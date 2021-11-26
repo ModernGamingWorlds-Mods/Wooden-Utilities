@@ -18,6 +18,7 @@ public class ModDataGen {
         }
         if (event.includeServer()) {
             generator.addProvider(new ModRecipeGenerator(generator));
+            generator.addProvider(new ModTagGenerator(generator, event.getExistingFileHelper()));
         }
     }
 }
