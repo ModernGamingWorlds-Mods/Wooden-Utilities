@@ -1,14 +1,15 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.item;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
-import io.github.noeppi_noeppi.libx.base.ItemBase;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShearsItem;
 
-public class WoodenShears extends ItemBase {
+import java.util.Objects;
 
-    public WoodenShears() {
-        super(WoodenUtilities.getInstance(), new Item.Properties().durability(119));
+public class WoodenShearsItem extends ShearsItem {
+
+    public WoodenShearsItem() {
+        super(new Properties().durability(119).tab(Objects.requireNonNull(WoodenUtilities.getInstance().tab)));
     }
 
     @Override
