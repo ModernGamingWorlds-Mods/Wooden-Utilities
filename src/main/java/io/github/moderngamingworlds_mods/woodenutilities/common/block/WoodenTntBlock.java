@@ -79,5 +79,9 @@ public class WoodenTntBlock extends Block implements Registerable {
         level.setBlock(pos, Blocks.AIR.defaultBlockState(), 11);
     }
 
-
+    @SuppressWarnings("deprecation")
+    @Override
+    public boolean dropFromExplosion(Explosion explosion) {
+        return false;
+    }
 }
