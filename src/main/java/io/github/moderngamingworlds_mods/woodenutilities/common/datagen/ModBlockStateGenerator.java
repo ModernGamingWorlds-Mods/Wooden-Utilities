@@ -4,7 +4,9 @@ import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.BlockStateProviderBase;
+import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -32,6 +34,11 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
     protected void defaultState(ResourceLocation id, Block block, Supplier<ModelFile> model) {
         if (block == ModBlocks.craftingSlab) {
             this.slab(id, block, this.mcLoc("block/crafting_table_top"), this.mcLoc("block/crafting_table_side"), this.mcLoc("block/oak_planks"));
+        } else if (block == ModBlocks.woodenTnt) {
+            this.simpleBlock(block, this.models().cubeBottomTop(id.getPath(),
+                    this.modLoc("block/wooden_tnt_side"),
+                    this.modLoc("block/wooden_tnt_top"),
+                    this.modLoc("block/wooden_tnt_bottom")));
         } else {
             super.defaultState(id, block, model);
         }
