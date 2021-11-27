@@ -10,6 +10,9 @@ public class ModConfig {
     @Config("Chance to get mining fatigue when breaking logs with empty hand.")
     public static double miningFatigueChance = 0.2;
 
+    @Config("Wooden TNT explosion radius")
+    public static float woodenTntExplosionRadius = 1f;
+
     @Group
     public static class WoodenBucket {
 
