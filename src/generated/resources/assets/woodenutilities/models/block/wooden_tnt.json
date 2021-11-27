@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "woodenutilities:block/wooden_tnt_side",
+    "bottom": "woodenutilities:block/wooden_tnt_top",
+    "top": "woodenutilities:block/wooden_tnt_bottom"
+  }
+}
