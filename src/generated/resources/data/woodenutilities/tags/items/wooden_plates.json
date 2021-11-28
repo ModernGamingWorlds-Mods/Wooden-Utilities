@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:acacia_plate",
+    "woodenutilities:birch_plate",
+    "woodenutilities:crimson_plate",
+    "woodenutilities:dark_oak_plate",
+    "woodenutilities:jungle_plate",
+    "woodenutilities:oak_plate",
+    "woodenutilities:spruce_plate",
+    "woodenutilities:warped_plate"
+  ]
+}
