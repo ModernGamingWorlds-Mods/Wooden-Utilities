@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GPG",
+    "PGP",
+    "GPG"
+  ],
+  "key": {
+    "G": {
+      "tag": "forge:gunpowder"
+    },
+    "P": {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:wooden_tnt"
+  }
+}

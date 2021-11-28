@@ -1,7 +1,9 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.datagen;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModItems;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModTags;
 import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.recipe.RecipeProviderBase;
 import net.minecraft.data.DataGenerator;
@@ -11,6 +13,9 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.ForgeTagHandler;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 
 import java.util.Objects;
 
@@ -28,6 +33,14 @@ public class ModRecipeGenerator extends RecipeProviderBase {
                 .pattern(" #")
                 .pattern("# ")
                 .unlockedBy("has_planks", has(ItemTags.PLANKS)).save(this.consumer());
+
+        ShapedRecipeBuilder.shaped(ModBlocks.woodenTnt)
+                .define('G', Tags.Items.GUNPOWDER)
+                .define('P', ModTags.WOODEN_PLATES)
+                .pattern("GPG")
+                .pattern("PGP")
+                .pattern("GPG")
+                .unlockedBy("has_plates", has(ModTags.WOODEN_PLATES)).save(this.consumer());
 
         this.plateRecipe(ModItems.oakPlate, Items.OAK_PLANKS);
         this.plateRecipe(ModItems.birchPlate, Items.BIRCH_PLANKS);

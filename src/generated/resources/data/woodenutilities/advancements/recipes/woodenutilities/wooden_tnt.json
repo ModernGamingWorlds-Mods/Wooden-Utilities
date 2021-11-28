@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodenutilities:wooden_tnt"
+    ]
+  },
+  "criteria": {
+    "has_plates": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "woodenutilities:wooden_plates"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodenutilities:wooden_tnt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_plates",
+      "has_the_recipe"
+    ]
+  ]
+}
