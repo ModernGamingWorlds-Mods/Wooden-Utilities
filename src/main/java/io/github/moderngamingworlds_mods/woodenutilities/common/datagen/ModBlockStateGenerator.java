@@ -4,9 +4,7 @@ import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.BlockStateProviderBase;
-import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -16,6 +14,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import java.util.Objects;
 import java.util.function.Supplier;
 
 @Datagen
@@ -39,6 +38,8 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
                     this.modLoc("block/wooden_tnt_side"),
                     this.modLoc("block/wooden_tnt_top"),
                     this.modLoc("block/wooden_tnt_bottom")));
+        } else if (block == ModBlocks.woodenFurnace) {
+            this.furnaceBlock(id, block);
         } else {
             super.defaultState(id, block, model);
         }
@@ -64,5 +65,22 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
                     .with(BlockStateProperties.SLAB_TYPE, type)
                     .addModels(new ConfiguredModel(type == SlabType.TOP ? modelTop : type == SlabType.BOTTOM ? modelBottom : modelFull));
         }
+    }
+
+    private void furnaceBlock(ResourceLocation id, Block block) {
+        this.horizontalBlock(block, (state) -> {
+            var blockRegName = Objects.requireNonNull(block.getRegistryName());
+            if (state.getValue(BlockStateProperties.LIT)) {
+                return this.models().orientable(id.getPath() + "_on",
+                        this.modLoc("block/" + blockRegName.getPath() + "_side"),
+                        this.modLoc("block/" + blockRegName.getPath() + "_front_on"),
+                        this.modLoc("block/" + blockRegName.getPath() + "_top"));
+            } else {
+                return this.models().orientable(id.getPath(),
+                        this.modLoc("block/" + blockRegName.getPath() + "_side"),
+                        this.modLoc("block/" + blockRegName.getPath() + "_front"),
+                        this.modLoc("block/" + blockRegName.getPath() + "_top"));
+            }
+        });
     }
 }

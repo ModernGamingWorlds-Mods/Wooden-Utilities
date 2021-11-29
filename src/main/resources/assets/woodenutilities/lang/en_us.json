@@ -3,6 +3,7 @@
 
   "block.woodenutilities.crafting_slab": "Crafting Slab",
   "block.woodenutilities.wooden_tnt": "Wooden TNT",
+  "block.woodenutilities.wooden_furnace": "Wooden Furnace",
 
   "item.woodenutilities.acacia_plate": "Acacia Plate",
   "item.woodenutilities.birch_plate": "Birch Plate",
@@ -16,5 +17,7 @@
   "item.woodenutilities.water_wooden_bucket": "Water Wooden Bucket",
   "item.woodenutilities.wooden_bucket": "Wooden Bucket",
   "item.woodenutilities.wooden_diamond": "Wooden Diamond",
-  "item.woodenutilities.wooden_shears": "Wooden Shears"
+  "item.woodenutilities.wooden_shears": "Wooden Shears",
+
+  "container.wooden_furnace": "Wooden Furnace"
 }
