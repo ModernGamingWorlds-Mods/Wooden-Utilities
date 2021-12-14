@@ -130,7 +130,10 @@ public class WoodcutterRecipe implements Recipe<Container> {
         public void toNetwork(FriendlyByteBuf buf, WoodcutterRecipe recipe) {
             buf.writeItem(recipe.result);
             recipe.ingredient.toNetwork(buf);
-            buf.writeByteArray(stringToBytes(recipe.requiredMods));
+            buf.writeVarInt(recipe.requiredMods.size());
+            for (String mod : recipe.requiredMods) {
+                buf.writeUtf(mod);
+            }
         }
 
         private byte[] stringToBytes(List<String> strings) {
