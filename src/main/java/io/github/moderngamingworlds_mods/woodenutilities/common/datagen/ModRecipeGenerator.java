@@ -12,7 +12,6 @@ import io.github.noeppi_noeppi.libx.data.provider.recipe.RecipeProviderBase;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -84,7 +83,9 @@ public class ModRecipeGenerator extends RecipeProviderBase {
                 .unlockedBy("has_planks", has(ItemTags.PLANKS)).save(this.consumer());
     }
 
-    private void genMCWoodcutterRecipes(Block plank){
-        WoodcutterUtil.getRecipesForPlank(plank).forEach(wcr -> WoodcutterRecipeBuilder.fromWoodcutterRecipe(wcr, this.consumer()));
+    private void genMCWoodcutterRecipes(Block plank) {
+        for (WoodcutterRecipe woodcutterRecipe : WoodcutterUtil.getRecipesForPlank(plank)) {
+            WoodcutterRecipeBuilder.from(woodcutterRecipe, this.consumer());
+        }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "type": "woodenutilities:woodcutter_serializer",
+  "requireMods": [
+    "minecraft"
+  ],
+  "ingredient": {
+    "item": "minecraft:spruce_planks"
+  },
+  "result": "minecraft:spruce_fence",
+  "count": 1
+}

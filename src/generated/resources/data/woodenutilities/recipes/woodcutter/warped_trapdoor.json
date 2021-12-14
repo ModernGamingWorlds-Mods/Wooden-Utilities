@@ -1,0 +1,11 @@
+{
+  "type": "woodenutilities:woodcutter_serializer",
+  "requireMods": [
+    "minecraft"
+  ],
+  "ingredient": {
+    "item": "minecraft:warped_planks"
+  },
+  "result": "minecraft:warped_trapdoor",
+  "count": 1
+}

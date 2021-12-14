@@ -1,0 +1,11 @@
+{
+  "type": "woodenutilities:woodcutter_serializer",
+  "requireMods": [
+    "minecraft"
+  ],
+  "ingredient": {
+    "item": "minecraft:oak_planks"
+  },
+  "result": "minecraft:oak_trapdoor",
+  "count": 1
+}
