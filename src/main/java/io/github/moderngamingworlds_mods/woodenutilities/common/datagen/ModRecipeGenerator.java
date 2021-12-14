@@ -4,18 +4,22 @@ import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModItems;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModTags;
+import io.github.moderngamingworlds_mods.woodenutilities.common.recipes.WoodcutterRecipe;
+import io.github.moderngamingworlds_mods.woodenutilities.common.recipes.WoodcutterRecipeBuilder;
+import io.github.moderngamingworlds_mods.woodenutilities.common.util.WoodcutterUtil;
 import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.recipe.RecipeProviderBase;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.ForgeTagHandler;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.ForgeItemTagsProvider;
 
 import java.util.Objects;
 
@@ -52,6 +56,15 @@ public class ModRecipeGenerator extends RecipeProviderBase {
         this.plateRecipe(ModItems.warpedPlate, Items.WARPED_PLANKS);
 
         this.bucketRecipe(ModItems.woodenBucket);
+
+        this.genMCWoodcutterRecipes(Blocks.OAK_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.SPRUCE_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.BIRCH_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.JUNGLE_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.ACACIA_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.DARK_OAK_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.CRIMSON_PLANKS);
+        this.genMCWoodcutterRecipes(Blocks.WARPED_PLANKS);
     }
 
     private void plateRecipe(Item plate, ItemLike material) {
@@ -69,5 +82,9 @@ public class ModRecipeGenerator extends RecipeProviderBase {
                 .pattern("# #")
                 .pattern(" # ")
                 .unlockedBy("has_planks", has(ItemTags.PLANKS)).save(this.consumer());
+    }
+
+    private void genMCWoodcutterRecipes(Block plank){
+        WoodcutterUtil.getRecipesForPlank(plank).forEach(wcr -> WoodcutterRecipeBuilder.fromWoodcutterRecipe(wcr, this.consumer()));
     }
 }
