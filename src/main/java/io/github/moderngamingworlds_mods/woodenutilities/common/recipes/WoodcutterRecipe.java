@@ -135,16 +135,6 @@ public class WoodcutterRecipe implements Recipe<Container> {
                 buf.writeUtf(mod);
             }
         }
-
-        private byte[] stringToBytes(List<String> strings) {
-            var listInString = Arrays.toString(strings.toArray(new String[0]));
-            listInString = listInString.replace("[", "").replace("]", "").replace(" ", "");
-            return listInString.getBytes();
-        }
-
-        private List<String> bytesToList(byte[] bytes) {
-            return Arrays.asList(new String(bytes).split(","));
-        }
     }
 
 }
