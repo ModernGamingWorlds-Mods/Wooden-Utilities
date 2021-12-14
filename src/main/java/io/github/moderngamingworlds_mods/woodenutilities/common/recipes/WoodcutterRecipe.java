@@ -122,7 +122,11 @@ public class WoodcutterRecipe implements Recipe<Container> {
         public WoodcutterRecipe fromNetwork(ResourceLocation res, FriendlyByteBuf buf) {
             var ingredient = Ingredient.fromNetwork(buf);
             var result = buf.readItem();
-            var requiredMods = bytesToList(buf.readByteArray());
+            List<String> requiredMods = Lists.newArrayList();
+            int size = buf.readVarInt();
+            for (int i = 0; i < size; i++) {
+                requiredMods.add(buf.readUtf());
+            }
             return new WoodcutterRecipe(res, ingredient, result, requiredMods);
         }
 
@@ -130,17 +134,10 @@ public class WoodcutterRecipe implements Recipe<Container> {
         public void toNetwork(FriendlyByteBuf buf, WoodcutterRecipe recipe) {
             buf.writeItem(recipe.result);
             recipe.ingredient.toNetwork(buf);
-            buf.writeByteArray(stringToBytes(recipe.requiredMods));
-        }
-
-        private byte[] stringToBytes(List<String> strings) {
-            var listInString = Arrays.toString(strings.toArray(new String[0]));
-            listInString = listInString.replace("[", "").replace("]", "").replace(" ", "");
-            return listInString.getBytes();
-        }
-
-        private List<String> bytesToList(byte[] bytes) {
-            return Arrays.asList(new String(bytes).split(","));
+            buf.writeVarInt(recipe.requiredMods.size());
+            for (String mod : recipe.requiredMods) {
+                buf.writeUtf(mod);
+            }
         }
     }
 
