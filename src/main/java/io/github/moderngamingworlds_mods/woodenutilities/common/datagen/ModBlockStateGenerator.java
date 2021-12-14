@@ -38,7 +38,7 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
                     this.modLoc("block/wooden_tnt_side"),
                     this.modLoc("block/wooden_tnt_top"),
                     this.modLoc("block/wooden_tnt_bottom")));
-        } else if (block == ModBlocks.woodCutter) {
+        } else if (block == ModBlocks.woodcutter) {
             this.horizontalBlock(block, this.defaultModel(this.modLoc("woodcutter"), block));
         } else if (block == ModBlocks.woodenFurnace) {
             this.furnaceBlock(id, block);
@@ -51,7 +51,7 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
     protected ModelFile defaultModel(ResourceLocation id, Block block) {
         if (block == ModBlocks.craftingSlab) {
             return null;
-        } else if (block == ModBlocks.woodCutter) {
+        } else if (block == ModBlocks.woodcutter) {
             return this.models().getExistingFile(id);
         }
 

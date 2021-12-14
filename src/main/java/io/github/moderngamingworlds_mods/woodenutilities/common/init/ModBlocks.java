@@ -15,8 +15,7 @@ public class ModBlocks {
 
     public static final Block craftingSlab = new CraftingSlabBlock();
     public static final Block woodenTnt = new WoodenTntBlock();
-    @RegName("woodcutter")
-    public static final Block woodCutter = new WoodcutterBlock();
+    public static final Block woodcutter = new WoodcutterBlock();
 
     public static final Block woodenFurnace = new WoodenFurnaceBlock();
     public static final BlockEntityType<WoodenFurnaceBlockEntity> WOODEN_FURNACE = BlockEntityType.Builder.of(WoodenFurnaceBlockEntity::new, woodenFurnace).build(null);
