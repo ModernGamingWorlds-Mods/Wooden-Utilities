@@ -50,7 +50,7 @@ public class WoodcutterUtil {
     }
 
     public static boolean isPlank(Item item) {
-        return item.getRegistryName().getPath().contains("planks");
+        return ItemTags.PLANKS.contains(item);
     }
 
     public static String getWoodType(Item item) {
