@@ -46,29 +46,29 @@ public class WoodCutterScreen extends AbstractContainerScreen<WoodCutterMenu> {
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, BACK);
         this.blit(poseStack, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
-        int k = (int) (41.0F * this.scrollOffs);
-        this.blit(poseStack, this.leftPos + 119, this.topPos + 15 + k, 176 + (this.isScrollBarActive() ? 0 : 12), 0, 12, 15);
-        int l = this.leftPos + 52;
-        int i1 = this.topPos + 14;
-        int j1 = this.startIndex + 12;
-        this.renderButtons(poseStack, mouseX, mouseY, l, i1, j1);
-        this.renderRecipes(l, i1, j1);
+        int scrollbarBtnY = (int) (41.0F * this.scrollOffs);
+        this.blit(poseStack, this.leftPos + 119, this.topPos + 15 + scrollbarBtnY, 176 + (this.isScrollBarActive() ? 0 : 12), 0, 12, 15);
+        int x = this.leftPos + 52;
+        int y = this.topPos + 14;
+        int lastVisibleElementIndex = this.startIndex + 12;
+        this.renderButtons(poseStack, mouseX, mouseY, x, y, lastVisibleElementIndex);
+        this.renderRecipes(x, y, lastVisibleElementIndex);
     }
 
     @Override
     protected void renderTooltip(PoseStack poseStack, int mouseX, int mouseY) {
         super.renderTooltip(poseStack, mouseX, mouseY);
         if (this.displayRecipes) {
-            int i = this.leftPos + 52;
-            int j = this.topPos + 14;
+            int x = this.leftPos + 52;
+            int y = this.topPos + 14;
             int k = this.startIndex + 12;
             List<WoodcutterRecipe> list = this.menu.getRecipes();
 
             for (int l = this.startIndex; l < k && l < this.menu.getNumRecipes(); ++l) {
-                int i1 = l - this.startIndex;
-                int j1 = i + i1 % 4 * 16;
-                int k1 = j + i1 / 4 * 18 + 2;
-                if (mouseX >= j1 && mouseX < j1 + 16 && mouseY >= k1 && mouseY < k1 + 18) {
+                int recipeStart = l - this.startIndex;
+                int recipeXEnd = x + recipeStart % 4 * 16;
+                int recipeYEnd = y + recipeStart / 4 * 18 + 2;
+                if (mouseX >= recipeXEnd && mouseX < recipeXEnd + 16 && mouseY >= recipeYEnd && mouseY < recipeYEnd + 18) {
                     this.renderTooltip(poseStack, list.get(l).getResultItem(), mouseX, mouseY);
                 }
             }
@@ -76,89 +76,89 @@ public class WoodCutterScreen extends AbstractContainerScreen<WoodCutterMenu> {
 
     }
 
-    private void renderButtons(PoseStack poseStack, int mouseX, int mouseY, int x, int y, int param1) {
-        for (int i = this.startIndex; i < param1 && i < this.menu.getNumRecipes(); ++i) {
-            int j = i - this.startIndex;
-            int k = x + j % 4 * 16;
-            int l = j / 4;
-            int i1 = y + l * 18 + 2;
-            int j1 = this.imageHeight;
+    private void renderButtons(PoseStack poseStack, int mouseX, int mouseY, int x, int y, int lastVisibleElementIndex) {
+        for (int i = this.startIndex; i < lastVisibleElementIndex && i < this.menu.getNumRecipes(); ++i) {
+            int recipeIndex = i - this.startIndex;
+            int xStart = x + recipeIndex % 4 * 16;
+            int l = recipeIndex / 4;
+            int yStart = y + l * 18 + 2;
+            int height = this.imageHeight;
             if (i == this.menu.getSelectedRecipeIndex()) {
-                j1 += 18;
-            } else if (mouseX >= k && mouseY >= i1 && mouseX < k + 16 && mouseY < i1 + 18) {
-                j1 += 36;
+                height += 18;
+            } else if (mouseX >= xStart && mouseY >= yStart && mouseX < xStart + 16 && mouseY < yStart + 18) {
+                height += 36;
             }
 
-            this.blit(poseStack, k, i1 - 1, 0, j1, 16, 18);
+            this.blit(poseStack, xStart, yStart - 1, 0, height, 16, 18);
         }
 
     }
 
-    private void renderRecipes(int x, int y, int param1) {
+    private void renderRecipes(int x, int y, int recipeIndexOffsetMax) {
         Preconditions.checkNotNull(this.minecraft);
         List<WoodcutterRecipe> list = this.menu.getRecipes();
 
-        for (int i = this.startIndex; i < param1 && i < this.menu.getNumRecipes(); ++i) {
-            int j = i - this.startIndex;
-            int k = x + j % 4 * 16;
-            int l = j / 4;
-            int i1 = y + l * 18 + 2;
-            this.minecraft.getItemRenderer().renderAndDecorateItem(list.get(i).getResultItem(), k, i1);
+        for (int i = this.startIndex; i < recipeIndexOffsetMax && i < this.menu.getNumRecipes(); ++i) {
+            int recipeStart = i - this.startIndex;
+            int xStart = x + recipeStart % 4 * 16;
+            int l = recipeStart / 4;
+            int yStart = y + l * 18 + 2;
+            this.minecraft.getItemRenderer().renderAndDecorateItem(list.get(i).getResultItem(), xStart, yStart);
         }
 
     }
 
     @Override
-    public boolean mouseClicked(double p_99318_, double p_99319_, int p_99320_) {
+    public boolean mouseClicked(double mouseX, double mouseY, int buttonCode) {
         Preconditions.checkNotNull(this.minecraft);
         Preconditions.checkNotNull(this.minecraft.gameMode);
         Preconditions.checkNotNull(this.minecraft.player);
         this.scrolling = false;
         if (this.displayRecipes) {
-            int i = this.leftPos + 52;
-            int j = this.topPos + 14;
-            int k = this.startIndex + 12;
+            int xStart = this.leftPos + 52;
+            int yStart = this.topPos + 14;
+            int index = this.startIndex + 12;
 
-            for (int l = this.startIndex; l < k; ++l) {
-                int i1 = l - this.startIndex;
-                double d0 = p_99318_ - (double) (i + i1 % 4 * 16);
-                double d1 = p_99319_ - (double) (j + i1 / 4 * 18);
-                if (d0 >= 0.0D && d1 >= 0.0D && d0 < 16.0D && d1 < 18.0D && this.menu.clickMenuButton(this.minecraft.player, l)) {
+            for (int l = this.startIndex; l < index; ++l) {
+                int recipeIndex = l - this.startIndex;
+                double deltaX = mouseX - (double) (xStart + recipeIndex % 4 * 16);
+                double deltaY = mouseY - (double) (yStart + recipeIndex / 4 * 18);
+                if (deltaX >= 0.0D && deltaY >= 0.0D && deltaX < 16.0D && deltaY < 18.0D && this.menu.clickMenuButton(this.minecraft.player, l)) {
                     Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
                     this.minecraft.gameMode.handleInventoryButtonClick((this.menu).containerId, l);
                     return true;
                 }
             }
 
-            i = this.leftPos + 119;
-            j = this.topPos + 9;
-            if (p_99318_ >= (double) i && p_99318_ < (double) (i + 12) && p_99319_ >= (double) j && p_99319_ < (double) (j + 54)) {
+            xStart = this.leftPos + 119;
+            yStart = this.topPos + 9;
+            if (mouseX >= (double) xStart && mouseX < (double) (xStart + 12) && mouseY >= (double) yStart && mouseY < (double) (yStart + 54)) {
                 this.scrolling = true;
             }
         }
 
-        return super.mouseClicked(p_99318_, p_99319_, p_99320_);
+        return super.mouseClicked(mouseX, mouseY, buttonCode);
     }
 
     @Override
-    public boolean mouseDragged(double p_99322_, double p_99323_, int p_99324_, double p_99325_, double p_99326_) {
+    public boolean mouseDragged(double mouseX, double mouseY, int buttonCode, double dragX, double dragY) {
         if (this.scrolling && this.isScrollBarActive()) {
-            int i = this.topPos + 14;
-            int j = i + 54;
-            this.scrollOffs = ((float) p_99323_ - (float) i - 7.5F) / ((float) (j - i) - 15.0F);
+            int yStart = this.topPos + 14;
+            int y = yStart + 54;
+            this.scrollOffs = ((float) mouseY - (float) yStart - 7.5F) / ((float) (y - yStart) - 15.0F);
             this.scrollOffs = Mth.clamp(this.scrollOffs, 0.0F, 1.0F);
             this.startIndex = (int) ((double) (this.scrollOffs * (float) this.getOffscreenRows()) + 0.5D) * 4;
             return true;
         } else {
-            return super.mouseDragged(p_99322_, p_99323_, p_99324_, p_99325_, p_99326_);
+            return super.mouseDragged(mouseX, mouseY, buttonCode, dragX, dragY);
         }
     }
 
     @Override
-    public boolean mouseScrolled(double p_99314_, double p_99315_, double p_99316_) {
+    public boolean mouseScrolled(double mouseX, double mouseY, double delta) {
         if (this.isScrollBarActive()) {
             int i = this.getOffscreenRows();
-            this.scrollOffs = (float) ((double) this.scrollOffs - p_99316_ / (double) i);
+            this.scrollOffs = (float) ((double) this.scrollOffs - delta / (double) i);
             this.scrollOffs = Mth.clamp(this.scrollOffs, 0.0F, 1.0F);
             this.startIndex = (int) ((double) (this.scrollOffs * (float) i) + 0.5D) * 4;
         }
