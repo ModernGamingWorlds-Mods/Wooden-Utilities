@@ -2,12 +2,16 @@ package io.github.moderngamingworlds_mods.woodenutilities.common.block;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.client.screen.WoodCutterScreen;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import io.github.moderngamingworlds_mods.woodenutilities.common.menu.WoodCutterMenu;
 import io.github.noeppi_noeppi.libx.base.MenuBlock;
 import io.github.noeppi_noeppi.libx.menu.BlockEntityMenu;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -33,6 +37,11 @@ public class WoodcutterBlock extends MenuBlock<WoodCutterMenu> {
     public WoodcutterBlock() {
         super(WoodenUtilities.getInstance(), TYPE, Properties.of(Material.WOOD));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    public void registerClient(ResourceLocation id, Consumer<Runnable> defer) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.woodcutter, RenderType.translucent());
     }
 
     @Override

@@ -36,7 +36,6 @@ public final class WoodenUtilities extends ModXRegistration {
 
     @Override
     protected void clientSetup(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.woodcutter, RenderType.translucent());
     }
 
     @Override
