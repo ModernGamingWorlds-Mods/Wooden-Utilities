@@ -1,5 +1,6 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.recipes;
 
+import com.google.common.collect.Lists;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
@@ -32,7 +33,6 @@ public class WoodcutterRecipe implements Recipe<Container> {
 
     public ResourceLocation recipeLoc;
 
-    public final String group = WoodenUtilities.getInstance().modid.concat(":").concat(SERIALIZER_ID);
     public List<String> requiredMods;
     public Ingredient ingredient;
     public ItemStack result;

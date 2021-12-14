@@ -2,6 +2,7 @@ package io.github.moderngamingworlds_mods.woodenutilities.common.util;
 
 import com.google.common.base.Preconditions;
 import io.github.moderngamingworlds_mods.woodenutilities.common.recipes.WoodcutterRecipe;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
