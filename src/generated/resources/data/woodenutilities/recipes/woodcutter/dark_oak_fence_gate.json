@@ -1,8 +1,5 @@
 {
   "type": "woodenutilities:woodcutter_serializer",
-  "requireMods": [
-    "minecraft"
-  ],
   "ingredient": {
     "item": "minecraft:dark_oak_planks"
   },

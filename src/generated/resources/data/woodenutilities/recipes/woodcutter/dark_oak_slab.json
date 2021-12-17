@@ -1,11 +1,8 @@
 {
   "type": "woodenutilities:woodcutter_serializer",
-  "requireMods": [
-    "minecraft"
-  ],
   "ingredient": {
     "item": "minecraft:dark_oak_planks"
   },
   "result": "minecraft:dark_oak_slab",
-  "count": 1
+  "count": 2
 }
