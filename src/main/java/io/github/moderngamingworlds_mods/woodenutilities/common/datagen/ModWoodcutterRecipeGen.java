@@ -6,8 +6,8 @@ import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.recipe.RecipeProviderBase;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 
 import java.util.Objects;
 
@@ -86,14 +86,14 @@ public class ModWoodcutterRecipeGen extends RecipeProviderBase {
         this.simpleWoodcutterRecipe(Items.WARPED_PLANKS, Items.WARPED_BUTTON);
     }
 
-    private void simpleWoodcutterRecipe(Item item, Item result, int count) {
-        var path = "woodcutter/".concat(Objects.requireNonNull(result.getRegistryName()).getPath());
+    private void simpleWoodcutterRecipe(ItemLike item, ItemLike result, int count) {
+        var path = "woodcutter/".concat(Objects.requireNonNull(result.asItem().getRegistryName()).getPath());
         WoodcutterRecipeBuilder.create(this.modLoc(path)).ingredient(item)
                 .result(result).count(count)
                 .build(this.consumer());
     }
 
-    private void simpleWoodcutterRecipe(Item item, Item result) {
+    private void simpleWoodcutterRecipe(ItemLike item, ItemLike result) {
         this.simpleWoodcutterRecipe(item, result, 1);
     }
 

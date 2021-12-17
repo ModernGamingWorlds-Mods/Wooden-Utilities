@@ -2,13 +2,11 @@ package io.github.moderngamingworlds_mods.woodenutilities.common.recipes;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModRecipes;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -18,11 +16,11 @@ import java.util.function.Consumer;
 
 public class WoodcutterRecipeBuilder implements FinishedRecipe {
 
-    public ResourceLocation loc;
-    public List<String> requiredMods = new ArrayList<>();
-    public List<String> ingredients = new ArrayList<>();
-    public String result;
-    public int count = 1;
+    private ResourceLocation loc;
+    private List<String> requiredMods = new ArrayList<>();
+    private List<String> ingredients = new ArrayList<>();
+    private String result;
+    private int count = 1;
 
     public WoodcutterRecipeBuilder(ResourceLocation loc) {
         this.loc = loc;
@@ -37,13 +35,13 @@ public class WoodcutterRecipeBuilder implements FinishedRecipe {
         return this;
     }
 
-    public WoodcutterRecipeBuilder ingredient(Item item) {
-        this.ingredients.add(Objects.requireNonNull(item.getRegistryName()).toString());
+    public WoodcutterRecipeBuilder ingredient(ItemLike item) {
+        this.ingredients.add(Objects.requireNonNull(item.asItem().getRegistryName()).toString());
         return this;
     }
 
-    public WoodcutterRecipeBuilder result(Item result) {
-        this.result = Objects.requireNonNull(result.getRegistryName()).toString();
+    public WoodcutterRecipeBuilder result(ItemLike result) {
+        this.result = Objects.requireNonNull(result.asItem().getRegistryName()).toString();
         return this;
     }
 
@@ -52,7 +50,7 @@ public class WoodcutterRecipeBuilder implements FinishedRecipe {
         return this;
     }
 
-    public void build(Consumer<FinishedRecipe> finishedRecipeConsumer){
+    public void build(Consumer<FinishedRecipe> finishedRecipeConsumer) {
         finishedRecipeConsumer.accept(this);
     }
 
@@ -63,7 +61,7 @@ public class WoodcutterRecipeBuilder implements FinishedRecipe {
             this.requiredMods.forEach(modArr::add);
             object.add("requireMods", modArr);
         }
-        if(this.ingredients.size() > 1){
+        if (this.ingredients.size() > 1) {
             var ingredientsArr = new JsonArray();
             for (String ingredient : this.ingredients) {
                 var itemObj = new JsonObject();
@@ -71,7 +69,7 @@ public class WoodcutterRecipeBuilder implements FinishedRecipe {
                 ingredientsArr.add(itemObj);
             }
             object.add("ingredient", ingredientsArr);
-        } else if(this.ingredients.size() == 1){
+        } else if (this.ingredients.size() == 1) {
             var ingredientObj = new JsonObject();
             ingredientObj.addProperty("item", this.ingredients.get(0));
             object.add("ingredient", ingredientObj);
