@@ -6,6 +6,7 @@ import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModRecipes;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import org.jetbrains.annotations.Nullable;
@@ -21,22 +22,38 @@ public class WoodcutterRecipeBuilder implements FinishedRecipe {
     public List<String> requiredMods = new ArrayList<>();
     public List<String> ingredients = new ArrayList<>();
     public String result;
-    public int count;
+    public int count = 1;
 
     public WoodcutterRecipeBuilder(ResourceLocation loc) {
         this.loc = loc;
     }
 
-    public static void from(WoodcutterRecipe recipe, Consumer<FinishedRecipe> recipeConsumer) {
-        String path = "woodcutter/".concat(Objects.requireNonNull(recipe.result.getItem().getRegistryName()).getPath());
-        var woodcutterRecipeBuilder = new WoodcutterRecipeBuilder(new ResourceLocation(WoodenUtilities.getInstance().modid, path));
-        woodcutterRecipeBuilder.requiredMods.addAll(recipe.requiredMods);
-        for (ItemStack item : recipe.ingredient.getItems()) {
-            woodcutterRecipeBuilder.ingredients.add(Objects.requireNonNull(item.getItem().getRegistryName()).toString());
-        }
-        woodcutterRecipeBuilder.result = recipe.result.getItem().getRegistryName().toString();
-        woodcutterRecipeBuilder.count = recipe.result.getCount();
-        recipeConsumer.accept(woodcutterRecipeBuilder);
+    public static WoodcutterRecipeBuilder create(ResourceLocation loc) {
+        return new WoodcutterRecipeBuilder(loc);
+    }
+
+    public WoodcutterRecipeBuilder requiredMod(String modId) {
+        this.requiredMods.add(modId);
+        return this;
+    }
+
+    public WoodcutterRecipeBuilder ingredient(Item item) {
+        this.ingredients.add(Objects.requireNonNull(item.getRegistryName()).toString());
+        return this;
+    }
+
+    public WoodcutterRecipeBuilder result(Item result) {
+        this.result = Objects.requireNonNull(result.getRegistryName()).toString();
+        return this;
+    }
+
+    public WoodcutterRecipeBuilder count(int count) {
+        this.count = count;
+        return this;
+    }
+
+    public void build(Consumer<FinishedRecipe> finishedRecipeConsumer){
+        finishedRecipeConsumer.accept(this);
     }
 
     @Override
