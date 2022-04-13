@@ -4,7 +4,6 @@ import io.github.noeppi_noeppi.libx.annotation.config.RegisterConfig;
 import io.github.noeppi_noeppi.libx.config.Config;
 import io.github.noeppi_noeppi.libx.config.Group;
 import io.github.noeppi_noeppi.libx.config.validator.DoubleRange;
-import io.github.noeppi_noeppi.libx.config.validator.FloatRange;
 import io.github.noeppi_noeppi.libx.config.validator.IntRange;
 
 @RegisterConfig

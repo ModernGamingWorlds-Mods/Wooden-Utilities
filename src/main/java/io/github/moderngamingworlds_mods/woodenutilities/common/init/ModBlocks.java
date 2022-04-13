@@ -5,7 +5,6 @@ import io.github.moderngamingworlds_mods.woodenutilities.common.block.Woodcutter
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.WoodenFurnaceBlock;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.WoodenTntBlock;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.entity.WoodenFurnaceBlockEntity;
-import io.github.noeppi_noeppi.libx.annotation.registration.RegName;
 import io.github.noeppi_noeppi.libx.annotation.registration.RegisterClass;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;

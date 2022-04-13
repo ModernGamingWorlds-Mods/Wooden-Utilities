@@ -5,7 +5,6 @@ import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModItems;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModTags;
 import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.CommonTagsProviderBase;
-import io.github.noeppi_noeppi.libx.mod.ModX;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
