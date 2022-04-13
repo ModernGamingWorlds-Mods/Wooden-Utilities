@@ -28,9 +28,6 @@ public class ModConfig {
 
         @Config("The max temperature that the Wooden Bucket can hold until burns itself.")
         public static int maxTemperature = 1300;
-
-        @Config("Number of seconds that the player will be set on fire when the bucket burn itself.")
-        public static int fireTime = 5;
     }
 
     @Group
