@@ -31,6 +31,7 @@ import net.minecraft.world.phys.HitResult;
 import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public class WoodenBucketItem extends BucketItem {
 
     private boolean hasCooldown = false;
@@ -65,8 +66,8 @@ public class WoodenBucketItem extends BucketItem {
                         level.setBlock(entity.blockPosition(), this.getFluid().defaultFluidState().createLegacyBlock(), Block.UPDATE_ALL);
                     }
                     stack.shrink(1);
-                    player.setSecondsOnFire(ModConfig.WoodenBucket.fireTime);
-                    player.broadcastBreakEvent(InteractionHand.MAIN_HAND);
+                    //TODO: This is crashing the game. Needs investigation.
+                    //player.broadcastBreakEvent(InteractionHand.MAIN_HAND);
                     this.hasCooldown = false;
                 }
             }

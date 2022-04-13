@@ -4,7 +4,6 @@ import io.github.noeppi_noeppi.libx.annotation.config.RegisterConfig;
 import io.github.noeppi_noeppi.libx.config.Config;
 import io.github.noeppi_noeppi.libx.config.Group;
 import io.github.noeppi_noeppi.libx.config.validator.DoubleRange;
-import io.github.noeppi_noeppi.libx.config.validator.FloatRange;
 import io.github.noeppi_noeppi.libx.config.validator.IntRange;
 
 @RegisterConfig
@@ -29,9 +28,6 @@ public class ModConfig {
 
         @Config("The max temperature that the Wooden Bucket can hold until burns itself.")
         public static int maxTemperature = 1300;
-
-        @Config("Number of seconds that the player will be set on fire when the bucket burn itself.")
-        public static int fireTime = 5;
     }
 
     @Group
