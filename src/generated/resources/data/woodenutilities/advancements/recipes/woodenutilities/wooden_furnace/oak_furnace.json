@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "woodenutilities:wooden_furnace/oak_furnace"
+    ]
+  },
+  "criteria": {
+    "hasPlanks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:oak_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "hasPlate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "woodenutilities:wooden_plates"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "woodenutilities:wooden_furnace/oak_furnace"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hasPlanks",
+      "hasPlate",
+      "has_the_recipe"
+    ]
+  ]
+}

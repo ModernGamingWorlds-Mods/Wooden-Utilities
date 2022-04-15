@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TPT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:warped_planks"
+    },
+    "P": {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:warped_furnace"
+  }
+}

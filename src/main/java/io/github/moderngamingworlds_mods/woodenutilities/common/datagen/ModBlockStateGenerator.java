@@ -1,6 +1,7 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.datagen;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
+import io.github.moderngamingworlds_mods.woodenutilities.common.block.WoodenFurnaceBlock;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import io.github.noeppi_noeppi.libx.annotation.data.Datagen;
 import io.github.noeppi_noeppi.libx.data.provider.BlockStateProviderBase;
@@ -9,12 +10,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import java.util.Objects;
 import java.util.function.Supplier;
 
 @Datagen
@@ -26,7 +27,7 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
 
     @Override
     protected void setup() {
-
+        this.manualModel(ModBlocks.woodcutter);
     }
 
     @Override
@@ -39,9 +40,9 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
                     this.modLoc("block/wooden_tnt_top"),
                     this.modLoc("block/wooden_tnt_bottom")));
         } else if (block == ModBlocks.woodcutter) {
-            this.horizontalBlock(block, this.defaultModel(this.modLoc("woodcutter"), block));
-        } else if (block == ModBlocks.woodenFurnace) {
-            this.furnaceBlock(id, block);
+            this.horizontalBlock(block, model.get());
+        } else if (block instanceof WoodenFurnaceBlock furnaceBlock) {
+            this.furnaceBlock(id, furnaceBlock);
         } else {
             super.defaultState(id, block, model);
         }
@@ -51,8 +52,6 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
     protected ModelFile defaultModel(ResourceLocation id, Block block) {
         if (block == ModBlocks.craftingSlab) {
             return null;
-        } else if (block == ModBlocks.woodcutter) {
-            return this.models().getExistingFile(id);
         }
 
         return super.defaultModel(id, block);
@@ -71,19 +70,16 @@ public class ModBlockStateGenerator extends BlockStateProviderBase {
         }
     }
 
-    private void furnaceBlock(ResourceLocation id, Block block) {
-        this.horizontalBlock(block, (state) -> {
-            var blockRegName = Objects.requireNonNull(block.getRegistryName());
+    private void furnaceBlock(ResourceLocation id, WoodenFurnaceBlock block) {
+        this.horizontalBlock(block, state -> {
+            WoodType type = block.type();
+            ResourceLocation side = this.mcLoc("block/" + type.name() + "_planks");
             if (state.getValue(BlockStateProperties.LIT)) {
-                return this.models().orientable(id.getPath() + "_on",
-                        this.modLoc("block/" + blockRegName.getPath() + "_side"),
-                        this.modLoc("block/" + blockRegName.getPath() + "_front_on"),
-                        this.modLoc("block/" + blockRegName.getPath() + "_top"));
+                return this.models().orientable(id.getPath() + "_on", side,
+                        this.modLoc("block/" + id.getPath() + "_front_on"), side);
             } else {
-                return this.models().orientable(id.getPath(),
-                        this.modLoc("block/" + blockRegName.getPath() + "_side"),
-                        this.modLoc("block/" + blockRegName.getPath() + "_front"),
-                        this.modLoc("block/" + blockRegName.getPath() + "_top"));
+                return this.models().orientable(id.getPath(), side,
+                        this.modLoc("block/" + id.getPath() + "_front"), side);
             }
         });
     }
