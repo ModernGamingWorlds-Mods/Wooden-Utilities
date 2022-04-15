@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.network.NetworkHooks;
 
@@ -37,10 +38,12 @@ import java.util.Set;
 public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Registerable {
 
     private final Item item;
+    private final WoodType type;
 
-    public WoodenFurnaceBlock() {
+    public WoodenFurnaceBlock(WoodType type) {
         super(Properties.of(Material.WOOD).lightLevel(state -> state.getValue(LIT) ? 13 : 0));
         this.item = new BlockItem(this, new Item.Properties().tab(Objects.requireNonNull(WoodenUtilities.getInstance().tab)));
+        this.type = type;
     }
 
     @Override
@@ -66,7 +69,7 @@ public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Register
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level levelIn, BlockState stateIn, BlockEntityType<T> blockEntityType) {
         return levelIn.isClientSide ? null : createTickerHelper(blockEntityType, ModBlocks.WOODEN_FURNACE, (level, pos, state, blockEntity) -> {
             AbstractFurnaceBlockEntity.serverTick(level, pos, state, blockEntity);
-            WoodenFurnaceBlockEntity.catchOnFireTick(level, pos, state, (WoodenFurnaceBlockEntity) blockEntity);
+            WoodenFurnaceBlockEntity.catchOnFireTick(level, pos, state, blockEntity);
         });
     }
 
@@ -75,7 +78,7 @@ public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Register
     public void animateTick(BlockState state, Level level, BlockPos pos, Random rand) {
         if (state.getValue(LIT)) {
             double d0 = (double) pos.getX() + 0.5D;
-            double d1 = (double) pos.getY();
+            double d1 = pos.getY();
             double d2 = (double) pos.getZ() + 0.5D;
             if (rand.nextDouble() < 0.1D) {
                 level.playLocalSound(d0, d1, d2, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
@@ -95,5 +98,9 @@ public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Register
     @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
         return ModConfig.catchOnFireProbability;
+    }
+
+    public WoodType type() {
+        return this.type;
     }
 }

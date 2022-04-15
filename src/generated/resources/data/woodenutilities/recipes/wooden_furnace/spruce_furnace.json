@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TPT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:spruce_planks"
+    },
+    "P": {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:spruce_furnace"
+  }
+}
