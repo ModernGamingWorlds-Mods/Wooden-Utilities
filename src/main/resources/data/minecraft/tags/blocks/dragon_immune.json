@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:woodcutter",
+    "woodenutilities:oak_furnace",
+    "woodenutilities:spruce_furnace",
+    "woodenutilities:birch_furnace",
+    "woodenutilities:acacia_furnace",
+    "woodenutilities:jungle_furnace",
+    "woodenutilities:dark_oak_furnace",
+    "woodenutilities:crimson_furnace",
+    "woodenutilities:warped_furnace"
+  ]
+}
