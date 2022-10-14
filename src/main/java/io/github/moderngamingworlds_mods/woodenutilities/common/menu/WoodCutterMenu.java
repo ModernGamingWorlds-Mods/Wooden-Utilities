@@ -1,10 +1,10 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.menu;
 
 import com.google.common.collect.Lists;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModMenus;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModRecipes;
 import io.github.moderngamingworlds_mods.woodenutilities.common.menu.slot.TakeFuncOutSlot;
 import io.github.moderngamingworlds_mods.woodenutilities.common.recipes.WoodcutterRecipe;
-import io.github.noeppi_noeppi.libx.menu.BlockMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -17,13 +17,12 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.forgespi.language.IModInfo;
-import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WoodCutterMenu extends BlockMenu {
+public class WoodCutterMenu extends AbstractBlockMenu {
 
     private ItemStack input = ItemStack.EMPTY;
     private final DataSlot selectedRecipeIndex = DataSlot.standalone();
@@ -47,8 +46,8 @@ public class WoodCutterMenu extends BlockMenu {
     final ResultContainer resultContainer = new ResultContainer();
 
 
-    public WoodCutterMenu(@Nullable MenuType<? extends BlockMenu> type, int windowId, Level level, BlockPos pos, Inventory playerContainer, Player player) {
-        super(type, windowId, level, pos, playerContainer, player, 0, 0);
+    public WoodCutterMenu(Level level, BlockPos pos, Inventory playerContainer, int windowId) {
+        super(ModMenus.WOODCUTTER.get(), level, pos, playerContainer, windowId);
 
         this.level = level;
 
@@ -115,10 +114,10 @@ public class WoodCutterMenu extends BlockMenu {
         this.selectedRecipeIndex.set(-1);
         this.outputSlot.set(ItemStack.EMPTY);
         if (!stack.isEmpty()) {
-            this.recipes = this.level.getRecipeManager().getRecipesFor(ModRecipes.WOODCUTTER, container, this.level).stream()
+            this.recipes = this.level.getRecipeManager().getRecipesFor(ModRecipes.WOODCUTTER.get(), container, this.level).stream()
                     .filter(wcr -> ModList.get().getMods().stream()
                             .map(IModInfo::getModId)
-                            .collect(Collectors.toList())
+                            .collect(Collectors.toSet())
                             .containsAll(wcr.requiredMods)
                     ).collect(Collectors.toList());
         }

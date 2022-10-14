@@ -27,7 +27,7 @@ import java.util.stream.StreamSupport;
 
 public class WoodcutterRecipe implements Recipe<Container> {
 
-    public static final String ID = WoodenUtilities.getInstance().modid.concat("_woodcutter");
+    public static final String ID = WoodenUtilities.MOD_ID.concat("_woodcutter");
     public static final String SERIALIZER_ID = "woodcutter_serializer";
 
     public ResourceLocation recipeLoc;
@@ -44,7 +44,7 @@ public class WoodcutterRecipe implements Recipe<Container> {
     }
 
     public WoodcutterRecipe(Ingredient ingredient, ItemStack stack) {
-        this(new ResourceLocation(WoodenUtilities.getInstance().modid, stack.getItem().getRegistryName().getPath() + "woodcutter"),
+        this(new ResourceLocation(WoodenUtilities.MOD_ID, stack.getItem().getRegistryName().getPath() + "woodcutter"),
                 ingredient,
                 stack,
                 List.of("minecraft"));
@@ -72,7 +72,7 @@ public class WoodcutterRecipe implements Recipe<Container> {
 
     @Override
     public ItemStack getToastSymbol() {
-        return new ItemStack(ModBlocks.woodcutter);
+        return new ItemStack(ModBlocks.WOODCUTTER.get());
     }
 
     @Override
@@ -82,12 +82,12 @@ public class WoodcutterRecipe implements Recipe<Container> {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.WOODCUTTER_SERIALIZER;
+        return ModRecipes.WOODCUTTER_SERIALIZER.get();
     }
 
     @Override
     public RecipeType<?> getType() {
-        return ModRecipes.WOODCUTTER;
+        return ModRecipes.WOODCUTTER.get();
     }
 
     public static class WoodcutterSerializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<WoodcutterRecipe> {

@@ -18,9 +18,6 @@ repositories {
 }
 
 dependencies {
-    annotationProcessor fg.deobf("io.github.noeppi_noeppi.mods:LibX:${libx_version}")
-
-    implementation fg.deobf("io.github.noeppi_noeppi.mods:LibX:${libx_version}")
     compileOnly fg.deobf("mezz.jei:jei-${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${jei_version}")
 

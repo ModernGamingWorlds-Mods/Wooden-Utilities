@@ -8,5 +8,5 @@ import net.minecraft.world.item.Item;
 
 public class ModTags {
 
-    public static final TagKey<Item> WOODEN_PLATES = ItemTags.create(new ResourceLocation(WoodenUtilities.getInstance().modid, "wooden_plates"));
+    public static final TagKey<Item> WOODEN_PLATES = ItemTags.create(new ResourceLocation(WoodenUtilities.MOD_ID, "wooden_plates"));
 }

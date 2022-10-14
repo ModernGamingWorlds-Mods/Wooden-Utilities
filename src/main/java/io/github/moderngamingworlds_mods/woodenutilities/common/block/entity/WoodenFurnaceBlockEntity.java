@@ -1,6 +1,6 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.block.entity;
 
-import io.github.moderngamingworlds_mods.woodenutilities.common.config.ModConfig;
+import io.github.moderngamingworlds_mods.woodenutilities.common.config.WUCommonConfig;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,14 +18,13 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 public class WoodenFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
 
     private int catchOnFireTimer = 0;
 
     public WoodenFurnaceBlockEntity(BlockPos worldPosition, BlockState blockState) {
-        super(ModBlocks.WOODEN_FURNACE, worldPosition, blockState, RecipeType.SMELTING);
+        super(ModBlocks.WOODEN_FURNACE.get(), worldPosition, blockState, RecipeType.SMELTING);
     }
 
     public static void catchOnFireTick(Level level, BlockPos pos, BlockState state, WoodenFurnaceBlockEntity self) {
@@ -33,13 +32,13 @@ public class WoodenFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
             if (self.catchOnFireTimer > 0) {
                 self.catchOnFireTimer--;
             } else {
-                self.catchOnFireTimer = ModConfig.WoodenFurnace.tryCatchOnFireTimeCycle;
-                if (level.random.nextDouble() < ModConfig.WoodenFurnace.chanceOfCatchingFire) {
+                self.catchOnFireTimer = WUCommonConfig.INSTANCE.furnaceTryCatchOnFireInterval.get();
+                if (level.random.nextDouble() < WUCommonConfig.INSTANCE.furnaceChanceOfCatchingFire.get()) {
                     var availableSpots = Arrays.stream(Direction.values())
                             .filter(dir -> level.getBlockState(pos.relative(dir)).isAir()
                                     && !level.getBlockState(pos.relative(dir).below()).isAir())
                             .map(pos::relative)
-                            .collect(Collectors.toList());
+                            .toList();
 
                     if (!availableSpots.isEmpty()) {
                         var randomPosInArea = availableSpots.size() == 1 ? availableSpots.get(0)

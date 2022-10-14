@@ -16,9 +16,9 @@ import java.util.function.Consumer;
 
 public class WoodcutterRecipeBuilder implements FinishedRecipe {
 
-    private ResourceLocation loc;
-    private List<String> requiredMods = new ArrayList<>();
-    private List<String> ingredients = new ArrayList<>();
+    private final ResourceLocation loc;
+    private final List<String> requiredMods = new ArrayList<>();
+    private final List<String> ingredients = new ArrayList<>();
     private String result;
     private int count = 1;
 
@@ -85,7 +85,7 @@ public class WoodcutterRecipeBuilder implements FinishedRecipe {
 
     @Override
     public RecipeSerializer<?> getType() {
-        return ModRecipes.WOODCUTTER_SERIALIZER;
+        return ModRecipes.WOODCUTTER_SERIALIZER.get();
     }
 
     @Nullable

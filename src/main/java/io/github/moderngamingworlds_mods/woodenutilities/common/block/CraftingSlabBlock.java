@@ -1,12 +1,8 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.block;
 
-import com.google.common.collect.ImmutableSet;
-import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
-import io.github.noeppi_noeppi.libx.mod.registration.Registerable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -16,8 +12,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.CraftingMenu;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
@@ -25,16 +19,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nonnull;
-import java.util.Set;
 
-public class CraftingSlabBlock extends SlabBlock implements Registerable {
-
-    private final Item item;
+public class CraftingSlabBlock extends SlabBlock {
 
     public CraftingSlabBlock() {
         super(Properties.copy(Blocks.OAK_SLAB));
-        //noinspection ConstantConditions
-        this.item = new BlockItem(this, new Item.Properties().tab(WoodenUtilities.getInstance().tab));
     }
 
     @SuppressWarnings("deprecation")
@@ -65,10 +54,5 @@ public class CraftingSlabBlock extends SlabBlock implements Registerable {
                 };
             }
         };
-    }
-
-    @Override
-    public Set<Object> getAdditionalRegisters(ResourceLocation id) {
-        return ImmutableSet.of(this.item);
     }
 }

@@ -16,7 +16,7 @@ public class TakeFuncOutSlot extends Slot {
         this.onTake = onTake;
     }
 
-    public boolean mayPlace(ItemStack p_40362_) {
+    public boolean mayPlace(ItemStack stack) {
         return false;
     }
 

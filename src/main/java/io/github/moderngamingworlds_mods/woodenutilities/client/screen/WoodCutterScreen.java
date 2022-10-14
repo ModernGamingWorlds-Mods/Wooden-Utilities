@@ -20,7 +20,7 @@ import java.util.List;
 
 public class WoodCutterScreen extends AbstractContainerScreen<WoodCutterMenu> {
 
-    private static final ResourceLocation BACK = new ResourceLocation(WoodenUtilities.getInstance().modid, "textures/gui/woodcutter.png");
+    private static final ResourceLocation BACK = new ResourceLocation(WoodenUtilities.MOD_ID, "textures/gui/woodcutter.png");
 
     private float scrollOffs;
     private boolean scrolling;

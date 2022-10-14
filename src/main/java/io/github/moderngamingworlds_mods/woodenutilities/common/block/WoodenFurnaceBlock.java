@@ -1,23 +1,17 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.block;
 
-import com.google.common.collect.ImmutableSet;
-import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.entity.WoodenFurnaceBlockEntity;
-import io.github.moderngamingworlds_mods.woodenutilities.common.config.ModConfig;
+import io.github.moderngamingworlds_mods.woodenutilities.common.config.WUCommonConfig;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
-import io.github.noeppi_noeppi.libx.mod.registration.Registerable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractFurnaceBlock;
@@ -31,24 +25,15 @@ import net.minecraft.world.level.material.Material;
 import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
-import java.util.Objects;
 import java.util.Random;
-import java.util.Set;
 
-public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Registerable {
+public class WoodenFurnaceBlock extends AbstractFurnaceBlock {
 
-    private final Item item;
     private final WoodType type;
 
     public WoodenFurnaceBlock(WoodType type) {
         super(Properties.of(Material.WOOD).lightLevel(state -> state.getValue(LIT) ? 13 : 0));
-        this.item = new BlockItem(this, new Item.Properties().tab(Objects.requireNonNull(WoodenUtilities.getInstance().tab)));
         this.type = type;
-    }
-
-    @Override
-    public Set<Object> getAdditionalRegisters(ResourceLocation id) {
-        return ImmutableSet.of(this.item);
     }
 
     @Override
@@ -62,12 +47,12 @@ public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Register
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return ModBlocks.WOODEN_FURNACE.create(pos, state);
+        return ModBlocks.WOODEN_FURNACE.get().create(pos, state);
     }
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level levelIn, BlockState stateIn, BlockEntityType<T> blockEntityType) {
-        return levelIn.isClientSide ? null : createTickerHelper(blockEntityType, ModBlocks.WOODEN_FURNACE, (level, pos, state, blockEntity) -> {
+        return levelIn.isClientSide ? null : createTickerHelper(blockEntityType, ModBlocks.WOODEN_FURNACE.get(), (level, pos, state, blockEntity) -> {
             AbstractFurnaceBlockEntity.serverTick(level, pos, state, blockEntity);
             WoodenFurnaceBlockEntity.catchOnFireTick(level, pos, state, blockEntity);
         });
@@ -97,7 +82,7 @@ public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements Register
 
     @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return ModConfig.catchOnFireProbability;
+        return WUCommonConfig.INSTANCE.catchOnFireProbability.get();
     }
 
     public WoodType type() {

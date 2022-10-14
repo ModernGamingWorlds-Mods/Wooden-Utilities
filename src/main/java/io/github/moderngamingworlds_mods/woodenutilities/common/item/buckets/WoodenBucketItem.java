@@ -1,7 +1,7 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.item.buckets;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
-import io.github.moderngamingworlds_mods.woodenutilities.common.config.ModConfig;
+import io.github.moderngamingworlds_mods.woodenutilities.common.config.WUCommonConfig;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModItems;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -31,19 +31,22 @@ import net.minecraft.world.phys.HitResult;
 import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
+//TODO: rework completely, this doesn't support modded fluids and stores player-specific state on a singleton
 @SuppressWarnings("deprecation")
 public class WoodenBucketItem extends BucketItem {
 
     private boolean hasCooldown = false;
 
     public WoodenBucketItem(Supplier<Fluid> inFluid) {
-        //noinspection ConstantConditions
-        super(inFluid, new Properties().tab(WoodenUtilities.getInstance().tab).stacksTo(inFluid == Fluids.EMPTY ? 16 : 1));
+        super(inFluid, new Properties()
+                .tab(WoodenUtilities.CREATIVE_TAB)
+                .stacksTo(inFluid == Fluids.EMPTY ? 16 : 1)
+        );
     }
 
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
-        return new ItemStack(ModItems.woodenBucket);
+        return new ItemStack(ModItems.WOODEN_BUCKET.get());
     }
 
     @Override
@@ -54,10 +57,10 @@ public class WoodenBucketItem extends BucketItem {
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int itemSlot, boolean isSelected) {
         if (!level.isClientSide) {
-            if (this.getFluid().getAttributes().getTemperature() >= ModConfig.WoodenBucket.maxTemperature
+            if (this.getFluid().getAttributes().getTemperature() >= WUCommonConfig.INSTANCE.bucketMaxTemperature.get()
                     && entity instanceof Player player) {
                 if (!this.hasCooldown) {
-                    player.getCooldowns().addCooldown(this, ModConfig.WoodenBucket.destroyTime);
+                    player.getCooldowns().addCooldown(this, WUCommonConfig.INSTANCE.bucketDestroyTime.get());
                     this.hasCooldown = true;
                 }
                 if (!player.getCooldowns().isOnCooldown(this)) {
@@ -106,9 +109,7 @@ public class WoodenBucketItem extends BucketItem {
 
                 if (!pickupItem.isEmpty()) {
                     player.awardStat(Stats.ITEM_USED.get(this));
-                    bucketpickup.getPickupSound().ifPresent((soundEvent) -> {
-                        player.playSound(soundEvent, 1, 1);
-                    });
+                    bucketpickup.getPickupSound().ifPresent(soundEvent -> player.playSound(soundEvent, 1, 1));
                     level.gameEvent(player, GameEvent.FLUID_PICKUP, pos);
 
                     // [START] custom insertion
@@ -144,7 +145,7 @@ public class WoodenBucketItem extends BucketItem {
 
     @Nonnull
     public static ItemStack getEmptySuccessItem(ItemStack stack, Player player) {
-        return !player.getAbilities().instabuild ? new ItemStack(ModItems.woodenBucket) : stack;
+        return !player.getAbilities().instabuild ? new ItemStack(ModItems.WOODEN_BUCKET.get()) : stack;
     }
 
     private boolean canBlockContainFluid(Level level, BlockPos pos, BlockState state) {

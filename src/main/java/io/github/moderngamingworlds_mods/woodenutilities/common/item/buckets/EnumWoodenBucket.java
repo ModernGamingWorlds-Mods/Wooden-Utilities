@@ -6,47 +6,44 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.function.Supplier;
 
 public enum EnumWoodenBucket {
 
-    EMPTY(Fluids.EMPTY),
-    LAVA(Fluids.LAVA),
-    WATER(Fluids.WATER);
+    EMPTY(() -> Fluids.EMPTY, ModItems.WOODEN_BUCKET),
+    LAVA (() -> Fluids.LAVA, ModItems.LAVA_WOODEN_BUCKET),
+    WATER(() -> Fluids.WATER, ModItems.WATER_WOODEN_BUCKET);
 
-    private final Fluid withFluid;
+    private static final Map<Fluid, EnumWoodenBucket> BY_FLUID = new IdentityHashMap<>();
 
-    EnumWoodenBucket(Fluid withFluid) {
+    private final Supplier<Fluid> withFluid;
+    private final Supplier<Item> item;
+
+    EnumWoodenBucket(Supplier<Fluid> withFluid, Supplier<Item> item) {
         this.withFluid = withFluid;
-    }
-
-    public static List<EnumWoodenBucket> asList() {
-        return Arrays.asList(values());
+        this.item = item;
     }
 
     public static ItemStack getBucket(Fluid fluid) {
-        return asList().stream()
-                .filter(bucket -> bucket.getFluid().isSame(fluid))
+        return Optional.ofNullable(BY_FLUID.get(fluid))
                 .map(bucket -> new ItemStack(bucket.getItem()))
-                .findFirst().orElseThrow(RuntimeException::new);
+                .orElseThrow(RuntimeException::new);
     }
 
     public Item getItem() {
-        switch (this) {
-            case WATER -> {
-                return ModItems.waterWoodenBucket;
-            }
-            case LAVA -> {
-                return ModItems.lavaWoodenBucket;
-            }
-            default -> {
-                return ModItems.woodenBucket;
-            }
-        }
+        return item.get();
     }
 
     public Fluid getFluid() {
-        return this.withFluid;
+        return this.withFluid.get();
+    }
+
+
+
+    public static void setup() {
+        for (EnumWoodenBucket bucket : values()) {
+            BY_FLUID.put(bucket.getFluid(), bucket);
+        }
     }
 }
