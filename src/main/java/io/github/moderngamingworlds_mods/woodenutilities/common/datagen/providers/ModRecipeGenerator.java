@@ -1,18 +1,21 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.datagen.providers;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
-import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
-import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModItems;
-import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModTags;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.*;
+import io.github.moderngamingworlds_mods.woodenutilities.common.util.WoodItemSet;
+import io.github.moderngamingworlds_mods.woodenutilities.common.util.WoodTypeCondition;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.crafting.ConditionalRecipe;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Objects;
 import java.util.function.Consumer;
@@ -41,36 +44,29 @@ public class ModRecipeGenerator extends RecipeProvider {
                 .unlockedBy("has_plates", has(ModTags.WOODEN_PLATES))
                 .save(consumer);
 
-        this.plateRecipe(consumer, ModItems.OAK_PLATE.get(), Items.OAK_PLANKS);
-        this.plateRecipe(consumer, ModItems.SPRUCE_PLATE.get(), Items.SPRUCE_PLANKS);
-        this.plateRecipe(consumer, ModItems.BIRCH_PLATE.get(), Items.BIRCH_PLANKS);
-        this.plateRecipe(consumer, ModItems.JUNGLE_PLATE.get(), Items.JUNGLE_PLANKS);
-        this.plateRecipe(consumer, ModItems.ACACIA_PLATE.get(), Items.ACACIA_PLANKS);
-        this.plateRecipe(consumer, ModItems.DARK_OAK_PLATE.get(), Items.DARK_OAK_PLANKS);
-        this.plateRecipe(consumer, ModItems.CRIMSON_PLATE.get(), Items.CRIMSON_PLANKS);
-        this.plateRecipe(consumer, ModItems.WARPED_PLATE.get(), Items.WARPED_PLANKS);
+        bucketRecipe(consumer, ModItems.WOODEN_BUCKET.get());
 
-        this.bucketRecipe(consumer, ModItems.WOODEN_BUCKET.get());
-
-        this.woodenFurnace(consumer, ModBlocks.OAK_FURNACE.get(), Items.OAK_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.SPRUCE_FURNACE.get(), Items.SPRUCE_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.BIRCH_FURNACE.get(), Items.BIRCH_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.JUNGLE_FURNACE.get(), Items.JUNGLE_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.ACACIA_FURNACE.get(), Items.ACACIA_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.DARK_OAK_FURNACE.get(), Items.DARK_OAK_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.CRIMSON_FURNACE.get(), Items.CRIMSON_PLANKS, ModTags.WOODEN_PLATES);
-        this.woodenFurnace(consumer, ModBlocks.WARPED_FURNACE.get(), Items.WARPED_PLANKS, ModTags.WOODEN_PLATES);
+        for (ModWoodType type : ModWoodType.values()) {
+            plateRecipe(consumer, type);
+            woodenFurnace(consumer, type, ModTags.WOODEN_PLATES);
+        }
     }
 
-    private void plateRecipe(Consumer<FinishedRecipe> consumer, Item plate, ItemLike material) {
-        ShapelessRecipeBuilder.shapeless(plate)
-                .requires(material)
-                .requires(ModItems.WOODEN_SHEARS.get())
-                .unlockedBy("has_" + Objects.requireNonNull(material.asItem().getRegistryName()).getPath(), has(material))
-                .save(consumer);
+    private static void plateRecipe(Consumer<FinishedRecipe> consumer, ModWoodType type) {
+        ItemLike plate = ModItems.PLATES.getRaw(type);
+        WoodItemSet material = type.getPlanksItem();
+
+        wrapInCondition(
+                ShapelessRecipeBuilder.shapeless(plate)
+                        .requires(material.getIngredient())
+                        .requires(ModItems.WOODEN_SHEARS.get())
+                        .unlockedBy("has_" + type.getName() + "_planks", has(material)),
+                consumer,
+                type
+        );
     }
 
-    private void bucketRecipe(Consumer<FinishedRecipe> consumer, Item bucket) {
+    private static void bucketRecipe(Consumer<FinishedRecipe> consumer, Item bucket) {
         ShapedRecipeBuilder.shaped(bucket)
                 .define('#', ItemTags.PLANKS)
                 .pattern("# #")
@@ -80,20 +76,54 @@ public class ModRecipeGenerator extends RecipeProvider {
                 .save(consumer);
     }
 
-    private void woodenFurnace(Consumer<FinishedRecipe> consumer, ItemLike furnace, ItemLike planks, TagKey<Item> plate) {
-        //noinspection ConstantConditions
-        ShapedRecipeBuilder.shaped(furnace)
-                .pattern("TTT")
-                .pattern("TPT")
-                .pattern("TTT")
-                .define('T', planks)
-                .define('P', plate)
-                .unlockedBy("hasPlanks", has(planks))
-                .unlockedBy("hasPlate", has(plate))
-                .save(consumer, modLoc("wooden_furnace/" + furnace.asItem().getRegistryName().getPath()));
+    private static void woodenFurnace(Consumer<FinishedRecipe> consumer, ModWoodType type, TagKey<Item> plate) {
+        RegistryObject<Block> furnace = ModBlocks.FURNACES.get(type);
+        WoodItemSet planks = type.getPlanksItem();
+
+        wrapInCondition(
+                ShapedRecipeBuilder.shaped(furnace.get())
+                        .pattern("TTT")
+                        .pattern("TPT")
+                        .pattern("TTT")
+                        .define('T', planks.getIngredient())
+                        .define('P', plate)
+                        .unlockedBy("hasPlanks", has(planks))
+                        .unlockedBy("hasPlate", has(plate)),
+                consumer,
+                modLoc("wooden_furnace/" + furnace.getId().getPath()),
+                type
+        );
     }
 
-    private ResourceLocation modLoc(String path) {
+    private static void wrapInCondition(RecipeBuilder builder, Consumer<FinishedRecipe> consumer, ModWoodType type) {
+        wrapInCondition(builder, consumer, RecipeBuilder.getDefaultRecipeId(builder.getResult()), type);
+    }
+
+    private static void wrapInCondition(RecipeBuilder builder, Consumer<FinishedRecipe> consumer, ResourceLocation name, ModWoodType type) {
+        if (type.isVanilla()) {
+            builder.save(consumer, name);
+            return;
+        }
+
+        FinishedRecipe[] recipe = new FinishedRecipe[1];
+        builder.save(finishedRecipe -> recipe[0] = finishedRecipe);
+
+        ConditionalRecipe.builder()
+                .addCondition(new WoodTypeCondition(type))
+                .addRecipe(recipe[0])
+                .generateAdvancement(recipe[0].getAdvancementId())
+                .build(consumer, name);
+    }
+
+    private static InventoryChangeTrigger.TriggerInstance has(WoodItemSet set) {
+        return set.getTagKey() != null ? has(set.getTagKey()) : has(set.getMainItem());
+    }
+
+    private static ResourceLocation modLoc(String path) {
         return new ResourceLocation(WoodenUtilities.MOD_ID, path);
+    }
+
+    private static String name(ItemLike item) {
+        return Objects.requireNonNull(item.asItem().getRegistryName()).getPath();
     }
 }

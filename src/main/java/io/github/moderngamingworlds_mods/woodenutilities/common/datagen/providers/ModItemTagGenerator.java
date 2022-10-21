@@ -1,13 +1,18 @@
 package io.github.moderngamingworlds_mods.woodenutilities.common.datagen.providers;
 
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
-import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModItems;
-import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModTags;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.*;
+import io.github.moderngamingworlds_mods.woodenutilities.common.util.WoodItemSet;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class ModItemTagGenerator extends ItemTagsProvider {
 
@@ -20,14 +25,19 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(Tags.Items.SHEARS)
                 .add(ModItems.WOODEN_SHEARS.get());
 
-        this.tag(ModTags.WOODEN_PLATES)
-                .add(ModItems.ACACIA_PLATE.get())
-                .add(ModItems.BIRCH_PLATE.get())
-                .add(ModItems.CRIMSON_PLATE.get())
-                .add(ModItems.DARK_OAK_PLATE.get())
-                .add(ModItems.JUNGLE_PLATE.get())
-                .add(ModItems.OAK_PLATE.get())
-                .add(ModItems.SPRUCE_PLATE.get())
-                .add(ModItems.WARPED_PLATE.get());
+        this.tag(ModTags.WOODEN_PLATES).add(
+                ModItems.PLATES.getAll()
+                        .stream()
+                        .map(RegistryObject::get)
+                        .toArray(Item[]::new)
+        );
+
+        Set<String> encountered = new HashSet<>();
+        for (ModWoodType type : ModWoodType.values()) {
+            WoodItemSet set = type.getPlanksItem();
+            if (set.getTagKey() != null && encountered.add(type.getSharedName())) {
+                set.fillTag(this.tag(set.getTagKey()));
+            }
+        }
     }
 }

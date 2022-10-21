@@ -6,12 +6,13 @@ import io.github.moderngamingworlds_mods.woodenutilities.common.block.Woodcutter
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.WoodenFurnaceBlock;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.WoodenTntBlock;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.entity.WoodenFurnaceBlockEntity;
+import io.github.moderngamingworlds_mods.woodenutilities.common.item.WoodBlockItem;
+import io.github.moderngamingworlds_mods.woodenutilities.common.util.WoodTypeObjectMap;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.*;
 
@@ -29,22 +30,30 @@ public class ModBlocks {
     public static final RegistryObject<Block> WOODEN_TNT = block("wooden_tnt", WoodenTntBlock::new);
     public static final RegistryObject<Block> WOODCUTTER = block("woodcutter", WoodcutterBlock::new);
 
-    public static final RegistryObject<Block> OAK_FURNACE = block("oak_furnace", () -> new WoodenFurnaceBlock(WoodType.OAK));
-    public static final RegistryObject<Block> SPRUCE_FURNACE = block("spruce_furnace", () -> new WoodenFurnaceBlock(WoodType.SPRUCE));
-    public static final RegistryObject<Block> BIRCH_FURNACE = block("birch_furnace", () -> new WoodenFurnaceBlock(WoodType.BIRCH));
-    public static final RegistryObject<Block> ACACIA_FURNACE = block("acacia_furnace", () -> new WoodenFurnaceBlock(WoodType.ACACIA));
-    public static final RegistryObject<Block> JUNGLE_FURNACE = block("jungle_furnace", () -> new WoodenFurnaceBlock(WoodType.JUNGLE));
-    public static final RegistryObject<Block> DARK_OAK_FURNACE = block("dark_oak_furnace", () -> new WoodenFurnaceBlock(WoodType.DARK_OAK));
-    public static final RegistryObject<Block> CRIMSON_FURNACE = block("crimson_furnace", () -> new WoodenFurnaceBlock(WoodType.CRIMSON));
-    public static final RegistryObject<Block> WARPED_FURNACE = block("warped_furnace", () -> new WoodenFurnaceBlock(WoodType.WARPED));
+    public static final WoodTypeObjectMap<Block> FURNACES = woodBlocks("furnace", WoodenFurnaceBlock::new);
 
     public static final RegistryObject<BlockEntityType<WoodenFurnaceBlockEntity>> WOODEN_FURNACE = blockEntity(
             "wooden_furnace",
             WoodenFurnaceBlockEntity::new,
-            List.of(OAK_FURNACE, SPRUCE_FURNACE, BIRCH_FURNACE, ACACIA_FURNACE, JUNGLE_FURNACE, DARK_OAK_FURNACE, CRIMSON_FURNACE, WARPED_FURNACE)
+            FURNACES.getAll()
     );
 
 
+
+    private static WoodTypeObjectMap<Block> woodBlocks(String nameSuffix, Supplier<Block> factory) {
+        return woodBlocks(nameSuffix, type -> factory.get());
+    }
+
+    private static WoodTypeObjectMap<Block> woodBlocks(String nameSuffix, Function<ModWoodType, Block> factory) {
+        Map<ModWoodType, RegistryObject<Block>> map = new EnumMap<>(ModWoodType.class);
+        for (ModWoodType type : ModWoodType.values()) {
+            map.put(
+                    type,
+                    block(type.getName() + "_" + nameSuffix, () -> factory.apply(type), block -> new WoodBlockItem(type, block))
+            );
+        }
+        return new WoodTypeObjectMap<>(map);
+    }
 
     private static RegistryObject<Block> block(String name, Supplier<Block> blockFactory) {
         return block(name, blockFactory, block -> new BlockItem(
@@ -60,7 +69,7 @@ public class ModBlocks {
     }
 
     private static <T extends BlockEntity> RegistryObject<BlockEntityType<T>> blockEntity(
-            String name, BlockEntityType.BlockEntitySupplier<T> beFactory, List<RegistryObject<Block>> allowedBlocks
+            String name, BlockEntityType.BlockEntitySupplier<T> beFactory, Collection<RegistryObject<Block>> allowedBlocks
     ) {
         //noinspection ConstantConditions
         return BLOCK_ENTITIES.register(

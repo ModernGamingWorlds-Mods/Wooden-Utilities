@@ -3,6 +3,8 @@ package io.github.moderngamingworlds_mods.woodenutilities.common.block;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.entity.WoodenFurnaceBlockEntity;
 import io.github.moderngamingworlds_mods.woodenutilities.common.config.WUCommonConfig;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModWoodType;
+import io.github.moderngamingworlds_mods.woodenutilities.common.util.IWoodenObject;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -20,18 +22,17 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class WoodenFurnaceBlock extends AbstractFurnaceBlock {
+public class WoodenFurnaceBlock extends AbstractFurnaceBlock implements IWoodenObject {
 
-    private final WoodType type;
+    private final ModWoodType type;
 
-    public WoodenFurnaceBlock(WoodType type) {
+    public WoodenFurnaceBlock(ModWoodType type) {
         super(Properties.of(Material.WOOD).lightLevel(state -> state.getValue(LIT) ? 13 : 0));
         this.type = type;
     }
@@ -85,7 +86,8 @@ public class WoodenFurnaceBlock extends AbstractFurnaceBlock {
         return WUCommonConfig.INSTANCE.catchOnFireProbability.get();
     }
 
-    public WoodType type() {
+    @Override
+    public ModWoodType getType() {
         return this.type;
     }
 }

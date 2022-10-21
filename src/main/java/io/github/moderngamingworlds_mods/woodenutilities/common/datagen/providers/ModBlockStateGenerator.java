@@ -4,13 +4,13 @@ import com.google.common.collect.Sets;
 import io.github.moderngamingworlds_mods.woodenutilities.WoodenUtilities;
 import io.github.moderngamingworlds_mods.woodenutilities.common.block.WoodenFurnaceBlock;
 import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModBlocks;
+import io.github.moderngamingworlds_mods.woodenutilities.common.init.ModWoodType;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -89,8 +89,9 @@ public class ModBlockStateGenerator extends BlockStateProvider {
 
     private void furnaceBlock(ResourceLocation id, WoodenFurnaceBlock block) {
         this.horizontalBlock(block, state -> {
-            WoodType type = block.type();
-            ResourceLocation side = this.mcLoc("block/" + type.name() + "_planks");
+            ModWoodType type = block.getType();
+            ResourceLocation side = this.mcLoc("block/" + type.getName() + "_planks");
+
             if (state.getValue(BlockStateProperties.LIT)) {
                 return this.models().orientable(id.getPath() + "_on", side,
                         this.modLoc("block/" + id.getPath() + "_front_on"), side);
