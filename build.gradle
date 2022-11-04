@@ -18,8 +18,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly fg.deobf("mezz.jei:jei-${jei_version}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${jei_version}")
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}"))
+    runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
 
     implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     implementation curse.mod(245211, top_fileid as int)
