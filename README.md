@@ -2,7 +2,7 @@
 
 [discordImg]: https://img.shields.io/discord/808837174387671090?color=7289DA&label=Modern%27s%20Place&style=flat-square
 
-[discordLink]: https://discord.gg/u7hZdEqg86
+[discordLink]: https://discord.gg/ATdtPejdJ8
 
 [curseImg]: http://cf.way2muchnoise.eu/409871.svg
 
