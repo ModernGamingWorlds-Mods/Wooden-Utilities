@@ -3,16 +3,20 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.57'
+    id 'net.neoforged.gradle.userdev' version '7.0.71'
 }
 
 version = mod_version
 group = mod_group_id
 
 repositories {
-    mavenLocal()
-    maven { url = "https://minecraft.curseforge.com/api/maven/"}
-    maven { url = "https://www.cursemaven.com"}
+    maven {
+        name = 'CurseMaven'
+        url = 'https://www.cursemaven.com'
+        content {
+            includeGroup('curse.maven')
+        }
+    }
     maven {
         name = "Shedaniel's maven"
         url = 'https://maven.shedaniel.me/'
@@ -65,7 +69,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation "net.neoforged:neoforge:${neo_version}"
+    implementation("net.neoforged:neoforge:${neo_version}")
 
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
