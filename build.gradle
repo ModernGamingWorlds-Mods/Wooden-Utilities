@@ -85,8 +85,11 @@ dependencies {
     compileOnly ("me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}")
     compileOnly ("me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}")
 
-    //Jade Support
+    //Curios Support
     implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
+
+    //Jade Support
+    implementation "curse.maven:jade-324717:4980188"
 }
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
