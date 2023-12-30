@@ -18,6 +18,9 @@ repositories {
         }
     }
     maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven {
         name = "Shedaniel's maven"
         url = 'https://maven.shedaniel.me/'
         content {
@@ -78,9 +81,12 @@ dependencies {
     // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
 
     // rei support
-    compileOnly("me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}")
-    compileOnly("me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}")
-    compileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}")
+    runtimeOnly ("me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}")
+    compileOnly ("me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}")
+    compileOnly ("me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}")
+
+    //Jade Support
+    implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
 }
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
