@@ -1,4 +1,1 @@
-- Added Modrinth & Curseforge Publshing Support
-- Added changelog.md
-- Updated NeoForge from 7.0.71 to 7.0.72
-- Updated NeoForge Version to 20.4.64-beta
+- Updated NeoForge Version to 20.4.69-beta
