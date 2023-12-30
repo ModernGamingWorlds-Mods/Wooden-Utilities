@@ -3,7 +3,9 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.71'
+    id 'net.neoforged.gradle.userdev' version '7.0.72'
+    id 'net.darkhax.curseforgegradle' version '1.1.17'
+    id 'com.modrinth.minotaur' version "2.+"
 }
 
 version = mod_version
@@ -47,6 +49,8 @@ runs {
 
         systemProperty 'forge.logging.console.level', 'debug'
 
+        jvmArgument '-Xmx6G'
+
         modSource project.sourceSets.main
     }
 
@@ -74,8 +78,6 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation("net.neoforged:neoforge:${neo_version}")
 
-    // Example mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
     // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
     // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
@@ -85,7 +87,7 @@ dependencies {
     compileOnly ("me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}")
     compileOnly ("me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}")
 
-    //Curios Support
+    //  Curios Support
     implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}+${minecraft_version}"
 
     //Jade Support
@@ -110,6 +112,44 @@ publishing {
     publications {
         register('mavenJava', MavenPublication) {
             from components.java
+        }
+    }
+
+    if (System.getenv().CURSEFORGE_KEY) {
+        task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+            apiToken = System.getenv().CURSEFORGE_KEY
+
+            def mainFile = upload(project.curseforge_id, jar)
+            mainFile.releaseType = 'alpha'
+            mainFile.addGameVersion "NeoForge"
+            mainFile.addGameVersion "${minecraft_version}"
+            mainFile.addGameVersion "Java 17"
+
+            mainFile.changelog = file("$project.rootDir/changelog.md")
+            mainFile.changelogType = 'markdown'
+
+            mainFile.addOptional("curios", "roughly-enough-items")
+        }
+    }
+
+    if (System.getenv().MODRINTH_KEY) {
+        modrinth {
+            token = System.getenv().MODRINTH_KEY
+            projectId = project.modrinth_id
+            versionType = "alpha"
+            versionName = "${mod_name} ${minecraft_version}"
+            versionNumber = project.version
+            uploadFile = jar
+            changelog = file("$project.rootDir/changelog.md").text
+            gameVersions = ["${minecraft_version}"]
+            loaders = ["neoforge"]
+
+            dependencies {
+//              optional.project "jei"
+                optional.project "curios"
+//              optional.project "patchouli"
+                optional.project "rei"
+            }
         }
     }
     repositories {
