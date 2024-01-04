@@ -1,1 +1,1 @@
-- Updated NeoForge Gradle Version to 7.0.80
+- Updated NeoForge Version to 20.4.76-Beta
