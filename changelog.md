@@ -1,1 +1,1 @@
-- Updated NeoForge Version to 20.4.77-Beta
+- Updated NeoForge Version to 20.4.80-Beta
