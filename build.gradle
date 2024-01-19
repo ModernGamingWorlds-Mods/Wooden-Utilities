@@ -31,8 +31,16 @@ repositories {
             includeGroup('me.shedaniel.cloth')
         }
     }
+    maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
 }
-
 
 base {
     archivesName = mod_id
@@ -78,9 +86,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation("net.neoforged:neoforge:${neo_version}")
 
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
-    // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
+    compileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
     // rei support
     runtimeOnly ("me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}")
