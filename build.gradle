@@ -86,11 +86,12 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation("net.neoforged:neoforge:${neo_version}")
 
-    compileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
-    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    // JEI Support
+    compileOnly ("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly ("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly ("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
-    // rei support
+    // REI Support
     runtimeOnly ("me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}")
     compileOnly ("me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}")
     compileOnly ("me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}")
