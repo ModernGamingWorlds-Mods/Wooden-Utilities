@@ -53,5 +53,5 @@ I have partnered with Bisect Hosting!!!
 </p>
 
   <p align="center">
-Use the Code "BedrockLegends", to save an additional 25% off your First purchase on Bisect Hosting.
+Use the Code "ModernGamingWorld", to save an additional 25% off your First purchase on Bisect Hosting.
 </p>
