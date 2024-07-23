@@ -42,10 +42,7 @@ This mod has a very neat feature where certain wood items in the game can be Fla
   <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_ModCompatibility.png">
 </p>
 
-- Iron Age Furniture
-- Engineer's Decor
-- Immersive Engineering
-- Macaw's Mods
+- Coming Soon
 
 <p align="center">
   <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_PromoCard.png">
