@@ -1,8 +1,0 @@
-{
-  "parent": "forge:item/bucket_drip",
-  "textures": {
-    "base": "woodenutilities:item/wooden_bucket"
-  },
-  "loader": "forge:bucket",
-  "fluid": "minecraft:lava"
-}

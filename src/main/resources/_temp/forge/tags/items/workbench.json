@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "woodenutilities:carpenter_workbench",
-    "woodenutilities:non_powered_fabrication_workbench",
-    "woodenutilities:powered_fabrication_workbench"
-  ]
-}

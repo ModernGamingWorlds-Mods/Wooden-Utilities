@@ -1,8 +1,0 @@
-{
-  "type": "woodenutilities:woodcutter_serializer",
-  "ingredient": {
-    "item": "minecraft:oak_planks"
-  },
-  "result": "minecraft:oak_fence_gate",
-  "count": 1
-}

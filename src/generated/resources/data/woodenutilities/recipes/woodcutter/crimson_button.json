@@ -1,8 +1,0 @@
-{
-  "type": "woodenutilities:woodcutter_serializer",
-  "ingredient": {
-    "item": "minecraft:crimson_planks"
-  },
-  "result": "minecraft:crimson_button",
-  "count": 1
-}

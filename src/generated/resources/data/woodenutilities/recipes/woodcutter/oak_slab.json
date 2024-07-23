@@ -1,8 +1,0 @@
-{
-  "type": "woodenutilities:woodcutter_serializer",
-  "ingredient": {
-    "item": "minecraft:oak_planks"
-  },
-  "result": "minecraft:oak_slab",
-  "count": 2
-}

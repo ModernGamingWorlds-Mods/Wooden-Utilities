@@ -1,8 +1,0 @@
-{
-  "type": "woodenutilities:woodcutter_serializer",
-  "ingredient": {
-    "item": "minecraft:jungle_planks"
-  },
-  "result": "minecraft:jungle_fence",
-  "count": 1
-}

@@ -1,8 +1,0 @@
-{
-  "type": "woodenutilities:woodcutter_serializer",
-  "ingredient": {
-    "item": "minecraft:warped_planks"
-  },
-  "result": "minecraft:warped_door",
-  "count": 1
-}
