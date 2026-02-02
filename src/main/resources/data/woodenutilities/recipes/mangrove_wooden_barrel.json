@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:mangrove_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:mangrove_wooden_barrel"
+  }
+}

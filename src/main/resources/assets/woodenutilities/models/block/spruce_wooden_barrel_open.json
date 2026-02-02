@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel_open",
+  "textures": {
+    "particle": "minecraft:block/spruce_planks",
+    "side": "minecraft:block/spruce_planks",
+    "top": "minecraft:block/spruce_planks",
+    "bottom": "minecraft:block/spruce_planks"
+  }
+}

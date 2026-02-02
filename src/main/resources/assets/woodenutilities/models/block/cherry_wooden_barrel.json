@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "minecraft:block/cherry_planks",
+    "side": "minecraft:block/cherry_planks",
+    "top": "minecraft:block/cherry_planks",
+    "bottom": "minecraft:block/cherry_planks"
+  }
+}

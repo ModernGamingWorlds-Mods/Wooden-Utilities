@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "biomesoplenty"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PP"
+        ],
+        "key": {
+          "P": {
+            "item": "biomesoplenty:fir_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:fir_wooden_plate",
+          "count": 4
+        }
+      }
+    }
+  ]
+}

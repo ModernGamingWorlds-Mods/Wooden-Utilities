@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel_open",
+  "textures": {
+    "particle": "twilightforest:block/sorting_planks",
+    "side": "twilightforest:block/sorting_planks",
+    "top": "twilightforest:block/sorting_planks",
+    "bottom": "twilightforest:block/sorting_planks"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cauldron",
+  "textures": {
+    "particle": "twilightforest:block/sorting_planks",
+    "side": "twilightforest:block/sorting_planks",
+    "top": "twilightforest:block/sorting_planks",
+    "bottom": "twilightforest:block/sorting_planks",
+    "inside": "twilightforest:block/sorting_planks"
+  }
+}

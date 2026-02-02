@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cauldron",
+  "textures": {
+    "particle": "twilightforest:block/towerwood",
+    "side": "twilightforest:block/towerwood",
+    "top": "twilightforest:block/towerwood",
+    "bottom": "twilightforest:block/towerwood",
+    "inside": "twilightforest:block/towerwood"
+  }
+}

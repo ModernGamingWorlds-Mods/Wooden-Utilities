@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel_open",
+  "textures": {
+    "particle": "biomesoplenty:block/mahogany_planks",
+    "side": "biomesoplenty:block/mahogany_planks",
+    "top": "biomesoplenty:block/mahogany_planks",
+    "bottom": "biomesoplenty:block/mahogany_planks"
+  }
+}

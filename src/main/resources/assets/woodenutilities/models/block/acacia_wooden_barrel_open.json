@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel_open",
+  "textures": {
+    "particle": "minecraft:block/acacia_planks",
+    "side": "minecraft:block/acacia_planks",
+    "top": "minecraft:block/acacia_planks",
+    "bottom": "minecraft:block/acacia_planks"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "biomesoplenty:block/dead_planks",
+    "side": "biomesoplenty:block/dead_planks",
+    "top": "biomesoplenty:block/dead_planks",
+    "bottom": "biomesoplenty:block/dead_planks"
+  }
+}
