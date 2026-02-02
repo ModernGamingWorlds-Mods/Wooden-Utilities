@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "minecraft:block/jungle_planks",
+    "side": "minecraft:block/jungle_planks",
+    "top": "minecraft:block/jungle_planks",
+    "bottom": "minecraft:block/jungle_planks"
+  }
+}

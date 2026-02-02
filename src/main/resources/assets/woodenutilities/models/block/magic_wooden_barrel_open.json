@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel_open",
+  "textures": {
+    "particle": "biomesoplenty:block/magic_planks",
+    "side": "biomesoplenty:block/magic_planks",
+    "top": "biomesoplenty:block/magic_planks",
+    "bottom": "biomesoplenty:block/magic_planks"
+  }
+}

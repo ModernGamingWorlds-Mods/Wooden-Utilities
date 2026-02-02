@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "aether"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PPP",
+          "P P",
+          "PPP"
+        ],
+        "key": {
+          "P": {
+            "item": "aether:skyroot_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:skyroot_wooden_barrel"
+        }
+      }
+    }
+  ]
+}

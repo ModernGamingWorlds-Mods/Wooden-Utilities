@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "twilightforest:block/time_planks",
+    "side": "twilightforest:block/time_planks",
+    "top": "twilightforest:block/time_planks",
+    "bottom": "twilightforest:block/time_planks"
+  }
+}

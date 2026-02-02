@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "biomesoplenty"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PPP",
+          "P P",
+          "PPP"
+        ],
+        "key": {
+          "P": {
+            "item": "biomesoplenty:umbran_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:umbran_wooden_barrel"
+        }
+      }
+    }
+  ]
+}

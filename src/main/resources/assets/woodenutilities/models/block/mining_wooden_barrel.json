@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "twilightforest:block/mining_planks",
+    "side": "twilightforest:block/mining_planks",
+    "top": "twilightforest:block/mining_planks",
+    "bottom": "twilightforest:block/mining_planks"
+  }
+}

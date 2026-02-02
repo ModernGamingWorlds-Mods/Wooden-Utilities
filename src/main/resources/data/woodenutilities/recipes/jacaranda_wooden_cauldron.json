@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "biomesoplenty"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "P P",
+          "P P",
+          "PPP"
+        ],
+        "key": {
+          "P": {
+            "item": "biomesoplenty:jacaranda_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:jacaranda_wooden_cauldron"
+        }
+      }
+    }
+  ]
+}

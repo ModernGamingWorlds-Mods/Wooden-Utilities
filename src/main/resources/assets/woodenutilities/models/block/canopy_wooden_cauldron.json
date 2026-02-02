@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cauldron",
+  "textures": {
+    "particle": "twilightforest:block/canopy_planks",
+    "side": "twilightforest:block/canopy_planks",
+    "top": "twilightforest:block/canopy_planks",
+    "bottom": "twilightforest:block/canopy_planks",
+    "inside": "twilightforest:block/canopy_planks"
+  }
+}
