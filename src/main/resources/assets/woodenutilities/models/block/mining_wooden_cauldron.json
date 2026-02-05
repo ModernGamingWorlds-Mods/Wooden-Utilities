@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/cauldron",
   "textures": {
-    "particle": "minecraft:block/spruce_planks",
-    "side": "minecraft:block/spruce_planks",
-    "top": "minecraft:block/spruce_planks",
-    "bottom": "minecraft:block/spruce_planks",
-    "inside": "minecraft:block/spruce_planks"
+    "particle": "twilightforest:block/mining_planks",
+    "side": "twilightforest:block/mining_planks",
+    "top": "twilightforest:block/mining_planks",
+    "bottom": "twilightforest:block/mining_planks",
+    "inside": "twilightforest:block/mining_planks"
   }
 }
