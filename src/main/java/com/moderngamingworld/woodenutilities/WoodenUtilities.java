@@ -21,7 +21,6 @@ public class WoodenUtilities {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
-
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
     }
