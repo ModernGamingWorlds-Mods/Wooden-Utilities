@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/water_cauldron_level1",
+  "textures": {
+    "particle": "biomesoplenty:block/maple_planks",
+    "side": "biomesoplenty:block/maple_planks",
+    "top": "biomesoplenty:block/maple_planks",
+    "bottom": "biomesoplenty:block/maple_planks",
+    "inside": "biomesoplenty:block/maple_planks"
+  }
+}
