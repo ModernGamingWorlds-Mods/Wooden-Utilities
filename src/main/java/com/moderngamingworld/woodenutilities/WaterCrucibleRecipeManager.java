@@ -54,14 +54,6 @@ public class WaterCrucibleRecipeManager extends SimpleJsonResourceReloadListener
         return recipes.stream().filter(recipe -> recipe.matches(stack, fluid)).findFirst();
     }
 
-    public static List<WaterCrucibleRecipe> getRecipes() {
-        return recipes;
-    }
-
-    public static List<WaterCrucibleRecipe> recipes() {
-        return recipes;
-    }
-
     public static ResourceLocation waterFluid() {
         return WATER;
     }

@@ -29,7 +29,7 @@ public class WoodenUtilitiesJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        registration.addRecipes(WaterCrucibleRecipeCategory.TYPE, WaterCrucibleRecipeManager.recipes());
+        registration.addRecipes(WaterCrucibleRecipeCategory.TYPE, WaterCrucibleRecipeManager.getRecipes());
     }
 
     @Override
