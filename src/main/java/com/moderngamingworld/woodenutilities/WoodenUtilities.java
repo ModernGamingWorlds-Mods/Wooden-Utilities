@@ -3,7 +3,6 @@ package com.moderngamingworld.woodenutilities;
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -17,7 +16,6 @@ public class WoodenUtilities {
     public static final String MOD_ID = "woodenutilities";
     private static final Logger LOGGER = LoggerFactory.getLogger(WoodenUtilities.class);
 
-    @SuppressWarnings("removal")
     public WoodenUtilities() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
@@ -25,8 +23,6 @@ public class WoodenUtilities {
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
-
-        MinecraftForge.EVENT_BUS.addListener(WaterCrucibleRecipeManager::onAddReloadListeners);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
