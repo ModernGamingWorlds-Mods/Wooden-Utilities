@@ -200,5 +200,6 @@
   "block.woodenutilities.sunroot_wooden_barrel": "Sunroot Wooden Barrel",
   "item.woodenutilities.sunroot_wooden_barrel": "Sunroot Wooden Barrel",
   "block.woodenutilities.skyroot_wooden_barrel": "Skyroot Wooden Barrel",
-  "item.woodenutilities.skyroot_wooden_barrel": "Skyroot Wooden Barrel"
+  "item.woodenutilities.skyroot_wooden_barrel": "Skyroot Wooden Barrel",
+  "jei.woodenutilities.category.water_crucible": "Water Crucible"
 }
