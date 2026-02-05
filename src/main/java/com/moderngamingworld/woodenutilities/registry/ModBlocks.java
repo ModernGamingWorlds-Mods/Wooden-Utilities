@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.CauldronInteraction;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.cauldron.CauldronInteraction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
