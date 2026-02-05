@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel_open",
   "textures": {
-    "particle": "twilightforest:block/twilight_oak_planks",
-    "side": "twilightforest:block/twilight_oak_planks",
-    "top": "twilightforest:block/twilight_oak_planks",
-    "bottom": "twilightforest:block/twilight_oak_planks"
+    "particle": "twilightforest:block/twilight_oak_wood",
+    "side": "twilightforest:block/twilight_oak_wood",
+    "top": "twilightforest:block/twilight_oak_wood",
+    "bottom": "twilightforest:block/twilight_oak_wood"
   }
 }
