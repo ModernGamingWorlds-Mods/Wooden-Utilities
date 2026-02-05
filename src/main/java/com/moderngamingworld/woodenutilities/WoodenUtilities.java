@@ -16,6 +16,7 @@ public class WoodenUtilities {
     public static final String MOD_ID = "woodenutilities";
     private static final Logger LOGGER = LoggerFactory.getLogger(WoodenUtilities.class);
 
+    @SuppressWarnings("removal")
     public WoodenUtilities() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
