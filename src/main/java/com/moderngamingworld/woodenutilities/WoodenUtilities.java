@@ -2,8 +2,20 @@ package com.moderngamingworld.woodenutilities;
 
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,12 +33,53 @@ public class WoodenUtilities {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
+        MinecraftForge.EVENT_BUS.addListener(this::onRightClickBlock);
+
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
         LOGGER.info("Wooden Utilities initialized.");
+    }
+
+    private void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        Level level = event.getLevel();
+        Player player = event.getEntity();
+        InteractionHand hand = event.getHand();
+        ItemStack heldItem = player.getItemInHand(hand);
+        BlockState state = level.getBlockState(event.getPos());
+
+        if (!(state.getBlock() instanceof WoodenCauldronBlock)) {
+            return;
+        }
+
+        if (!(heldItem.getItem() instanceof BucketItem bucketItem) || heldItem.getItem() == Items.BUCKET) {
+            return;
+        }
+
+        if (!bucketItem.getFluid().is(FluidTags.WATER)) {
+            event.setCanceled(true);
+            event.setCancellationResult(net.minecraft.world.InteractionResult.sidedSuccess(level.isClientSide));
+            return;
+        }
+
+        if (!level.isClientSide) {
+            if (!player.getAbilities().instabuild) {
+                heldItem.shrink(1);
+                ItemStack emptyBucket = new ItemStack(Items.BUCKET);
+                if (heldItem.isEmpty()) {
+                    player.setItemInHand(hand, emptyBucket);
+                } else if (!player.getInventory().add(emptyBucket)) {
+                    player.drop(emptyBucket, false);
+                }
+            }
+
+            level.playSound(null, event.getPos(), SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
+        }
+
+        event.setCanceled(true);
+        event.setCancellationResult(net.minecraft.world.InteractionResult.sidedSuccess(level.isClientSide));
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
