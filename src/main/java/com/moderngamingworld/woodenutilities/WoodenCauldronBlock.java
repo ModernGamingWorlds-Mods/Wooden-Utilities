@@ -24,25 +24,9 @@ public class WoodenCauldronBlock extends CauldronBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack heldItem = player.getItemInHand(hand);
-        if (heldItem.getItem() instanceof BucketItem bucketItem && heldItem.getItem() != Items.BUCKET) {
-            if (bucketItem.getFluid().is(FluidTags.WATER)) {
-                if (!level.isClientSide) {
-                    if (!player.getAbilities().instabuild) {
-                        heldItem.shrink(1);
-                        ItemStack emptyBucket = new ItemStack(Items.BUCKET);
-                        if (heldItem.isEmpty()) {
-                            player.setItemInHand(hand, emptyBucket);
-                        } else if (!player.getInventory().add(emptyBucket)) {
-                            player.drop(emptyBucket, false);
-                        }
-                    }
-
-                    level.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0F, 1.0F);
-                }
-
-                return InteractionResult.sidedSuccess(level.isClientSide);
-            }
-
+        if (heldItem.getItem() instanceof BucketItem
+            && heldItem.getItem() != Items.BUCKET
+            && heldItem.getItem() != Items.WATER_BUCKET) {
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
 
