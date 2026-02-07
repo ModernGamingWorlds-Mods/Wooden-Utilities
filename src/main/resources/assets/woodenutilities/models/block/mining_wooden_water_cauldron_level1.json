@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_level1",
+  "textures": {
+    "particle": "twilightforest:block/mining_planks",
+    "side": "twilightforest:block/mining_planks",
+    "top": "twilightforest:block/mining_planks",
+    "bottom": "twilightforest:block/mining_planks",
+    "inside": "twilightforest:block/mining_planks",
+    "content": "minecraft:block/water_still"
+  }
+}

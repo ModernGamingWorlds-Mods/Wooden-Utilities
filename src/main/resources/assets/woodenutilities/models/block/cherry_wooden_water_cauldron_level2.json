@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_level2",
+  "textures": {
+    "particle": "minecraft:block/cherry_planks",
+    "side": "minecraft:block/cherry_planks",
+    "top": "minecraft:block/cherry_planks",
+    "bottom": "minecraft:block/cherry_planks",
+    "inside": "minecraft:block/cherry_planks",
+    "content": "minecraft:block/water_still"
+  }
+}

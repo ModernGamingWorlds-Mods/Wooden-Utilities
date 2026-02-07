@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_level1",
+  "textures": {
+    "particle": "biomesoplenty:block/magic_planks",
+    "side": "biomesoplenty:block/magic_planks",
+    "top": "biomesoplenty:block/magic_planks",
+    "bottom": "biomesoplenty:block/magic_planks",
+    "inside": "biomesoplenty:block/magic_planks",
+    "content": "minecraft:block/water_still"
+  }
+}
