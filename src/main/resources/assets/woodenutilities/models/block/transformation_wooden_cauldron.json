@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/cauldron",
   "textures": {
-    "particle": "twilightforest:block/transformation_planks",
-    "side": "twilightforest:block/transformation_planks",
-    "top": "twilightforest:block/transformation_planks",
-    "bottom": "twilightforest:block/transformation_planks",
-    "inside": "twilightforest:block/transformation_planks"
+    "particle": "twilightforest:block/wood/planks/transwood/transwood_planks",
+    "side": "twilightforest:block/wood/planks/transwood/transwood_planks",
+    "top": "twilightforest:block/wood/planks/transwood/transwood_planks",
+    "bottom": "twilightforest:block/wood/planks/transwood/transwood_planks",
+    "inside": "twilightforest:block/wood/planks/transwood/transwood_planks"
   }
 }

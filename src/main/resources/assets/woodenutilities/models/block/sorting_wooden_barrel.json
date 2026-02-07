@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel",
   "textures": {
-    "particle": "twilightforest:block/sorting_planks",
-    "side": "twilightforest:block/sorting_planks",
-    "top": "twilightforest:block/sorting_planks",
-    "bottom": "twilightforest:block/sorting_planks"
+    "particle": "twilightforest:block/wood/planks/sortwood/sortwood_planks",
+    "side": "twilightforest:block/wood/planks/sortwood/sortwood_planks",
+    "top": "twilightforest:block/wood/planks/sortwood/sortwood_planks",
+    "bottom": "twilightforest:block/wood/planks/sortwood/sortwood_planks"
   }
 }
