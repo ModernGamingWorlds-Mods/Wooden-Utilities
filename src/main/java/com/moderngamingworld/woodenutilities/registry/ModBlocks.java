@@ -2,7 +2,6 @@ package com.moderngamingworld.woodenutilities.registry;
 
 import com.moderngamingworld.woodenutilities.WoodenCauldronBlock;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
-import com.moderngamingworld.woodenutilities.WoodenWaterCauldronBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BarrelBlock;
@@ -15,8 +14,6 @@ import net.minecraftforge.registries.RegistryObject;
 public final class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, WoodenUtilities.MOD_ID);
 
-    public static final RegistryObject<Block> WOODEN_WATER_CAULDRON = BLOCKS.register("wooden_water_cauldron",
-        () -> new WoodenWaterCauldronBlock(BlockBehaviour.Properties.copy(Blocks.WATER_CAULDRON), ModBlocks.WOODEN_CAULDRON));
     public static final RegistryObject<Block> WOODEN_CAULDRON = BLOCKS.register("wooden_cauldron",
         () -> new WoodenCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
     public static final RegistryObject<Block> OAK_WOODEN_CAULDRON = BLOCKS.register("oak_wooden_cauldron",
