@@ -92,8 +92,6 @@ public final class ModItems {
     public static final RegistryObject<Item> SKYROOT_WOODEN_PLATE = ITEMS.register("skyroot_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> WOODEN_CAULDRON = ITEMS.register("wooden_cauldron",
-        () -> new BlockItem(ModBlocks.WOODEN_CAULDRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> OAK_WOODEN_CAULDRON = ITEMS.register("oak_wooden_cauldron",
         () -> new BlockItem(ModBlocks.OAK_WOODEN_CAULDRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> SPRUCE_WOODEN_CAULDRON = ITEMS.register("spruce_wooden_cauldron",
