@@ -46,8 +46,6 @@ public final class ModBlocks {
         () -> new CauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
     public static final RegistryObject<Block> TIME_WOODEN_CAULDRON = BLOCKS.register("time_wooden_cauldron",
         () -> new CauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
-    public static final RegistryObject<Block> TRANSFORMATION_WOODEN_CAULDRON = BLOCKS.register("transformation_wooden_cauldron",
-        () -> new CauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
     public static final RegistryObject<Block> MINING_WOODEN_CAULDRON = BLOCKS.register("mining_wooden_cauldron",
         () -> new CauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
     public static final RegistryObject<Block> SORTING_WOODEN_CAULDRON = BLOCKS.register("sorting_wooden_cauldron",
