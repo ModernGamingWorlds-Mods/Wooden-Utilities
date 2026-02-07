@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel",
   "textures": {
-    "particle": "twilightforest:block/transformation_planks",
-    "side": "twilightforest:block/transformation_planks",
-    "top": "twilightforest:block/transformation_planks",
-    "bottom": "twilightforest:block/transformation_planks"
+    "particle": "twilightforest:block/transwood_planks",
+    "side": "twilightforest:block/transwood_planks",
+    "top": "twilightforest:block/transwood_planks",
+    "bottom": "twilightforest:block/transwood_planks"
   }
 }

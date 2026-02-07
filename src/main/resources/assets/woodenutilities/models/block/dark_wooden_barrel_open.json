@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel_open",
   "textures": {
-    "particle": "twilightforest:block/dark_planks",
-    "side": "twilightforest:block/dark_planks",
-    "top": "twilightforest:block/dark_planks",
-    "bottom": "twilightforest:block/dark_planks"
+    "particle": "twilightforest:block/darkwood_planks",
+    "side": "twilightforest:block/darkwood_planks",
+    "top": "twilightforest:block/darkwood_planks",
+    "bottom": "twilightforest:block/darkwood_planks"
   }
 }
