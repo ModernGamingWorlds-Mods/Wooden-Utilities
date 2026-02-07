@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel_open",
   "textures": {
-    "particle": "aether:block/skyroot_planks",
-    "side": "aether:block/skyroot_planks",
-    "top": "aether:block/skyroot_planks",
-    "bottom": "aether:block/skyroot_planks"
+    "particle": "aether:block/wood/planks/skyroot/skyroot_planks",
+    "side": "aether:block/wood/planks/skyroot/skyroot_planks",
+    "top": "aether:block/wood/planks/skyroot/skyroot_planks",
+    "bottom": "aether:block/wood/planks/skyroot/skyroot_planks"
   }
 }
