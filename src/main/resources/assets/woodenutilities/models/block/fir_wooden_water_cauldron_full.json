@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_full",
+  "textures": {
+    "particle": "biomesoplenty:block/fir_planks",
+    "side": "biomesoplenty:block/fir_planks",
+    "top": "biomesoplenty:block/fir_planks",
+    "bottom": "biomesoplenty:block/fir_planks",
+    "inside": "biomesoplenty:block/fir_planks",
+    "content": "minecraft:block/water_still"
+  }
+}

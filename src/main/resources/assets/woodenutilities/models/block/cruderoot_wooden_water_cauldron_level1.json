@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_level1",
+  "textures": {
+    "particle": "deep_aether:block/cruderoot_planks",
+    "side": "deep_aether:block/cruderoot_planks",
+    "top": "deep_aether:block/cruderoot_planks",
+    "bottom": "deep_aether:block/cruderoot_planks",
+    "inside": "deep_aether:block/cruderoot_planks",
+    "content": "minecraft:block/water_still"
+  }
+}

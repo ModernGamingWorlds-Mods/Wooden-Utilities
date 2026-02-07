@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_level1",
+  "textures": {
+    "particle": "biomesoplenty:block/empyreal_planks",
+    "side": "biomesoplenty:block/empyreal_planks",
+    "top": "biomesoplenty:block/empyreal_planks",
+    "bottom": "biomesoplenty:block/empyreal_planks",
+    "inside": "biomesoplenty:block/empyreal_planks",
+    "content": "minecraft:block/water_still"
+  }
+}
