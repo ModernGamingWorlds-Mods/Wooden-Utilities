@@ -86,7 +86,6 @@ public class WoodenUtilities {
             event.accept(ModItems.TWILIGHT_MANGROVE_WOODEN_CAULDRON);
             event.accept(ModItems.DARK_WOODEN_CAULDRON);
             event.accept(ModItems.TIME_WOODEN_CAULDRON);
-            event.accept(ModItems.TRANSFORMATION_WOODEN_CAULDRON);
             event.accept(ModItems.MINING_WOODEN_CAULDRON);
             event.accept(ModItems.SORTING_WOODEN_CAULDRON);
             event.accept(ModItems.TOWERWOOD_WOODEN_CAULDRON);

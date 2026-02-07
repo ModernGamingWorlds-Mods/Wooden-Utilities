@@ -124,8 +124,6 @@ public final class ModItems {
         () -> new BlockItem(ModBlocks.DARK_WOODEN_CAULDRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> TIME_WOODEN_CAULDRON = ITEMS.register("time_wooden_cauldron",
         () -> new BlockItem(ModBlocks.TIME_WOODEN_CAULDRON.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TRANSFORMATION_WOODEN_CAULDRON = ITEMS.register("transformation_wooden_cauldron",
-        () -> new BlockItem(ModBlocks.TRANSFORMATION_WOODEN_CAULDRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> MINING_WOODEN_CAULDRON = ITEMS.register("mining_wooden_cauldron",
         () -> new BlockItem(ModBlocks.MINING_WOODEN_CAULDRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> SORTING_WOODEN_CAULDRON = ITEMS.register("sorting_wooden_cauldron",
