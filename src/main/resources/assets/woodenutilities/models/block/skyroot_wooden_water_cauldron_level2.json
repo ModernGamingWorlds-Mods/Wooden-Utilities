@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_level2",
+  "textures": {
+    "particle": "aether:block/skyroot_planks",
+    "side": "aether:block/skyroot_planks",
+    "top": "aether:block/skyroot_planks",
+    "bottom": "aether:block/skyroot_planks",
+    "inside": "aether:block/skyroot_planks",
+    "content": "minecraft:block/water_still"
+  }
+}

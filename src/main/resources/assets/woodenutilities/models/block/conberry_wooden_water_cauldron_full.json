@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_full",
+  "textures": {
+    "particle": "deep_aether:block/conberry_planks",
+    "side": "deep_aether:block/conberry_planks",
+    "top": "deep_aether:block/conberry_planks",
+    "bottom": "deep_aether:block/conberry_planks",
+    "inside": "deep_aether:block/conberry_planks",
+    "content": "minecraft:block/water_still"
+  }
+}

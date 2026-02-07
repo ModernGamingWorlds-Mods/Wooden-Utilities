@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/template_cauldron_full",
+  "textures": {
+    "particle": "twilightforest:block/mangrove_planks",
+    "side": "twilightforest:block/mangrove_planks",
+    "top": "twilightforest:block/mangrove_planks",
+    "bottom": "twilightforest:block/mangrove_planks",
+    "inside": "twilightforest:block/mangrove_planks",
+    "content": "minecraft:block/water_still"
+  }
+}
