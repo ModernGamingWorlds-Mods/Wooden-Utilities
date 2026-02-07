@@ -21,9 +21,7 @@ public class WoodenCauldronBlock extends CauldronBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack heldItem = player.getItemInHand(hand);
-        if (heldItem.getItem() instanceof BucketItem
-            && heldItem.getItem() != Items.BUCKET
-            && heldItem.getItem() != Items.WATER_BUCKET) {
+        if (heldItem.getItem() instanceof BucketItem && heldItem.getItem() != Items.BUCKET) {
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
 
