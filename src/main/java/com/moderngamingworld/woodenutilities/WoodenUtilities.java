@@ -70,7 +70,6 @@ public class WoodenUtilities {
             event.accept(ModItems.CONBERRY_WOODEN_PLATE);
             event.accept(ModItems.SUNROOT_WOODEN_PLATE);
             event.accept(ModItems.SKYROOT_WOODEN_PLATE);
-            event.accept(ModItems.WOODEN_CAULDRON);
             event.accept(ModItems.OAK_WOODEN_CAULDRON);
             event.accept(ModItems.SPRUCE_WOODEN_CAULDRON);
             event.accept(ModItems.BIRCH_WOODEN_CAULDRON);
