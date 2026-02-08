@@ -3,7 +3,7 @@
   "textures": {
     "particle": "biomesoplenty:block/willow_planks",
     "side": "biomesoplenty:block/willow_planks",
-    "top": "biomesoplenty:block/willow_planks",
-    "bottom": "biomesoplenty:block/willow_planks"
+    "top": "minecraft:block/barrel_top",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

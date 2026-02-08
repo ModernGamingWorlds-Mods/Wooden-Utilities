@@ -3,7 +3,7 @@
   "textures": {
     "particle": "minecraft:block/mangrove_planks",
     "side": "minecraft:block/mangrove_planks",
-    "top": "minecraft:block/mangrove_planks",
-    "bottom": "minecraft:block/mangrove_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

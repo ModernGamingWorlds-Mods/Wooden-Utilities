@@ -3,7 +3,7 @@
   "textures": {
     "particle": "twilightforest:block/darkwood_planks",
     "side": "twilightforest:block/darkwood_planks",
-    "top": "twilightforest:block/darkwood_planks",
-    "bottom": "twilightforest:block/darkwood_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

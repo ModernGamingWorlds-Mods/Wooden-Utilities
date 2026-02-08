@@ -3,7 +3,7 @@
   "textures": {
     "particle": "biomesoplenty:block/jacaranda_planks",
     "side": "biomesoplenty:block/jacaranda_planks",
-    "top": "biomesoplenty:block/jacaranda_planks",
-    "bottom": "biomesoplenty:block/jacaranda_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

@@ -3,7 +3,7 @@
   "textures": {
     "particle": "deep_aether:block/cruderoot_planks",
     "side": "deep_aether:block/cruderoot_planks",
-    "top": "deep_aether:block/cruderoot_planks",
-    "bottom": "deep_aether:block/cruderoot_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

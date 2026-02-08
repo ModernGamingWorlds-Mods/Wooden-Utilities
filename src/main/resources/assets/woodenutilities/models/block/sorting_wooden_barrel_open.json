@@ -3,7 +3,7 @@
   "textures": {
     "particle": "twilightforest:block/sortwood_planks",
     "side": "twilightforest:block/sortwood_planks",
-    "top": "twilightforest:block/sortwood_planks",
-    "bottom": "twilightforest:block/sortwood_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

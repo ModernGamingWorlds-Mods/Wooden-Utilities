@@ -3,7 +3,7 @@
   "textures": {
     "particle": "biomesoplenty:block/redwood_planks",
     "side": "biomesoplenty:block/redwood_planks",
-    "top": "biomesoplenty:block/redwood_planks",
-    "bottom": "biomesoplenty:block/redwood_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

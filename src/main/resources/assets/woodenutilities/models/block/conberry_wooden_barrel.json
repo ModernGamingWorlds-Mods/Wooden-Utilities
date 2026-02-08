@@ -3,7 +3,7 @@
   "textures": {
     "particle": "deep_aether:block/conberry_planks",
     "side": "deep_aether:block/conberry_planks",
-    "top": "deep_aether:block/conberry_planks",
-    "bottom": "deep_aether:block/conberry_planks"
+    "top": "minecraft:block/barrel_top",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

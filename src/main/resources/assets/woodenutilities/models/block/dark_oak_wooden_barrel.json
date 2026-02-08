@@ -3,7 +3,7 @@
   "textures": {
     "particle": "minecraft:block/dark_oak_planks",
     "side": "minecraft:block/dark_oak_planks",
-    "top": "minecraft:block/dark_oak_planks",
-    "bottom": "minecraft:block/dark_oak_planks"
+    "top": "minecraft:block/barrel_top",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

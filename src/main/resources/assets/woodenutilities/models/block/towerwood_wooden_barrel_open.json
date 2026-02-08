@@ -3,7 +3,7 @@
   "textures": {
     "particle": "twilightforest:block/towerwood",
     "side": "twilightforest:block/towerwood",
-    "top": "twilightforest:block/towerwood",
-    "bottom": "twilightforest:block/towerwood"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }

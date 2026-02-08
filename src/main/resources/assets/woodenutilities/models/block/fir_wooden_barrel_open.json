@@ -3,7 +3,7 @@
   "textures": {
     "particle": "biomesoplenty:block/fir_planks",
     "side": "biomesoplenty:block/fir_planks",
-    "top": "biomesoplenty:block/fir_planks",
-    "bottom": "biomesoplenty:block/fir_planks"
+    "top": "minecraft:block/barrel_top_open",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }
