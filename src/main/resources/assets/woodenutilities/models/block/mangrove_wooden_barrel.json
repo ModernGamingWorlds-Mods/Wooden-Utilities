@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel",
   "textures": {
-    "particle": "minecraft:block/mangrove_planks",
-    "side": "minecraft:block/mangrove_planks",
-    "top": "minecraft:block/mangrove_planks",
-    "bottom": "minecraft:block/mangrove_planks"
+    "particle": "minecraft:block/barrel_side",
+    "side": "minecraft:block/barrel_side",
+    "top": "minecraft:block/barrel_top",
+    "bottom": "minecraft:block/barrel_bottom"
   }
 }
