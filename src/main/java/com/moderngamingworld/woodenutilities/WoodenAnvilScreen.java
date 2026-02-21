@@ -23,5 +23,10 @@ public class WoodenAnvilScreen extends AbstractContainerScreen<WoodenAnvilMenu> 
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
         guiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
+        // The vanilla anvil texture has a red rectangle baked in for the name field.
+        // Fill it with the standard GUI background colour so it blends away.
+        guiGraphics.fill(this.leftPos + 60, this.topPos + 22,
+                         this.leftPos + 166, this.topPos + 38,
+                         0xFFC6C6C6);
     }
 }
