@@ -1,7 +1,9 @@
 package com.moderngamingworld.woodenutilities;
 
+import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
+import com.moderngamingworld.woodenutilities.registry.ModRecipes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +25,8 @@ public class WoodenUtilities {
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModRecipes.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -114,6 +118,7 @@ public class WoodenUtilities {
             event.accept(ModItems.WOODEN_SHEARS);
             event.accept(ModItems.WOODEN_WRENCH);
             event.accept(ModItems.WOODEN_HAMMER);
+            event.accept(ModItems.WOODEN_BUCKET);
         }
 
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {

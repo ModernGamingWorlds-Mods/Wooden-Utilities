@@ -1,0 +1,267 @@
+package com.moderngamingworld.woodenutilities;
+
+import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
+import com.moderngamingworld.woodenutilities.registry.ModRecipes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.List;
+
+public class WoodenCauldronBlockEntity extends BlockEntity {
+
+    private static final int TANK_CAPACITY = 1000;
+
+    final FluidTank tankA = new FluidTank(TANK_CAPACITY);
+    final FluidTank tankB = new FluidTank(TANK_CAPACITY);
+    final ItemStackHandler itemHandler = new ItemStackHandler(1);
+
+    // ── Fluid handler: fill + drain (sides: N/S/E/W) ────────────────────────
+    private final IFluidHandler sideFluidHandler = new IFluidHandler() {
+        @Override public int getTanks() { return 2; }
+
+        @Override public FluidStack getFluidInTank(int tank) {
+            return tank == 0 ? tankA.getFluid() : tankB.getFluid();
+        }
+
+        @Override public int getTankCapacity(int tank) { return TANK_CAPACITY; }
+
+        @Override public boolean isFluidValid(int tank, FluidStack stack) { return true; }
+
+        @Override
+        public int fill(FluidStack resource, FluidAction action) {
+            // Try Tank A first (accepts same fluid or is empty)
+            int filledA = tankA.fill(resource, action);
+            if (filledA > 0) return filledA;
+            // Tank A rejected it — try Tank B only when a recipe pairs them
+            if (!tankA.isEmpty() && recipeAllowsSecondFluid(resource)) {
+                return tankB.fill(resource, action);
+            }
+            return 0;
+        }
+
+        @Override
+        public FluidStack drain(FluidStack resource, FluidAction action) {
+            FluidStack drained = tankA.drain(resource, action);
+            if (!drained.isEmpty()) return drained;
+            return tankB.drain(resource, action);
+        }
+
+        @Override
+        public FluidStack drain(int maxDrain, FluidAction action) {
+            FluidStack drained = tankA.drain(maxDrain, action);
+            if (!drained.isEmpty()) return drained;
+            return tankB.drain(maxDrain, action);
+        }
+    };
+
+    // ── Fluid handler: drain only (DOWN face) ────────────────────────────────
+    private final IFluidHandler extractFluidHandler = new IFluidHandler() {
+        @Override public int getTanks() { return 2; }
+
+        @Override public FluidStack getFluidInTank(int tank) {
+            return tank == 0 ? tankA.getFluid() : tankB.getFluid();
+        }
+
+        @Override public int getTankCapacity(int tank) { return TANK_CAPACITY; }
+
+        @Override public boolean isFluidValid(int tank, FluidStack stack) { return false; }
+
+        @Override public int fill(FluidStack resource, FluidAction action) { return 0; }
+
+        @Override
+        public FluidStack drain(FluidStack resource, FluidAction action) {
+            FluidStack drained = tankA.drain(resource, action);
+            if (!drained.isEmpty()) return drained;
+            return tankB.drain(resource, action);
+        }
+
+        @Override
+        public FluidStack drain(int maxDrain, FluidAction action) {
+            FluidStack drained = tankA.drain(maxDrain, action);
+            if (!drained.isEmpty()) return drained;
+            return tankB.drain(maxDrain, action);
+        }
+    };
+
+    // ── Item handler: insert-only (UP face) ──────────────────────────────────
+    private final IItemHandler insertOnlyItemHandler = new IItemHandler() {
+        @Override public int getSlots() { return 1; }
+
+        @Override @Nonnull
+        public ItemStack getStackInSlot(int slot) { return itemHandler.getStackInSlot(slot); }
+
+        @Override @Nonnull
+        public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
+            return itemHandler.insertItem(slot, stack, simulate);
+        }
+
+        @Override @Nonnull
+        public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            return ItemStack.EMPTY;
+        }
+
+        @Override public int getSlotLimit(int slot) { return itemHandler.getSlotLimit(slot); }
+
+        @Override public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
+            return itemHandler.isItemValid(slot, stack);
+        }
+    };
+
+    // ── LazyOptionals ─────────────────────────────────────────────────────────
+    private LazyOptional<IFluidHandler> sideFluidOpt = LazyOptional.of(() -> sideFluidHandler);
+    private LazyOptional<IFluidHandler> extractFluidOpt = LazyOptional.of(() -> extractFluidHandler);
+    private LazyOptional<IItemHandler> insertItemOpt = LazyOptional.of(() -> insertOnlyItemHandler);
+
+    // ─────────────────────────────────────────────────────────────────────────
+
+    public WoodenCauldronBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.WOODEN_CAULDRON.get(), pos, state);
+    }
+
+    // ── Server tick ───────────────────────────────────────────────────────────
+
+    public static void serverTick(Level level, BlockPos pos, BlockState state,
+                                  WoodenCauldronBlockEntity be) {
+        if (be.tankA.isEmpty()) return;
+
+        List<WoodenCauldronRecipe> recipes =
+                level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get());
+
+        for (WoodenCauldronRecipe recipe : recipes) {
+            if (recipe.matches(be)) {
+                recipe.consumeInputs(be);
+                be.setChanged();
+                level.sendBlockUpdated(pos, state, state, 3);
+                tryOutputItem(level, pos, recipe.getResultCopy());
+                break;
+            }
+        }
+    }
+
+    private static void tryOutputItem(Level level, BlockPos pos, ItemStack result) {
+        BlockPos belowPos = pos.below();
+        net.minecraft.world.level.block.entity.BlockEntity belowBE = level.getBlockEntity(belowPos);
+        if (belowBE instanceof Container container) {
+            ItemStack remaining = result.copy();
+            for (int i = 0; i < container.getContainerSize() && !remaining.isEmpty(); i++) {
+                if (container.canPlaceItem(i, remaining)) {
+                    ItemStack slot = container.getItem(i);
+                    if (slot.isEmpty()) {
+                        container.setItem(i, remaining);
+                        remaining = ItemStack.EMPTY;
+                    } else if (ItemStack.isSameItemSameTags(slot, remaining)) {
+                        int canFit = Math.min(remaining.getCount(), slot.getMaxStackSize() - slot.getCount());
+                        if (canFit > 0) {
+                            slot.grow(canFit);
+                            remaining.shrink(canFit);
+                            container.setChanged();
+                        }
+                    }
+                }
+            }
+            if (!remaining.isEmpty()) {
+                spawnItemEntity(level, pos, remaining);
+            }
+        } else {
+            spawnItemEntity(level, pos, result);
+        }
+    }
+
+    private static void spawnItemEntity(Level level, BlockPos pos, ItemStack stack) {
+        if (stack.isEmpty()) return;
+        double x = pos.getX() + 0.5;
+        double y = pos.getY() + 1.2;
+        double z = pos.getZ() + 0.5;
+        double vx = (level.random.nextFloat() - 0.5f) * 0.1f;
+        double vz = (level.random.nextFloat() - 0.5f) * 0.1f;
+        ItemEntity entity = new ItemEntity(level, x, y, z, stack);
+        entity.setDeltaMovement(vx, 0.2, vz);
+        level.addFreshEntity(entity);
+    }
+
+    // ── Fluid routing helper ──────────────────────────────────────────────────
+
+    private boolean recipeAllowsSecondFluid(FluidStack incoming) {
+        if (level == null) return false;
+        FluidStack aFluid = tankA.getFluid();
+        if (aFluid.isEmpty()) return false;
+
+        List<WoodenCauldronRecipe> recipes =
+                level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get());
+
+        return recipes.stream().anyMatch(r ->
+                r.isFluidFluid()
+                        && r.getInputFluid().getFluid() == aFluid.getFluid()
+                        && r.getInputFluid2() != null
+                        && r.getInputFluid2().getFluid() == incoming.getFluid());
+    }
+
+    // ── Capability routing ────────────────────────────────────────────────────
+
+    @Override @Nonnull
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
+        if (cap == ForgeCapabilities.FLUID_HANDLER) {
+            if (side == Direction.UP) return LazyOptional.empty();
+            if (side == Direction.DOWN) return extractFluidOpt.cast();
+            return sideFluidOpt.cast();       // null (internal), N, S, E, W
+        }
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
+            if (side == null || side == Direction.UP) return insertItemOpt.cast();
+            return LazyOptional.empty();
+        }
+        return super.getCapability(cap, side);
+    }
+
+    @Override
+    public void invalidateCaps() {
+        super.invalidateCaps();
+        sideFluidOpt.invalidate();
+        extractFluidOpt.invalidate();
+        insertItemOpt.invalidate();
+        // Refresh so the block entity can be re-attached if it comes back
+        sideFluidOpt = LazyOptional.of(() -> sideFluidHandler);
+        extractFluidOpt = LazyOptional.of(() -> extractFluidHandler);
+        insertItemOpt = LazyOptional.of(() -> insertOnlyItemHandler);
+    }
+
+    // ── NBT persistence ───────────────────────────────────────────────────────
+
+    @Override
+    protected void saveAdditional(CompoundTag tag) {
+        super.saveAdditional(tag);
+        tag.put("TankA", tankA.writeToNBT(new CompoundTag()));
+        tag.put("TankB", tankB.writeToNBT(new CompoundTag()));
+        tag.put("Items", itemHandler.serializeNBT());
+    }
+
+    @Override
+    public void load(CompoundTag tag) {
+        super.load(tag);
+        tankA.readFromNBT(tag.getCompound("TankA"));
+        tankB.readFromNBT(tag.getCompound("TankB"));
+        itemHandler.deserializeNBT(tag.getCompound("Items"));
+    }
+
+    // ── Accessors (used by recipe and block) ──────────────────────────────────
+
+    public FluidTank getTankA() { return tankA; }
+    public FluidTank getTankB() { return tankB; }
+    public ItemStackHandler getItemHandler() { return itemHandler; }
+}
