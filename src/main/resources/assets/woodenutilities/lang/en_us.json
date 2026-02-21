@@ -316,5 +316,7 @@
   "item.woodenutilities.sunroot_wooden_barrel": "Sunroot Wooden Barrel",
   "block.woodenutilities.skyroot_wooden_barrel": "Skyroot Wooden Barrel",
   "item.woodenutilities.skyroot_wooden_barrel": "Skyroot Wooden Barrel",
-  "itemGroup.woodenutilities": "Wooden Utilities"
+  "itemGroup.woodenutilities": "Wooden Utilities",
+  "jei.woodenutilities.wooden_cauldron": "Wooden Cauldron",
+  "jei.woodenutilities.wooden_anvil": "Wooden Anvil"
 }

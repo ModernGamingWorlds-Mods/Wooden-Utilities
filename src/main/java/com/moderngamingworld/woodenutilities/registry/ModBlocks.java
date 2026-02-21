@@ -12,6 +12,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
+
 public final class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, WoodenUtilities.MOD_ID);
 
@@ -91,6 +93,23 @@ public final class ModBlocks {
         () -> new WoodenCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
     public static final RegistryObject<Block> SKYROOT_WOODEN_CAULDRON = BLOCKS.register("skyroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
+    public static final List<RegistryObject<Block>> ALL_WOODEN_CAULDRONS = List.of(
+        OAK_WOODEN_CAULDRON, SPRUCE_WOODEN_CAULDRON, BIRCH_WOODEN_CAULDRON,
+        JUNGLE_WOODEN_CAULDRON, ACACIA_WOODEN_CAULDRON, DARK_OAK_WOODEN_CAULDRON,
+        MANGROVE_WOODEN_CAULDRON, CHERRY_WOODEN_CAULDRON, BAMBOO_WOODEN_CAULDRON,
+        CRIMSON_WOODEN_CAULDRON, WARPED_WOODEN_CAULDRON,
+        TWILIGHT_OAK_WOODEN_CAULDRON, CANOPY_WOODEN_CAULDRON, TWILIGHT_MANGROVE_WOODEN_CAULDRON,
+        DARK_WOODEN_CAULDRON, TIME_WOODEN_CAULDRON, MINING_WOODEN_CAULDRON,
+        SORTING_WOODEN_CAULDRON, TOWERWOOD_WOODEN_CAULDRON,
+        FIR_WOODEN_CAULDRON, PINE_WOODEN_CAULDRON, MAPLE_WOODEN_CAULDRON,
+        REDWOOD_WOODEN_CAULDRON, MAHOGANY_WOODEN_CAULDRON, JACARANDA_WOODEN_CAULDRON,
+        PALM_WOODEN_CAULDRON, WILLOW_WOODEN_CAULDRON, DEAD_WOODEN_CAULDRON,
+        MAGIC_WOODEN_CAULDRON, UMBRAN_WOODEN_CAULDRON, HELLBARK_WOODEN_CAULDRON,
+        EMPYREAL_WOODEN_CAULDRON, ROSEROOT_WOODEN_CAULDRON, YAGROOT_WOODEN_CAULDRON,
+        CRUDEROOT_WOODEN_CAULDRON, CONBERRY_WOODEN_CAULDRON, SUNROOT_WOODEN_CAULDRON,
+        SKYROOT_WOODEN_CAULDRON
+    );
+
     public static final RegistryObject<Block> WOODEN_BARREL = BLOCKS.register("wooden_barrel",
         () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     public static final RegistryObject<Block> OAK_WOODEN_BARREL = BLOCKS.register("oak_wooden_barrel",
