@@ -122,11 +122,11 @@ public class WoodenUtilities {
             event.accept(ModItems.WOODEN_SHEARS);
             event.accept(ModItems.WOODEN_WRENCH);
             event.accept(ModItems.WOODEN_HAMMER);
-            event.accept(ModItems.WOODEN_ANVIL);
             event.accept(ModItems.WOODEN_BUCKET);
         }
 
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModItems.WOODEN_ANVIL);
             event.accept(ModItems.WOODEN_BARREL);
             event.accept(ModItems.OAK_WOODEN_BARREL);
             event.accept(ModItems.SPRUCE_WOODEN_BARREL);
