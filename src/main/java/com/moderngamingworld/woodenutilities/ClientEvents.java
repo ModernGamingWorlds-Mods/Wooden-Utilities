@@ -28,8 +28,8 @@ public class ClientEvents {
                 (stack, level, entity, seed) -> {
                     FluidStack fluid = WoodenBucketItem.getFluid(stack);
                     if (fluid.isEmpty()) return 0f;
-                    if (fluid.getFluid() == Fluids.WATER) return 1f;
-                    if (fluid.getFluid() == Fluids.LAVA)  return 2f;
+                    if (fluid.getFluid() == Fluids.WATER) return 0.5f;
+                    if (fluid.getFluid() == Fluids.LAVA)  return 1.0f;
                     return 0f;
                 };
             ItemProperties.register(ModItems.WOODEN_BUCKET.get(),             fluidTypeProp, fluidFunc);

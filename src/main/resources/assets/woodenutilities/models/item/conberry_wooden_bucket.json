@@ -6,13 +6,13 @@
   "overrides": [
     {
       "predicate": {
-        "woodenutilities:fluid_type": 1.0
+        "woodenutilities:fluid_type": 0.5
       },
       "model": "woodenutilities:item/conberry_wooden_bucket_water"
     },
     {
       "predicate": {
-        "woodenutilities:fluid_type": 2.0
+        "woodenutilities:fluid_type": 1.0
       },
       "model": "woodenutilities:item/conberry_wooden_bucket_lava"
     }
