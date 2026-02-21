@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/roseroot_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/roseroot_wooden_cauldron"
+  }
 }

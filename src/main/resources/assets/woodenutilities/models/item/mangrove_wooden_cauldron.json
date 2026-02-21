@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/mangrove_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/mangrove_wooden_cauldron"
+  }
 }

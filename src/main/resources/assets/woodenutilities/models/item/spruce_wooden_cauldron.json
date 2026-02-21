@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/spruce_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/spruce_wooden_cauldron"
+  }
 }

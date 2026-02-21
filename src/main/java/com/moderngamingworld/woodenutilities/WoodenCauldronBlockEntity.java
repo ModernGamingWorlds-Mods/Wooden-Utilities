@@ -5,6 +5,8 @@ import com.moderngamingworld.woodenutilities.registry.ModRecipes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
@@ -259,9 +261,27 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         itemHandler.deserializeNBT(tag.getCompound("Items"));
     }
 
+    // ── Client sync ───────────────────────────────────────────────────────────
+
+    @Override
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
+    }
+
+    @Override
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        if (pkt.getTag() != null) load(pkt.getTag());
+    }
+
     // ── Accessors (used by recipe and block) ──────────────────────────────────
 
     public FluidTank getTankA() { return tankA; }
     public FluidTank getTankB() { return tankB; }
     public ItemStackHandler getItemHandler() { return itemHandler; }
+    public IFluidHandler getSideFluidHandler() { return sideFluidHandler; }
 }

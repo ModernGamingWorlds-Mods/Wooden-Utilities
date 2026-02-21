@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/jacaranda_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/jacaranda_wooden_cauldron"
+  }
 }

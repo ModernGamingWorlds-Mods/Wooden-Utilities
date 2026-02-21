@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/sorting_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/sorting_wooden_cauldron"
+  }
 }

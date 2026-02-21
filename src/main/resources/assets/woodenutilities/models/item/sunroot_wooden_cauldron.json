@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/sunroot_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/sunroot_wooden_cauldron"
+  }
 }

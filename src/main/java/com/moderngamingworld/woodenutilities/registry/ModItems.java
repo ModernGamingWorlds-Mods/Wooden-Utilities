@@ -1,5 +1,6 @@
 package com.moderngamingworld.woodenutilities.registry;
 
+import com.moderngamingworld.woodenutilities.WoodenBucketItem;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
 import net.minecraft.world.item.Item;
@@ -257,6 +258,86 @@ public final class ModItems {
 
     public static final RegistryObject<Item> WOODEN_HAMMER = ITEMS.register("wooden_hammer",
         () -> new Item(new Item.Properties().durability(96)));
+
+    public static final RegistryObject<Item> WOODEN_BUCKET = ITEMS.register("wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> OAK_WOODEN_BUCKET = ITEMS.register("oak_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SPRUCE_WOODEN_BUCKET = ITEMS.register("spruce_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BIRCH_WOODEN_BUCKET = ITEMS.register("birch_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> JUNGLE_WOODEN_BUCKET = ITEMS.register("jungle_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ACACIA_WOODEN_BUCKET = ITEMS.register("acacia_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DARK_OAK_WOODEN_BUCKET = ITEMS.register("dark_oak_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MANGROVE_WOODEN_BUCKET = ITEMS.register("mangrove_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CHERRY_WOODEN_BUCKET = ITEMS.register("cherry_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BAMBOO_WOODEN_BUCKET = ITEMS.register("bamboo_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CRIMSON_WOODEN_BUCKET = ITEMS.register("crimson_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WARPED_WOODEN_BUCKET = ITEMS.register("warped_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TWILIGHT_OAK_WOODEN_BUCKET = ITEMS.register("twilight_oak_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CANOPY_WOODEN_BUCKET = ITEMS.register("canopy_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TWILIGHT_MANGROVE_WOODEN_BUCKET = ITEMS.register("twilight_mangrove_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DARK_WOODEN_BUCKET = ITEMS.register("dark_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TIME_WOODEN_BUCKET = ITEMS.register("time_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MINING_WOODEN_BUCKET = ITEMS.register("mining_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SORTING_WOODEN_BUCKET = ITEMS.register("sorting_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TOWERWOOD_WOODEN_BUCKET = ITEMS.register("towerwood_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> FIR_WOODEN_BUCKET = ITEMS.register("fir_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PINE_WOODEN_BUCKET = ITEMS.register("pine_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MAPLE_WOODEN_BUCKET = ITEMS.register("maple_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REDWOOD_WOODEN_BUCKET = ITEMS.register("redwood_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MAHOGANY_WOODEN_BUCKET = ITEMS.register("mahogany_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> JACARANDA_WOODEN_BUCKET = ITEMS.register("jacaranda_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PALM_WOODEN_BUCKET = ITEMS.register("palm_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WILLOW_WOODEN_BUCKET = ITEMS.register("willow_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DEAD_WOODEN_BUCKET = ITEMS.register("dead_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MAGIC_WOODEN_BUCKET = ITEMS.register("magic_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> UMBRAN_WOODEN_BUCKET = ITEMS.register("umbran_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> HELLBARK_WOODEN_BUCKET = ITEMS.register("hellbark_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> EMPYREAL_WOODEN_BUCKET = ITEMS.register("empyreal_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ROSEROOT_WOODEN_BUCKET = ITEMS.register("roseroot_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> YAGROOT_WOODEN_BUCKET = ITEMS.register("yagroot_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CRUDEROOT_WOODEN_BUCKET = ITEMS.register("cruderoot_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CONBERRY_WOODEN_BUCKET = ITEMS.register("conberry_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SUNROOT_WOODEN_BUCKET = ITEMS.register("sunroot_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKYROOT_WOODEN_BUCKET = ITEMS.register("skyroot_wooden_bucket",
+        () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
 
     private ModItems() {
     }

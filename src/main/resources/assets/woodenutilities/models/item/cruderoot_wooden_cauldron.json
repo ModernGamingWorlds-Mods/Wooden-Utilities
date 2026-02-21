@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/cruderoot_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/cruderoot_wooden_cauldron"
+  }
 }

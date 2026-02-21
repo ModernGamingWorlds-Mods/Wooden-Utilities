@@ -2,6 +2,7 @@ package com.moderngamingworld.woodenutilities;
 
 import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
+import com.moderngamingworld.woodenutilities.registry.ModCreativeTabs;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
 import com.moderngamingworld.woodenutilities.registry.ModRecipes;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -27,6 +28,7 @@ public class WoodenUtilities {
         ModItems.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

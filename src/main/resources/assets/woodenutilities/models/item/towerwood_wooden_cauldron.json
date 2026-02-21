@@ -1,3 +1,6 @@
 {
-  "parent": "woodenutilities:block/towerwood_wooden_cauldron"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/towerwood_wooden_cauldron"
+  }
 }
