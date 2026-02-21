@@ -36,13 +36,8 @@ It has more wooden items then other mods
   <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_Features.png">
 </p>
 
-- Coming Soon
-
-<p align="center">
-  <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_ModCompatibility.png">
-</p>
-
-- Coming Soon
+- Kubejs Support to for custom recipes
+- JEI 
 
 <p align="center">
   <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_PromoCard.png">
