@@ -2,6 +2,7 @@ package com.moderngamingworld.woodenutilities;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -9,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
@@ -40,6 +42,21 @@ public class WoodenBucketItem extends Item {
         } else {
             stack.getOrCreateTag().put("Fluid", fluid.writeToNBT(new CompoundTag()));
         }
+    }
+
+    // ── Display name changes based on fluid content ───────────────────────────
+
+    @Override
+    public Component getName(ItemStack stack) {
+        FluidStack fluid = getFluid(stack);
+        if (!fluid.isEmpty()) {
+            String base = getDescriptionId(stack); // e.g. "item.woodenutilities.oak_wooden_bucket"
+            if (fluid.getFluid() == Fluids.WATER)
+                return Component.translatable(base.replace("_wooden_bucket", "_wooden_water_bucket"));
+            if (fluid.getFluid() == Fluids.LAVA)
+                return Component.translatable(base.replace("_wooden_bucket", "_wooden_lava_bucket"));
+        }
+        return super.getName(stack);
     }
 
     // ── Capability: 1000 mb single-tank, any fluid ────────────────────────────
