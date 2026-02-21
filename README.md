@@ -18,17 +18,12 @@
 
 
 <p align="center">
-Wooden Utilities, an all-new Minecraft Mod that adds more Wood-Related items to your daily Minecraft Experience.
+Welcome to Wooden Utilities!
 </p>
 
 
 <p align="center">
-What's is the difference between this mod and other Wood-Related Mod Packs? 
-</p>
-
-
-<p align="center">
-It has more wooden items then other mods
+Wooden Utilities expands the usefulness of wood by introducing new functional items, blocks, and mechanics centered entirely around wooden materials. The goal is to make wood more flexible, more practical, and more relevant throughout every stage of gameplay.
 </p>
 
 
@@ -36,22 +31,12 @@ It has more wooden items then other mods
   <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_Features.png">
 </p>
 
-- Coming Soon
+- Kubejs support for custom recipe integration
+- Custom progression through included recipes
+- Modded wood types support
 
 <p align="center">
-  <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_ModCompatibility.png">
-</p>
-
-- Coming Soon
-
-<p align="center">
-  <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_PromoCard.png">
-</p>
-
-  <p align="center">
-I have partnered with Bisect Hosting!!!
-</p>
-
-  <p align="center">
-Use the Code "ModernGamingWorld", to save an additional 25% off your First purchase on Bisect Hosting.
+  <a href="https://www.bisecthosting.com/moderngamingworld" target="_blank">
+    <img width="1124" height="200" src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_PromoCard.png">
+  </a>
 </p>
