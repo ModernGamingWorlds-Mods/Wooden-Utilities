@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/barrel_open",
   "textures": {
-    "particle": "minecraft:block/barrel_side",
-    "side": "minecraft:block/barrel_side",
-    "top": "minecraft:block/barrel_top_open",
-    "bottom": "minecraft:block/barrel_bottom"
+    "particle": "woodenutilities:block/bamboo_wooden_barrel_side",
+    "side": "woodenutilities:block/bamboo_wooden_barrel_side",
+    "top": "woodenutilities:block/bamboo_wooden_barrel_top_open",
+    "bottom": "woodenutilities:block/bamboo_wooden_barrel_bottom"
   }
 }
