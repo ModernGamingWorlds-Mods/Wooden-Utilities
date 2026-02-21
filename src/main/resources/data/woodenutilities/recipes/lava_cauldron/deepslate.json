@@ -1,0 +1,14 @@
+{
+  "type": "woodenutilities:wooden_cauldron",
+  "input_fluid": {
+    "fluid": "minecraft:lava",
+    "amount": 1000
+  },
+  "input_item": {
+    "item": "minecraft:cobbled_deepslate"
+  },
+  "result": {
+    "item": "minecraft:deepslate",
+    "count": 1
+  }
+}
