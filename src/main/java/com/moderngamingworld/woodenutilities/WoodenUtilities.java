@@ -4,6 +4,7 @@ import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
 import com.moderngamingworld.woodenutilities.registry.ModCreativeTabs;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
+import com.moderngamingworld.woodenutilities.registry.ModMenuTypes;
 import com.moderngamingworld.woodenutilities.registry.ModRecipes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -28,6 +29,7 @@ public class WoodenUtilities {
         ModItems.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
     }
 
@@ -120,6 +122,7 @@ public class WoodenUtilities {
             event.accept(ModItems.WOODEN_SHEARS);
             event.accept(ModItems.WOODEN_WRENCH);
             event.accept(ModItems.WOODEN_HAMMER);
+            event.accept(ModItems.WOODEN_ANVIL);
             event.accept(ModItems.WOODEN_BUCKET);
         }
 

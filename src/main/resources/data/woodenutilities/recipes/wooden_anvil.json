@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "_P_",
+    "PPP"
+  ],
+  "key": {
+    "P": { "item": "minecraft:oak_planks" }
+  },
+  "result": {
+    "item": "woodenutilities:wooden_anvil",
+    "count": 1
+  }
+}

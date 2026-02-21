@@ -339,6 +339,9 @@ public final class ModItems {
     public static final RegistryObject<Item> SKYROOT_WOODEN_BUCKET = ITEMS.register("skyroot_wooden_bucket",
         () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> WOODEN_ANVIL = ITEMS.register("wooden_anvil",
+        () -> new BlockItem(ModBlocks.WOODEN_ANVIL.get(), new Item.Properties()));
+
     private ModItems() {
     }
 

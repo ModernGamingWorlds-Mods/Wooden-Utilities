@@ -1,5 +1,6 @@
 package com.moderngamingworld.woodenutilities.registry;
 
+import com.moderngamingworld.woodenutilities.WoodenAnvilBlock;
 import com.moderngamingworld.woodenutilities.WoodenCauldronBlock;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
 import net.minecraft.world.level.block.Block;
@@ -170,6 +171,9 @@ public final class ModBlocks {
         () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
     public static final RegistryObject<Block> SKYROOT_WOODEN_BARREL = BLOCKS.register("skyroot_wooden_barrel",
         () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
+
+    public static final RegistryObject<Block> WOODEN_ANVIL = BLOCKS.register("wooden_anvil",
+        () -> new WoodenAnvilBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL).noOcclusion()));
 
     private ModBlocks() {
     }
