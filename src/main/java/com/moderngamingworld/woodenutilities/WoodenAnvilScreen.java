@@ -19,12 +19,14 @@ public class WoodenAnvilScreen extends ItemCombinerScreen<WoodenAnvilMenu> {
     }
 
     @Override
-    protected void subInit() {
-        // No name field needed
-    }
+    protected void subInit() {}
 
     @Override
-    protected void renderErrorIcon(GuiGraphics guiGraphics, int x, int y) {
-        // No error icon needed
+    protected void renderErrorIcon(GuiGraphics guiGraphics, int x, int y) {}
+
+    @Override
+    protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
+        guiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
+        // Intentionally omit nameEdit.render() — no rename field needed
     }
 }
