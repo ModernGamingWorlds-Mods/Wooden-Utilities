@@ -1,0 +1,14 @@
+{
+  "type": "woodenutilities:wooden_cauldron",
+  "input_fluid": {
+    "fluid": "minecraft:lava",
+    "amount": 1000
+  },
+  "input_item": {
+    "item": "minecraft:ice"
+  },
+  "result": {
+    "item": "minecraft:water_bucket",
+    "count": 1
+  }
+}

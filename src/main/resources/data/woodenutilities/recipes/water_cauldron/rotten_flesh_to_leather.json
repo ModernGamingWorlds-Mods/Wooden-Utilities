@@ -5,7 +5,7 @@
     "amount": 1000
   },
   "input_item": {
-    "item": "minecraft:rotten_flash"
+    "item": "minecraft:rotten_flesh"
   },
   "result": {
     "item": "minecraft:leather",
