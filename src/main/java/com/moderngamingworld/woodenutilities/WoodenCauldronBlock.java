@@ -71,6 +71,15 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
         return RenderShape.MODEL;
     }
 
+    // ── Light emission ────────────────────────────────────────────────────────
+
+    @Override
+    public int getLightEmission(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos) {
+        BlockEntity be = level.getBlockEntity(pos);
+        if (be instanceof WoodenCauldronBlockEntity cauldron && cauldron.hasLava()) return 15;
+        return super.getLightEmission(state, level, pos);
+    }
+
     // ── Block entity wiring ───────────────────────────────────────────────────
 
     @Nullable

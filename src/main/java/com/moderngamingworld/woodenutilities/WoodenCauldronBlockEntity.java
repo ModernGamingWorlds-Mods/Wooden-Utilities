@@ -33,6 +33,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 *///?}
 
+import net.minecraft.tags.FluidTags;
+
 import javax.annotation.Nonnull;
 import java.util.List;
 
@@ -339,6 +341,11 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     *///?}
 
     // ── Accessors (used by recipe and block) ──────────────────────────────────
+
+    public boolean hasLava() {
+        return (!tankA.isEmpty() && tankA.getFluid().getFluid().is(FluidTags.LAVA))
+            || (!tankB.isEmpty() && tankB.getFluid().getFluid().is(FluidTags.LAVA));
+    }
 
     public FluidTank getTankA() { return tankA; }
     public FluidTank getTankB() { return tankB; }
