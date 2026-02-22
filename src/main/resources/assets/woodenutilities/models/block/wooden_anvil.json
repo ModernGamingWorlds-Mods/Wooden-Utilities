@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_anvil",
+  "textures": {
+    "body": "woodenutilities:block/wooden_anvil",
+    "top":  "woodenutilities:block/wooden_anvil_top"
+  }
+}

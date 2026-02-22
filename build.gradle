@@ -1,0 +1,151 @@
+// ── Plugin declarations ───────────────────────────────────────────────────────
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    // Declared with apply=false so both land in the classpath; we apply one below.
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)' apply false
+    id 'net.neoforged.gradle.userdev' version '7.0.+' apply false
+}
+
+// ── Stonecutter: determine current build target ───────────────────────────────
+// project.name is the version string (e.g. "1.20.1-forge" or "1.21.1-neoforge")
+// when building a versioned subproject, or "Wooden-Utilities" for the root task.
+boolean isForge    = project.name.endsWith('-forge')
+boolean isNeoForge = project.name.endsWith('-neoforge')
+
+if (isNeoForge) apply plugin: 'net.neoforged.gradle.userdev'
+if (isForge)    apply plugin: 'net.minecraftforge.gradle'
+
+// ── Stonecutter preprocessor constants ───────────────────────────────────────
+stonecutter.const 'forge',    isForge
+stonecutter.const 'neoforge', isNeoForge
+
+// ── Project coordinates ───────────────────────────────────────────────────────
+version = mod_version
+group   = maven_group
+
+base {
+    archivesName = mod_id
+}
+
+// Forge 1.20.6+ requires Java 21; older Forge uses Java 17
+def mcParts = minecraft_version.split('\\.')
+boolean forgeNeedsJava21 = isForge && (mcParts[1].toInteger() > 20 ||
+        (mcParts[1].toInteger() == 20 && mcParts.length > 2 && mcParts[2].toInteger() >= 6))
+java.toolchain.languageVersion = JavaLanguageVersion.of((isNeoForge || forgeNeedsJava21) ? 21 : 17)
+
+// ── Loader-specific configuration ────────────────────────────────────────────
+if (isNeoForge) {
+    runs {
+        configureEach {
+            systemProperty 'neoforge.logging.markers', 'REGISTRIES'
+            systemProperty 'neoforge.logging.console.level', 'debug'
+            modSource project.sourceSets.main
+        }
+        client {
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
+        server {
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+            programArgument '--nogui'
+        }
+    }
+
+    sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+    repositories {
+        maven { url = 'https://maven.blamejared.com' }
+    }
+
+    dependencies {
+        implementation "net.neoforged:neoforge:${neo_version}"
+        if (jei_version != 'none') {
+            compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+            runtimeOnly  "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+        }
+    }
+
+} else if (isForge) {
+    minecraft {
+        mappings channel: mapping_channel, version: mapping_version
+        copyIdeResources = true
+
+        runs {
+            configureEach {
+                workingDirectory project.file('run')
+                property 'forge.logging.markers', 'REGISTRIES'
+                property 'forge.logging.console.level', 'debug'
+                mods {
+                    "${mod_id}" { source sourceSets.main }
+                }
+            }
+            client  {}
+            server  { args '--nogui' }
+        }
+    }
+
+    repositories {
+        maven { url = 'https://maven.blamejared.com' }
+    }
+
+    dependencies {
+        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+        if (jei_version != 'none') {
+            compileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+            runtimeOnly  "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
+        }
+    }
+}
+
+// ── processResources ─────────────────────────────────────────────────────────
+tasks.named('processResources', ProcessResources).configure {
+    def replaceProperties = [
+        minecraft_version: minecraft_version,
+        mod_issues       : mod_issues,
+        mod_homepage     : mod_homepage,
+        mod_id           : mod_id,
+        mod_name         : mod_name,
+        mod_license      : mod_license,
+        mod_version      : mod_version,
+        mod_author       : mod_author,
+        mod_description  : mod_description,
+        jei_version      : jei_version,
+    ]
+
+    inputs.properties replaceProperties
+
+    if (isNeoForge) {
+        replaceProperties.put('neo_version', neo_version)
+        exclude 'META-INF/mods.toml'
+        filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
+            expand replaceProperties + [project: project]
+        }
+    } else if (isForge) {
+        replaceProperties.put('forge_version', forge_version)
+        exclude 'META-INF/neoforge.mods.toml'
+        filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+            expand replaceProperties + [project: project]
+        }
+    }
+}
+
+// ── Jar manifest ─────────────────────────────────────────────────────────────
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            'Specification-Title'     : mod_id,
+            'Specification-Vendor'    : mod_author,
+            'Specification-Version'   : '1',
+            'Implementation-Title'    : project.name,
+            'Implementation-Version'  : project.jar.archiveVersion,
+            'Implementation-Vendor'   : mod_author,
+            'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

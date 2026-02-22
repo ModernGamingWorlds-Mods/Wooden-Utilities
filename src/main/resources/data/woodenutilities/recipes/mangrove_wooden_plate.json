@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:mangrove_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:mangrove_wooden_plate",
+    "count": 4
+  }
+}

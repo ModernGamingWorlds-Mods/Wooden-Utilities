@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "woodenutilities_transformation_cauldron"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "P P",
+          " P "
+        ],
+        "key": {
+          "P": {
+            "item": "twilightforest:transwood_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:transformation_wooden_cauldron"
+        }
+      }
+    }
+  ]
+}

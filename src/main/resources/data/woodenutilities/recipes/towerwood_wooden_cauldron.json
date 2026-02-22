@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "P P",
+          "P P",
+          "PPP"
+        ],
+        "key": {
+          "P": {
+            "item": "twilightforest:towerwood"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:towerwood_wooden_cauldron"
+        }
+      }
+    }
+  ]
+}

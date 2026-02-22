@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PPP",
+          "P P",
+          "PPP"
+        ],
+        "key": {
+          "P": {
+            "item": "twilightforest:timewood_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:time_wooden_barrel"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PP"
+        ],
+        "key": {
+          "P": {
+            "item": "twilightforest:darkwood_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:dark_wooden_plate",
+          "count": 4
+        }
+      }
+    }
+  ]
+}

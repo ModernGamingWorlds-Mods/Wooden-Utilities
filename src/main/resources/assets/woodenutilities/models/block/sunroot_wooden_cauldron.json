@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cauldron",
+  "textures": {
+    "particle": "deep_aether:block/sunroot_planks",
+    "side": "deep_aether:block/sunroot_planks",
+    "top": "deep_aether:block/sunroot_planks",
+    "bottom": "deep_aether:block/sunroot_planks",
+    "inside": "deep_aether:block/sunroot_planks"
+  }
+}

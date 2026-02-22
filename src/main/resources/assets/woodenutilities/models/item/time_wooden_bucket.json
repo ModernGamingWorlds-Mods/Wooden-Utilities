@@ -1,0 +1,20 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/time_wooden_bucket"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "woodenutilities:fluid_type": 0.5
+      },
+      "model": "woodenutilities:item/time_wooden_bucket_water"
+    },
+    {
+      "predicate": {
+        "woodenutilities:fluid_type": 1.0
+      },
+      "model": "woodenutilities:item/time_wooden_bucket_lava"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "woodenutilities:block/green_enchanted_wooden_barrel_side",
+    "side": "woodenutilities:block/green_enchanted_wooden_barrel_side",
+    "top": "woodenutilities:block/green_enchanted_wooden_barrel_top",
+    "bottom": "woodenutilities:block/green_enchanted_wooden_barrel_bottom"
+  }
+}

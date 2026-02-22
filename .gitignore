@@ -1,0 +1,41 @@
+# Build output
+build/
+out/
+
+# Gradle cache and wrapper downloads
+.gradle/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# Run directories
+run/
+runs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Stray unpacked library directories (from Stonecutter/Gradle classpath)
+META-INF/
+_COROUTINE/
+com/
+dev/
+it/
+kotlin/
+kotlinx/
+net/
+okio/
+org/
+
+# Kotlin debug binary
+DebugProbesKt.bin
+
+# Logs
+*.log

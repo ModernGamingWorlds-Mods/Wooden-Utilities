@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:wooden_bucket"
+  }
+}

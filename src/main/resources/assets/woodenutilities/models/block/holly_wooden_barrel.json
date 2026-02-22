@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/barrel",
+  "textures": {
+    "particle": "woodenutilities:block/holly_wooden_barrel_side",
+    "side": "woodenutilities:block/holly_wooden_barrel_side",
+    "top": "woodenutilities:block/holly_wooden_barrel_top",
+    "bottom": "woodenutilities:block/holly_wooden_barrel_bottom"
+  }
+}

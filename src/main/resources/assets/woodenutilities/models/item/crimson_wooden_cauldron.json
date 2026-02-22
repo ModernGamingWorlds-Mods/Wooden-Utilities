@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "woodenutilities:item/crimson_wooden_cauldron"
+  }
+}

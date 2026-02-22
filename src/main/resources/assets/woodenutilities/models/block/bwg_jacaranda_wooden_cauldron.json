@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cauldron",
+  "textures": {
+    "particle": "biomeswevegone:block/jacaranda/planks",
+    "side": "biomeswevegone:block/jacaranda/planks",
+    "top": "biomeswevegone:block/jacaranda/planks",
+    "bottom": "biomeswevegone:block/jacaranda/planks",
+    "inside": "biomeswevegone:block/jacaranda/planks"
+  }
+}
