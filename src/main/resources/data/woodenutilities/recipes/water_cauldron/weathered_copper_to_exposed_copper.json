@@ -1,0 +1,14 @@
+{
+  "type": "woodenutilities:wooden_cauldron",
+  "input_fluid": {
+    "fluid": "minecraft:water",
+    "amount": 1000
+  },
+  "input_item": {
+    "item": "minecraft:weathered_copper"
+  },
+  "result": {
+    "item": "minecraft:exposed_copper",
+    "count": 2
+  }
+}

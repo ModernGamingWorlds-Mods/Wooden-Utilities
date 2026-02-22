@@ -5,10 +5,10 @@
     "amount": 1000
   },
   "input_item": {
-    "item": "minecraft:rotten_flash"
+    "item": "minecraft:snow_block"
   },
   "result": {
-    "item": "minecraft:leather",
-    "count": 1
+    "item": "minecraft:snow",
+    "count": 4
   }
 }
