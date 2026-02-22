@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "twilightforest:block/towerwood",
+    "top": "twilightforest:block/towerwood",
+    "side": "twilightforest:block/towerwood",
+    "inside": "twilightforest:block/towerwood"
+  }
+}

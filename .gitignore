@@ -23,16 +23,16 @@ runs/
 Thumbs.db
 
 # Stray unpacked library directories (from Stonecutter/Gradle classpath)
-META-INF/
-_COROUTINE/
-com/
-dev/
-it/
-kotlin/
-kotlinx/
-net/
-okio/
-org/
+/META-INF/
+/_COROUTINE/
+/com/
+/dev/
+/it/
+/kotlin/
+/kotlinx/
+/net/
+/okio/
+/org/
 
 # Kotlin debug binary
 DebugProbesKt.bin

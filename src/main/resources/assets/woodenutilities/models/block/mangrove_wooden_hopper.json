@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "minecraft:block/mangrove_planks",
+    "top": "minecraft:block/mangrove_planks",
+    "side": "minecraft:block/mangrove_planks",
+    "inside": "minecraft:block/mangrove_planks"
+  }
+}

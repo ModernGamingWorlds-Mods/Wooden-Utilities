@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "twilightforest:block/wood/planks/mangrove/mangrove_planks",
+    "top": "twilightforest:block/wood/planks/mangrove/mangrove_planks",
+    "side": "twilightforest:block/wood/planks/mangrove/mangrove_planks",
+    "inside": "twilightforest:block/wood/planks/mangrove/mangrove_planks"
+  }
+}

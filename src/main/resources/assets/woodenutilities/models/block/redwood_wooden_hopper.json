@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "biomesoplenty:block/redwood_planks",
+    "top": "biomesoplenty:block/redwood_planks",
+    "side": "biomesoplenty:block/redwood_planks",
+    "inside": "biomesoplenty:block/redwood_planks"
+  }
+}

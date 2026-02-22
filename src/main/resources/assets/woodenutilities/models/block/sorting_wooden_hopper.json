@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "twilightforest:block/sortwood_planks",
+    "top": "twilightforest:block/sortwood_planks",
+    "side": "twilightforest:block/sortwood_planks",
+    "inside": "twilightforest:block/sortwood_planks"
+  }
+}

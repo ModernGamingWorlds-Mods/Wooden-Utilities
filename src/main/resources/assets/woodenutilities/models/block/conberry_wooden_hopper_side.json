@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "deep_aether:block/conberry_planks",
+    "top": "deep_aether:block/conberry_planks",
+    "side": "deep_aether:block/conberry_planks",
+    "inside": "deep_aether:block/conberry_planks"
+  }
+}

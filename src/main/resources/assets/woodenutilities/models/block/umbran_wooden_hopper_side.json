@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "biomesoplenty:block/umbran_planks",
+    "top": "biomesoplenty:block/umbran_planks",
+    "side": "biomesoplenty:block/umbran_planks",
+    "inside": "biomesoplenty:block/umbran_planks"
+  }
+}

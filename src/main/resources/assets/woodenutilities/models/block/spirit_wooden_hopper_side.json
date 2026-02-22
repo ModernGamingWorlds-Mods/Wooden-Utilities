@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "biomeswevegone:block/spirit/planks",
+    "top": "biomeswevegone:block/spirit/planks",
+    "side": "biomeswevegone:block/spirit/planks",
+    "inside": "biomeswevegone:block/spirit/planks"
+  }
+}

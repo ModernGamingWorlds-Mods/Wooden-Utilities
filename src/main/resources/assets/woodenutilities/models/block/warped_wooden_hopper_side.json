@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "minecraft:block/warped_planks",
+    "top": "minecraft:block/warped_planks",
+    "side": "minecraft:block/warped_planks",
+    "inside": "minecraft:block/warped_planks"
+  }
+}

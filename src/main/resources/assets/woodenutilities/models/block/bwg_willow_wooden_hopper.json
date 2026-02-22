@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "biomeswevegone:block/willow/planks",
+    "top": "biomeswevegone:block/willow/planks",
+    "side": "biomeswevegone:block/willow/planks",
+    "inside": "biomeswevegone:block/willow/planks"
+  }
+}

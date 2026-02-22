@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "enabled=false,facing=down":  { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper" },
+    "enabled=true,facing=down":   { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper" },
+    "enabled=false,facing=north": { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side" },
+    "enabled=true,facing=north":  { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side" },
+    "enabled=false,facing=south": { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side", "y": 180 },
+    "enabled=true,facing=south":  { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side", "y": 180 },
+    "enabled=false,facing=west":  { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side", "y": 270 },
+    "enabled=true,facing=west":   { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side", "y": 270 },
+    "enabled=false,facing=east":  { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side", "y": 90 },
+    "enabled=true,facing=east":   { "model": "woodenutilities:block/bwg_mahogany_wooden_hopper_side", "y": 90 }
+  }
+}

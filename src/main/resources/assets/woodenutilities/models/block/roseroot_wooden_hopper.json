@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "deep_aether:block/roseroot_planks",
+    "top": "deep_aether:block/roseroot_planks",
+    "side": "deep_aether:block/roseroot_planks",
+    "inside": "deep_aether:block/roseroot_planks"
+  }
+}

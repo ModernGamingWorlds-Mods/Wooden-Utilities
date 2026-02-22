@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    "PCP",
+    " P "
+  ],
+  "key": {
+    "P": { "item": "woodenutilities:warped_wooden_plate" },
+    "C": { "item": "minecraft:chest" }
+  },
+  "result": {
+    "item": "woodenutilities:warped_wooden_hopper"
+  }
+}
