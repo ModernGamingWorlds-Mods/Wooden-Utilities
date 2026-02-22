@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PPP",
-    "_P_",
+    " P ",
     "PPP"
   ],
   "key": {
-    "P": { "item": "minecraft:oak_planks" }
+    "P": { "tag": "minecraft:planks" }
   },
   "result": {
     "item": "woodenutilities:wooden_anvil",

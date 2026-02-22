@@ -6,28 +6,28 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.BlockItem;
 //? if neoforge {
-import net.neoforged.bus.api.IEventBus;
+/*import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-//?} else {
-/*import net.minecraftforge.eventbus.api.IEventBus;
+*///?} else {
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-*///?}
+//?}
 
 import java.util.List;
 
 public final class ModItems {
 
     //? if neoforge {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WoodenUtilities.MOD_ID);
-    //?} else {
-    /*public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, WoodenUtilities.MOD_ID);
-    *///?}
+    /*public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WoodenUtilities.MOD_ID);
+    *///?} else {
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, WoodenUtilities.MOD_ID);
+    //?}
 
     //? if neoforge {
-    public static final DeferredItem<Item> OAK_WOODEN_PLATE = ITEMS.register("oak_wooden_plate",
+    /*public static final DeferredItem<Item> OAK_WOODEN_PLATE = ITEMS.register("oak_wooden_plate",
         () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SPRUCE_WOODEN_PLATE = ITEMS.register("spruce_wooden_plate",
         () -> new Item(new Item.Properties()));
@@ -629,8 +629,8 @@ public final class ModItems {
         () -> new BlockItem(ModBlocks.WITCH_HAZEL_WOODEN_HOPPER.get(), new Item.Properties()));
     public static final DeferredItem<Item> ZELKOVA_WOODEN_HOPPER = ITEMS.register("zelkova_wooden_hopper",
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_HOPPER.get(), new Item.Properties()));
-    //?} else {
-    /*public static final RegistryObject<Item> OAK_WOODEN_PLATE = ITEMS.register("oak_wooden_plate",
+    *///?} else {
+    public static final RegistryObject<Item> OAK_WOODEN_PLATE = ITEMS.register("oak_wooden_plate",
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SPRUCE_WOODEN_PLATE = ITEMS.register("spruce_wooden_plate",
         () -> new Item(new Item.Properties()));
@@ -747,6 +747,8 @@ public final class ModItems {
     public static final RegistryObject<Item> SAKURA_WOODEN_PLATE = ITEMS.register("sakura_wooden_plate",
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SKYRIS_WOODEN_PLATE = ITEMS.register("skyris_wooden_plate",
+        () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SPIRIT_WOODEN_PLATE = ITEMS.register("spirit_wooden_plate",
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WHITE_MANGROVE_WOODEN_PLATE = ITEMS.register("white_mangrove_wooden_plate",
         () -> new Item(new Item.Properties()));
@@ -1225,10 +1227,10 @@ public final class ModItems {
     public static final RegistryObject<Item> ZELKOVA_WOODEN_HOPPER = ITEMS.register("zelkova_wooden_hopper",
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_HOPPER.get(), new Item.Properties()));
 
-    *///?}
+    //?}
 
     //? if neoforge {
-    public static final List<DeferredItem<Item>> ALL_WOODEN_BUCKETS = List.of(
+    /*public static final List<DeferredItem<Item>> ALL_WOODEN_BUCKETS = List.of(
         WOODEN_BUCKET, OAK_WOODEN_BUCKET, SPRUCE_WOODEN_BUCKET, BIRCH_WOODEN_BUCKET,
         JUNGLE_WOODEN_BUCKET, ACACIA_WOODEN_BUCKET, DARK_OAK_WOODEN_BUCKET,
         MANGROVE_WOODEN_BUCKET, CHERRY_WOODEN_BUCKET, BAMBOO_WOODEN_BUCKET,
@@ -1243,7 +1245,7 @@ public final class ModItems {
         YAGROOT_WOODEN_BUCKET, CRUDEROOT_WOODEN_BUCKET, CONBERRY_WOODEN_BUCKET,
         SUNROOT_WOODEN_BUCKET, SKYROOT_WOODEN_BUCKET
     );
-    //?}
+    *///?}
 
     private ModItems() {
     }
