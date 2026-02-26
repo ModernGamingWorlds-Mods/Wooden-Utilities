@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "deep_aether"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PP",
+          "PP"
+        ],
+        "key": {
+          "P": {
+            "item": "deep_aether:yagroot_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:yagroot_wooden_crafting_table"
+        }
+      }
+    }
+  ]
+}

@@ -3,26 +3,33 @@ package com.moderngamingworld.woodenutilities;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-//? if neoforge {
-import com.mojang.serialization.MapCodec;
+//? if modern_nbt {
+/*import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
-import net.neoforged.neoforge.fluids.FluidStack;
+*///?} else if forge_mid {
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.network.FriendlyByteBuf;
 //?} else {
 /*import com.google.gson.JsonObject;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+*///?}
+//? if neoforge {
+/*import net.neoforged.neoforge.fluids.FluidStack;
+*///?} else {
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
-*///?}
+//?}
 
 import java.util.Optional;
 
 public class WoodenCauldronRecipeSerializer implements RecipeSerializer<WoodenCauldronRecipe> {
 
-    //? if neoforge {
-    public static final MapCodec<WoodenCauldronRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
+    //? if modern_nbt {
+    /*public static final MapCodec<WoodenCauldronRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
         instance.group(
             FluidStack.CODEC.fieldOf("input_fluid").forGetter(WoodenCauldronRecipe::getInputFluid),
             FluidStack.CODEC.optionalFieldOf("input_fluid_2").forGetter(r -> Optional.ofNullable(r.getInputFluid2())),
@@ -62,6 +69,43 @@ public class WoodenCauldronRecipeSerializer implements RecipeSerializer<WoodenCa
     @Override
     public StreamCodec<RegistryFriendlyByteBuf, WoodenCauldronRecipe> streamCodec() {
         return STREAM_CODEC;
+    }
+    *///?} else if forge_mid {
+    public static final Codec<WoodenCauldronRecipe> CODEC = RecordCodecBuilder.create(instance ->
+        instance.group(
+            FluidStack.CODEC.fieldOf("input_fluid").forGetter(WoodenCauldronRecipe::getInputFluid),
+            FluidStack.CODEC.optionalFieldOf("input_fluid_2").forGetter(r -> Optional.ofNullable(r.getInputFluid2())),
+            Ingredient.CODEC.optionalFieldOf("input_item").forGetter(r -> Optional.ofNullable(r.getInputItem())),
+            ItemStack.CODEC.fieldOf("result").forGetter(WoodenCauldronRecipe::getResultCopy)
+        ).apply(instance, (fluid, fluid2, item, result) ->
+            new WoodenCauldronRecipe(fluid, fluid2.orElse(null), item.orElse(null), result)
+        )
+    );
+
+    @Override
+    public Codec<WoodenCauldronRecipe> codec() {
+        return CODEC;
+    }
+
+    @Override
+    public WoodenCauldronRecipe fromNetwork(FriendlyByteBuf buf) {
+        FluidStack inputFluid = buf.readFluidStack();
+        FluidStack inputFluid2 = buf.readBoolean() ? buf.readFluidStack() : null;
+        Ingredient inputItem = buf.readBoolean() ? Ingredient.fromNetwork(buf) : null;
+        ItemStack result = buf.readItem();
+        return new WoodenCauldronRecipe(inputFluid, inputFluid2, inputItem, result);
+    }
+
+    @Override
+    public void toNetwork(FriendlyByteBuf buf, WoodenCauldronRecipe recipe) {
+        buf.writeFluidStack(recipe.getInputFluid());
+        FluidStack fluid2 = recipe.getInputFluid2();
+        buf.writeBoolean(fluid2 != null);
+        if (fluid2 != null) buf.writeFluidStack(fluid2);
+        Ingredient item = recipe.getInputItem();
+        buf.writeBoolean(item != null);
+        if (item != null) item.toNetwork(buf);
+        buf.writeItem(recipe.getResultCopy());
     }
     //?} else {
     /*@Override

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "woodenutilities:block/sorting_wooden_crafting_table_side",
+    "down": "woodenutilities:block/sorting_wooden_crafting_table_bottom",
+    "up": "woodenutilities:block/sorting_wooden_crafting_table_top",
+    "north": "woodenutilities:block/sorting_wooden_crafting_table_front",
+    "east": "woodenutilities:block/sorting_wooden_crafting_table_side",
+    "south": "woodenutilities:block/sorting_wooden_crafting_table_front",
+    "west": "woodenutilities:block/sorting_wooden_crafting_table_side"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "woodenutilities:block/conberry_wooden_crafting_table_bottom",
+    "top":    "woodenutilities:block/conberry_wooden_crafting_table_top",
+    "side":   "woodenutilities:block/conberry_wooden_crafting_table_side"
+  }
+}

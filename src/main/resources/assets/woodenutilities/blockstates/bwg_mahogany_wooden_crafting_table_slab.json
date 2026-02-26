@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "woodenutilities:block/bwg_mahogany_wooden_crafting_table_slab" },
+    "type=top":    { "model": "woodenutilities:block/bwg_mahogany_wooden_crafting_table_slab_top" },
+    "type=double": { "model": "woodenutilities:block/bwg_mahogany_wooden_crafting_table" }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    { "type": "forge:mod_loaded", "modid": "biomesoplenty" }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "woodenutilities:mahogany_wooden_crafting_table" }
+    ],
+    "result": {
+      "item": "woodenutilities:mahogany_wooden_crafting_table_slab",
+      "count": 2
+    }
+  }
+}

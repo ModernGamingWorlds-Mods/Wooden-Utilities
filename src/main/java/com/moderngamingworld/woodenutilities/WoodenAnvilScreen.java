@@ -6,23 +6,23 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 //? if neoforge {
-import net.neoforged.api.distmarker.Dist;
+/*import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-//?} else {
-/*import net.minecraftforge.api.distmarker.Dist;
+*///?} else {
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-*///?}
+//?}
 
 @OnlyIn(Dist.CLIENT)
 public class WoodenAnvilScreen extends AbstractContainerScreen<WoodenAnvilMenu> {
 
     //? if neoforge {
-    private static final ResourceLocation TEXTURE =
-        ResourceLocation.fromNamespaceAndPath("minecraft", "textures/gui/container/anvil.png");
-    //?} else {
     /*private static final ResourceLocation TEXTURE =
+        ResourceLocation.fromNamespaceAndPath("minecraft", "textures/gui/container/anvil.png");
+    *///?} else {
+    private static final ResourceLocation TEXTURE =
         new ResourceLocation("minecraft", "textures/gui/container/anvil.png");
-    *///?}
+    //?}
 
     public WoodenAnvilScreen(WoodenAnvilMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title);

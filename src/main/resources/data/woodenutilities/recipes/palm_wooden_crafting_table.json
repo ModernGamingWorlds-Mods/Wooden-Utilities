@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "biomesoplenty"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PP",
+          "PP"
+        ],
+        "key": {
+          "P": {
+            "item": "biomesoplenty:palm_planks"
+          }
+        },
+        "result": {
+          "item": "woodenutilities:palm_wooden_crafting_table"
+        }
+      }
+    }
+  ]
+}

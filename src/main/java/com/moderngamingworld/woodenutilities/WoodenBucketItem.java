@@ -12,21 +12,21 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 //? if neoforge {
-import com.moderngamingworld.woodenutilities.registry.ModDataComponents;
+/*import com.moderngamingworld.woodenutilities.registry.ModDataComponents;
 import net.neoforged.neoforge.fluids.FluidActionResult;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.FluidUtil;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
-//?} else {
-/*import net.minecraft.nbt.CompoundTag;
+*///?} else {
+import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fluids.FluidActionResult;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStack;
 import javax.annotation.Nullable;
-*///?}
+//?}
 
 public class WoodenBucketItem extends Item {
 
@@ -39,7 +39,7 @@ public class WoodenBucketItem extends Item {
     // ── Fluid storage helpers ─────────────────────────────────────────────────
 
     //? if neoforge {
-    public static FluidStack getFluid(ItemStack stack) {
+    /*public static FluidStack getFluid(ItemStack stack) {
         return stack.getOrDefault(ModDataComponents.BUCKET_FLUID.get(), FluidStack.EMPTY);
     }
 
@@ -48,7 +48,7 @@ public class WoodenBucketItem extends Item {
         else stack.set(ModDataComponents.BUCKET_FLUID.get(), fluid);
     }
 
-    /** Called by RegisterCapabilitiesEvent in WoodenUtilities. */
+    /^* Called by RegisterCapabilitiesEvent in WoodenUtilities. ^/
     public static IFluidHandlerItem createFluidHandler(ItemStack stack) {
         return new IFluidHandlerItem() {
             @Override public ItemStack getContainer() { return stack; }
@@ -92,8 +92,8 @@ public class WoodenBucketItem extends Item {
             }
         };
     }
-    //?} else {
-    /*public static FluidStack getFluid(ItemStack stack) {
+    *///?} else {
+    public static FluidStack getFluid(ItemStack stack) {
         if (!stack.hasTag() || !stack.getTag().contains("Fluid")) return FluidStack.EMPTY;
         return FluidStack.loadFluidStackFromNBT(stack.getTag().getCompound("Fluid"));
     }
@@ -113,7 +113,7 @@ public class WoodenBucketItem extends Item {
             public boolean canFillFluidType(FluidStack fluid) { return true; }
         };
     }
-    *///?}
+    //?}
 
     // ── Display name changes based on fluid content ───────────────────────────
 

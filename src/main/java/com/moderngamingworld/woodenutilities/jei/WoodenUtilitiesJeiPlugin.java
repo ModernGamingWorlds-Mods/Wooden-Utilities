@@ -13,7 +13,7 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-//? if neoforge {
+//? if recipe_holder {
 import net.minecraft.world.item.crafting.RecipeHolder;
 //?}
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -27,10 +27,10 @@ public class WoodenUtilitiesJeiPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
         //? if neoforge {
-        return ResourceLocation.fromNamespaceAndPath(WoodenUtilities.MOD_ID, "jei_plugin");
-        //?} else {
-        /*return new ResourceLocation(WoodenUtilities.MOD_ID, "jei_plugin");
-        *///?}
+        /*return ResourceLocation.fromNamespaceAndPath(WoodenUtilities.MOD_ID, "jei_plugin");
+        *///?} else {
+        return new ResourceLocation(WoodenUtilities.MOD_ID, "jei_plugin");
+        //?}
     }
 
     @Override
@@ -47,7 +47,7 @@ public class WoodenUtilitiesJeiPlugin implements IModPlugin {
         // Cauldron: read from the live recipe manager — picks up KubeJS recipes automatically
         if (Minecraft.getInstance().level != null) {
             RecipeManager rm = Minecraft.getInstance().level.getRecipeManager();
-            //? if neoforge {
+            //? if recipe_holder {
             List<WoodenCauldronRecipe> cauldronRecipes =
                 rm.getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
                   .stream().map(RecipeHolder::value).collect(Collectors.toList());

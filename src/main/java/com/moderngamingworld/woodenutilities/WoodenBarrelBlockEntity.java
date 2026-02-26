@@ -19,9 +19,9 @@ import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-//? if neoforge {
-import net.minecraft.core.HolderLookup;
-//?}
+//? if modern_nbt {
+/*import net.minecraft.core.HolderLookup;
+*///?}
 
 public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
 
@@ -81,8 +81,8 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
         return ChestMenu.threeRows(id, inventory, this);
     }
 
-    //? if neoforge {
-    @Override
+    //? if modern_nbt {
+    /*@Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         if (!this.trySaveLootTable(tag)) {
@@ -98,8 +98,8 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
             ContainerHelper.loadAllItems(tag, this.items, registries);
         }
     }
-    //?} else {
-    /*@Override
+    *///?} else {
+    @Override
     protected void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
         if (!this.trySaveLootTable(tag)) {
@@ -115,7 +115,7 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
             ContainerHelper.loadAllItems(tag, this.items);
         }
     }
-    *///?}
+    //?}
 
     @Override
     public void startOpen(Player player) {

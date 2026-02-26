@@ -8,18 +8,18 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluids;
 //? if neoforge {
-import net.neoforged.bus.api.IEventBus;
+/*import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-//?} else {
-/*import net.minecraftforge.eventbus.api.IEventBus;
+*///?} else {
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-*///?}
+//?}
 
 public final class ModCreativeTabs {
 
@@ -27,10 +27,10 @@ public final class ModCreativeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WoodenUtilities.MOD_ID);
 
     //? if neoforge {
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOODEN_UTILITIES_TAB =
-    //?} else {
-    /*public static final RegistryObject<CreativeModeTab> WOODEN_UTILITIES_TAB =
-    *///?}
+    /*public static final DeferredHolder<CreativeModeTab, CreativeModeTab> WOODEN_UTILITIES_TAB =
+    *///?} else {
+    public static final RegistryObject<CreativeModeTab> WOODEN_UTILITIES_TAB =
+    //?}
             CREATIVE_MODE_TABS.register("wooden_utilities", () ->
                     CreativeModeTab.builder()
                             .icon(() -> new ItemStack(ModItems.OAK_WOODEN_CAULDRON.get()))
@@ -186,6 +186,106 @@ public final class ModCreativeTabs {
                                 }
                                 if (hasAether) {
                                     output.accept(ModItems.SKYROOT_WOODEN_BARREL.get());
+                                }
+
+                                // ── Crafting Tables ───────────────────────────────────────
+                                output.accept(ModItems.WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.OAK_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.SPRUCE_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.BIRCH_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.JUNGLE_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.ACACIA_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.DARK_OAK_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.MANGROVE_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.CHERRY_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.BAMBOO_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.CRIMSON_WOODEN_CRAFTING_TABLE.get());
+                                output.accept(ModItems.WARPED_WOODEN_CRAFTING_TABLE.get());
+                                if (hasTF) {
+                                    output.accept(ModItems.TWILIGHT_OAK_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.CANOPY_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.TWILIGHT_MANGROVE_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.DARK_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.TIME_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.TRANSFORMATION_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.MINING_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.SORTING_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.TOWERWOOD_WOODEN_CRAFTING_TABLE.get());
+                                }
+                                if (hasBOP) {
+                                    output.accept(ModItems.FIR_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.PINE_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.MAPLE_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.REDWOOD_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.MAHOGANY_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.JACARANDA_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.PALM_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.WILLOW_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.DEAD_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.MAGIC_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.UMBRAN_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.HELLBARK_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.EMPYREAL_WOODEN_CRAFTING_TABLE.get());
+                                }
+                                if (hasDeepAether) {
+                                    output.accept(ModItems.ROSEROOT_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.YAGROOT_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.CRUDEROOT_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.CONBERRY_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.SUNROOT_WOODEN_CRAFTING_TABLE.get());
+                                }
+                                if (hasAether) {
+                                    output.accept(ModItems.SKYROOT_WOODEN_CRAFTING_TABLE.get());
+                                }
+
+                                // ── Crafting Table Slabs ──────────────────────────────────
+                                output.accept(ModItems.WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.OAK_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.SPRUCE_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.BIRCH_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.JUNGLE_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.ACACIA_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.DARK_OAK_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.MANGROVE_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.CHERRY_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.BAMBOO_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.CRIMSON_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                output.accept(ModItems.WARPED_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                if (hasTF) {
+                                    output.accept(ModItems.TWILIGHT_OAK_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.CANOPY_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.TWILIGHT_MANGROVE_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.DARK_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.TIME_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.TRANSFORMATION_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.MINING_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.SORTING_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.TOWERWOOD_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                }
+                                if (hasBOP) {
+                                    output.accept(ModItems.FIR_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.PINE_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.MAPLE_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.REDWOOD_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.MAHOGANY_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.JACARANDA_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.PALM_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.WILLOW_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.DEAD_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.MAGIC_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.UMBRAN_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.HELLBARK_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.EMPYREAL_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                }
+                                if (hasDeepAether) {
+                                    output.accept(ModItems.ROSEROOT_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.YAGROOT_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.CRUDEROOT_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.CONBERRY_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                    output.accept(ModItems.SUNROOT_WOODEN_CRAFTING_TABLE_SLAB.get());
+                                }
+                                if (hasAether) {
+                                    output.accept(ModItems.SKYROOT_WOODEN_CRAFTING_TABLE_SLAB.get());
                                 }
 
                                 // ── Tools ────────────────────────────────────────────────

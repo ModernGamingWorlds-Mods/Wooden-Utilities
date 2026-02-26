@@ -14,12 +14,12 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import org.joml.Matrix4f;
 //? if neoforge {
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+/*import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.fluids.FluidStack;
-//?} else {
-/*import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
+*///?} else {
+import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.minecraftforge.fluids.FluidStack;
-*///?}
+//?}
 
 public class WoodenCauldronRenderer implements BlockEntityRenderer<WoodenCauldronBlockEntity> {
 
@@ -74,18 +74,18 @@ public class WoodenCauldronRenderer implements BlockEntityRenderer<WoodenCauldro
         VertexConsumer vc = bufferSource.getBuffer(RenderType.translucent());
 
         //? if neoforge {
-        // Top face (normal pointing up) — NeoForge 1.21 vertex API (no endVertex)
+        /*// Top face (normal pointing up) — NeoForge 1.21 vertex API (no endVertex)
         vc.addVertex(pose, x1, fluidY, z1).setColor(r, g, b, a).setUv(u0, v0).setOverlay(packedOverlay).setLight(packedLight).setNormal(0, 1, 0);
         vc.addVertex(pose, x1, fluidY, z2).setColor(r, g, b, a).setUv(u0, v1).setOverlay(packedOverlay).setLight(packedLight).setNormal(0, 1, 0);
         vc.addVertex(pose, x2, fluidY, z2).setColor(r, g, b, a).setUv(u1, v1).setOverlay(packedOverlay).setLight(packedLight).setNormal(0, 1, 0);
         vc.addVertex(pose, x2, fluidY, z1).setColor(r, g, b, a).setUv(u1, v0).setOverlay(packedOverlay).setLight(packedLight).setNormal(0, 1, 0);
-        //?} else {
-        /*// Top face (normal pointing up) — Forge 1.20.1 vertex API (requires endVertex)
+        *///?} else {
+        // Top face (normal pointing up) — Forge 1.20.1 vertex API (requires endVertex)
         vc.vertex(pose, x1, fluidY, z1).color(r, g, b, a).uv(u0, v0).overlayCoords(packedOverlay).uv2(packedLight).normal(0, 1, 0).endVertex();
         vc.vertex(pose, x1, fluidY, z2).color(r, g, b, a).uv(u0, v1).overlayCoords(packedOverlay).uv2(packedLight).normal(0, 1, 0).endVertex();
         vc.vertex(pose, x2, fluidY, z2).color(r, g, b, a).uv(u1, v1).overlayCoords(packedOverlay).uv2(packedLight).normal(0, 1, 0).endVertex();
         vc.vertex(pose, x2, fluidY, z1).color(r, g, b, a).uv(u1, v0).overlayCoords(packedOverlay).uv2(packedLight).normal(0, 1, 0).endVertex();
-        *///?}
+        //?}
     }
 
     private void renderItem(WoodenCauldronBlockEntity be, PoseStack poseStack,

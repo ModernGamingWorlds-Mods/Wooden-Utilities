@@ -22,6 +22,36 @@ if (isForge)    apply plugin: 'net.minecraftforge.gradle'
 stonecutter.const 'forge',    isForge
 stonecutter.const 'neoforge', isNeoForge
 
+// MC version parsing for version-specific constants
+def mcVer = minecraft_version.tokenize('.')
+int mcMinor = mcVer[1].toInteger()
+int mcPatch = mcVer.size() > 2 ? mcVer[2].toInteger() : 0
+
+// forge_1201: only 1.20.1-forge (has getId(), NetworkHooks, old serializer signatures)
+stonecutter.const 'forge_1201', (isForge && mcMinor == 20 && mcPatch == 1)
+
+// forge_mid: 1.20.2-forge and 1.20.4-forge (codec() returns Codec<T>, uses FriendlyByteBuf)
+stonecutter.const 'forge_mid', (isForge && mcMinor == 20 && (mcPatch == 2 || mcPatch == 4))
+
+// old_props: 1.20.1 and 1.20.2 forge use BlockBehaviour.Properties.copy(); 1.20.4+ use ofFullCopy()
+stonecutter.const 'old_props', (isForge && mcMinor == 20 && mcPatch <= 2)
+
+// recipe_holder: getAllRecipesFor returns List<RecipeHolder<T>> (all except 1.20.1-forge)
+stonecutter.const 'recipe_holder', (isNeoForge || (isForge && !(mcMinor == 20 && mcPatch == 1)))
+
+// modern_nbt: saveAdditional/load/getUpdateTag/onDataPacket take HolderLookup.Provider
+//             Also: RecipeInput, isSameItemSameComponents, codec-based recipe serializer
+//             True for: 1.20.6-forge and all NeoForge
+stonecutter.const 'modern_nbt', (isNeoForge || (isForge && (mcMinor > 20 || mcPatch >= 6)))
+
+// has_item_props: ItemProperties and ClampedItemPropertyFunction exist
+//                Removed in NeoForge 1.21.4+
+stonecutter.const 'has_item_props', !(isNeoForge && mcMinor == 21 && mcPatch >= 4)
+
+// block_codec: BaseEntityBlock requires codec() override
+//              True for all except forge_1201
+stonecutter.const 'block_codec', !(isForge && mcMinor == 20 && mcPatch == 1)
+
 // ── Project coordinates ───────────────────────────────────────────────────────
 version = mod_version
 group   = maven_group

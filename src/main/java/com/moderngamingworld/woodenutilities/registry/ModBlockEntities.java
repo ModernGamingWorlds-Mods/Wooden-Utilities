@@ -7,14 +7,14 @@ import com.moderngamingworld.woodenutilities.WoodenUtilities;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 //? if neoforge {
-import net.neoforged.bus.api.IEventBus;
+/*import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-//?} else {
-/*import net.minecraftforge.eventbus.api.IEventBus;
+*///?} else {
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-*///?}
+//?}
 
 public final class ModBlockEntities {
 
@@ -22,10 +22,10 @@ public final class ModBlockEntities {
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, WoodenUtilities.MOD_ID);
 
     //? if neoforge {
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenCauldronBlockEntity>> WOODEN_CAULDRON =
-    //?} else {
-    /*public static final RegistryObject<BlockEntityType<WoodenCauldronBlockEntity>> WOODEN_CAULDRON =
-    *///?}
+    /*public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenCauldronBlockEntity>> WOODEN_CAULDRON =
+    *///?} else {
+    public static final RegistryObject<BlockEntityType<WoodenCauldronBlockEntity>> WOODEN_CAULDRON =
+    //?}
             BLOCK_ENTITIES.register("wooden_cauldron", () ->
                     BlockEntityType.Builder.of(WoodenCauldronBlockEntity::new,
                             ModBlocks.OAK_WOODEN_CAULDRON.get(),
@@ -87,8 +87,8 @@ public final class ModBlockEntities {
                             ModBlocks.SAKURA_WOODEN_CAULDRON.get(),
                             ModBlocks.SKYRIS_WOODEN_CAULDRON.get(),
                             //? if neoforge {
-                            ModBlocks.SPIRIT_WOODEN_CAULDRON.get(),
-                            //?}
+                            /*ModBlocks.SPIRIT_WOODEN_CAULDRON.get(),
+                            *///?}
                             ModBlocks.WHITE_MANGROVE_WOODEN_CAULDRON.get(),
                             ModBlocks.BWG_WILLOW_WOODEN_CAULDRON.get(),
                             ModBlocks.WITCH_HAZEL_WOODEN_CAULDRON.get(),
@@ -96,10 +96,10 @@ public final class ModBlockEntities {
                     ).build(null));
 
     //? if neoforge {
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenBarrelBlockEntity>> WOODEN_BARREL =
-    //?} else {
-    /*public static final RegistryObject<BlockEntityType<WoodenBarrelBlockEntity>> WOODEN_BARREL =
-    *///?}
+    /*public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenBarrelBlockEntity>> WOODEN_BARREL =
+    *///?} else {
+    public static final RegistryObject<BlockEntityType<WoodenBarrelBlockEntity>> WOODEN_BARREL =
+    //?}
             BLOCK_ENTITIES.register("wooden_barrel", () ->
                     BlockEntityType.Builder.of(WoodenBarrelBlockEntity::new,
                             ModBlocks.WOODEN_BARREL.get(),
@@ -163,8 +163,8 @@ public final class ModBlockEntities {
                             ModBlocks.SAKURA_WOODEN_BARREL.get(),
                             ModBlocks.SKYRIS_WOODEN_BARREL.get(),
                             //? if neoforge {
-                            ModBlocks.SPIRIT_WOODEN_BARREL.get(),
-                            //?}
+                            /*ModBlocks.SPIRIT_WOODEN_BARREL.get(),
+                            *///?}
                             ModBlocks.WHITE_MANGROVE_WOODEN_BARREL.get(),
                             ModBlocks.BWG_WILLOW_WOODEN_BARREL.get(),
                             ModBlocks.WITCH_HAZEL_WOODEN_BARREL.get(),
@@ -172,10 +172,10 @@ public final class ModBlockEntities {
                     ).build(null));
 
     //? if neoforge {
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenHopperBlockEntity>> WOODEN_HOPPER =
-    //?} else {
-    /*public static final RegistryObject<BlockEntityType<WoodenHopperBlockEntity>> WOODEN_HOPPER =
-    *///?}
+    /*public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenHopperBlockEntity>> WOODEN_HOPPER =
+    *///?} else {
+    public static final RegistryObject<BlockEntityType<WoodenHopperBlockEntity>> WOODEN_HOPPER =
+    //?}
             BLOCK_ENTITIES.register("wooden_hopper", () ->
                     BlockEntityType.Builder.of(WoodenHopperBlockEntity::new,
                             ModBlocks.OAK_WOODEN_HOPPER.get(),
@@ -237,8 +237,8 @@ public final class ModBlockEntities {
                             ModBlocks.SAKURA_WOODEN_HOPPER.get(),
                             ModBlocks.SKYRIS_WOODEN_HOPPER.get(),
                             //? if neoforge {
-                            ModBlocks.SPIRIT_WOODEN_HOPPER.get(),
-                            //?}
+                            /*ModBlocks.SPIRIT_WOODEN_HOPPER.get(),
+                            *///?}
                             ModBlocks.WHITE_MANGROVE_WOODEN_HOPPER.get(),
                             ModBlocks.BWG_WILLOW_WOODEN_HOPPER.get(),
                             ModBlocks.WITCH_HAZEL_WOODEN_HOPPER.get(),

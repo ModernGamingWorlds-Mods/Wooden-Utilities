@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "woodenutilities:block/ebony_wooden_crafting_table_side",
+    "down": "woodenutilities:block/ebony_wooden_crafting_table_bottom",
+    "up": "woodenutilities:block/ebony_wooden_crafting_table_top",
+    "north": "woodenutilities:block/ebony_wooden_crafting_table_front",
+    "east": "woodenutilities:block/ebony_wooden_crafting_table_side",
+    "south": "woodenutilities:block/ebony_wooden_crafting_table_front",
+    "west": "woodenutilities:block/ebony_wooden_crafting_table_side"
+  }
+}

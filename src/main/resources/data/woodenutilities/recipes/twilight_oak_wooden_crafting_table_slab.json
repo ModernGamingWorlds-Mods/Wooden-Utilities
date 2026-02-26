@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    { "type": "forge:mod_loaded", "modid": "twilightforest" }
+  ],
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      { "item": "woodenutilities:twilight_oak_wooden_crafting_table" }
+    ],
+    "result": {
+      "item": "woodenutilities:twilight_oak_wooden_crafting_table_slab",
+      "count": 2
+    }
+  }
+}

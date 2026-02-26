@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "woodenutilities:block/cypress_wooden_crafting_table_side",
+    "down": "woodenutilities:block/cypress_wooden_crafting_table_bottom",
+    "up": "woodenutilities:block/cypress_wooden_crafting_table_top",
+    "north": "woodenutilities:block/cypress_wooden_crafting_table_front",
+    "east": "woodenutilities:block/cypress_wooden_crafting_table_side",
+    "south": "woodenutilities:block/cypress_wooden_crafting_table_front",
+    "west": "woodenutilities:block/cypress_wooden_crafting_table_side"
+  }
+}

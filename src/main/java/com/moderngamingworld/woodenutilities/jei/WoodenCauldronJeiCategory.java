@@ -17,10 +17,10 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 //? if neoforge {
-import mezz.jei.api.neoforge.NeoForgeTypes;
-//?} else {
-/*import mezz.jei.api.forge.ForgeTypes;
-*///?}
+/*import mezz.jei.api.neoforge.NeoForgeTypes;
+*///?} else {
+import mezz.jei.api.forge.ForgeTypes;
+//?}
 
 import java.util.Arrays;
 
@@ -61,26 +61,26 @@ public class WoodenCauldronJeiCategory implements IRecipeCategory<WoodenCauldron
     public void setRecipe(IRecipeLayoutBuilder builder, WoodenCauldronRecipe recipe, IFocusGroup focuses) {
         // Tank A fluid — always present
         //? if neoforge {
-        builder.addSlot(RecipeIngredientRole.INPUT, 1, 6)
+        /*builder.addSlot(RecipeIngredientRole.INPUT, 1, 6)
             .addIngredient(NeoForgeTypes.FLUID_STACK, recipe.getInputFluid())
             .setFluidRenderer(recipe.getInputFluid().getAmount(), false, 16, 16);
-        //?} else {
-        /*builder.addSlot(RecipeIngredientRole.INPUT, 1, 6)
+        *///?} else {
+        builder.addSlot(RecipeIngredientRole.INPUT, 1, 6)
             .addIngredient(ForgeTypes.FLUID_STACK, recipe.getInputFluid())
             .setFluidRenderer(recipe.getInputFluid().getAmount(), false, 16, 16);
-        *///?}
+        //?}
 
         // Second input: another fluid, or an item
         if (recipe.isFluidFluid()) {
             //? if neoforge {
-            builder.addSlot(RecipeIngredientRole.INPUT, 31, 6)
+            /*builder.addSlot(RecipeIngredientRole.INPUT, 31, 6)
                 .addIngredient(NeoForgeTypes.FLUID_STACK, recipe.getInputFluid2())
                 .setFluidRenderer(recipe.getInputFluid2().getAmount(), false, 16, 16);
-            //?} else {
-            /*builder.addSlot(RecipeIngredientRole.INPUT, 31, 6)
+            *///?} else {
+            builder.addSlot(RecipeIngredientRole.INPUT, 31, 6)
                 .addIngredient(ForgeTypes.FLUID_STACK, recipe.getInputFluid2())
                 .setFluidRenderer(recipe.getInputFluid2().getAmount(), false, 16, 16);
-            *///?}
+            //?}
         } else {
             builder.addSlot(RecipeIngredientRole.INPUT, 31, 6)
                 .addIngredients(VanillaTypes.ITEM_STACK,

@@ -2,31 +2,33 @@ package com.moderngamingworld.woodenutilities;
 
 import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
+//? if has_item_props {
 import net.minecraft.client.renderer.item.ItemProperties;
+//?}
 import net.minecraft.world.level.material.Fluids;
 //? if neoforge {
-import net.minecraft.resources.ResourceLocation;
+/*import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.fluids.FluidStack;
-//?} else {
-/*import net.minecraft.resources.ResourceLocation;
+*///?} else {
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.fluids.FluidStack;
-*///?}
+//?}
 
 //? if neoforge {
-@EventBusSubscriber(modid = WoodenUtilities.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-//?} else {
-/*@Mod.EventBusSubscriber(modid = WoodenUtilities.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-*///?}
+/*@EventBusSubscriber(modid = WoodenUtilities.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+*///?} else {
+@Mod.EventBusSubscriber(modid = WoodenUtilities.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+//?}
 public class ClientEvents {
 
     @SubscribeEvent
@@ -36,12 +38,13 @@ public class ClientEvents {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
+        //? if has_item_props {
         event.enqueueWork(() -> {
             //? if neoforge {
-            ResourceLocation fluidTypeProp = ResourceLocation.fromNamespaceAndPath(WoodenUtilities.MOD_ID, "fluid_type");
-            //?} else {
-            /*ResourceLocation fluidTypeProp = new ResourceLocation(WoodenUtilities.MOD_ID, "fluid_type");
-            *///?}
+            /*ResourceLocation fluidTypeProp = ResourceLocation.fromNamespaceAndPath(WoodenUtilities.MOD_ID, "fluid_type");
+            *///?} else {
+            ResourceLocation fluidTypeProp = new ResourceLocation(WoodenUtilities.MOD_ID, "fluid_type");
+            //?}
             net.minecraft.client.renderer.item.ClampedItemPropertyFunction fluidFunc =
                 (stack, level, entity, seed) -> {
                     FluidStack fluid = WoodenBucketItem.getFluid(stack);
@@ -90,5 +93,6 @@ public class ClientEvents {
             ItemProperties.register(ModItems.SUNROOT_WOODEN_BUCKET.get(),     fluidTypeProp, fluidFunc);
             ItemProperties.register(ModItems.SKYROOT_WOODEN_BUCKET.get(),     fluidTypeProp, fluidFunc);
         });
+        //?}
     }
 }

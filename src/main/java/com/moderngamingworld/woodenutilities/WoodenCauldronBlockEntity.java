@@ -10,20 +10,20 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
-//? if neoforge {
+//? if recipe_holder {
 import net.minecraft.world.item.crafting.RecipeHolder;
 //?}
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 //? if neoforge {
-import net.neoforged.neoforge.fluids.FluidStack;
+/*import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
-//?} else {
-/*import net.minecraftforge.common.capabilities.Capability;
+*///?} else {
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.fluids.FluidStack;
@@ -31,7 +31,7 @@ import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-*///?}
+//?}
 
 import net.minecraft.tags.FluidTags;
 
@@ -150,7 +150,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
                                   WoodenCauldronBlockEntity be) {
         if (be.tankA.isEmpty()) return;
 
-        //? if neoforge {
+        //? if recipe_holder {
         for (net.minecraft.world.item.crafting.RecipeHolder<WoodenCauldronRecipe> holder :
                 level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())) {
             WoodenCauldronRecipe recipe = holder.value();
@@ -179,11 +179,11 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
                     if (slot.isEmpty()) {
                         container.setItem(i, remaining);
                         remaining = ItemStack.EMPTY;
-                    //? if neoforge {
-                    } else if (ItemStack.isSameItemSameComponents(slot, remaining)) {
-                    //?} else {
-                    /*} else if (ItemStack.isSameItemSameTags(slot, remaining)) {
-                    *///?}
+                    //? if modern_nbt {
+                    /*} else if (ItemStack.isSameItemSameComponents(slot, remaining)) {
+                    *///?} else {
+                    } else if (ItemStack.isSameItemSameTags(slot, remaining)) {
+                    //?}
                         int canFit = Math.min(remaining.getCount(), slot.getMaxStackSize() - slot.getCount());
                         if (canFit > 0) {
                             slot.grow(canFit);
@@ -220,7 +220,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         FluidStack aFluid = tankA.getFluid();
         if (aFluid.isEmpty()) return false;
 
-        //? if neoforge {
+        //? if recipe_holder {
         return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
                 .stream().anyMatch(h -> {
             WoodenCauldronRecipe r = h.value();
@@ -242,8 +242,8 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
 
     // ── NBT persistence ───────────────────────────────────────────────────────
 
-    //? if neoforge {
-    @Override
+    //? if modern_nbt {
+    /*@Override
     protected void saveAdditional(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         tag.put("TankA", tankA.writeToNBT(registries, new CompoundTag()));
@@ -258,8 +258,8 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         tankB.readFromNBT(registries, tag.getCompound("TankB"));
         itemHandler.deserializeNBT(registries, tag.getCompound("Items"));
     }
-    //?} else {
-    /*@Override
+    *///?} else {
+    @Override
     protected void saveAdditional(CompoundTag tag) {
         super.saveAdditional(tag);
         tag.put("TankA", tankA.writeToNBT(new CompoundTag()));
@@ -274,46 +274,46 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         tankB.readFromNBT(tag.getCompound("TankB"));
         itemHandler.deserializeNBT(tag.getCompound("Items"));
     }
-    *///?}
+    //?}
 
     // ── Client sync ───────────────────────────────────────────────────────────
 
-    //? if neoforge {
-    @Override
+    //? if modern_nbt {
+    /*@Override
     public CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
         return saveWithoutMetadata(registries);
     }
-    //?} else {
-    /*@Override
+    *///?} else {
+    @Override
     public CompoundTag getUpdateTag() {
         return saveWithoutMetadata();
     }
-    *///?}
+    //?}
 
     @Override
     public ClientboundBlockEntityDataPacket getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
-    //? if neoforge {
-    @Override
+    //? if modern_nbt {
+    /*@Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt,
                              net.minecraft.core.HolderLookup.Provider registries) {
         if (pkt.getTag() != null) loadAdditional(pkt.getTag(), registries);
     }
-    //?} else {
-    /*@Override
+    *///?} else {
+    @Override
     public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
         if (pkt.getTag() != null) load(pkt.getTag());
     }
-    *///?}
+    //?}
 
     // ── Forge capabilities ────────────────────────────────────────────────────
 
     //? if neoforge {
     
     //?} else {
-    /*private final LazyOptional<IFluidHandler> fluidCap         = LazyOptional.of(() -> sideFluidHandler);
+    private final LazyOptional<IFluidHandler> fluidCap         = LazyOptional.of(() -> sideFluidHandler);
     private final LazyOptional<IFluidHandler> extractFluidCap  = LazyOptional.of(() -> extractFluidHandler);
     private final LazyOptional<IItemHandler>  itemCap          = LazyOptional.of(() -> insertOnlyItemHandler);
 
@@ -338,7 +338,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         extractFluidCap.invalidate();
         itemCap.invalidate();
     }
-    *///?}
+    //?}
 
     // ── Accessors (used by recipe and block) ──────────────────────────────────
 

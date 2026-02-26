@@ -16,8 +16,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 //? if neoforge {
 //?} else {
-/*import net.minecraft.world.InteractionHand;
-*///?}
+import net.minecraft.world.InteractionHand;
+//?}
 
 import javax.annotation.Nullable;
 
@@ -40,7 +40,7 @@ public class WoodenBarrelBlock extends BarrelBlock {
     }
 
     //? if neoforge {
-    @Override
+    /*@Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
                                             Player player, BlockHitResult hitResult) {
         if (level.isClientSide) {
@@ -53,8 +53,8 @@ public class WoodenBarrelBlock extends BarrelBlock {
         }
         return InteractionResult.CONSUME;
     }
-    //?} else {
-    /*@Override
+    *///?} else {
+    @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos,
                                  Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (level.isClientSide) {
@@ -67,5 +67,5 @@ public class WoodenBarrelBlock extends BarrelBlock {
         }
         return InteractionResult.CONSUME;
     }
-    *///?}
+    //?}
 }

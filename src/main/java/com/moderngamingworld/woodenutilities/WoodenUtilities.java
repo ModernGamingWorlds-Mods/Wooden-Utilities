@@ -10,19 +10,19 @@ import com.moderngamingworld.woodenutilities.registry.ModRecipes;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.CreativeModeTabs;
 //? if neoforge {
-import net.neoforged.bus.api.IEventBus;
+/*import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-//?} else {
-/*import net.minecraftforge.eventbus.api.IEventBus;
+*///?} else {
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-*///?}
+//?}
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,12 +32,12 @@ public class WoodenUtilities {
     private static final Logger LOGGER = LoggerFactory.getLogger(WoodenUtilities.class);
 
     //? if neoforge {
-    public WoodenUtilities(IEventBus modEventBus) {
+    /*public WoodenUtilities(IEventBus modEventBus) {
         modEventBus.addListener(WoodenUtilities::registerCapabilities);
-    //?} else {
-    /*public WoodenUtilities() {
+    *///?} else {
+    public WoodenUtilities() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-    *///?}
+    //?}
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
@@ -55,7 +55,7 @@ public class WoodenUtilities {
     }
 
     //? if neoforge {
-    private static void registerCapabilities(RegisterCapabilitiesEvent event) {
+    /*private static void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(
             Capabilities.FluidHandler.BLOCK,
             ModBlockEntities.WOODEN_CAULDRON.get(),
@@ -83,7 +83,7 @@ public class WoodenUtilities {
             );
         }
     }
-    //?}
+    *///?}
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -185,8 +185,8 @@ public class WoodenUtilities {
             event.accept(ModItems.SAKURA_WOODEN_PLATE);
             event.accept(ModItems.SKYRIS_WOODEN_PLATE);
             //? if neoforge {
-            event.accept(ModItems.SPIRIT_WOODEN_PLATE);
-            //?}
+            /*event.accept(ModItems.SPIRIT_WOODEN_PLATE);
+            *///?}
             event.accept(ModItems.WHITE_MANGROVE_WOODEN_PLATE);
             event.accept(ModItems.BWG_WILLOW_WOODEN_PLATE);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_PLATE);
@@ -212,8 +212,8 @@ public class WoodenUtilities {
             event.accept(ModItems.SAKURA_WOODEN_CAULDRON);
             event.accept(ModItems.SKYRIS_WOODEN_CAULDRON);
             //? if neoforge {
-            event.accept(ModItems.SPIRIT_WOODEN_CAULDRON);
-            //?}
+            /*event.accept(ModItems.SPIRIT_WOODEN_CAULDRON);
+            *///?}
             event.accept(ModItems.WHITE_MANGROVE_WOODEN_CAULDRON);
             event.accept(ModItems.BWG_WILLOW_WOODEN_CAULDRON);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_CAULDRON);
@@ -290,8 +290,8 @@ public class WoodenUtilities {
             event.accept(ModItems.SAKURA_WOODEN_BARREL);
             event.accept(ModItems.SKYRIS_WOODEN_BARREL);
             //? if neoforge {
-            event.accept(ModItems.SPIRIT_WOODEN_BARREL);
-            //?}
+            /*event.accept(ModItems.SPIRIT_WOODEN_BARREL);
+            *///?}
             event.accept(ModItems.WHITE_MANGROVE_WOODEN_BARREL);
             event.accept(ModItems.BWG_WILLOW_WOODEN_BARREL);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_BARREL);
@@ -355,8 +355,8 @@ public class WoodenUtilities {
             event.accept(ModItems.SAKURA_WOODEN_HOPPER);
             event.accept(ModItems.SKYRIS_WOODEN_HOPPER);
             //? if neoforge {
-            event.accept(ModItems.SPIRIT_WOODEN_HOPPER);
-            //?}
+            /*event.accept(ModItems.SPIRIT_WOODEN_HOPPER);
+            *///?}
             event.accept(ModItems.WHITE_MANGROVE_WOODEN_HOPPER);
             event.accept(ModItems.BWG_WILLOW_WOODEN_HOPPER);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_HOPPER);
