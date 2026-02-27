@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:rabbit_hide" },
+  "result": { "item": "minecraft:leather", "count": 1 }
+}
