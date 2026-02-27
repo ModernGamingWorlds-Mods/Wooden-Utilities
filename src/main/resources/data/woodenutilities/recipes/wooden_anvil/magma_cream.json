@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:magma_block" },
+  "result": { "item": "minecraft:magma_cream", "count": 2 }
+}
