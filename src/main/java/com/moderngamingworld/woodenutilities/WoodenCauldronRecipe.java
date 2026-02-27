@@ -35,8 +35,8 @@ public class WoodenCauldronRecipe implements Recipe<Container> {
     @Nullable private final Ingredient inputItem;
     private final ItemStack result;
     //? if forge_1201 {
-    /*net.minecraft.resources.ResourceLocation id;
-    *///?}
+    net.minecraft.resources.ResourceLocation id;
+    //?}
 
     public WoodenCauldronRecipe(FluidStack inputFluid,
                                 @Nullable FluidStack inputFluid2,
@@ -120,7 +120,7 @@ public class WoodenCauldronRecipe implements Recipe<Container> {
     public RecipeType<?> getType() { return ModRecipes.WOODEN_CAULDRON_TYPE.get(); }
 
     //? if forge_1201 {
-    /*@Override
+    @Override
     public net.minecraft.resources.ResourceLocation getId() { return id; }
-    *///?}
+    //?}
 }

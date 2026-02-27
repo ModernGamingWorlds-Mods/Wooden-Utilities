@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:cika_planks" },
+  "result": { "item": "woodenutilities:cika_wooden_plate", "count": 2 }
+}

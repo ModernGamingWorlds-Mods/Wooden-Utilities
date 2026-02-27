@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "deep_aether:roseroot_planks" },
+  "result": { "item": "woodenutilities:roseroot_wooden_plate", "count": 2 }
+}

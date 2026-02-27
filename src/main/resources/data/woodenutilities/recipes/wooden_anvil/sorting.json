@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "twilightforest:sorting_planks" },
+  "result": { "item": "woodenutilities:sorting_wooden_plate", "count": 2 }
+}

@@ -2,7 +2,6 @@ package com.moderngamingworld.woodenutilities.jei;
 
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
 import com.moderngamingworld.woodenutilities.registry.ModBlocks;
-import com.moderngamingworld.woodenutilities.registry.ModItems;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
@@ -14,12 +13,7 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class WoodenAnvilJeiCategory implements IRecipeCategory<WoodenAnvilJeiCategory.AnvilRecipe> {
 
@@ -67,25 +61,4 @@ public class WoodenAnvilJeiCategory implements IRecipeCategory<WoodenAnvilJeiCat
     }
 
     public record AnvilRecipe(ItemStack hammer, ItemStack plank, ItemStack result) {}
-
-    public static List<AnvilRecipe> buildRecipes() {
-        ItemStack hammer = new ItemStack(ModItems.WOODEN_HAMMER.get());
-        List<AnvilRecipe> list = new ArrayList<>();
-        addRecipe(list, hammer, Items.OAK_PLANKS,      ModItems.OAK_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.SPRUCE_PLANKS,   ModItems.SPRUCE_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.BIRCH_PLANKS,    ModItems.BIRCH_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.JUNGLE_PLANKS,   ModItems.JUNGLE_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.ACACIA_PLANKS,   ModItems.ACACIA_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.DARK_OAK_PLANKS, ModItems.DARK_OAK_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.MANGROVE_PLANKS, ModItems.MANGROVE_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.CHERRY_PLANKS,   ModItems.CHERRY_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.BAMBOO_PLANKS,   ModItems.BAMBOO_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.CRIMSON_PLANKS,  ModItems.CRIMSON_WOODEN_PLATE.get());
-        addRecipe(list, hammer, Items.WARPED_PLANKS,   ModItems.WARPED_WOODEN_PLATE.get());
-        return list;
-    }
-
-    private static void addRecipe(List<AnvilRecipe> list, ItemStack hammer, Item plank, Item plate) {
-        list.add(new AnvilRecipe(hammer.copy(), new ItemStack(plank), new ItemStack(plate, 2)));
-    }
 }

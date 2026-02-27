@@ -1,5 +1,7 @@
 package com.moderngamingworld.woodenutilities.registry;
 
+import com.moderngamingworld.woodenutilities.WoodenAnvilRecipe;
+import com.moderngamingworld.woodenutilities.WoodenAnvilRecipeSerializer;
 import com.moderngamingworld.woodenutilities.WoodenCauldronRecipe;
 import com.moderngamingworld.woodenutilities.WoodenCauldronRecipeSerializer;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
@@ -42,6 +44,22 @@ public final class ModRecipes {
     public static final RegistryObject<RecipeSerializer<WoodenCauldronRecipe>> WOODEN_CAULDRON_SERIALIZER =
     //?}
             RECIPE_SERIALIZERS.register("wooden_cauldron", WoodenCauldronRecipeSerializer::new);
+
+    //? if neoforge {
+    /*public static final DeferredHolder<RecipeType<?>, RecipeType<WoodenAnvilRecipe>> WOODEN_ANVIL_TYPE =
+    *///?} else {
+    public static final RegistryObject<RecipeType<WoodenAnvilRecipe>> WOODEN_ANVIL_TYPE =
+    //?}
+            RECIPE_TYPES.register("wooden_anvil", () -> new RecipeType<>() {
+                @Override public String toString() { return WoodenUtilities.MOD_ID + ":wooden_anvil"; }
+            });
+
+    //? if neoforge {
+    /*public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<WoodenAnvilRecipe>> WOODEN_ANVIL_SERIALIZER =
+    *///?} else {
+    public static final RegistryObject<RecipeSerializer<WoodenAnvilRecipe>> WOODEN_ANVIL_SERIALIZER =
+    //?}
+            RECIPE_SERIALIZERS.register("wooden_anvil", WoodenAnvilRecipeSerializer::new);
 
     private ModRecipes() {}
 

@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:acacia_planks" },
+  "result": { "item": "woodenutilities:acacia_wooden_plate", "count": 2 }
+}

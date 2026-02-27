@@ -9,14 +9,14 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 *///?} else if forge_mid {
-import com.mojang.serialization.Codec;
+/*import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.network.FriendlyByteBuf;
-//?} else {
-/*import com.google.gson.JsonObject;
+*///?} else {
+import com.google.gson.JsonObject;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-*///?}
+//?}
 //? if neoforge {
 /*import net.neoforged.neoforge.fluids.FluidStack;
 *///?} else {
@@ -71,7 +71,7 @@ public class WoodenCauldronRecipeSerializer implements RecipeSerializer<WoodenCa
         return STREAM_CODEC;
     }
     *///?} else if forge_mid {
-    public static final Codec<WoodenCauldronRecipe> CODEC = RecordCodecBuilder.create(instance ->
+    /*public static final Codec<WoodenCauldronRecipe> CODEC = RecordCodecBuilder.create(instance ->
         instance.group(
             FluidStack.CODEC.fieldOf("input_fluid").forGetter(WoodenCauldronRecipe::getInputFluid),
             FluidStack.CODEC.optionalFieldOf("input_fluid_2").forGetter(r -> Optional.ofNullable(r.getInputFluid2())),
@@ -107,8 +107,8 @@ public class WoodenCauldronRecipeSerializer implements RecipeSerializer<WoodenCa
         if (item != null) item.toNetwork(buf);
         buf.writeItem(recipe.getResultCopy());
     }
-    //?} else {
-    /*@Override
+    *///?} else {
+    @Override
     public WoodenCauldronRecipe fromJson(ResourceLocation id, JsonObject json) {
         FluidStack inputFluid = fluidFromJson(json.getAsJsonObject("input_fluid"));
         FluidStack inputFluid2 = json.has("input_fluid_2")
@@ -158,5 +158,5 @@ public class WoodenCauldronRecipeSerializer implements RecipeSerializer<WoodenCa
             net.minecraft.core.registries.BuiltInRegistries.ITEM.get(new ResourceLocation(itemId));
         return new ItemStack(item, count);
     }
-    *///?}
+    //?}
 }

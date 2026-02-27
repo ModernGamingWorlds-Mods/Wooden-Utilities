@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomesoplenty:willow_planks" },
+  "result": { "item": "woodenutilities:willow_wooden_plate", "count": 2 }
+}

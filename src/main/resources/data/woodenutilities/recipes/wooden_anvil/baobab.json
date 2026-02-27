@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:baobab_planks" },
+  "result": { "item": "woodenutilities:baobab_wooden_plate", "count": 2 }
+}

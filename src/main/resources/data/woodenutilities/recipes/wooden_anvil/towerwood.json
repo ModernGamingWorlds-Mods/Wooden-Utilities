@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "twilightforest:towerwood_planks" },
+  "result": { "item": "woodenutilities:towerwood_wooden_plate", "count": 2 }
+}

@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:green_enchanted_planks" },
+  "result": { "item": "woodenutilities:green_enchanted_wooden_plate", "count": 2 }
+}

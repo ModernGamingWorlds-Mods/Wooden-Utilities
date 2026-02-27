@@ -17,8 +17,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.InteractionHand;
 //?}
 //? if forge_1201 {
-/*import net.minecraftforge.network.NetworkHooks;
-*///?}
+import net.minecraftforge.network.NetworkHooks;
+//?}
 
 public class WoodenAnvilBlock extends Block {
 
@@ -45,21 +45,21 @@ public class WoodenAnvilBlock extends Block {
                                  Player player, InteractionHand hand, BlockHitResult hit) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
         //? if forge_1201 {
-        /*NetworkHooks.openScreen(
+        NetworkHooks.openScreen(
             (ServerPlayer) player,
             new SimpleMenuProvider(
                 (id, inv, p) -> new WoodenAnvilMenu(id, inv, ContainerLevelAccess.create(level, pos)),
                 Component.translatable("container.wooden_anvil")
             )
         );
-        *///?} else {
-        ((ServerPlayer) player).openMenu(
+        //?} else {
+        /*((ServerPlayer) player).openMenu(
             new SimpleMenuProvider(
                 (id, inv, p) -> new WoodenAnvilMenu(id, inv, ContainerLevelAccess.create(level, pos)),
                 Component.translatable("container.wooden_anvil")
             )
         );
-        //?}
+        *///?}
         return InteractionResult.CONSUME;
     }
     //?}

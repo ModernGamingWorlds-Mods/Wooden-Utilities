@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:white_mangrove_planks" },
+  "result": { "item": "woodenutilities:white_mangrove_wooden_plate", "count": 2 }
+}

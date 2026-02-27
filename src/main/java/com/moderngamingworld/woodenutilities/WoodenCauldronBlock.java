@@ -28,13 +28,13 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.fluids.FluidUtil;
 *///?} else if forge_mid {
-import com.mojang.serialization.MapCodec;
+/*import com.mojang.serialization.MapCodec;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.FluidUtil;
-//?} else if modern_nbt {
+*///?} else if modern_nbt {
 /*import com.mojang.serialization.MapCodec;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -42,12 +42,12 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.FluidUtil;
 *///?} else {
-/*import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.FluidUtil;
-*///?}
+//?}
 
 import javax.annotation.Nullable;
 
@@ -68,13 +68,13 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
         return CODEC;
     }
     *///?} else if forge_mid {
-    public static final MapCodec<WoodenCauldronBlock> CODEC = simpleCodec(WoodenCauldronBlock::new);
+    /*public static final MapCodec<WoodenCauldronBlock> CODEC = simpleCodec(WoodenCauldronBlock::new);
 
     @Override
     protected MapCodec<WoodenCauldronBlock> codec() {
         return CODEC;
     }
-    //?}
+    *///?}
 
     // Matches the vanilla AbstractCauldronBlock shape
     private static final VoxelShape SHAPE = Shapes.join(

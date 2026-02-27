@@ -11,8 +11,8 @@ import net.minecraft.world.Container;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 //? if recipe_holder {
-import net.minecraft.world.item.crafting.RecipeHolder;
-//?}
+/*import net.minecraft.world.item.crafting.RecipeHolder;
+*///?}
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -151,13 +151,13 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         if (be.tankA.isEmpty()) return;
 
         //? if recipe_holder {
-        for (net.minecraft.world.item.crafting.RecipeHolder<WoodenCauldronRecipe> holder :
+        /*for (net.minecraft.world.item.crafting.RecipeHolder<WoodenCauldronRecipe> holder :
                 level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())) {
             WoodenCauldronRecipe recipe = holder.value();
-        //?} else {
-        /*for (WoodenCauldronRecipe recipe :
+        *///?} else {
+        for (WoodenCauldronRecipe recipe :
                 level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())) {
-        *///?}
+        //?}
             if (recipe.matches(be)) {
                 recipe.consumeInputs(be);
                 be.setChanged();
@@ -221,7 +221,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         if (aFluid.isEmpty()) return false;
 
         //? if recipe_holder {
-        return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
+        /*return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
                 .stream().anyMatch(h -> {
             WoodenCauldronRecipe r = h.value();
             return r.isFluidFluid()
@@ -229,15 +229,15 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
                     && r.getInputFluid2() != null
                     && r.getInputFluid2().getFluid() == incoming.getFluid();
         });
-        //?} else {
-        /*return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
+        *///?} else {
+        return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
                 .stream().anyMatch(r ->
             r.isFluidFluid()
                     && r.getInputFluid().getFluid() == aFluid.getFluid()
                     && r.getInputFluid2() != null
                     && r.getInputFluid2().getFluid() == incoming.getFluid()
         );
-        *///?}
+        //?}
     }
 
     // ── NBT persistence ───────────────────────────────────────────────────────

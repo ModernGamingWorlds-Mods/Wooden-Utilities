@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:sakura_planks" },
+  "result": { "item": "woodenutilities:sakura_wooden_plate", "count": 2 }
+}

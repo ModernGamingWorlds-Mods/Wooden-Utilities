@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:cypress_planks" },
+  "result": { "item": "woodenutilities:cypress_wooden_plate", "count": 2 }
+}

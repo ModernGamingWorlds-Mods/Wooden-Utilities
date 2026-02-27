@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomesoplenty:hellbark_planks" },
+  "result": { "item": "woodenutilities:hellbark_wooden_plate", "count": 2 }
+}

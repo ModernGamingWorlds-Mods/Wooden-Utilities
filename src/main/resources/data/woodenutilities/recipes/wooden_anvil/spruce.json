@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:spruce_planks" },
+  "result": { "item": "woodenutilities:spruce_wooden_plate", "count": 2 }
+}

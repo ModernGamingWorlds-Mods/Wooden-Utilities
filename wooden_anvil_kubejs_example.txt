@@ -1,0 +1,12 @@
+// kubejs/server_scripts/wooden_anvil_recipes.js
+ServerEvents.recipes(event => {
+    // Add a new recipe: dirt -> oak wooden plate (silly example)
+    event.custom({
+        type: 'woodenutilities:wooden_anvil',
+        input: { item: 'minecraft:dirt' },
+        result: { item: 'woodenutilities:oak_wooden_plate', count: 2 }
+    });
+
+    // Remove the vanilla oak planks -> oak plate recipe
+    event.remove({ type: 'woodenutilities:wooden_anvil', output: 'woodenutilities:oak_wooden_plate' });
+});

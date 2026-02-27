@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "deep_aether:sunroot_planks" },
+  "result": { "item": "woodenutilities:sunroot_wooden_plate", "count": 2 }
+}

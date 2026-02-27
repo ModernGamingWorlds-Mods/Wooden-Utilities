@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:spirit_planks" },
+  "result": { "item": "woodenutilities:spirit_wooden_plate", "count": 2 }
+}

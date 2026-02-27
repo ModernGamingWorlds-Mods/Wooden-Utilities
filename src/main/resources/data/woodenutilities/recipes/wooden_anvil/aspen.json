@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:aspen_planks" },
+  "result": { "item": "woodenutilities:aspen_wooden_plate", "count": 2 }
+}

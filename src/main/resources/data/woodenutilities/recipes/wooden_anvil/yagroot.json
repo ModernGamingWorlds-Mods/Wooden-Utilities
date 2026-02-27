@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "deep_aether:yagroot_planks" },
+  "result": { "item": "woodenutilities:yagroot_wooden_plate", "count": 2 }
+}

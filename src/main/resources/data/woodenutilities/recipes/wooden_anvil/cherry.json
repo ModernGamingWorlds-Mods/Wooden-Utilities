@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:cherry_planks" },
+  "result": { "item": "woodenutilities:cherry_wooden_plate", "count": 2 }
+}

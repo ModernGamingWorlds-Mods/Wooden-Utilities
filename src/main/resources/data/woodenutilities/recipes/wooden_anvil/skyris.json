@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:skyris_planks" },
+  "result": { "item": "woodenutilities:skyris_wooden_plate", "count": 2 }
+}

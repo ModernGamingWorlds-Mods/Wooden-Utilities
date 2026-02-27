@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:zelkova_planks" },
+  "result": { "item": "woodenutilities:zelkova_wooden_plate", "count": 2 }
+}

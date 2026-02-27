@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:redwood_planks" },
+  "result": { "item": "woodenutilities:bwg_redwood_wooden_plate", "count": 2 }
+}

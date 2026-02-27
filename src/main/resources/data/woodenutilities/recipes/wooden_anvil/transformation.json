@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "twilightforest:transformation_planks" },
+  "result": { "item": "woodenutilities:transformation_wooden_plate", "count": 2 }
+}

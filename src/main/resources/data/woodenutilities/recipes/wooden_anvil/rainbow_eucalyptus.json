@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:rainbow_eucalyptus_planks" },
+  "result": { "item": "woodenutilities:rainbow_eucalyptus_wooden_plate", "count": 2 }
+}

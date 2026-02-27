@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:jacaranda_planks" },
+  "result": { "item": "woodenutilities:bwg_jacaranda_wooden_plate", "count": 2 }
+}

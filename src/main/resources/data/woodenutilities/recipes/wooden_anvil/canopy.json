@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "twilightforest:canopy_planks" },
+  "result": { "item": "woodenutilities:canopy_wooden_plate", "count": 2 }
+}

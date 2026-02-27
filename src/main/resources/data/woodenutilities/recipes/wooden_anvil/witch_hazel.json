@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "biomeswevegone:witch_hazel_planks" },
+  "result": { "item": "woodenutilities:witch_hazel_wooden_plate", "count": 2 }
+}
