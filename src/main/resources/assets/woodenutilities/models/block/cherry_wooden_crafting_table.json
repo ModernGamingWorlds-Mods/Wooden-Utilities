@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/cherry_wooden_crafting_table_side",
-    "down": "woodenutilities:block/cherry_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/cherry_wooden_crafting_table_top",
-    "north": "woodenutilities:block/cherry_wooden_crafting_table_front",
-    "east": "woodenutilities:block/cherry_wooden_crafting_table_side",
-    "south": "woodenutilities:block/cherry_wooden_crafting_table_front",
-    "west": "woodenutilities:block/cherry_wooden_crafting_table_side"
+    "particle": "minecraft:block/cherry_planks",
+    "down": "minecraft:block/cherry_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "minecraft:block/cherry_planks",
+    "east": "minecraft:block/cherry_planks",
+    "south": "minecraft:block/cherry_planks",
+    "west": "minecraft:block/cherry_planks"
   }
 }

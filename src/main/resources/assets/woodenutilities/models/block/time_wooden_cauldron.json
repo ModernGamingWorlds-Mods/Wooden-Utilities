@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/cauldron",
   "textures": {
-    "particle": "twilightforest:block/timewood_planks",
-    "side": "twilightforest:block/timewood_planks",
-    "top": "twilightforest:block/timewood_planks",
-    "bottom": "twilightforest:block/timewood_planks",
-    "inside": "twilightforest:block/timewood_planks"
+    "particle": "twilightforest:block/wood/planks/time/time_planks",
+    "side": "twilightforest:block/wood/planks/time/time_planks",
+    "top": "twilightforest:block/wood/planks/time/time_planks",
+    "bottom": "twilightforest:block/wood/planks/time/time_planks",
+    "inside": "twilightforest:block/wood/planks/time/time_planks"
   }
 }

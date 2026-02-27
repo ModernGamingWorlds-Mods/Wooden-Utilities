@@ -1,15 +1,16 @@
 {
-  "conditions": [
-    { "type": "forge:mod_loaded", "modid": "deep_aether" }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
   ],
-  "recipe": {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-      { "item": "woodenutilities:roseroot_wooden_crafting_table" }
-    ],
-    "result": {
-      "item": "woodenutilities:roseroot_wooden_crafting_table_slab",
-      "count": 2
+  "key": {
+    "P": {
+      "item": "deep_aether:roseroot_planks"
     }
+  },
+  "result": {
+    "item": "woodenutilities:roseroot_wooden_crafting_table_slab",
+    "count": 2
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/crimson_wooden_crafting_table_side",
-    "down": "woodenutilities:block/crimson_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/crimson_wooden_crafting_table_top",
-    "north": "woodenutilities:block/crimson_wooden_crafting_table_front",
-    "east": "woodenutilities:block/crimson_wooden_crafting_table_side",
-    "south": "woodenutilities:block/crimson_wooden_crafting_table_front",
-    "west": "woodenutilities:block/crimson_wooden_crafting_table_side"
+    "particle": "minecraft:block/crimson_planks",
+    "down": "minecraft:block/crimson_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "minecraft:block/crimson_planks",
+    "east": "minecraft:block/crimson_planks",
+    "south": "minecraft:block/crimson_planks",
+    "west": "minecraft:block/crimson_planks"
   }
 }

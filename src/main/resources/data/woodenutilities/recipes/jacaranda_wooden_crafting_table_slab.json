@@ -1,15 +1,16 @@
 {
-  "conditions": [
-    { "type": "forge:mod_loaded", "modid": "biomesoplenty" }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
   ],
-  "recipe": {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-      { "item": "woodenutilities:jacaranda_wooden_crafting_table" }
-    ],
-    "result": {
-      "item": "woodenutilities:jacaranda_wooden_crafting_table_slab",
-      "count": 2
+  "key": {
+    "P": {
+      "item": "biomesoplenty:jacaranda_planks"
     }
+  },
+  "result": {
+    "item": "woodenutilities:jacaranda_wooden_crafting_table_slab",
+    "count": 2
   }
 }

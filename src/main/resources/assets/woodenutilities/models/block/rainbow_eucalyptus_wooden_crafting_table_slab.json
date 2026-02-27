@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_bottom",
-    "top":    "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_top",
-    "side":   "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_side"
+    "bottom": "biomeswevegone:block/rainbow_eucalyptus/planks",
+    "top": "minecraft:block/crafting_table_top",
+    "side": "biomeswevegone:block/rainbow_eucalyptus/planks"
   }
 }

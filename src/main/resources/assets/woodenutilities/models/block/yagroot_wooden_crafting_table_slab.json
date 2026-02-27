@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "woodenutilities:block/yagroot_wooden_crafting_table_bottom",
-    "top":    "woodenutilities:block/yagroot_wooden_crafting_table_top",
-    "side":   "woodenutilities:block/yagroot_wooden_crafting_table_side"
+    "bottom": "deep_aether:block/yagroot_planks",
+    "top": "minecraft:block/crafting_table_top",
+    "side": "deep_aether:block/yagroot_planks"
   }
 }

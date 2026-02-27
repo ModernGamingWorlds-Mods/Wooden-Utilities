@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/cauldron",
   "textures": {
-    "particle": "aether:block/wood/planks/skyroot/skyroot_planks",
-    "side": "aether:block/wood/planks/skyroot/skyroot_planks",
-    "top": "aether:block/wood/planks/skyroot/skyroot_planks",
-    "bottom": "aether:block/wood/planks/skyroot/skyroot_planks",
-    "inside": "aether:block/wood/planks/skyroot/skyroot_planks"
+    "particle": "aether:block/natural/skyroot_planks",
+    "side": "aether:block/natural/skyroot_planks",
+    "top": "aether:block/natural/skyroot_planks",
+    "bottom": "aether:block/natural/skyroot_planks",
+    "inside": "aether:block/natural/skyroot_planks"
   }
 }

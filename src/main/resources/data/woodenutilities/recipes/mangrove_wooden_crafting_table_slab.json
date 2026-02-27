@@ -1,8 +1,14 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    { "item": "woodenutilities:mangrove_wooden_crafting_table" }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
   ],
+  "key": {
+    "P": {
+      "item": "minecraft:mangrove_planks"
+    }
+  },
   "result": {
     "item": "woodenutilities:mangrove_wooden_crafting_table_slab",
     "count": 2

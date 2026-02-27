@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/jacaranda_wooden_crafting_table_side",
-    "down": "woodenutilities:block/jacaranda_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/jacaranda_wooden_crafting_table_top",
-    "north": "woodenutilities:block/jacaranda_wooden_crafting_table_front",
-    "east": "woodenutilities:block/jacaranda_wooden_crafting_table_side",
-    "south": "woodenutilities:block/jacaranda_wooden_crafting_table_front",
-    "west": "woodenutilities:block/jacaranda_wooden_crafting_table_side"
+    "particle": "biomesoplenty:block/jacaranda_planks",
+    "down": "biomesoplenty:block/jacaranda_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomesoplenty:block/jacaranda_planks",
+    "east": "biomesoplenty:block/jacaranda_planks",
+    "south": "biomesoplenty:block/jacaranda_planks",
+    "west": "biomesoplenty:block/jacaranda_planks"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/skyris_wooden_crafting_table_side",
-    "down": "woodenutilities:block/skyris_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/skyris_wooden_crafting_table_top",
-    "north": "woodenutilities:block/skyris_wooden_crafting_table_front",
-    "east": "woodenutilities:block/skyris_wooden_crafting_table_side",
-    "south": "woodenutilities:block/skyris_wooden_crafting_table_front",
-    "west": "woodenutilities:block/skyris_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/skyris/planks",
+    "down": "biomeswevegone:block/skyris/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/skyris/planks",
+    "east": "biomeswevegone:block/skyris/planks",
+    "south": "biomeswevegone:block/skyris/planks",
+    "west": "biomeswevegone:block/skyris/planks"
   }
 }

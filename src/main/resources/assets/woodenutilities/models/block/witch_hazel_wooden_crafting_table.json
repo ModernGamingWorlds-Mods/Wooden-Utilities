@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/witch_hazel_wooden_crafting_table_side",
-    "down": "woodenutilities:block/witch_hazel_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/witch_hazel_wooden_crafting_table_top",
-    "north": "woodenutilities:block/witch_hazel_wooden_crafting_table_front",
-    "east": "woodenutilities:block/witch_hazel_wooden_crafting_table_side",
-    "south": "woodenutilities:block/witch_hazel_wooden_crafting_table_front",
-    "west": "woodenutilities:block/witch_hazel_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/witch_hazel/planks",
+    "down": "biomeswevegone:block/witch_hazel/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/witch_hazel/planks",
+    "east": "biomeswevegone:block/witch_hazel/planks",
+    "south": "biomeswevegone:block/witch_hazel/planks",
+    "west": "biomeswevegone:block/witch_hazel/planks"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/towerwood_wooden_crafting_table_side",
-    "down": "woodenutilities:block/towerwood_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/towerwood_wooden_crafting_table_top",
-    "north": "woodenutilities:block/towerwood_wooden_crafting_table_front",
-    "east": "woodenutilities:block/towerwood_wooden_crafting_table_side",
-    "south": "woodenutilities:block/towerwood_wooden_crafting_table_front",
-    "west": "woodenutilities:block/towerwood_wooden_crafting_table_side"
+    "particle": "twilightforest:block/towerwood",
+    "down": "twilightforest:block/towerwood",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "twilightforest:block/towerwood",
+    "east": "twilightforest:block/towerwood",
+    "south": "twilightforest:block/towerwood",
+    "west": "twilightforest:block/towerwood"
   }
 }

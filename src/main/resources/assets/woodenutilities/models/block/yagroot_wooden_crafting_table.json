@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/yagroot_wooden_crafting_table_side",
-    "down": "woodenutilities:block/yagroot_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/yagroot_wooden_crafting_table_top",
-    "north": "woodenutilities:block/yagroot_wooden_crafting_table_front",
-    "east": "woodenutilities:block/yagroot_wooden_crafting_table_side",
-    "south": "woodenutilities:block/yagroot_wooden_crafting_table_front",
-    "west": "woodenutilities:block/yagroot_wooden_crafting_table_side"
+    "particle": "deep_aether:block/yagroot_planks",
+    "down": "deep_aether:block/yagroot_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "deep_aether:block/yagroot_planks",
+    "east": "deep_aether:block/yagroot_planks",
+    "south": "deep_aether:block/yagroot_planks",
+    "west": "deep_aether:block/yagroot_planks"
   }
 }

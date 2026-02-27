@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/bwg_willow_wooden_crafting_table_side",
-    "down": "woodenutilities:block/bwg_willow_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/bwg_willow_wooden_crafting_table_top",
-    "north": "woodenutilities:block/bwg_willow_wooden_crafting_table_front",
-    "east": "woodenutilities:block/bwg_willow_wooden_crafting_table_side",
-    "south": "woodenutilities:block/bwg_willow_wooden_crafting_table_front",
-    "west": "woodenutilities:block/bwg_willow_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/willow/planks",
+    "down": "biomeswevegone:block/willow/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/willow/planks",
+    "east": "biomeswevegone:block/willow/planks",
+    "south": "biomeswevegone:block/willow/planks",
+    "west": "biomeswevegone:block/willow/planks"
   }
 }
