@@ -1,0 +1,21 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:dark_oak_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:dark_oak_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

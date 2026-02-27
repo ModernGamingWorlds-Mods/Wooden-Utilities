@@ -12,16 +12,15 @@
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "P P",
-          "P P",
-          "PPP"
+          "PCP",
+          " P "
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:cruderoot_planks"
-          }
+          "P": { "item": "woodenutilities:cruderoot_wooden_plate" },
+          "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:cruderoot_wooden_cauldron"
+          "item": "woodenutilities:cruderoot_wooden_hopper"
         }
       }
     }

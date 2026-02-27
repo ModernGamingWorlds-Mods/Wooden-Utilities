@@ -5,23 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "deep_aether"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "P P",
-          "P P",
-          "PPP"
+          "PP",
+          "LL"
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:conberry_planks"
-          }
+          "P": { "item": "woodenutilities:empyreal_wooden_plate" },
+          "L": { "item": "biomesoplenty:empyreal_planks" }
         },
         "result": {
-          "item": "woodenutilities:conberry_wooden_cauldron"
+          "item": "woodenutilities:empyreal_wooden_crafting_table_slab",
+          "count": 2
         }
       }
     }

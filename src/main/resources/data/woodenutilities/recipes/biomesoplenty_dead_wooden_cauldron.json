@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "twilightforest"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "P P",
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:dark_planks"
-          }
+          "P": { "item": "woodenutilities:dead_wooden_plate" },
+          "L": { "item": "biomesoplenty:dead_planks" }
         },
         "result": {
-          "item": "woodenutilities:dark_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:dead_wooden_cauldron"
         }
       }
     }

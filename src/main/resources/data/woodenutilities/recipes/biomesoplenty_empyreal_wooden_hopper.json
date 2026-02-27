@@ -12,16 +12,15 @@
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "P P",
-          "P P",
-          "PPP"
+          "PCP",
+          " P "
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:dead_planks"
-          }
+          "P": { "item": "woodenutilities:empyreal_wooden_plate" },
+          "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:dead_wooden_cauldron"
+          "item": "woodenutilities:empyreal_wooden_hopper"
         }
       }
     }

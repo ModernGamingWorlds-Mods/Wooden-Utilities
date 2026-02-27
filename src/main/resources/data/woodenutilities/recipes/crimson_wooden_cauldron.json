@@ -3,12 +3,11 @@
   "pattern": [
     "P P",
     "P P",
-    "PPP"
+    "LLL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:crimson_planks"
-    }
+    "P": { "item": "woodenutilities:crimson_wooden_plate" },
+    "L": { "item": "minecraft:crimson_planks" }
   },
   "result": {
     "item": "woodenutilities:crimson_wooden_cauldron"

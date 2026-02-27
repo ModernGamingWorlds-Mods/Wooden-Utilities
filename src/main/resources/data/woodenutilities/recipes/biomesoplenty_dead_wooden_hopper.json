@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "deep_aether"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "P P",
+          "PCP",
+          " P "
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:cruderoot_planks"
-          }
+          "P": { "item": "woodenutilities:dead_wooden_plate" },
+          "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:cruderoot_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:dead_wooden_hopper"
         }
       }
     }

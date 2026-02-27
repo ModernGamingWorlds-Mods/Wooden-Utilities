@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "deep_aether"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PP",
+          "LL"
+        ],
+        "key": {
+          "P": { "item": "woodenutilities:conberry_wooden_plate" },
+          "L": { "item": "deep_aether:conberry_planks" }
+        },
+        "result": {
+          "item": "woodenutilities:conberry_wooden_crafting_table_slab",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

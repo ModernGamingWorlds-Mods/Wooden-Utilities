@@ -2,12 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PP",
-    "PP"
+    "LL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:dark_oak_planks"
-    }
+    "P": { "item": "woodenutilities:dark_oak_wooden_plate" },
+    "L": { "item": "minecraft:dark_oak_planks" }
   },
   "result": {
     "item": "woodenutilities:dark_oak_wooden_crafting_table_slab",

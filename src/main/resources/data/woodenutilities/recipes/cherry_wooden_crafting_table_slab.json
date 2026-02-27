@@ -2,12 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PP",
-    "PP"
+    "LL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:cherry_planks"
-    }
+    "P": { "item": "woodenutilities:cherry_wooden_plate" },
+    "L": { "item": "minecraft:cherry_planks" }
   },
   "result": {
     "item": "woodenutilities:cherry_wooden_crafting_table_slab",

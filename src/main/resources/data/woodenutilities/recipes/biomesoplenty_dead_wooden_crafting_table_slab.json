@@ -11,17 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
-          "P P",
-          "PPP"
+          "PP",
+          "LL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:dead_planks"
-          }
+          "P": { "item": "woodenutilities:dead_wooden_plate" },
+          "L": { "item": "biomesoplenty:dead_planks" }
         },
         "result": {
-          "item": "woodenutilities:dead_wooden_barrel"
+          "item": "woodenutilities:dead_wooden_crafting_table_slab",
+          "count": 2
         }
       }
     }

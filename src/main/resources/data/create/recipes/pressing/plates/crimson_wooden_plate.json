@@ -1,0 +1,21 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:crimson_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

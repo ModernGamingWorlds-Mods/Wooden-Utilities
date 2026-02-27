@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "deep_aether"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "LLL",
+          "P P",
+          "LLL"
+        ],
+        "key": {
+          "P": { "item": "woodenutilities:cruderoot_wooden_plate" },
+          "L": { "item": "deep_aether:cruderoot_planks" }
+        },
+        "result": {
+          "item": "woodenutilities:cruderoot_wooden_barrel"
+        }
+      }
+    }
+  ]
+}

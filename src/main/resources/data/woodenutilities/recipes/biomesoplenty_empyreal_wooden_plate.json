@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "aether"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "P P",
-          "PCP",
-          " P "
+          "PP"
         ],
         "key": {
-          "P": { "item": "woodenutilities:conberry_wooden_plate" },
-          "C": { "item": "minecraft:chest" }
+          "P": {
+            "item": "biomesoplenty:empyreal_planks"
+          }
         },
         "result": {
-          "item": "woodenutilities:conberry_wooden_hopper"
+          "item": "woodenutilities:empyreal_wooden_plate",
+          "count": 2
         }
       }
     }

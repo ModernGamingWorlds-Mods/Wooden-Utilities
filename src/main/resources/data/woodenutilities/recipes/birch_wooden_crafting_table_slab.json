@@ -2,10 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PP",
-    "PP"
+    "LL"
   ],
   "key": {
     "P": {
+      "item": "woodenutilities:birch_wooden_plate"
+    },
+    "L": {
       "item": "minecraft:birch_planks"
     }
   },
