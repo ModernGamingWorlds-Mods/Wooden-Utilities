@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:slime_block" },
+  "result": { "item": "minecraft:slime_ball", "count": 4 }
+}
