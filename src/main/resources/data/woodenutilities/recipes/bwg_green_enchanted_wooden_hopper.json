@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "byg"
+          "modid": "biomeswevegone"
         }
       ],
       "recipe": {
@@ -16,11 +16,11 @@
           " P "
         ],
         "key": {
-          "P": { "item": "woodenutilities:white_mangrove_wooden_plate" },
+          "P": { "item": "woodenutilities:green_enchanted_wooden_plate" },
           "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:white_mangrove_wooden_hopper"
+          "item": "woodenutilities:green_enchanted_wooden_hopper"
         }
       }
     }

@@ -3,10 +3,13 @@
   "pattern": [
     "P P",
     "P P",
-    "PPP"
+    "LLL"
   ],
   "key": {
     "P": {
+      "item": "woodenutilities:acacia_wooden_plate"
+    },
+    "L": {
       "item": "minecraft:acacia_planks"
     }
   },

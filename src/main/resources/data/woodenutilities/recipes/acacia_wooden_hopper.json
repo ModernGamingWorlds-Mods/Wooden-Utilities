@@ -6,8 +6,12 @@
     " P "
   ],
   "key": {
-    "P": { "item": "woodenutilities:acacia_wooden_plate" },
-    "C": { "item": "minecraft:chest" }
+    "P": {
+      "item": "woodenutilities:acacia_wooden_plate"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    }
   },
   "result": {
     "item": "woodenutilities:acacia_wooden_hopper"
