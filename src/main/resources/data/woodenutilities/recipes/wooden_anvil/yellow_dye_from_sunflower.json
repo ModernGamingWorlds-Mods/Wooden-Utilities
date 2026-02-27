@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:sunflower" },
+  "result": { "item": "minecraft:yellow_dye", "count": 2 }
+}

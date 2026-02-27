@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:packed_ice" },
+  "result": { "item": "minecraft:snowball", "count": 4 }
+}

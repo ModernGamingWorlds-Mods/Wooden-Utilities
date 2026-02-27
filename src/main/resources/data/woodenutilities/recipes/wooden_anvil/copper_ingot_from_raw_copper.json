@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:raw_copper" },
+  "result": { "item": "minecraft:copper_ingot", "count": 1 }
+}

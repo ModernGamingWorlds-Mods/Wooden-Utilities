@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:beetroot" },
+  "result": { "item": "minecraft:red_dye", "count": 1 }
+}

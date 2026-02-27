@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:nether_gold_ore" },
+  "result": { "item": "minecraft:gold_nugget", "count": 2 }
+}

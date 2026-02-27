@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:podzol" },
+  "result": { "item": "minecraft:dirt", "count": 1 }
+}

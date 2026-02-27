@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:peony" },
+  "result": { "item": "minecraft:pink_dye", "count": 2 }
+}
