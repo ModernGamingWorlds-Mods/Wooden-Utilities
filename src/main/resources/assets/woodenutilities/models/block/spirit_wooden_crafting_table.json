@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/spirit_wooden_crafting_table_side",
-    "down": "woodenutilities:block/spirit_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/spirit_wooden_crafting_table_top",
-    "north": "woodenutilities:block/spirit_wooden_crafting_table_front",
-    "east": "woodenutilities:block/spirit_wooden_crafting_table_side",
-    "south": "woodenutilities:block/spirit_wooden_crafting_table_front",
-    "west": "woodenutilities:block/spirit_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/spirit/planks",
+    "down": "biomeswevegone:block/spirit/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/spirit/planks",
+    "east": "biomeswevegone:block/spirit/planks",
+    "south": "biomeswevegone:block/spirit/planks",
+    "west": "biomeswevegone:block/spirit/planks"
   }
 }

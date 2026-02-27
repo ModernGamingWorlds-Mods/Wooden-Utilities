@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/zelkova_wooden_crafting_table_side",
-    "down": "woodenutilities:block/zelkova_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/zelkova_wooden_crafting_table_top",
-    "north": "woodenutilities:block/zelkova_wooden_crafting_table_front",
-    "east": "woodenutilities:block/zelkova_wooden_crafting_table_side",
-    "south": "woodenutilities:block/zelkova_wooden_crafting_table_front",
-    "west": "woodenutilities:block/zelkova_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/zelkova/planks",
+    "down": "biomeswevegone:block/zelkova/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/zelkova/planks",
+    "east": "biomeswevegone:block/zelkova/planks",
+    "south": "biomeswevegone:block/zelkova/planks",
+    "west": "biomeswevegone:block/zelkova/planks"
   }
 }

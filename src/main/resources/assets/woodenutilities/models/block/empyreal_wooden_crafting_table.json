@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/empyreal_wooden_crafting_table_side",
-    "down": "woodenutilities:block/empyreal_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/empyreal_wooden_crafting_table_top",
-    "north": "woodenutilities:block/empyreal_wooden_crafting_table_front",
-    "east": "woodenutilities:block/empyreal_wooden_crafting_table_side",
-    "south": "woodenutilities:block/empyreal_wooden_crafting_table_front",
-    "west": "woodenutilities:block/empyreal_wooden_crafting_table_side"
+    "particle": "biomesoplenty:block/empyreal_planks",
+    "down": "biomesoplenty:block/empyreal_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomesoplenty:block/empyreal_planks",
+    "east": "biomesoplenty:block/empyreal_planks",
+    "south": "biomesoplenty:block/empyreal_planks",
+    "west": "biomesoplenty:block/empyreal_planks"
   }
 }

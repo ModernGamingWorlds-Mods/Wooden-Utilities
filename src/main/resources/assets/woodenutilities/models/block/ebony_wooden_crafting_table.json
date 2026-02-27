@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/ebony_wooden_crafting_table_side",
-    "down": "woodenutilities:block/ebony_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/ebony_wooden_crafting_table_top",
-    "north": "woodenutilities:block/ebony_wooden_crafting_table_front",
-    "east": "woodenutilities:block/ebony_wooden_crafting_table_side",
-    "south": "woodenutilities:block/ebony_wooden_crafting_table_front",
-    "west": "woodenutilities:block/ebony_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/ebony/planks",
+    "down": "biomeswevegone:block/ebony/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/ebony/planks",
+    "east": "biomeswevegone:block/ebony/planks",
+    "south": "biomeswevegone:block/ebony/planks",
+    "west": "biomeswevegone:block/ebony/planks"
   }
 }

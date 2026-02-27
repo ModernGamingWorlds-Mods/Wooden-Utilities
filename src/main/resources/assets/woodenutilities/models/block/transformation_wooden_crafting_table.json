@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/transformation_wooden_crafting_table_side",
-    "down": "woodenutilities:block/transformation_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/transformation_wooden_crafting_table_top",
-    "north": "woodenutilities:block/transformation_wooden_crafting_table_front",
-    "east": "woodenutilities:block/transformation_wooden_crafting_table_side",
-    "south": "woodenutilities:block/transformation_wooden_crafting_table_front",
-    "west": "woodenutilities:block/transformation_wooden_crafting_table_side"
+    "particle": "twilightforest:block/transwood_planks",
+    "down": "twilightforest:block/transwood_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "twilightforest:block/transwood_planks",
+    "east": "twilightforest:block/transwood_planks",
+    "south": "twilightforest:block/transwood_planks",
+    "west": "twilightforest:block/transwood_planks"
   }
 }

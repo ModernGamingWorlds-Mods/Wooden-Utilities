@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/palm_wooden_crafting_table_side",
-    "down": "woodenutilities:block/palm_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/palm_wooden_crafting_table_top",
-    "north": "woodenutilities:block/palm_wooden_crafting_table_front",
-    "east": "woodenutilities:block/palm_wooden_crafting_table_side",
-    "south": "woodenutilities:block/palm_wooden_crafting_table_front",
-    "west": "woodenutilities:block/palm_wooden_crafting_table_side"
+    "particle": "biomesoplenty:block/palm_planks",
+    "down": "biomesoplenty:block/palm_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomesoplenty:block/palm_planks",
+    "east": "biomesoplenty:block/palm_planks",
+    "south": "biomesoplenty:block/palm_planks",
+    "west": "biomesoplenty:block/palm_planks"
   }
 }

@@ -457,136 +457,6 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> ZELKOVA_WOODEN_HOPPER = BLOCKS.register("zelkova_wooden_hopper",
         () -> new WoodenHopperBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.HOPPER)));
 
-    public static final DeferredHolder<Block, Block> WOODEN_CRAFTING_TABLE = BLOCKS.register("wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> OAK_WOODEN_CRAFTING_TABLE = BLOCKS.register("oak_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SPRUCE_WOODEN_CRAFTING_TABLE = BLOCKS.register("spruce_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BIRCH_WOODEN_CRAFTING_TABLE = BLOCKS.register("birch_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> JUNGLE_WOODEN_CRAFTING_TABLE = BLOCKS.register("jungle_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> ACACIA_WOODEN_CRAFTING_TABLE = BLOCKS.register("acacia_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> DARK_OAK_WOODEN_CRAFTING_TABLE = BLOCKS.register("dark_oak_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> MANGROVE_WOODEN_CRAFTING_TABLE = BLOCKS.register("mangrove_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CHERRY_WOODEN_CRAFTING_TABLE = BLOCKS.register("cherry_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BAMBOO_WOODEN_CRAFTING_TABLE = BLOCKS.register("bamboo_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CRIMSON_WOODEN_CRAFTING_TABLE = BLOCKS.register("crimson_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> WARPED_WOODEN_CRAFTING_TABLE = BLOCKS.register("warped_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> TWILIGHT_OAK_WOODEN_CRAFTING_TABLE = BLOCKS.register("twilight_oak_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CANOPY_WOODEN_CRAFTING_TABLE = BLOCKS.register("canopy_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> TWILIGHT_MANGROVE_WOODEN_CRAFTING_TABLE = BLOCKS.register("twilight_mangrove_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> DARK_WOODEN_CRAFTING_TABLE = BLOCKS.register("dark_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> TIME_WOODEN_CRAFTING_TABLE = BLOCKS.register("time_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> TRANSFORMATION_WOODEN_CRAFTING_TABLE = BLOCKS.register("transformation_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> MINING_WOODEN_CRAFTING_TABLE = BLOCKS.register("mining_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SORTING_WOODEN_CRAFTING_TABLE = BLOCKS.register("sorting_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> TOWERWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("towerwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> FIR_WOODEN_CRAFTING_TABLE = BLOCKS.register("fir_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> PINE_WOODEN_CRAFTING_TABLE = BLOCKS.register("pine_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> MAPLE_WOODEN_CRAFTING_TABLE = BLOCKS.register("maple_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> REDWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("redwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> MAHOGANY_WOODEN_CRAFTING_TABLE = BLOCKS.register("mahogany_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> JACARANDA_WOODEN_CRAFTING_TABLE = BLOCKS.register("jacaranda_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> PALM_WOODEN_CRAFTING_TABLE = BLOCKS.register("palm_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> WILLOW_WOODEN_CRAFTING_TABLE = BLOCKS.register("willow_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> DEAD_WOODEN_CRAFTING_TABLE = BLOCKS.register("dead_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> MAGIC_WOODEN_CRAFTING_TABLE = BLOCKS.register("magic_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> UMBRAN_WOODEN_CRAFTING_TABLE = BLOCKS.register("umbran_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> HELLBARK_WOODEN_CRAFTING_TABLE = BLOCKS.register("hellbark_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> EMPYREAL_WOODEN_CRAFTING_TABLE = BLOCKS.register("empyreal_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> ROSEROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("roseroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> YAGROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("yagroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CRUDEROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("cruderoot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CONBERRY_WOODEN_CRAFTING_TABLE = BLOCKS.register("conberry_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SUNROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("sunroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SKYROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("skyroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> ASPEN_WOODEN_CRAFTING_TABLE = BLOCKS.register("aspen_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BAOBAB_WOODEN_CRAFTING_TABLE = BLOCKS.register("baobab_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BLUE_ENCHANTED_WOODEN_CRAFTING_TABLE = BLOCKS.register("blue_enchanted_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CIKA_WOODEN_CRAFTING_TABLE = BLOCKS.register("cika_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> CYPRESS_WOODEN_CRAFTING_TABLE = BLOCKS.register("cypress_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> EBONY_WOODEN_CRAFTING_TABLE = BLOCKS.register("ebony_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_FIR_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_fir_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> FLORUS_WOODEN_CRAFTING_TABLE = BLOCKS.register("florus_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> GREEN_ENCHANTED_WOODEN_CRAFTING_TABLE = BLOCKS.register("green_enchanted_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> HOLLY_WOODEN_CRAFTING_TABLE = BLOCKS.register("holly_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> IRONWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("ironwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_JACARANDA_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_jacaranda_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_MAHOGANY_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_mahogany_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_MAPLE_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_maple_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_PALM_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_palm_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_PINE_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_pine_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> RAINBOW_EUCALYPTUS_WOODEN_CRAFTING_TABLE = BLOCKS.register("rainbow_eucalyptus_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_REDWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_redwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SAKURA_WOODEN_CRAFTING_TABLE = BLOCKS.register("sakura_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SKYRIS_WOODEN_CRAFTING_TABLE = BLOCKS.register("skyris_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> SPIRIT_WOODEN_CRAFTING_TABLE = BLOCKS.register("spirit_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> WHITE_MANGROVE_WOODEN_CRAFTING_TABLE = BLOCKS.register("white_mangrove_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> BWG_WILLOW_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_willow_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> WITCH_HAZEL_WOODEN_CRAFTING_TABLE = BLOCKS.register("witch_hazel_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
-    public static final DeferredHolder<Block, Block> ZELKOVA_WOODEN_CRAFTING_TABLE = BLOCKS.register("zelkova_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
     public static final DeferredHolder<Block, Block> WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
     public static final DeferredHolder<Block, Block> OAK_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("oak_wooden_crafting_table_slab",
@@ -719,7 +589,7 @@ public final class ModBlocks {
         () -> new WoodenCraftingTableSlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
     *///?} else {
     //? if old_props {
-    /*private static net.minecraft.world.level.block.state.BlockBehaviour.Properties cauldronProps() {
+    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties cauldronProps() {
         return net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.CAULDRON);
     }
     private static net.minecraft.world.level.block.state.BlockBehaviour.Properties barrelProps() {
@@ -734,8 +604,8 @@ public final class ModBlocks {
     private static net.minecraft.world.level.block.state.BlockBehaviour.Properties hopperProps() {
         return net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy(net.minecraft.world.level.block.Blocks.HOPPER);
     }
-    *///?} else {
-    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties cauldronProps() {
+    //?} else {
+    /*private static net.minecraft.world.level.block.state.BlockBehaviour.Properties cauldronProps() {
         return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.CAULDRON);
     }
     private static net.minecraft.world.level.block.state.BlockBehaviour.Properties barrelProps() {
@@ -750,7 +620,7 @@ public final class ModBlocks {
     private static net.minecraft.world.level.block.state.BlockBehaviour.Properties hopperProps() {
         return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.HOPPER);
     }
-    //?}
+    *///?}
     public static final RegistryObject<Block> OAK_WOODEN_CAULDRON = BLOCKS.register("oak_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final RegistryObject<Block> SPRUCE_WOODEN_CAULDRON = BLOCKS.register("spruce_wooden_cauldron",
@@ -1173,134 +1043,6 @@ public final class ModBlocks {
     public static final RegistryObject<Block> ZELKOVA_WOODEN_HOPPER = BLOCKS.register("zelkova_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    public static final RegistryObject<Block> WOODEN_CRAFTING_TABLE = BLOCKS.register("wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> OAK_WOODEN_CRAFTING_TABLE = BLOCKS.register("oak_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> SPRUCE_WOODEN_CRAFTING_TABLE = BLOCKS.register("spruce_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BIRCH_WOODEN_CRAFTING_TABLE = BLOCKS.register("birch_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> JUNGLE_WOODEN_CRAFTING_TABLE = BLOCKS.register("jungle_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> ACACIA_WOODEN_CRAFTING_TABLE = BLOCKS.register("acacia_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> DARK_OAK_WOODEN_CRAFTING_TABLE = BLOCKS.register("dark_oak_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> MANGROVE_WOODEN_CRAFTING_TABLE = BLOCKS.register("mangrove_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CHERRY_WOODEN_CRAFTING_TABLE = BLOCKS.register("cherry_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BAMBOO_WOODEN_CRAFTING_TABLE = BLOCKS.register("bamboo_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CRIMSON_WOODEN_CRAFTING_TABLE = BLOCKS.register("crimson_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> WARPED_WOODEN_CRAFTING_TABLE = BLOCKS.register("warped_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> TWILIGHT_OAK_WOODEN_CRAFTING_TABLE = BLOCKS.register("twilight_oak_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CANOPY_WOODEN_CRAFTING_TABLE = BLOCKS.register("canopy_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> TWILIGHT_MANGROVE_WOODEN_CRAFTING_TABLE = BLOCKS.register("twilight_mangrove_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> DARK_WOODEN_CRAFTING_TABLE = BLOCKS.register("dark_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> TIME_WOODEN_CRAFTING_TABLE = BLOCKS.register("time_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> TRANSFORMATION_WOODEN_CRAFTING_TABLE = BLOCKS.register("transformation_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> MINING_WOODEN_CRAFTING_TABLE = BLOCKS.register("mining_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> SORTING_WOODEN_CRAFTING_TABLE = BLOCKS.register("sorting_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> TOWERWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("towerwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> FIR_WOODEN_CRAFTING_TABLE = BLOCKS.register("fir_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> PINE_WOODEN_CRAFTING_TABLE = BLOCKS.register("pine_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> MAPLE_WOODEN_CRAFTING_TABLE = BLOCKS.register("maple_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> REDWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("redwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> MAHOGANY_WOODEN_CRAFTING_TABLE = BLOCKS.register("mahogany_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> JACARANDA_WOODEN_CRAFTING_TABLE = BLOCKS.register("jacaranda_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> PALM_WOODEN_CRAFTING_TABLE = BLOCKS.register("palm_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> WILLOW_WOODEN_CRAFTING_TABLE = BLOCKS.register("willow_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> DEAD_WOODEN_CRAFTING_TABLE = BLOCKS.register("dead_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> MAGIC_WOODEN_CRAFTING_TABLE = BLOCKS.register("magic_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> UMBRAN_WOODEN_CRAFTING_TABLE = BLOCKS.register("umbran_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> HELLBARK_WOODEN_CRAFTING_TABLE = BLOCKS.register("hellbark_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> EMPYREAL_WOODEN_CRAFTING_TABLE = BLOCKS.register("empyreal_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> ROSEROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("roseroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> YAGROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("yagroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CRUDEROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("cruderoot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CONBERRY_WOODEN_CRAFTING_TABLE = BLOCKS.register("conberry_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> SUNROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("sunroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> SKYROOT_WOODEN_CRAFTING_TABLE = BLOCKS.register("skyroot_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> ASPEN_WOODEN_CRAFTING_TABLE = BLOCKS.register("aspen_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BAOBAB_WOODEN_CRAFTING_TABLE = BLOCKS.register("baobab_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BLUE_ENCHANTED_WOODEN_CRAFTING_TABLE = BLOCKS.register("blue_enchanted_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CIKA_WOODEN_CRAFTING_TABLE = BLOCKS.register("cika_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> CYPRESS_WOODEN_CRAFTING_TABLE = BLOCKS.register("cypress_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> EBONY_WOODEN_CRAFTING_TABLE = BLOCKS.register("ebony_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_FIR_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_fir_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> FLORUS_WOODEN_CRAFTING_TABLE = BLOCKS.register("florus_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> GREEN_ENCHANTED_WOODEN_CRAFTING_TABLE = BLOCKS.register("green_enchanted_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> HOLLY_WOODEN_CRAFTING_TABLE = BLOCKS.register("holly_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> IRONWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("ironwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_JACARANDA_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_jacaranda_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_MAHOGANY_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_mahogany_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_MAPLE_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_maple_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_PALM_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_palm_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_PINE_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_pine_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> RAINBOW_EUCALYPTUS_WOODEN_CRAFTING_TABLE = BLOCKS.register("rainbow_eucalyptus_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_REDWOOD_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_redwood_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> SAKURA_WOODEN_CRAFTING_TABLE = BLOCKS.register("sakura_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> SKYRIS_WOODEN_CRAFTING_TABLE = BLOCKS.register("skyris_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> WHITE_MANGROVE_WOODEN_CRAFTING_TABLE = BLOCKS.register("white_mangrove_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> BWG_WILLOW_WOODEN_CRAFTING_TABLE = BLOCKS.register("bwg_willow_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> WITCH_HAZEL_WOODEN_CRAFTING_TABLE = BLOCKS.register("witch_hazel_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
-    public static final RegistryObject<Block> ZELKOVA_WOODEN_CRAFTING_TABLE = BLOCKS.register("zelkova_wooden_crafting_table",
-        () -> new WoodenCraftingTableBlock(craftingTableProps()));
     public static final RegistryObject<Block> WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final RegistryObject<Block> OAK_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("oak_wooden_crafting_table_slab",

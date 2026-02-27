@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/twilight_oak_wooden_crafting_table_side",
-    "down": "woodenutilities:block/twilight_oak_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/twilight_oak_wooden_crafting_table_top",
-    "north": "woodenutilities:block/twilight_oak_wooden_crafting_table_front",
-    "east": "woodenutilities:block/twilight_oak_wooden_crafting_table_side",
-    "south": "woodenutilities:block/twilight_oak_wooden_crafting_table_front",
-    "west": "woodenutilities:block/twilight_oak_wooden_crafting_table_side"
+    "particle": "twilightforest:block/wood/planks/twilight_oak/twilight_oak_planks",
+    "down": "twilightforest:block/wood/planks/twilight_oak/twilight_oak_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "twilightforest:block/wood/planks/twilight_oak/twilight_oak_planks",
+    "east": "twilightforest:block/wood/planks/twilight_oak/twilight_oak_planks",
+    "south": "twilightforest:block/wood/planks/twilight_oak/twilight_oak_planks",
+    "west": "twilightforest:block/wood/planks/twilight_oak/twilight_oak_planks"
   }
 }

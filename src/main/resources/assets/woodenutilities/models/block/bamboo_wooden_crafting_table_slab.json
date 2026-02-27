@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "woodenutilities:block/bamboo_wooden_crafting_table_bottom",
-    "top":    "woodenutilities:block/bamboo_wooden_crafting_table_top",
-    "side":   "woodenutilities:block/bamboo_wooden_crafting_table_side"
+    "bottom": "minecraft:block/bamboo_planks",
+    "top": "minecraft:block/crafting_table_top",
+    "side": "minecraft:block/bamboo_planks"
   }
 }

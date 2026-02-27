@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "woodenutilities:block/umbran_wooden_crafting_table_bottom",
-    "top":    "woodenutilities:block/umbran_wooden_crafting_table_top",
-    "side":   "woodenutilities:block/umbran_wooden_crafting_table_side"
+    "bottom": "biomesoplenty:block/umbran_planks",
+    "top": "minecraft:block/crafting_table_top",
+    "side": "biomesoplenty:block/umbran_planks"
   }
 }

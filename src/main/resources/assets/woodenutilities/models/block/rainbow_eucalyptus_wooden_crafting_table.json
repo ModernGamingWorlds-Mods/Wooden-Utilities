@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_side",
-    "down": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_top",
-    "north": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_front",
-    "east": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_side",
-    "south": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_front",
-    "west": "woodenutilities:block/rainbow_eucalyptus_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/rainbow_eucalyptus/planks",
+    "down": "biomeswevegone:block/rainbow_eucalyptus/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/rainbow_eucalyptus/planks",
+    "east": "biomeswevegone:block/rainbow_eucalyptus/planks",
+    "south": "biomeswevegone:block/rainbow_eucalyptus/planks",
+    "west": "biomeswevegone:block/rainbow_eucalyptus/planks"
   }
 }

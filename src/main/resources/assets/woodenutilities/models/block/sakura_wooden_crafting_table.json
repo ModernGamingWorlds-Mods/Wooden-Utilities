@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/sakura_wooden_crafting_table_side",
-    "down": "woodenutilities:block/sakura_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/sakura_wooden_crafting_table_top",
-    "north": "woodenutilities:block/sakura_wooden_crafting_table_front",
-    "east": "woodenutilities:block/sakura_wooden_crafting_table_side",
-    "south": "woodenutilities:block/sakura_wooden_crafting_table_front",
-    "west": "woodenutilities:block/sakura_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/sakura/planks",
+    "down": "biomeswevegone:block/sakura/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/sakura/planks",
+    "east": "biomeswevegone:block/sakura/planks",
+    "south": "biomeswevegone:block/sakura/planks",
+    "west": "biomeswevegone:block/sakura/planks"
   }
 }

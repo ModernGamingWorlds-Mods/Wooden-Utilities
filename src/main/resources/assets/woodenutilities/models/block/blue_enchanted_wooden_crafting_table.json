@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/blue_enchanted_wooden_crafting_table_side",
-    "down": "woodenutilities:block/blue_enchanted_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/blue_enchanted_wooden_crafting_table_top",
-    "north": "woodenutilities:block/blue_enchanted_wooden_crafting_table_front",
-    "east": "woodenutilities:block/blue_enchanted_wooden_crafting_table_side",
-    "south": "woodenutilities:block/blue_enchanted_wooden_crafting_table_front",
-    "west": "woodenutilities:block/blue_enchanted_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/blue_enchanted/planks",
+    "down": "biomeswevegone:block/blue_enchanted/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/blue_enchanted/planks",
+    "east": "biomeswevegone:block/blue_enchanted/planks",
+    "south": "biomeswevegone:block/blue_enchanted/planks",
+    "west": "biomeswevegone:block/blue_enchanted/planks"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/umbran_wooden_crafting_table_side",
-    "down": "woodenutilities:block/umbran_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/umbran_wooden_crafting_table_top",
-    "north": "woodenutilities:block/umbran_wooden_crafting_table_front",
-    "east": "woodenutilities:block/umbran_wooden_crafting_table_side",
-    "south": "woodenutilities:block/umbran_wooden_crafting_table_front",
-    "west": "woodenutilities:block/umbran_wooden_crafting_table_side"
+    "particle": "biomesoplenty:block/umbran_planks",
+    "down": "biomesoplenty:block/umbran_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomesoplenty:block/umbran_planks",
+    "east": "biomesoplenty:block/umbran_planks",
+    "south": "biomesoplenty:block/umbran_planks",
+    "west": "biomesoplenty:block/umbran_planks"
   }
 }

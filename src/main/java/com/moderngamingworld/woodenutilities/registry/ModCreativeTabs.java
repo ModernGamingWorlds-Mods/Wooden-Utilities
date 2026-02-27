@@ -188,54 +188,52 @@ public final class ModCreativeTabs {
                                     output.accept(ModItems.SKYROOT_WOODEN_BARREL.get());
                                 }
 
-                                // ── Crafting Tables ───────────────────────────────────────
-                                output.accept(ModItems.WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.OAK_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.SPRUCE_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.BIRCH_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.JUNGLE_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.ACACIA_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.DARK_OAK_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.MANGROVE_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.CHERRY_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.BAMBOO_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.CRIMSON_WOODEN_CRAFTING_TABLE.get());
-                                output.accept(ModItems.WARPED_WOODEN_CRAFTING_TABLE.get());
+                                // ── Hoppers ──────────────────────────────────────────────
+                                output.accept(ModItems.OAK_WOODEN_HOPPER.get());
+                                output.accept(ModItems.SPRUCE_WOODEN_HOPPER.get());
+                                output.accept(ModItems.BIRCH_WOODEN_HOPPER.get());
+                                output.accept(ModItems.JUNGLE_WOODEN_HOPPER.get());
+                                output.accept(ModItems.ACACIA_WOODEN_HOPPER.get());
+                                output.accept(ModItems.DARK_OAK_WOODEN_HOPPER.get());
+                                output.accept(ModItems.MANGROVE_WOODEN_HOPPER.get());
+                                output.accept(ModItems.CHERRY_WOODEN_HOPPER.get());
+                                output.accept(ModItems.BAMBOO_WOODEN_HOPPER.get());
+                                output.accept(ModItems.CRIMSON_WOODEN_HOPPER.get());
+                                output.accept(ModItems.WARPED_WOODEN_HOPPER.get());
                                 if (hasTF) {
-                                    output.accept(ModItems.TWILIGHT_OAK_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.CANOPY_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.TWILIGHT_MANGROVE_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.DARK_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.TIME_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.TRANSFORMATION_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.MINING_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.SORTING_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.TOWERWOOD_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.TWILIGHT_OAK_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.CANOPY_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.TWILIGHT_MANGROVE_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.DARK_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.TIME_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.MINING_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.SORTING_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.TOWERWOOD_WOODEN_HOPPER.get());
                                 }
                                 if (hasBOP) {
-                                    output.accept(ModItems.FIR_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.PINE_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.MAPLE_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.REDWOOD_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.MAHOGANY_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.JACARANDA_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.PALM_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.WILLOW_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.DEAD_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.MAGIC_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.UMBRAN_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.HELLBARK_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.EMPYREAL_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.FIR_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.PINE_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.MAPLE_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.REDWOOD_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.MAHOGANY_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.JACARANDA_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.PALM_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.WILLOW_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.DEAD_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.MAGIC_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.UMBRAN_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.HELLBARK_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.EMPYREAL_WOODEN_HOPPER.get());
                                 }
                                 if (hasDeepAether) {
-                                    output.accept(ModItems.ROSEROOT_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.YAGROOT_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.CRUDEROOT_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.CONBERRY_WOODEN_CRAFTING_TABLE.get());
-                                    output.accept(ModItems.SUNROOT_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.ROSEROOT_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.YAGROOT_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.CRUDEROOT_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.CONBERRY_WOODEN_HOPPER.get());
+                                    output.accept(ModItems.SUNROOT_WOODEN_HOPPER.get());
                                 }
                                 if (hasAether) {
-                                    output.accept(ModItems.SKYROOT_WOODEN_CRAFTING_TABLE.get());
+                                    output.accept(ModItems.SKYROOT_WOODEN_HOPPER.get());
                                 }
 
                                 // ── Crafting Table Slabs ──────────────────────────────────

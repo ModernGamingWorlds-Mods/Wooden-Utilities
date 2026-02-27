@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "woodenutilities:block/white_mangrove_wooden_crafting_table_side",
-    "down": "woodenutilities:block/white_mangrove_wooden_crafting_table_bottom",
-    "up": "woodenutilities:block/white_mangrove_wooden_crafting_table_top",
-    "north": "woodenutilities:block/white_mangrove_wooden_crafting_table_front",
-    "east": "woodenutilities:block/white_mangrove_wooden_crafting_table_side",
-    "south": "woodenutilities:block/white_mangrove_wooden_crafting_table_front",
-    "west": "woodenutilities:block/white_mangrove_wooden_crafting_table_side"
+    "particle": "biomeswevegone:block/white_mangrove/planks",
+    "down": "biomeswevegone:block/white_mangrove/planks",
+    "up": "minecraft:block/crafting_table_top",
+    "north": "biomeswevegone:block/white_mangrove/planks",
+    "east": "biomeswevegone:block/white_mangrove/planks",
+    "south": "biomeswevegone:block/white_mangrove/planks",
+    "west": "biomeswevegone:block/white_mangrove/planks"
   }
 }
