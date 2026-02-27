@@ -3,10 +3,13 @@
   "pattern": [
     "P P",
     "P P",
-    "PPP"
+    "LLL"
   ],
   "key": {
     "P": {
+      "item": "woodenutilities:bamboo_wooden_plate"
+    },
+    "L": {
       "item": "minecraft:bamboo_planks"
     }
   },
