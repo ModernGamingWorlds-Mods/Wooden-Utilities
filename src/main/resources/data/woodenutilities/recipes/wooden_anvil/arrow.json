@@ -1,6 +1,0 @@
-{
-  "type": "woodenutilities:wooden_anvil",
-  "input": { "item": "minecraft:flint" },
-  "tool": { "item": "minecraft:stick" },
-  "result": { "item": "minecraft:arrow", "count": 2 }
-}

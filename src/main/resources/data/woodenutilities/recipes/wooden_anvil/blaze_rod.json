@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:blaze_rod" },
+  "result": { "item": "minecraft:blaze_powder", "count": 4 }
+}

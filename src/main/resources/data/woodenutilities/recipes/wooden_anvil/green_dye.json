@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:cactus" },
+  "result": { "item": "minecraft:green_dye", "count": 2 }
+}

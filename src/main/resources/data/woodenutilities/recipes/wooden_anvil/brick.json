@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:clay_ball" },
+  "result": { "item": "minecraft:brick", "count": 1 }
+}

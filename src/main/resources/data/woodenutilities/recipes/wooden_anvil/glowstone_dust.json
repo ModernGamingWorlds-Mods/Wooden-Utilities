@@ -1,0 +1,5 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": { "item": "minecraft:glowstone" },
+  "result": { "item": "minecraft:glowstone_dust", "count": 5 }
+}
