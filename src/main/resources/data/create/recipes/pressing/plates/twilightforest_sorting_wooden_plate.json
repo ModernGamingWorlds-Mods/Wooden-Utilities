@@ -1,0 +1,25 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "twilightforest:sorting_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:sorting_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

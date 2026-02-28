@@ -5,23 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "aether"
+          "modid": "twilightforest"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
-          "P P",
-          "PPP"
+          "PP"
         ],
         "key": {
           "P": {
-            "item": "aether:skyroot_planks"
+            "item": "twilightforest:sorting_planks"
           }
         },
         "result": {
-          "item": "woodenutilities:skyroot_wooden_barrel"
+          "item": "woodenutilities:sorting_wooden_plate",
+          "count": 2
         }
       }
     }

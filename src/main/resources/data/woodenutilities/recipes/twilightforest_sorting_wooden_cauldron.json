@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "aether"
+          "modid": "twilightforest"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "P P",
-          "PCP",
-          " P "
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": { "item": "woodenutilities:skyroot_wooden_plate" },
-          "C": { "item": "minecraft:chest" }
+          "P": { "item": "woodenutilities:sorting_wooden_plate" },
+          "L": { "item": "twilightforest:sorting_planks" }
         },
         "result": {
-          "item": "woodenutilities:skyroot_wooden_hopper"
+          "item": "woodenutilities:sorting_wooden_cauldron"
         }
       }
     }

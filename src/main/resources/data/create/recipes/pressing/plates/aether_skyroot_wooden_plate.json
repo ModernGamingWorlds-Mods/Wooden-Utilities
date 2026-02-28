@@ -1,0 +1,25 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "aether:skyroot_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:skyroot_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

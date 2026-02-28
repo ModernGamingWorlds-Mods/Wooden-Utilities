@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "LLL",
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:sorting_planks"
-          }
+          "P": { "item": "woodenutilities:sorting_wooden_plate" },
+          "L": { "item": "twilightforest:sorting_planks" }
         },
         "result": {
-          "item": "woodenutilities:sorting_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:sorting_wooden_barrel"
         }
       }
     }

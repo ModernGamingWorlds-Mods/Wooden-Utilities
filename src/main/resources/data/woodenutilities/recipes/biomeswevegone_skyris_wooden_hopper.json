@@ -5,23 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "aether"
+          "modid": "biomeswevegone"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "P P",
-          "P P",
-          "PPP"
+          "PCP",
+          " P "
         ],
         "key": {
-          "P": {
-            "item": "aether:skyroot_planks"
-          }
+          "P": { "item": "woodenutilities:skyris_wooden_plate" },
+          "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:skyroot_wooden_cauldron"
+          "item": "woodenutilities:skyris_wooden_hopper"
         }
       }
     }
