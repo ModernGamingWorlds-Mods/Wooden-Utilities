@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "PP",
+          "LL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:jacaranda_planks"
-          }
+          "P": { "item": "woodenutilities:jacaranda_wooden_plate" },
+          "L": { "item": "biomesoplenty:jacaranda_planks" }
         },
         "result": {
-          "item": "woodenutilities:jacaranda_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:jacaranda_wooden_crafting_table_slab",
+          "count": 2
         }
       }
     }

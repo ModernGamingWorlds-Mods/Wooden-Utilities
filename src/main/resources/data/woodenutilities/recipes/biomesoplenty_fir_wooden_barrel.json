@@ -11,17 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
+          "LLL",
           "P P",
-          "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:fir_planks"
-          }
+          "P": { "item": "woodenutilities:fir_wooden_plate" },
+          "L": { "item": "biomesoplenty:fir_planks" }
         },
         "result": {
-          "item": "woodenutilities:fir_wooden_cauldron"
+          "item": "woodenutilities:fir_wooden_barrel"
         }
       }
     }

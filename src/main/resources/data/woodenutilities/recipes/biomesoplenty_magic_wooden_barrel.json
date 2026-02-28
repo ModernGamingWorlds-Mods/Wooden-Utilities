@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
+          "LLL",
           "P P",
-          "PCP",
-          " P "
+          "LLL"
         ],
         "key": {
           "P": { "item": "woodenutilities:magic_wooden_plate" },
-          "C": { "item": "minecraft:chest" }
+          "L": { "item": "biomesoplenty:magic_planks" }
         },
         "result": {
-          "item": "woodenutilities:magic_wooden_hopper"
+          "item": "woodenutilities:magic_wooden_barrel"
         }
       }
     }

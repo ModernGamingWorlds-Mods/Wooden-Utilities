@@ -13,15 +13,14 @@
         "pattern": [
           "P P",
           "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:magic_planks"
-          }
+          "P": { "item": "woodenutilities:hellbark_wooden_plate" },
+          "L": { "item": "biomesoplenty:hellbark_planks" }
         },
         "result": {
-          "item": "woodenutilities:magic_wooden_cauldron"
+          "item": "woodenutilities:hellbark_wooden_cauldron"
         }
       }
     }

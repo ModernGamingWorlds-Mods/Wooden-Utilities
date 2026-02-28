@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "byg"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "P P",
-          "PCP",
-          " P "
+          "PP"
         ],
         "key": {
-          "P": { "item": "woodenutilities:ironwood_wooden_plate" },
-          "C": { "item": "minecraft:chest" }
+          "P": {
+            "item": "biomesoplenty:hellbark_planks"
+          }
         },
         "result": {
-          "item": "woodenutilities:ironwood_wooden_hopper"
+          "item": "woodenutilities:hellbark_wooden_plate",
+          "count": 2
         }
       }
     }

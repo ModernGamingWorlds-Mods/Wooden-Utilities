@@ -2,12 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PP",
-    "PP"
+    "LL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:jungle_planks"
-    }
+    "P": { "item": "woodenutilities:jungle_wooden_plate" },
+    "L": { "item": "minecraft:jungle_planks" }
   },
   "result": {
     "item": "woodenutilities:jungle_wooden_crafting_table_slab",

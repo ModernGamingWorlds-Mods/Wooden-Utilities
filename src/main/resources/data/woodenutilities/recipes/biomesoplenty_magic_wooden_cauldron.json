@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "biomesoplenty"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "P P",
+          "P P",
+          "LLL"
+        ],
+        "key": {
+          "P": { "item": "woodenutilities:magic_wooden_plate" },
+          "L": { "item": "biomesoplenty:magic_planks" }
+        },
+        "result": {
+          "item": "woodenutilities:magic_wooden_cauldron"
+        }
+      }
+    }
+  ]
+}

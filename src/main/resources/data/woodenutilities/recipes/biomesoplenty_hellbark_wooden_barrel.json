@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "LLL",
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:magic_planks"
-          }
+          "P": { "item": "woodenutilities:hellbark_wooden_plate" },
+          "L": { "item": "biomesoplenty:hellbark_planks" }
         },
         "result": {
-          "item": "woodenutilities:magic_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:hellbark_wooden_barrel"
         }
       }
     }

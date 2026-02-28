@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "biomesoplenty"
+          "modid": "biomeswevegone"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "P P",
+          "PCP",
+          " P "
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:hellbark_planks"
-          }
+          "P": { "item": "woodenutilities:ironwood_wooden_plate" },
+          "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:hellbark_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:ironwood_wooden_hopper"
         }
       }
     }

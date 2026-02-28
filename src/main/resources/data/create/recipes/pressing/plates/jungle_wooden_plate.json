@@ -1,16 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PP",
     "PP"
   ],
   "key": {
     "P": {
-      "item": "biomesoplenty:fir_planks"
+      "item": "minecraft:jungle_planks"
     }
   },
   "result": {
-    "item": "woodenutilities:fir_wooden_crafting_table_slab",
+    "item": "woodenutilities:jungle_wooden_plate",
     "count": 2
   }
 }
