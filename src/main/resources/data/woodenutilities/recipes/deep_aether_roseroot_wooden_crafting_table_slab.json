@@ -11,15 +11,15 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "PP",
+          "LL"
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:roseroot_planks"
-          }
+          "P": { "item": "woodenutilities:roseroot_wooden_plate" },
+          "L": { "item": "deep_aether:roseroot_planks" }
         },
         "result": {
-          "item": "woodenutilities:roseroot_wooden_plate",
+          "item": "woodenutilities:roseroot_wooden_crafting_table_slab",
           "count": 2
         }
       }

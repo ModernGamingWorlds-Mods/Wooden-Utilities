@@ -1,14 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PPP",
+    "LLL",
     "P P",
-    "PPP"
+    "LLL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:oak_planks"
-    }
+    "P": { "item": "woodenutilities:oak_wooden_plate" },
+    "L": { "item": "minecraft:oak_planks" }
   },
   "result": {
     "item": "woodenutilities:oak_wooden_barrel"

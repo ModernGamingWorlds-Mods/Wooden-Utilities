@@ -1,0 +1,21 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:mangrove_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:mangrove_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

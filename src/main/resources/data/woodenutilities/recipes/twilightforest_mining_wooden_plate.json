@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "deep_aether"
+          "modid": "twilightforest"
         }
       ],
       "recipe": {
@@ -15,11 +15,11 @@
         ],
         "key": {
           "P": {
-            "item": "deep_aether:roseroot_planks"
+            "item": "twilightforest:mining_planks"
           }
         },
         "result": {
-          "item": "woodenutilities:roseroot_wooden_plate",
+          "item": "woodenutilities:mining_wooden_plate",
           "count": 2
         }
       }

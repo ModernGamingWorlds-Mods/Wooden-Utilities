@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "P P",
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:roseroot_planks"
-          }
+          "P": { "item": "woodenutilities:roseroot_wooden_plate" },
+          "L": { "item": "deep_aether:roseroot_planks" }
         },
         "result": {
-          "item": "woodenutilities:roseroot_wooden_plate",
-          "count": 2
+          "item": "woodenutilities:roseroot_wooden_cauldron"
         }
       }
     }

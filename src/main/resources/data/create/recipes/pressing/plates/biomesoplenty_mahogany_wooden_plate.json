@@ -1,0 +1,25 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "biomesoplenty"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "biomesoplenty:mahogany_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:mahogany_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

@@ -3,12 +3,11 @@
   "pattern": [
     "P P",
     "P P",
-    "PPP"
+    "LLL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:mangrove_planks"
-    }
+    "P": { "item": "woodenutilities:mangrove_wooden_plate" },
+    "L": { "item": "minecraft:mangrove_planks" }
   },
   "result": {
     "item": "woodenutilities:mangrove_wooden_cauldron"

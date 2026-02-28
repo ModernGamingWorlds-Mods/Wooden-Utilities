@@ -5,21 +5,21 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "deep_aether"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "PP",
+          "LL"
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:roseroot_planks"
-          }
+          "P": { "item": "woodenutilities:redwood_wooden_plate" },
+          "L": { "item": "biomesoplenty:redwood_planks" }
         },
         "result": {
-          "item": "woodenutilities:roseroot_wooden_plate",
+          "item": "woodenutilities:redwood_wooden_crafting_table_slab",
           "count": 2
         }
       }
