@@ -13,12 +13,11 @@
         "pattern": [
           "P P",
           "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:towerwood"
-          }
+          "P": { "item": "woodenutilities:towerwood_wooden_plate" },
+          "L": { "item": "twilightforest:towerwood" }
         },
         "result": {
           "item": "woodenutilities:towerwood_wooden_cauldron"

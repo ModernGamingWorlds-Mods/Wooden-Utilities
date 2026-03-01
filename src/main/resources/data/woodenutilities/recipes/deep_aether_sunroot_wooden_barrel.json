@@ -5,23 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "twilightforest"
+          "modid": "deep_aether"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
+          "LLL",
           "P P",
-          "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:time_planks"
-          }
+          "P": { "item": "woodenutilities:sunroot_wooden_plate" },
+          "L": { "item": "deep_aether:sunroot_planks" }
         },
         "result": {
-          "item": "woodenutilities:time_wooden_cauldron"
+          "item": "woodenutilities:sunroot_wooden_barrel"
         }
       }
     }

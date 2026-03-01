@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "deep_aether"
+          "modid": "twilightforest"
         }
       ],
       "recipe": {
@@ -15,12 +15,12 @@
         ],
         "key": {
           "P": {
-            "item": "deep_aether:sunroot_planks"
+            "item": "twilightforest:towerwood"
           }
         },
         "result": {
-          "item": "woodenutilities:sunroot_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:towerwood_wooden_plate",
+          "count": 2
         }
       }
     }

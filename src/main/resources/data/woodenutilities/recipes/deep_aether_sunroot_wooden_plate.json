@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "aether"
+          "modid": "deep_aether"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "P P",
-          "PCP",
-          " P "
+          "PP"
         ],
         "key": {
-          "P": { "item": "woodenutilities:sunroot_wooden_plate" },
-          "C": { "item": "minecraft:chest" }
+          "P": {
+            "item": "deep_aether:sunroot_planks"
+          }
         },
         "result": {
-          "item": "woodenutilities:sunroot_wooden_hopper"
+          "item": "woodenutilities:sunroot_wooden_plate",
+          "count": 2
         }
       }
     }

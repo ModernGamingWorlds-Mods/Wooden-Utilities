@@ -1,0 +1,25 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "twilightforest:time_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:time_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "P P",
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:umbran_planks"
-          }
+          "P": { "item": "woodenutilities:umbran_wooden_plate" },
+          "L": { "item": "biomesoplenty:umbran_planks" }
         },
         "result": {
-          "item": "woodenutilities:umbran_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:umbran_wooden_cauldron"
         }
       }
     }

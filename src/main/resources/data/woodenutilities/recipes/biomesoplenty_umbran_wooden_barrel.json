@@ -5,23 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "twilightforest"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
+          "LLL",
           "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:towerwood"
-          }
+          "P": { "item": "woodenutilities:umbran_wooden_plate" },
+          "L": { "item": "biomesoplenty:umbran_planks" }
         },
         "result": {
-          "item": "woodenutilities:towerwood_wooden_barrel"
+          "item": "woodenutilities:umbran_wooden_barrel"
         }
       }
     }

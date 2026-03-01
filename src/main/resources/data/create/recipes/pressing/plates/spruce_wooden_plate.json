@@ -1,0 +1,21 @@
+{
+  "type": "create:pressing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:spruce_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "woodenutilities:spruce_wooden_plate",
+      "count": 2
+    }
+  ],
+  "processingTime": 100
+}

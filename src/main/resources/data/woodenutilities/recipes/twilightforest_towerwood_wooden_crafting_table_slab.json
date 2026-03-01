@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PP",
+          "LL"
+        ],
+        "key": {
+          "P": { "item": "woodenutilities:towerwood_wooden_plate" },
+          "L": { "item": "twilightforest:towerwood" }
+        },
+        "result": {
+          "item": "woodenutilities:towerwood_wooden_crafting_table_slab",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

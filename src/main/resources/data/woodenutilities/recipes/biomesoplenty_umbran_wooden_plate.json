@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "twilightforest"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
@@ -15,12 +15,12 @@
         ],
         "key": {
           "P": {
-            "item": "twilightforest:towerwood"
+            "item": "biomesoplenty:umbran_planks"
           }
         },
         "result": {
-          "item": "woodenutilities:towerwood_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:umbran_wooden_plate",
+          "count": 2
         }
       }
     }

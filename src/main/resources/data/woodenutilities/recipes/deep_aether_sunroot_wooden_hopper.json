@@ -11,17 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
           "P P",
-          "PPP"
+          "PCP",
+          " P "
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:sunroot_planks"
-          }
+          "P": { "item": "woodenutilities:sunroot_wooden_plate" },
+          "C": { "item": "minecraft:chest" }
         },
         "result": {
-          "item": "woodenutilities:sunroot_wooden_barrel"
+          "item": "woodenutilities:sunroot_wooden_hopper"
         }
       }
     }
