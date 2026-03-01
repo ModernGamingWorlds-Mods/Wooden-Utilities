@@ -5,7 +5,7 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "biomesoplenty"
+          "modid": "twilightforest"
         }
       ],
       "recipe": {
@@ -13,15 +13,14 @@
         "pattern": [
           "P P",
           "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:willow_planks"
-          }
+          "P": { "item": "woodenutilities:transformation_wooden_plate" },
+          "L": { "item": "twilightforest:transformation_planks" }
         },
         "result": {
-          "item": "woodenutilities:willow_wooden_cauldron"
+          "item": "woodenutilities:transformation_wooden_cauldron"
         }
       }
     }

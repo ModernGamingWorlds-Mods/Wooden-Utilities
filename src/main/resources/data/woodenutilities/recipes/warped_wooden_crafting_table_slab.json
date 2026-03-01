@@ -2,12 +2,11 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PP",
-    "PP"
+    "LL"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:warped_planks"
-    }
+    "P": { "item": "woodenutilities:warped_wooden_plate" },
+    "L": { "item": "minecraft:warped_planks" }
   },
   "result": {
     "item": "woodenutilities:warped_wooden_crafting_table_slab",

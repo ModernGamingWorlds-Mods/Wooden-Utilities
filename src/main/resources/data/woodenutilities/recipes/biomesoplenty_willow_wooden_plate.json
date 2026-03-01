@@ -11,15 +11,15 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP",
-          "LL"
+          "PP"
         ],
         "key": {
-          "P": { "item": "woodenutilities:umbran_wooden_plate" },
-          "L": { "item": "biomesoplenty:umbran_planks" }
+          "P": {
+            "item": "biomesoplenty:willow_planks"
+          }
         },
         "result": {
-          "item": "woodenutilities:umbran_wooden_crafting_table_slab",
+          "item": "woodenutilities:willow_wooden_plate",
           "count": 2
         }
       }

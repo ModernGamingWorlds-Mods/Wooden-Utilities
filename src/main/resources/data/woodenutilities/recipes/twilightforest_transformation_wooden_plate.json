@@ -5,23 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "biomesoplenty"
+          "modid": "twilightforest"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
-          "P P",
-          "PPP"
+          "PP"
         ],
         "key": {
           "P": {
-            "item": "biomesoplenty:willow_planks"
+            "item": "twilightforest:transformation_planks"
           }
         },
         "result": {
-          "item": "woodenutilities:willow_wooden_barrel"
+          "item": "woodenutilities:transformation_wooden_plate",
+          "count": 2
         }
       }
     }

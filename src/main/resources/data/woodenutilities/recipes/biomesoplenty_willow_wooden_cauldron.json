@@ -5,26 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "twilightforest"
-        },
-        {
-          "type": "forge:mod_loaded",
-          "modid": "woodenutilities_transformation_cauldron"
+          "modid": "biomesoplenty"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "P P",
-          " P "
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:transformation_planks"
-          }
+          "P": { "item": "woodenutilities:willow_wooden_plate" },
+          "L": { "item": "biomesoplenty:willow_planks" }
         },
         "result": {
-          "item": "woodenutilities:transformation_wooden_cauldron"
+          "item": "woodenutilities:willow_wooden_cauldron"
         }
       }
     }

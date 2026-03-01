@@ -11,14 +11,13 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
+          "LLL",
           "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "twilightforest:transformation_planks"
-          }
+          "P": { "item": "woodenutilities:transformation_wooden_plate" },
+          "L": { "item": "twilightforest:transformation_planks" }
         },
         "result": {
           "item": "woodenutilities:transformation_wooden_barrel"

@@ -11,16 +11,16 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PP"
+          "LLL",
+          "P P",
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "biomesoplenty:willow_planks"
-          }
+          "P": { "item": "woodenutilities:willow_wooden_plate" },
+          "L": { "item": "biomesoplenty:willow_planks" }
         },
         "result": {
-          "item": "woodenutilities:willow_wooden_plate",
-          "count": 4
+          "item": "woodenutilities:willow_wooden_barrel"
         }
       }
     }
