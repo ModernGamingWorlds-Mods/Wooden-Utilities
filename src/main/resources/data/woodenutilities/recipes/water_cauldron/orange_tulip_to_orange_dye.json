@@ -5,10 +5,10 @@
     "amount": 1000
   },
   "input_item": {
-    "item": "minecraft:sand"
+    "item": "minecraft:orange_tulip"
   },
   "result": {
-    "item": "minecraft:clay_ball",
-    "count": 2
+    "item": "minecraft:orange_dye",
+    "count": 1
   }
 }

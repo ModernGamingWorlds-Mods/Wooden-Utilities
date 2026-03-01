@@ -11,14 +11,13 @@
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
-          "PPP",
+          "LLL",
           "P P",
-          "PPP"
+          "LLL"
         ],
         "key": {
-          "P": {
-            "item": "deep_aether:yagroot_planks"
-          }
+          "P": { "item": "woodenutilities:yagroot_wooden_plate" },
+          "L": { "item": "deep_aether:yagroot_planks" }
         },
         "result": {
           "item": "woodenutilities:yagroot_wooden_barrel"

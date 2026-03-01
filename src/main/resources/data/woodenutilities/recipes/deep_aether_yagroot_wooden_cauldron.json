@@ -5,22 +5,22 @@
       "conditions": [
         {
           "type": "forge:mod_loaded",
-          "modid": "aether"
+          "modid": "deep_aether"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "P P",
-          "PCP",
-          " P "
+          "P P",
+          "LLL"
         ],
         "key": {
           "P": { "item": "woodenutilities:yagroot_wooden_plate" },
-          "C": { "item": "minecraft:chest" }
+          "L": { "item": "deep_aether:yagroot_planks" }
         },
         "result": {
-          "item": "woodenutilities:yagroot_wooden_hopper"
+          "item": "woodenutilities:yagroot_wooden_cauldron"
         }
       }
     }

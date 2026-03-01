@@ -1,14 +1,14 @@
 {
   "type": "woodenutilities:wooden_cauldron",
   "input_fluid": {
-    "fluid": "minecraft:water",
+    "fluid": "minecraft:lava",
     "amount": 1000
   },
   "input_item": {
-    "item": "minecraft:sand"
+    "item": "minecraft:salmon"
   },
   "result": {
-    "item": "minecraft:clay_ball",
-    "count": 2
+    "item": "minecraft:cooked_salmon",
+    "count": 1
   }
 }

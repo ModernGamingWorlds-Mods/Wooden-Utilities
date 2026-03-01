@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "PPP",
-    "P P",
+    "L L",
     "PPP"
   ],
   "key": {
     "P": {
       "tag": "minecraft:planks"
+    },
+    "L": {
+      "tag": "woodenutilities:wooden_plates"
     }
   },
   "result": {

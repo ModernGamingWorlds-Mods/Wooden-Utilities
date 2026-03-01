@@ -5,10 +5,10 @@
     "amount": 1000
   },
   "input_item": {
-    "item": "minecraft:sand"
+    "item": "minecraft:sunflower"
   },
   "result": {
-    "item": "minecraft:clay_ball",
+    "item": "minecraft:yellow_dye",
     "count": 2
   }
 }
