@@ -424,6 +424,9 @@ public final class ModItems {
     public static final DeferredItem<Item> SAWDUST = ITEMS.register("sawdust",
         () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> OAK_ROD = ITEMS.register("oak_rod",
+        () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> ACACIA_ROD = ITEMS.register("acacia_rod",
         () -> new Item(new Item.Properties()));
 
@@ -1167,6 +1170,9 @@ public final class ModItems {
         () -> new Item(new Item.Properties().durability(96)));
 
     public static final RegistryObject<Item> SAWDUST = ITEMS.register("sawdust",
+        () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> OAK_ROD = ITEMS.register("oak_rod",
         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ACACIA_ROD = ITEMS.register("acacia_rod",
