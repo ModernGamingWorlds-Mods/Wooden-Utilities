@@ -45,6 +45,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     final FluidTank tankA = new FluidTank(TANK_CAPACITY);
     final FluidTank tankB = new FluidTank(TANK_CAPACITY);
     final ItemStackHandler itemHandler = new ItemStackHandler(1);
+    private ItemStack filterItem = ItemStack.EMPTY;
 
     // ── Fluid handler: fill + drain (sides: N/S/E/W) ────────────────────────
     final IFluidHandler sideFluidHandler = new IFluidHandler() {
@@ -144,6 +145,9 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         super(ModBlockEntities.WOODEN_CAULDRON.get(), pos, state);
     }
 
+    public ItemStack getFilterItem() { return filterItem; }
+    public void setFilterItem(ItemStack stack) { this.filterItem = stack; }
+
     // ── Server tick ───────────────────────────────────────────────────────────
 
     public static void serverTick(Level level, BlockPos pos, BlockState state,
@@ -159,6 +163,10 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
                 level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())) {
         //?}
             if (recipe.matches(be)) {
+                // If a filter is set, skip recipes whose result doesn't match
+                if (!be.filterItem.isEmpty() && be.filterItem.getItem() != recipe.getResultCopy().getItem()) {
+                    continue;
+                }
                 recipe.consumeInputs(be);
                 be.setChanged();
                 level.sendBlockUpdated(pos, state, state, 3);
@@ -249,6 +257,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         tag.put("TankA", tankA.writeToNBT(registries, new CompoundTag()));
         tag.put("TankB", tankB.writeToNBT(registries, new CompoundTag()));
         tag.put("Items", itemHandler.serializeNBT(registries));
+        if (!filterItem.isEmpty()) tag.put("Filter", filterItem.save(registries));
     }
 
     @Override
@@ -257,6 +266,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         tankA.readFromNBT(registries, tag.getCompound("TankA"));
         tankB.readFromNBT(registries, tag.getCompound("TankB"));
         itemHandler.deserializeNBT(registries, tag.getCompound("Items"));
+        filterItem = ItemStack.parseOptional(registries, tag.getCompound("Filter"));
     }
     *///?} else {
     @Override
@@ -265,6 +275,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         tag.put("TankA", tankA.writeToNBT(new CompoundTag()));
         tag.put("TankB", tankB.writeToNBT(new CompoundTag()));
         tag.put("Items", itemHandler.serializeNBT());
+        if (!filterItem.isEmpty()) tag.put("Filter", filterItem.save(new CompoundTag()));
     }
 
     @Override
@@ -273,6 +284,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         tankA.readFromNBT(tag.getCompound("TankA"));
         tankB.readFromNBT(tag.getCompound("TankB"));
         itemHandler.deserializeNBT(tag.getCompound("Items"));
+        filterItem = tag.contains("Filter") ? ItemStack.of(tag.getCompound("Filter")) : ItemStack.EMPTY;
     }
     //?}
 

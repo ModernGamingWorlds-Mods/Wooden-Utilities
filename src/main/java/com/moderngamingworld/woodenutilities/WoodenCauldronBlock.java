@@ -23,6 +23,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 //? if neoforge {
 /*import com.mojang.serialization.MapCodec;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -132,36 +133,102 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level,
                                               BlockPos pos, Player player, InteractionHand hand,
                                               BlockHitResult hit) {
-        if (stack.getCapability(Capabilities.FluidHandler.ITEM) == null)
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-
-        if (!level.isClientSide) {
-            BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof WoodenCauldronBlockEntity cauldron) {
-                FluidUtil.interactWithFluidHandler(player, hand, cauldron.getSideFluidHandler());
-                cauldron.setChanged();
-                level.sendBlockUpdated(pos, state, state, 3);
+        // Fluid container → fill/drain
+        if (stack.getCapability(Capabilities.FluidHandler.ITEM) != null) {
+            if (!level.isClientSide) {
+                BlockEntity be = level.getBlockEntity(pos);
+                if (be instanceof WoodenCauldronBlockEntity cauldron) {
+                    FluidUtil.interactWithFluidHandler(player, hand, cauldron.getSideFluidHandler());
+                    cauldron.setChanged();
+                    level.sendBlockUpdated(pos, state, state, 3);
+                }
             }
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
         }
-        return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        // Filter: shift + right-click item on a side face to set the output filter
+        net.minecraft.core.Direction hitFace = hit.getDirection();
+        if (player.isShiftKeyDown() && hitFace != net.minecraft.core.Direction.UP && hitFace != net.minecraft.core.Direction.DOWN) {
+            if (!level.isClientSide) {
+                BlockEntity be = level.getBlockEntity(pos);
+                if (be instanceof WoodenCauldronBlockEntity cauldron) {
+                    ItemStack filter = stack.copy();
+                    filter.setCount(1);
+                    cauldron.setFilterItem(filter);
+                    cauldron.setChanged();
+                    level.sendBlockUpdated(pos, state, state, 3);
+                    player.displayClientMessage(
+                        net.minecraft.network.chat.Component.literal("Filter set to: " + filter.getHoverName().getString()), true);
+                }
+            }
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                               Player player, BlockHitResult hit) {
+        // Shift + right-click side face with empty hand → clear the output filter
+        net.minecraft.core.Direction hitFace = hit.getDirection();
+        if (player.isShiftKeyDown() && hitFace != net.minecraft.core.Direction.UP && hitFace != net.minecraft.core.Direction.DOWN) {
+            if (!level.isClientSide) {
+                BlockEntity be = level.getBlockEntity(pos);
+                if (be instanceof WoodenCauldronBlockEntity cauldron) {
+                    cauldron.setFilterItem(ItemStack.EMPTY);
+                    cauldron.setChanged();
+                    level.sendBlockUpdated(pos, state, state, 3);
+                    player.displayClientMessage(
+                        net.minecraft.network.chat.Component.literal("Filter cleared"), true);
+                }
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        return InteractionResult.PASS;
     }
     *///?} else {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos,
                                  Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stack = player.getItemInHand(hand);
-        if (!stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent())
-            return InteractionResult.PASS;
+        net.minecraft.core.Direction hitFace = hit.getDirection();
 
-        if (!level.isClientSide) {
-            BlockEntity be = level.getBlockEntity(pos);
-            if (be instanceof WoodenCauldronBlockEntity cauldron) {
-                FluidUtil.interactWithFluidHandler(player, hand, level, pos, null);
-                cauldron.setChanged();
-                level.sendBlockUpdated(pos, state, state, 3);
+        // Fluid container → fill/drain
+        if (!stack.isEmpty() && stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent()) {
+            if (!level.isClientSide) {
+                BlockEntity be = level.getBlockEntity(pos);
+                if (be instanceof WoodenCauldronBlockEntity cauldron) {
+                    FluidUtil.interactWithFluidHandler(player, hand, level, pos, null);
+                    cauldron.setChanged();
+                    level.sendBlockUpdated(pos, state, state, 3);
+                }
             }
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+
+        // Filter: shift + right-click a side face with an item to set, or empty-handed to clear
+        if (player.isShiftKeyDown() && hitFace != net.minecraft.core.Direction.UP && hitFace != net.minecraft.core.Direction.DOWN) {
+            if (!level.isClientSide) {
+                BlockEntity be = level.getBlockEntity(pos);
+                if (be instanceof WoodenCauldronBlockEntity cauldron) {
+                    if (stack.isEmpty()) {
+                        cauldron.setFilterItem(ItemStack.EMPTY);
+                        player.displayClientMessage(
+                            net.minecraft.network.chat.Component.literal("Filter cleared"), true);
+                    } else {
+                        ItemStack filter = stack.copy();
+                        filter.setCount(1);
+                        cauldron.setFilterItem(filter);
+                        player.displayClientMessage(
+                            net.minecraft.network.chat.Component.literal("Filter set to: " + filter.getHoverName().getString()), true);
+                    }
+                    cauldron.setChanged();
+                    level.sendBlockUpdated(pos, state, state, 3);
+                }
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+
+        return InteractionResult.PASS;
     }
     //?}
 
@@ -198,6 +265,10 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
                 ItemStack item = cauldron.getItemHandler().getStackInSlot(0);
                 if (!item.isEmpty()) {
                     Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), item);
+                }
+                ItemStack filter = cauldron.getFilterItem();
+                if (!filter.isEmpty()) {
+                    Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), filter);
                 }
             }
         }

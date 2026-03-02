@@ -30,6 +30,7 @@ public class WoodenCauldronRenderer implements BlockEntityRenderer<WoodenCauldro
                        MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
         renderFluid(be, poseStack, bufferSource, packedLight, packedOverlay);
         renderItem(be, poseStack, bufferSource, packedLight, packedOverlay);
+        renderFilter(be, poseStack, bufferSource, packedLight, packedOverlay);
     }
 
     private void renderFluid(WoodenCauldronBlockEntity be, PoseStack poseStack,
@@ -102,6 +103,24 @@ public class WoodenCauldronRenderer implements BlockEntityRenderer<WoodenCauldro
                 packedLight, packedOverlay,
                 poseStack, bufferSource,
                 be.getLevel(), 0
+        );
+        poseStack.popPose();
+    }
+
+    private void renderFilter(WoodenCauldronBlockEntity be, PoseStack poseStack,
+                               MultiBufferSource bufferSource, int packedLight, int packedOverlay) {
+        ItemStack filter = be.getFilterItem();
+        if (filter.isEmpty()) return;
+
+        poseStack.pushPose();
+        // Hover just above the cauldron rim so it's visible from all sides
+        poseStack.translate(0.5, 1.15, 0.5);
+        poseStack.scale(0.35f, 0.35f, 0.35f);
+        Minecraft.getInstance().getItemRenderer().renderStatic(
+                filter, ItemDisplayContext.FIXED,
+                packedLight, packedOverlay,
+                poseStack, bufferSource,
+                be.getLevel(), 1
         );
         poseStack.popPose();
     }
