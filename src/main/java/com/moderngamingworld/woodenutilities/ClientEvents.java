@@ -43,7 +43,7 @@ public class ClientEvents {
             //? if neoforge {
             /*ResourceLocation fluidTypeProp = ResourceLocation.fromNamespaceAndPath(WoodenUtilities.MOD_ID, "fluid_type");
             *///?} else {
-            ResourceLocation fluidTypeProp = new ResourceLocation(WoodenUtilities.MOD_ID, "fluid_type");
+            ResourceLocation fluidTypeProp = ResourceLocation.fromNamespaceAndPath(WoodenUtilities.MOD_ID, "fluid_type");
             //?}
             net.minecraft.client.renderer.item.ClampedItemPropertyFunction fluidFunc =
                 (stack, level, entity, seed) -> {
