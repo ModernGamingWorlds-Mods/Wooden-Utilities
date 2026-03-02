@@ -1154,6 +1154,9 @@ public final class ModItems {
     public static final RegistryObject<Item> WOODEN_HAMMER = ITEMS.register("wooden_hammer",
         () -> new Item(new Item.Properties().durability(96)));
 
+    public static final RegistryObject<Item> SAWDUST = ITEMS.register("sawdust",
+        () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> WOODEN_BUCKET = ITEMS.register("wooden_bucket",
         () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> OAK_WOODEN_BUCKET = ITEMS.register("oak_wooden_bucket",
