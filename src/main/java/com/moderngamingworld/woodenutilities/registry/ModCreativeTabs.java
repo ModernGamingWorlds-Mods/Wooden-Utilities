@@ -353,6 +353,7 @@ public final class ModCreativeTabs {
                                 output.accept(ModItems.ACACIA_ROD.get());
                                 output.accept(ModItems.BIRCH_ROD.get());
                                 output.accept(ModItems.DARK_OAK_ROD.get());
+                                output.accept(ModItems.JUNGLE_ROD.get());
 
                                 // ── Misc Items ───────────────────────────────────────────
                                 output.accept(ModItems.SAWDUST.get());
