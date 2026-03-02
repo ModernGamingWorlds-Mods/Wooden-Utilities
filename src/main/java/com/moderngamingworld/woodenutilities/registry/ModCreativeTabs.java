@@ -349,6 +349,11 @@ public final class ModCreativeTabs {
                                     addBucket.accept(ModItems.SKYROOT_WOODEN_BUCKET.get());
                                 }
 
+                                // ── Rods ─────────────────────────────────────────────────
+                                output.accept(ModItems.ACACIA_ROD.get());
+                                output.accept(ModItems.BIRCH_ROD.get());
+                                output.accept(ModItems.DARK_OAK_ROD.get());
+
                                 // ── Misc Items ───────────────────────────────────────────
                                 output.accept(ModItems.SAWDUST.get());
                             })
