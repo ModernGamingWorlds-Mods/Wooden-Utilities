@@ -351,6 +351,7 @@ public final class ModCreativeTabs {
 
                                 // ── Rods ─────────────────────────────────────────────────
                                 output.accept(ModItems.OAK_ROD.get());
+                                output.accept(ModItems.SPRUCE_ROD.get());
                                 output.accept(ModItems.ACACIA_ROD.get());
                                 output.accept(ModItems.BIRCH_ROD.get());
                                 output.accept(ModItems.DARK_OAK_ROD.get());
