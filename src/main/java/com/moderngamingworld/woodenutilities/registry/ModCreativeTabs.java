@@ -348,6 +348,9 @@ public final class ModCreativeTabs {
                                 if (hasAether) {
                                     addBucket.accept(ModItems.SKYROOT_WOODEN_BUCKET.get());
                                 }
+
+                                // ── Misc Items ───────────────────────────────────────────
+                                output.accept(ModItems.SAWDUST.get());
                             })
                             .build()
             );

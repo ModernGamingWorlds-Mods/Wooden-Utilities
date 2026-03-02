@@ -227,6 +227,10 @@ public class WoodenUtilities {
             event.accept(ModItems.WOODEN_BUCKET);
         }
 
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SAWDUST);
+        }
+
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModItems.WOODEN_ANVIL);
             event.accept(ModItems.WOODEN_BARREL);
