@@ -61,6 +61,8 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
 
         @Override
         public int fill(FluidStack resource, FluidAction action) {
+            // If filter is set, only accept fluids used in recipes producing the filter item
+            if (!isFluidAllowedByFilter(resource)) return 0;
             // Try Tank A first (accepts same fluid or is empty)
             int filledA = tankA.fill(resource, action);
             if (filledA > 0) return filledA;
@@ -124,6 +126,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
 
         @Override @Nonnull
         public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
+            if (!isItemAllowedByFilter(stack)) return stack;
             return itemHandler.insertItem(slot, stack, simulate);
         }
 
@@ -135,7 +138,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         @Override public int getSlotLimit(int slot) { return itemHandler.getSlotLimit(slot); }
 
         @Override public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-            return itemHandler.isItemValid(slot, stack);
+            return isItemAllowedByFilter(stack) && itemHandler.isItemValid(slot, stack);
         }
     };
 
@@ -235,7 +238,8 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
             return r.isFluidFluid()
                     && r.getInputFluid().getFluid() == aFluid.getFluid()
                     && r.getInputFluid2() != null
-                    && r.getInputFluid2().getFluid() == incoming.getFluid();
+                    && r.getInputFluid2().getFluid() == incoming.getFluid()
+                    && (filterItem.isEmpty() || r.getResultCopy().getItem() == filterItem.getItem());
         });
         *///?} else {
         return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
@@ -244,6 +248,53 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
                     && r.getInputFluid().getFluid() == aFluid.getFluid()
                     && r.getInputFluid2() != null
                     && r.getInputFluid2().getFluid() == incoming.getFluid()
+                    && (filterItem.isEmpty() || r.getResultCopy().getItem() == filterItem.getItem())
+        );
+        //?}
+    }
+
+    public boolean isFluidAllowedByFilter(FluidStack incoming) {
+        if (filterItem.isEmpty() || level == null) return true;
+
+        //? if recipe_holder {
+        /*return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
+                .stream().anyMatch(h -> {
+            WoodenCauldronRecipe r = h.value();
+            return r.getResultCopy().getItem() == filterItem.getItem()
+                    && (r.getInputFluid().getFluid() == incoming.getFluid()
+                        || (r.isFluidFluid() && r.getInputFluid2() != null
+                            && r.getInputFluid2().getFluid() == incoming.getFluid()));
+        });
+        *///?} else {
+        return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
+                .stream().anyMatch(r ->
+            r.getResultCopy().getItem() == filterItem.getItem()
+                    && (r.getInputFluid().getFluid() == incoming.getFluid()
+                        || (r.isFluidFluid() && r.getInputFluid2() != null
+                            && r.getInputFluid2().getFluid() == incoming.getFluid()))
+        );
+        //?}
+    }
+
+    public boolean isItemAllowedByFilter(ItemStack stack) {
+        if (filterItem.isEmpty() || level == null || stack.isEmpty()) return true;
+
+        //? if recipe_holder {
+        /*return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
+                .stream().anyMatch(h -> {
+            WoodenCauldronRecipe r = h.value();
+            return r.getResultCopy().getItem() == filterItem.getItem()
+                    && !r.isFluidFluid()
+                    && r.getInputItem() != null
+                    && r.getInputItem().test(stack);
+        });
+        *///?} else {
+        return level.getRecipeManager().getAllRecipesFor(ModRecipes.WOODEN_CAULDRON_TYPE.get())
+                .stream().anyMatch(r ->
+            r.getResultCopy().getItem() == filterItem.getItem()
+                    && !r.isFluidFluid()
+                    && r.getInputItem() != null
+                    && r.getInputItem().test(stack)
         );
         //?}
     }

@@ -242,6 +242,7 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
         if (!(be instanceof WoodenCauldronBlockEntity cauldron)) return;
 
         ItemStack current = itemEntity.getItem();
+        if (!cauldron.isItemAllowedByFilter(current)) return;
         ItemStack remaining = cauldron.getItemHandler().insertItem(0, current, false);
 
         if (remaining != current) {
