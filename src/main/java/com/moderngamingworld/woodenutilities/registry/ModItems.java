@@ -427,6 +427,9 @@ public final class ModItems {
     public static final DeferredItem<Item> ACACIA_ROD = ITEMS.register("acacia_rod",
         () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> BIRCH_ROD = ITEMS.register("birch_rod",
+        () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> WOODEN_BUCKET = ITEMS.register("wooden_bucket",
         () -> new WoodenBucketItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> OAK_WOODEN_BUCKET = ITEMS.register("oak_wooden_bucket",
@@ -1161,6 +1164,9 @@ public final class ModItems {
         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ACACIA_ROD = ITEMS.register("acacia_rod",
+        () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BIRCH_ROD = ITEMS.register("birch_rod",
         () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WOODEN_BUCKET = ITEMS.register("wooden_bucket",
