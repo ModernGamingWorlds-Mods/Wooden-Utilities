@@ -39,3 +39,11 @@ DebugProbesKt.bin
 
 # Logs
 *.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Planning documents (tracked locally only)
+HANDMADE_FEEL_PLAN.md

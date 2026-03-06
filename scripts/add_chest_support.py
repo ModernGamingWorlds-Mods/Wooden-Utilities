@@ -419,6 +419,8 @@ def gen_lang():
         if key not in lang:
             # Build pretty name from suffix
             pretty = suf.replace("_WOODEN", "").replace("_", " ").title().strip()
+            # Fix known acronyms that .title() lowercases
+            pretty = pretty.replace("Bwg ", "BWG ")
             if pretty:
                 lang[key] = f"{pretty} Wooden Chest"
             else:
