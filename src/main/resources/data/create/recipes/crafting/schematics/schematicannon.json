@@ -1,0 +1,37 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:dispenser"
+    },
+    "I": {
+      "tag": "forge:storage_blocks/iron"
+    },
+    "L": {
+      "tag": "woodenutilities:wooden_plates"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    " I ",
+    "LIL",
+    "SDS"
+  ],
+  "result": {
+    "item": "create:schematicannon"
+  },
+  "show_notification": true
+}
