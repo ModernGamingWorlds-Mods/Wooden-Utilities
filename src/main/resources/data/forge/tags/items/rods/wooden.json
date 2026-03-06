@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:oak_rod",
+    "woodenutilities:acacia_rod",
+    "woodenutilities:birch_rod",
+    "woodenutilities:dark_oak_rod",
+    "woodenutilities:jungle_rod",
+    "woodenutilities:spruce_rod"
+  ]
+}
