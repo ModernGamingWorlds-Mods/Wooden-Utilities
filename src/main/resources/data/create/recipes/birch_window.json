@@ -1,0 +1,31 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "woodenutilities:birch_wooden_plate"
+    },
+    "X": {
+      "tag": "forge:glass/colorless"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#X#"
+  ],
+  "result": {
+    "count": 2,
+    "item": "create:birch_window"
+  },
+  "show_notification": true
+}
