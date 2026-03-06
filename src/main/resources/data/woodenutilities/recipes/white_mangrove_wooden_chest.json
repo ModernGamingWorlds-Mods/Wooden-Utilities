@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "byg:white_mangrove_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:white_mangrove_wooden_chest",
+    "count": 1
+  }
+}

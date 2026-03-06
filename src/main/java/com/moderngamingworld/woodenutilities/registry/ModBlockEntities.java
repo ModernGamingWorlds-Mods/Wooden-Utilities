@@ -1,6 +1,7 @@
 package com.moderngamingworld.woodenutilities.registry;
 
 import com.moderngamingworld.woodenutilities.WoodenBarrelBlockEntity;
+import com.moderngamingworld.woodenutilities.WoodenChestBlockEntity;
 import com.moderngamingworld.woodenutilities.WoodenCauldronBlockEntity;
 import com.moderngamingworld.woodenutilities.WoodenHopperBlockEntity;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
@@ -197,6 +198,96 @@ public final class ModBlockEntities {
                             ModBlocks.TEAK_WOODEN_BARREL.get(),
                             ModBlocks.WENGE_WOODEN_BARREL.get(),
                             ModBlocks.ZEBRAWOOD_WOODEN_BARREL.get()
+                    ).build(null));
+
+    //? if neoforge {
+    /*public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<WoodenChestBlockEntity>> WOODEN_CHEST =
+    *///?} else {
+    public static final RegistryObject<BlockEntityType<WoodenChestBlockEntity>> WOODEN_CHEST =
+    //?}
+            BLOCK_ENTITIES.register("wooden_chest", () ->
+                    BlockEntityType.Builder.of(WoodenChestBlockEntity::new,
+                            ModBlocks.WOODEN_CHEST.get(),
+                            ModBlocks.OAK_WOODEN_CHEST.get(),
+                            ModBlocks.SPRUCE_WOODEN_CHEST.get(),
+                            ModBlocks.BIRCH_WOODEN_CHEST.get(),
+                            ModBlocks.JUNGLE_WOODEN_CHEST.get(),
+                            ModBlocks.ACACIA_WOODEN_CHEST.get(),
+                            ModBlocks.DARK_OAK_WOODEN_CHEST.get(),
+                            ModBlocks.MANGROVE_WOODEN_CHEST.get(),
+                            ModBlocks.CHERRY_WOODEN_CHEST.get(),
+                            ModBlocks.BAMBOO_WOODEN_CHEST.get(),
+                            ModBlocks.CRIMSON_WOODEN_CHEST.get(),
+                            ModBlocks.WARPED_WOODEN_CHEST.get(),
+                            ModBlocks.TWILIGHT_OAK_WOODEN_CHEST.get(),
+                            ModBlocks.CANOPY_WOODEN_CHEST.get(),
+                            ModBlocks.TWILIGHT_MANGROVE_WOODEN_CHEST.get(),
+                            ModBlocks.DARK_WOODEN_CHEST.get(),
+                            ModBlocks.TIME_WOODEN_CHEST.get(),
+                            ModBlocks.TRANSFORMATION_WOODEN_CHEST.get(),
+                            ModBlocks.MINING_WOODEN_CHEST.get(),
+                            ModBlocks.SORTING_WOODEN_CHEST.get(),
+                            ModBlocks.TOWERWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.FIR_WOODEN_CHEST.get(),
+                            ModBlocks.PINE_WOODEN_CHEST.get(),
+                            ModBlocks.MAPLE_WOODEN_CHEST.get(),
+                            ModBlocks.REDWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.MAHOGANY_WOODEN_CHEST.get(),
+                            ModBlocks.JACARANDA_WOODEN_CHEST.get(),
+                            ModBlocks.PALM_WOODEN_CHEST.get(),
+                            ModBlocks.WILLOW_WOODEN_CHEST.get(),
+                            ModBlocks.DEAD_WOODEN_CHEST.get(),
+                            ModBlocks.MAGIC_WOODEN_CHEST.get(),
+                            ModBlocks.UMBRAN_WOODEN_CHEST.get(),
+                            ModBlocks.HELLBARK_WOODEN_CHEST.get(),
+                            ModBlocks.EMPYREAL_WOODEN_CHEST.get(),
+                            ModBlocks.ROSEROOT_WOODEN_CHEST.get(),
+                            ModBlocks.YAGROOT_WOODEN_CHEST.get(),
+                            ModBlocks.CRUDEROOT_WOODEN_CHEST.get(),
+                            ModBlocks.CONBERRY_WOODEN_CHEST.get(),
+                            ModBlocks.SUNROOT_WOODEN_CHEST.get(),
+                            ModBlocks.SKYROOT_WOODEN_CHEST.get(),
+                            ModBlocks.ASPEN_WOODEN_CHEST.get(),
+                            ModBlocks.BAOBAB_WOODEN_CHEST.get(),
+                            ModBlocks.BLUE_ENCHANTED_WOODEN_CHEST.get(),
+                            ModBlocks.CIKA_WOODEN_CHEST.get(),
+                            ModBlocks.CYPRESS_WOODEN_CHEST.get(),
+                            ModBlocks.EBONY_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_FIR_WOODEN_CHEST.get(),
+                            ModBlocks.FLORUS_WOODEN_CHEST.get(),
+                            ModBlocks.GREEN_ENCHANTED_WOODEN_CHEST.get(),
+                            ModBlocks.HOLLY_WOODEN_CHEST.get(),
+                            ModBlocks.IRONWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_JACARANDA_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_MAHOGANY_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_MAPLE_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_PALM_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_PINE_WOODEN_CHEST.get(),
+                            ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_REDWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.SAKURA_WOODEN_CHEST.get(),
+                            ModBlocks.SKYRIS_WOODEN_CHEST.get(),
+                            //? if neoforge {
+                            /*ModBlocks.SPIRIT_WOODEN_CHEST.get(),
+                            *///?}
+                            ModBlocks.WHITE_MANGROVE_WOODEN_CHEST.get(),
+                            ModBlocks.BWG_WILLOW_WOODEN_CHEST.get(),
+                            ModBlocks.WITCH_HAZEL_WOODEN_CHEST.get(),
+                            ModBlocks.ZELKOVA_WOODEN_CHEST.get(),
+                            ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.BANYAN_WOODEN_CHEST.get(),
+                            ModBlocks.BLACK_WALNUT_WOODEN_CHEST.get(),
+                            ModBlocks.BLOODWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.BRISTLECONE_PINE_WOODEN_CHEST.get(),
+                            ModBlocks.CORK_OAK_WOODEN_CHEST.get(),
+                            ModBlocks.DRAGON_BLOOD_WOODEN_CHEST.get(),
+                            ModBlocks.KAPOK_WOODEN_CHEST.get(),
+                            ModBlocks.LARCH_WOODEN_CHEST.get(),
+                            ModBlocks.SANDALWOOD_WOODEN_CHEST.get(),
+                            ModBlocks.SYCAMORE_WOODEN_CHEST.get(),
+                            ModBlocks.TEAK_WOODEN_CHEST.get(),
+                            ModBlocks.WENGE_WOODEN_CHEST.get(),
+                            ModBlocks.ZEBRAWOOD_WOODEN_CHEST.get()
                     ).build(null));
 
     //? if neoforge {

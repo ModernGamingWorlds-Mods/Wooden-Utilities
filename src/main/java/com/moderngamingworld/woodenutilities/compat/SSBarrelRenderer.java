@@ -122,6 +122,11 @@ public class SSBarrelRenderer implements BlockEntityRenderer<BlockEntity> {
         poseStack.popPose();
     }
 
+    /** Shared wood-key resolver, also used by SSChestRenderer. */
+    static String resolveWoodKeyStatic(BlockEntity blockEntity) {
+        return resolveWoodKey(blockEntity);
+    }
+
     private static String resolveWoodKey(BlockEntity blockEntity) {
         try {
             Object woodType = blockEntity.getClass().getMethod("getWoodType").invoke(blockEntity);
@@ -276,6 +281,10 @@ public class SSBarrelRenderer implements BlockEntityRenderer<BlockEntity> {
         geoRenderer.render(poseStack, anim, bufferSource, renderType, buffer, packedLight, partialTick);
 
         poseStack.popPose();
+    }
+
+    static String resolveWoodKeyStatic(BlockEntity blockEntity) {
+        return resolveWoodKey(blockEntity);
     }
 
     private static String resolveWoodKey(BlockEntity blockEntity) {

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:black_walnut_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:black_walnut_wooden_chest",
+    "count": 1
+  }
+}

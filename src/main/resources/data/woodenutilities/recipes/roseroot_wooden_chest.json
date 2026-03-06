@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "deepaether:roseroot_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:roseroot_wooden_chest",
+    "count": 1
+  }
+}

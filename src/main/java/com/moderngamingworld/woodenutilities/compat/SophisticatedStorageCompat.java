@@ -27,6 +27,11 @@ public class SophisticatedStorageCompat {
         "limited_gold_barrel", "limited_diamond_barrel", "limited_netherite_barrel",
     };
 
+    /** All expected SS chest block entity type registry names. */
+    private static final String[] SS_CHEST_TYPES = {
+        "chest", "copper_chest", "iron_chest", "gold_chest", "diamond_chest", "netherite_chest",
+    };
+
     @SuppressWarnings({"unchecked", "rawtypes"})
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         //? if has_geckolib {
@@ -35,6 +40,13 @@ public class SophisticatedStorageCompat {
                     ResourceLocation.fromNamespaceAndPath(SS_MOD_ID, typeName));
             if (type != null) {
                 event.registerBlockEntityRenderer((BlockEntityType) type, SSBarrelRenderer::new);
+            }
+        }
+        for (String typeName : SS_CHEST_TYPES) {
+            BlockEntityType<?> type = BuiltInRegistries.BLOCK_ENTITY_TYPE.get(
+                    ResourceLocation.fromNamespaceAndPath(SS_MOD_ID, typeName));
+            if (type != null) {
+                event.registerBlockEntityRenderer((BlockEntityType) type, SSChestRenderer::new);
             }
         }
         //?}

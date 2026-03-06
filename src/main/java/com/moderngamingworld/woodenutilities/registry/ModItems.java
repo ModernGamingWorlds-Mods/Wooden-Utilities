@@ -1,6 +1,7 @@
 package com.moderngamingworld.woodenutilities.registry;
 
 import com.moderngamingworld.woodenutilities.WoodenBarrelBlockItem;
+import com.moderngamingworld.woodenutilities.WoodenChestBlockItem;
 import com.moderngamingworld.woodenutilities.WoodenBucketItem;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
 import net.minecraft.world.item.Item;
@@ -1512,7 +1513,167 @@ public final class ModItems {
         () -> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_PLATE = ITEMS.register("zebrawood_wooden_plate",
         () -> new Item(new Item.Properties()));
-    *///?} else {
+    
+    // ── Wooden Chest Items (NeoForge) ───────────────────────────────────────
+    public static final DeferredItem<Item> WOODEN_CHEST = ITEMS.register("wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> OAK_WOODEN_CHEST = ITEMS.register("oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SPRUCE_WOODEN_CHEST = ITEMS.register("spruce_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SPRUCE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BIRCH_WOODEN_CHEST = ITEMS.register("birch_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BIRCH_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> JUNGLE_WOODEN_CHEST = ITEMS.register("jungle_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.JUNGLE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ACACIA_WOODEN_CHEST = ITEMS.register("acacia_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ACACIA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DARK_OAK_WOODEN_CHEST = ITEMS.register("dark_oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DARK_OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> MANGROVE_WOODEN_CHEST = ITEMS.register("mangrove_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MANGROVE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CHERRY_WOODEN_CHEST = ITEMS.register("cherry_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CHERRY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BAMBOO_WOODEN_CHEST = ITEMS.register("bamboo_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BAMBOO_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CRIMSON_WOODEN_CHEST = ITEMS.register("crimson_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CRIMSON_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WARPED_WOODEN_CHEST = ITEMS.register("warped_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WARPED_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TWILIGHT_OAK_WOODEN_CHEST = ITEMS.register("twilight_oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TWILIGHT_OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CANOPY_WOODEN_CHEST = ITEMS.register("canopy_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CANOPY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TWILIGHT_MANGROVE_WOODEN_CHEST = ITEMS.register("twilight_mangrove_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TWILIGHT_MANGROVE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DARK_WOODEN_CHEST = ITEMS.register("dark_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DARK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TIME_WOODEN_CHEST = ITEMS.register("time_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TIME_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TRANSFORMATION_WOODEN_CHEST = ITEMS.register("transformation_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TRANSFORMATION_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> MINING_WOODEN_CHEST = ITEMS.register("mining_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MINING_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SORTING_WOODEN_CHEST = ITEMS.register("sorting_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SORTING_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TOWERWOOD_WOODEN_CHEST = ITEMS.register("towerwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TOWERWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> FIR_WOODEN_CHEST = ITEMS.register("fir_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.FIR_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> PINE_WOODEN_CHEST = ITEMS.register("pine_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.PINE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> MAPLE_WOODEN_CHEST = ITEMS.register("maple_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MAPLE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> REDWOOD_WOODEN_CHEST = ITEMS.register("redwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.REDWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> MAHOGANY_WOODEN_CHEST = ITEMS.register("mahogany_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MAHOGANY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> JACARANDA_WOODEN_CHEST = ITEMS.register("jacaranda_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.JACARANDA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> PALM_WOODEN_CHEST = ITEMS.register("palm_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.PALM_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WILLOW_WOODEN_CHEST = ITEMS.register("willow_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WILLOW_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DEAD_WOODEN_CHEST = ITEMS.register("dead_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DEAD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> MAGIC_WOODEN_CHEST = ITEMS.register("magic_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MAGIC_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> UMBRAN_WOODEN_CHEST = ITEMS.register("umbran_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.UMBRAN_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> HELLBARK_WOODEN_CHEST = ITEMS.register("hellbark_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.HELLBARK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> EMPYREAL_WOODEN_CHEST = ITEMS.register("empyreal_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.EMPYREAL_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ROSEROOT_WOODEN_CHEST = ITEMS.register("roseroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ROSEROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> YAGROOT_WOODEN_CHEST = ITEMS.register("yagroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.YAGROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CRUDEROOT_WOODEN_CHEST = ITEMS.register("cruderoot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CRUDEROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CONBERRY_WOODEN_CHEST = ITEMS.register("conberry_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CONBERRY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SUNROOT_WOODEN_CHEST = ITEMS.register("sunroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SUNROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SKYROOT_WOODEN_CHEST = ITEMS.register("skyroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SKYROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ASPEN_WOODEN_CHEST = ITEMS.register("aspen_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ASPEN_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BAOBAB_WOODEN_CHEST = ITEMS.register("baobab_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BAOBAB_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLUE_ENCHANTED_WOODEN_CHEST = ITEMS.register("blue_enchanted_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BLUE_ENCHANTED_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CIKA_WOODEN_CHEST = ITEMS.register("cika_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CIKA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CYPRESS_WOODEN_CHEST = ITEMS.register("cypress_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CYPRESS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> EBONY_WOODEN_CHEST = ITEMS.register("ebony_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.EBONY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_FIR_WOODEN_CHEST = ITEMS.register("bwg_fir_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_FIR_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> FLORUS_WOODEN_CHEST = ITEMS.register("florus_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.FLORUS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> GREEN_ENCHANTED_WOODEN_CHEST = ITEMS.register("green_enchanted_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.GREEN_ENCHANTED_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> HOLLY_WOODEN_CHEST = ITEMS.register("holly_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.HOLLY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> IRONWOOD_WOODEN_CHEST = ITEMS.register("ironwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.IRONWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_JACARANDA_WOODEN_CHEST = ITEMS.register("bwg_jacaranda_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_JACARANDA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_MAHOGANY_WOODEN_CHEST = ITEMS.register("bwg_mahogany_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_MAHOGANY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_MAPLE_WOODEN_CHEST = ITEMS.register("bwg_maple_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_MAPLE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_PALM_WOODEN_CHEST = ITEMS.register("bwg_palm_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_PALM_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_PINE_WOODEN_CHEST = ITEMS.register("bwg_pine_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_PINE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> RAINBOW_EUCALYPTUS_WOODEN_CHEST = ITEMS.register("rainbow_eucalyptus_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_REDWOOD_WOODEN_CHEST = ITEMS.register("bwg_redwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_REDWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SAKURA_WOODEN_CHEST = ITEMS.register("sakura_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SAKURA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SKYRIS_WOODEN_CHEST = ITEMS.register("skyris_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SKYRIS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SPIRIT_WOODEN_CHEST = ITEMS.register("spirit_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SPIRIT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WHITE_MANGROVE_WOODEN_CHEST = ITEMS.register("white_mangrove_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WHITE_MANGROVE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BWG_WILLOW_WOODEN_CHEST = ITEMS.register("bwg_willow_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_WILLOW_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WITCH_HAZEL_WOODEN_CHEST = ITEMS.register("witch_hazel_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WITCH_HAZEL_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZELKOVA_WOODEN_CHEST = ITEMS.register("zelkova_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ZELKOVA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_CHEST = ITEMS.register("african_blackwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_WOODEN_CHEST = ITEMS.register("banyan_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BANYAN_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_CHEST = ITEMS.register("black_walnut_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_CHEST = ITEMS.register("bloodwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BLOODWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_CHEST = ITEMS.register("bristlecone_pine_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_CHEST = ITEMS.register("cork_oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CORK_OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_CHEST = ITEMS.register("dragon_blood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_WOODEN_CHEST = ITEMS.register("kapok_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.KAPOK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_WOODEN_CHEST = ITEMS.register("larch_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.LARCH_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_CHEST = ITEMS.register("sandalwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SANDALWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_CHEST = ITEMS.register("sycamore_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SYCAMORE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_WOODEN_CHEST = ITEMS.register("teak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TEAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_WOODEN_CHEST = ITEMS.register("wenge_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WENGE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_CHEST = ITEMS.register("zebrawood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+*///?} else {
     public static final RegistryObject<Item> OAK_WOODEN_PLATE = ITEMS.register("oak_wooden_plate",
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SPRUCE_WOODEN_PLATE = ITEMS.register("spruce_wooden_plate",
@@ -2987,6 +3148,168 @@ public final class ModItems {
         () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_PLATE = ITEMS.register("zebrawood_wooden_plate",
         () -> new Item(new Item.Properties()));
+
+        // ── Wooden Chest Items (Forge) ──────────────────────────────────────────
+    public static final RegistryObject<Item> WOODEN_CHEST = ITEMS.register("wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OAK_WOODEN_CHEST = ITEMS.register("oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SPRUCE_WOODEN_CHEST = ITEMS.register("spruce_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SPRUCE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BIRCH_WOODEN_CHEST = ITEMS.register("birch_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BIRCH_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> JUNGLE_WOODEN_CHEST = ITEMS.register("jungle_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.JUNGLE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ACACIA_WOODEN_CHEST = ITEMS.register("acacia_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ACACIA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DARK_OAK_WOODEN_CHEST = ITEMS.register("dark_oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DARK_OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MANGROVE_WOODEN_CHEST = ITEMS.register("mangrove_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MANGROVE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CHERRY_WOODEN_CHEST = ITEMS.register("cherry_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CHERRY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BAMBOO_WOODEN_CHEST = ITEMS.register("bamboo_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BAMBOO_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CRIMSON_WOODEN_CHEST = ITEMS.register("crimson_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CRIMSON_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WARPED_WOODEN_CHEST = ITEMS.register("warped_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WARPED_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TWILIGHT_OAK_WOODEN_CHEST = ITEMS.register("twilight_oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TWILIGHT_OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CANOPY_WOODEN_CHEST = ITEMS.register("canopy_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CANOPY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TWILIGHT_MANGROVE_WOODEN_CHEST = ITEMS.register("twilight_mangrove_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TWILIGHT_MANGROVE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DARK_WOODEN_CHEST = ITEMS.register("dark_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DARK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TIME_WOODEN_CHEST = ITEMS.register("time_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TIME_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TRANSFORMATION_WOODEN_CHEST = ITEMS.register("transformation_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TRANSFORMATION_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MINING_WOODEN_CHEST = ITEMS.register("mining_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MINING_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SORTING_WOODEN_CHEST = ITEMS.register("sorting_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SORTING_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TOWERWOOD_WOODEN_CHEST = ITEMS.register("towerwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TOWERWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FIR_WOODEN_CHEST = ITEMS.register("fir_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.FIR_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PINE_WOODEN_CHEST = ITEMS.register("pine_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.PINE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MAPLE_WOODEN_CHEST = ITEMS.register("maple_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MAPLE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> REDWOOD_WOODEN_CHEST = ITEMS.register("redwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.REDWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MAHOGANY_WOODEN_CHEST = ITEMS.register("mahogany_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MAHOGANY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> JACARANDA_WOODEN_CHEST = ITEMS.register("jacaranda_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.JACARANDA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PALM_WOODEN_CHEST = ITEMS.register("palm_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.PALM_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WILLOW_WOODEN_CHEST = ITEMS.register("willow_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WILLOW_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DEAD_WOODEN_CHEST = ITEMS.register("dead_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DEAD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MAGIC_WOODEN_CHEST = ITEMS.register("magic_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.MAGIC_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> UMBRAN_WOODEN_CHEST = ITEMS.register("umbran_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.UMBRAN_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HELLBARK_WOODEN_CHEST = ITEMS.register("hellbark_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.HELLBARK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> EMPYREAL_WOODEN_CHEST = ITEMS.register("empyreal_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.EMPYREAL_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ROSEROOT_WOODEN_CHEST = ITEMS.register("roseroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ROSEROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> YAGROOT_WOODEN_CHEST = ITEMS.register("yagroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.YAGROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CRUDEROOT_WOODEN_CHEST = ITEMS.register("cruderoot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CRUDEROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CONBERRY_WOODEN_CHEST = ITEMS.register("conberry_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CONBERRY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SUNROOT_WOODEN_CHEST = ITEMS.register("sunroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SUNROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SKYROOT_WOODEN_CHEST = ITEMS.register("skyroot_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SKYROOT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ASPEN_WOODEN_CHEST = ITEMS.register("aspen_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ASPEN_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BAOBAB_WOODEN_CHEST = ITEMS.register("baobab_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BAOBAB_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_ENCHANTED_WOODEN_CHEST = ITEMS.register("blue_enchanted_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BLUE_ENCHANTED_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CIKA_WOODEN_CHEST = ITEMS.register("cika_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CIKA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CYPRESS_WOODEN_CHEST = ITEMS.register("cypress_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CYPRESS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> EBONY_WOODEN_CHEST = ITEMS.register("ebony_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.EBONY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_FIR_WOODEN_CHEST = ITEMS.register("bwg_fir_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_FIR_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FLORUS_WOODEN_CHEST = ITEMS.register("florus_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.FLORUS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> GREEN_ENCHANTED_WOODEN_CHEST = ITEMS.register("green_enchanted_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.GREEN_ENCHANTED_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> HOLLY_WOODEN_CHEST = ITEMS.register("holly_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.HOLLY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> IRONWOOD_WOODEN_CHEST = ITEMS.register("ironwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.IRONWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_JACARANDA_WOODEN_CHEST = ITEMS.register("bwg_jacaranda_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_JACARANDA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_MAHOGANY_WOODEN_CHEST = ITEMS.register("bwg_mahogany_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_MAHOGANY_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_MAPLE_WOODEN_CHEST = ITEMS.register("bwg_maple_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_MAPLE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_PALM_WOODEN_CHEST = ITEMS.register("bwg_palm_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_PALM_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_PINE_WOODEN_CHEST = ITEMS.register("bwg_pine_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_PINE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> RAINBOW_EUCALYPTUS_WOODEN_CHEST = ITEMS.register("rainbow_eucalyptus_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_REDWOOD_WOODEN_CHEST = ITEMS.register("bwg_redwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_REDWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SAKURA_WOODEN_CHEST = ITEMS.register("sakura_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SAKURA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SKYRIS_WOODEN_CHEST = ITEMS.register("skyris_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SKYRIS_WOODEN_CHEST.get(), new Item.Properties()));
+    //? if neoforge {
+    /*public static final RegistryObject<Item> SPIRIT_WOODEN_CHEST = ITEMS.register("spirit_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SPIRIT_WOODEN_CHEST.get(), new Item.Properties()));
+    *///?}
+    public static final RegistryObject<Item> WHITE_MANGROVE_WOODEN_CHEST = ITEMS.register("white_mangrove_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WHITE_MANGROVE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BWG_WILLOW_WOODEN_CHEST = ITEMS.register("bwg_willow_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BWG_WILLOW_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WITCH_HAZEL_WOODEN_CHEST = ITEMS.register("witch_hazel_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WITCH_HAZEL_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZELKOVA_WOODEN_CHEST = ITEMS.register("zelkova_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ZELKOVA_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_CHEST = ITEMS.register("african_blackwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_WOODEN_CHEST = ITEMS.register("banyan_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BANYAN_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_CHEST = ITEMS.register("black_walnut_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_CHEST = ITEMS.register("bloodwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BLOODWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_CHEST = ITEMS.register("bristlecone_pine_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_CHEST = ITEMS.register("cork_oak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.CORK_OAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_CHEST = ITEMS.register("dragon_blood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_WOODEN_CHEST = ITEMS.register("kapok_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.KAPOK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_WOODEN_CHEST = ITEMS.register("larch_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.LARCH_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_CHEST = ITEMS.register("sandalwood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SANDALWOOD_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_CHEST = ITEMS.register("sycamore_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.SYCAMORE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_WOODEN_CHEST = ITEMS.register("teak_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.TEAK_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_WOODEN_CHEST = ITEMS.register("wenge_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.WENGE_WOODEN_CHEST.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_CHEST = ITEMS.register("zebrawood_wooden_chest",
+        () -> new WoodenChestBlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CHEST.get(), new Item.Properties()));
 
     //?}
 

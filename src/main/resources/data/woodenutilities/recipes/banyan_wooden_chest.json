@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:banyan_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:banyan_wooden_chest",
+    "count": 1
+  }
+}

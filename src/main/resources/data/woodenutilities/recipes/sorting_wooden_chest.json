@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "twilightforest:sorting_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:sorting_wooden_chest",
+    "count": 1
+  }
+}

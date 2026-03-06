@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "byg:jacaranda_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:bwg_jacaranda_wooden_chest",
+    "count": 1
+  }
+}

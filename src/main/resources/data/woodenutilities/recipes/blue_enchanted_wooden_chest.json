@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "byg:blue_enchanted_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:blue_enchanted_wooden_chest",
+    "count": 1
+  }
+}

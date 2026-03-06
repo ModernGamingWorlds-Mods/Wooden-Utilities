@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:kapok_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:kapok_wooden_chest",
+    "count": 1
+  }
+}

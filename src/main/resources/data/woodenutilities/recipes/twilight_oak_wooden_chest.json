@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "twilightforest:twilight_oak_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:twilight_oak_wooden_chest",
+    "count": 1
+  }
+}

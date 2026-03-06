@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "twilightforest:canopy_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:canopy_wooden_chest",
+    "count": 1
+  }
+}

@@ -49,6 +49,7 @@ public class ClientEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.WOODEN_CAULDRON.get(), WoodenCauldronRenderer::new);
         //? if has_geckolib {
         event.registerBlockEntityRenderer(ModBlockEntities.WOODEN_BARREL.get(), WoodenBarrelRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.WOODEN_CHEST.get(), WoodenChestRenderer::new);
         if (ModList.get().isLoaded(SophisticatedStorageCompat.SS_MOD_ID)) {
             SophisticatedStorageCompat.registerRenderers(event);
         }
