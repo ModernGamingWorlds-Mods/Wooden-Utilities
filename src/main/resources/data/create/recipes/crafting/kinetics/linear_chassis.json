@@ -1,0 +1,32 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "woodenutilities:wooden_plates"
+    },
+    "P": {
+      "item": "create:andesite_alloy"
+    }
+  },
+  "pattern": [
+    " P ",
+    "LLL",
+    " P "
+  ],
+  "result": {
+    "count": 3,
+    "item": "create:linear_chassis"
+  },
+  "show_notification": true
+}

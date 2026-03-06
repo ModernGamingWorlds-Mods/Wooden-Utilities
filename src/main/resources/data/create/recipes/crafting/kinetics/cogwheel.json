@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:shaft"
+    },
+    {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  ],
+  "result": {
+    "item": "create:cogwheel"
+  }
+}

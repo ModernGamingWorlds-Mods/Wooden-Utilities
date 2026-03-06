@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "C": {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "  A"
+  ],
+  "result": {
+    "item": "create:hand_crank"
+  },
+  "show_notification": true
+}

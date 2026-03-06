@@ -1,0 +1,34 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "woodenutilities:wooden_plates"
+    },
+    "C": {
+      "item": "create:andesite_casing"
+    },
+    "I": {
+      "item": "create:piston_extension_pole"
+    }
+  },
+  "pattern": [
+    "B",
+    "C",
+    "I"
+  ],
+  "result": {
+    "item": "create:mechanical_piston"
+  },
+  "show_notification": true
+}
