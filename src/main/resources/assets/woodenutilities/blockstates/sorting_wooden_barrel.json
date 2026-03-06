@@ -1,50 +1,7 @@
 {
   "variants": {
-    "facing=north,open=false": {
-      "model": "woodenutilities:block/sorting_wooden_barrel"
-    },
-    "facing=south,open=false": {
-      "model": "woodenutilities:block/sorting_wooden_barrel",
-      "y": 180
-    },
-    "facing=west,open=false": {
-      "model": "woodenutilities:block/sorting_wooden_barrel",
-      "y": 270
-    },
-    "facing=east,open=false": {
-      "model": "woodenutilities:block/sorting_wooden_barrel",
-      "y": 90
-    },
-    "facing=north,open=true": {
-      "model": "woodenutilities:block/sorting_wooden_barrel_open"
-    },
-    "facing=south,open=true": {
-      "model": "woodenutilities:block/sorting_wooden_barrel_open",
-      "y": 180
-    },
-    "facing=west,open=true": {
-      "model": "woodenutilities:block/sorting_wooden_barrel_open",
-      "y": 270
-    },
-    "facing=east,open=true": {
-      "model": "woodenutilities:block/sorting_wooden_barrel_open",
-      "y": 90
-    },
-    "facing=up,open=false": {
-      "model": "woodenutilities:block/sorting_wooden_barrel",
-      "x": 270
-    },
-    "facing=up,open=true": {
-      "model": "woodenutilities:block/sorting_wooden_barrel_open",
-      "x": 270
-    },
-    "facing=down,open=false": {
-      "model": "woodenutilities:block/sorting_wooden_barrel",
-      "x": 90
-    },
-    "facing=down,open=true": {
-      "model": "woodenutilities:block/sorting_wooden_barrel_open",
-      "x": 90
+    "": {
+      "model": "minecraft:block/oak_planks"
     }
   }
 }

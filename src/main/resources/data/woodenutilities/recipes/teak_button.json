@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:teak_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:teak_button"
+  }
+}

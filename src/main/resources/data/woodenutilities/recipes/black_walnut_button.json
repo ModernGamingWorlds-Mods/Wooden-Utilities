@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:black_walnut_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:black_walnut_button"
+  }
+}

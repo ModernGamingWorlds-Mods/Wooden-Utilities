@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:teak_planks"
+    },
+    "S": {
+      "item": "woodenutilities:teak_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:teak_wooden_barrel"
+  }
+}

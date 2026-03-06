@@ -1,0 +1,20 @@
+MISSING GEO MODEL ASSETS FOR WOODEN BARRELS
+============================================
+The following 8 barrel variants currently have NO custom geo model.
+They are temporarily using the oak barrel model and texture as a fallback.
+
+Once new .geo.json models + .png textures are provided, drop them into:
+  Assets/woodenutilities/geo/block/<name>.geo.json
+  Assets/woodenutilities/textures/geo/barrel/<name>.png
+
+and remove the fallback entries from WoodenBarrelGeoModel.java (OAK_FALLBACK set).
+
+MISSING:
+  wooden_barrel           (generic/default)
+  towerwood_wooden_barrel (Twilight Forest - towerwood)
+  roseroot_wooden_barrel  (Biomes o' Plenty - roseroot)
+  yagroot_wooden_barrel   (Biomes o' Plenty - yagroot)
+  cruderoot_wooden_barrel (Biomes o' Plenty - cruderoot)
+  conberry_wooden_barrel  (unknown origin)
+  sunroot_wooden_barrel   (unknown origin)
+  skyroot_wooden_barrel   (The Aether - skyroot)

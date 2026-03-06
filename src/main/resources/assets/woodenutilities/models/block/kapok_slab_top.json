@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "woodenutilities:block/kapok_planks",
+    "side": "woodenutilities:block/kapok_planks",
+    "top": "woodenutilities:block/kapok_planks"
+  }
+}

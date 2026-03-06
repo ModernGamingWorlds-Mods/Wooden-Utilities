@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "woodenutilities:block/bristlecone_pine_planks",
+    "top": "woodenutilities:block/bristlecone_pine_planks",
+    "side": "woodenutilities:block/bristlecone_pine_planks",
+    "inside": "woodenutilities:block/bristlecone_pine_planks"
+  }
+}

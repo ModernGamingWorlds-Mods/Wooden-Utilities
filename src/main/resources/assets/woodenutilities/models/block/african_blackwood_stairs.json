@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "woodenutilities:block/african_blackwood_planks",
+    "side": "woodenutilities:block/african_blackwood_planks",
+    "top": "woodenutilities:block/african_blackwood_planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodenutilities:block/cork_oak_slab"
+    },
+    "type=double": {
+      "model": "woodenutilities:block/cork_oak_planks"
+    },
+    "type=top": {
+      "model": "woodenutilities:block/cork_oak_slab_top"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:cork_oak_planks"
+    },
+    "S": {
+      "item": "woodenutilities:cork_oak_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:cork_oak_wooden_barrel"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_forest",
+  "features": "woodenutilities:sycamore_tree",
+  "step": "vegetal_decoration"
+}

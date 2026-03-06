@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:wenge_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:wenge_slab",
+    "count": 6
+  }
+}

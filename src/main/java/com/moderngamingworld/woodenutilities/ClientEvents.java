@@ -1,7 +1,18 @@
 package com.moderngamingworld.woodenutilities;
 
+//? if has_geckolib {
+import com.moderngamingworld.woodenutilities.compat.SophisticatedStorageCompat;
+//?}
 import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
+import com.moderngamingworld.woodenutilities.registry.ModBlocks;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
+import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.world.level.FoliageColor;
+//? if neoforge {
+/*import net.neoforged.fml.ModList;
+*///?} else {
+import net.minecraftforge.fml.ModList;
+//?}
 //? if has_item_props {
 import net.minecraft.client.renderer.item.ItemProperties;
 //?}
@@ -13,6 +24,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.fluids.FluidStack;
 *///?} else {
 import net.minecraft.resources.ResourceLocation;
@@ -21,6 +33,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.fluids.FluidStack;
 //?}
 
@@ -34,6 +47,56 @@ public class ClientEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.WOODEN_CAULDRON.get(), WoodenCauldronRenderer::new);
+        //? if has_geckolib {
+        event.registerBlockEntityRenderer(ModBlockEntities.WOODEN_BARREL.get(), WoodenBarrelRenderer::new);
+        if (ModList.get().isLoaded(SophisticatedStorageCompat.SS_MOD_ID)) {
+            SophisticatedStorageCompat.registerRenderers(event);
+        }
+        //?}
+    }
+
+    @SubscribeEvent
+    public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+        event.register(
+            (state, level, pos, tintIndex) -> level != null && pos != null
+                ? BiomeColors.getAverageFoliageColor(level, pos)
+                : FoliageColor.getDefaultColor(),
+            ModBlocks.AFRICAN_BLACKWOOD_LEAVES.get(),
+            ModBlocks.BANYAN_LEAVES.get(),
+            ModBlocks.BLACK_WALNUT_LEAVES.get(),
+            ModBlocks.BLOODWOOD_LEAVES.get(),
+            ModBlocks.BRISTLECONE_PINE_LEAVES.get(),
+            ModBlocks.CORK_OAK_LEAVES.get(),
+            ModBlocks.DRAGON_BLOOD_LEAVES.get(),
+            ModBlocks.KAPOK_LEAVES.get(),
+            ModBlocks.LARCH_LEAVES.get(),
+            ModBlocks.SANDALWOOD_LEAVES.get(),
+            ModBlocks.SYCAMORE_LEAVES.get(),
+            ModBlocks.TEAK_LEAVES.get(),
+            ModBlocks.WENGE_LEAVES.get(),
+            ModBlocks.ZEBRAWOOD_LEAVES.get()
+        );
+    }
+
+    @SubscribeEvent
+    public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+        event.register(
+            (stack, tintIndex) -> FoliageColor.getDefaultColor(),
+            ModItems.AFRICAN_BLACKWOOD_LEAVES.get(),
+            ModItems.BANYAN_LEAVES.get(),
+            ModItems.BLACK_WALNUT_LEAVES.get(),
+            ModItems.BLOODWOOD_LEAVES.get(),
+            ModItems.BRISTLECONE_PINE_LEAVES.get(),
+            ModItems.CORK_OAK_LEAVES.get(),
+            ModItems.DRAGON_BLOOD_LEAVES.get(),
+            ModItems.KAPOK_LEAVES.get(),
+            ModItems.LARCH_LEAVES.get(),
+            ModItems.SANDALWOOD_LEAVES.get(),
+            ModItems.SYCAMORE_LEAVES.get(),
+            ModItems.TEAK_LEAVES.get(),
+            ModItems.WENGE_LEAVES.get(),
+            ModItems.ZEBRAWOOD_LEAVES.get()
+        );
     }
 
     @SubscribeEvent

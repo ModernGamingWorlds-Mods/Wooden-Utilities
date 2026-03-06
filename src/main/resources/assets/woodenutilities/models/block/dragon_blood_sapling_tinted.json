@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "woodenutilities:block/dragon_blood_sapling"
+  }
+}

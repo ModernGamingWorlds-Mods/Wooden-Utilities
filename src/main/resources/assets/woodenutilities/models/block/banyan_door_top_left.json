@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "woodenutilities:block/banyan_planks",
+    "top": "woodenutilities:block/banyan_planks"
+  }
+}

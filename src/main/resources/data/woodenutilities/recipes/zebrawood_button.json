@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:zebrawood_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:zebrawood_button"
+  }
+}

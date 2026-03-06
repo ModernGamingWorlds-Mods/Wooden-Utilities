@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:bloodwood_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:bloodwood_button"
+  }
+}

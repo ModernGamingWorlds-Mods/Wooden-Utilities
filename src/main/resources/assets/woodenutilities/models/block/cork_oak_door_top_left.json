@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "woodenutilities:block/cork_oak_planks",
+    "top": "woodenutilities:block/cork_oak_planks"
+  }
+}

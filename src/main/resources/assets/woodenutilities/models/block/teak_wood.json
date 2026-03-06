@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "woodenutilities:block/teak_log_side",
+    "side": "woodenutilities:block/teak_log_side"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "woodenutilities:block/teak_wall_sign",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "woodenutilities:block/teak_wall_sign"
+    },
+    "facing=east": {
+      "model": "woodenutilities:block/teak_wall_sign",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "woodenutilities:block/teak_wall_sign",
+      "y": 90
+    }
+  }
+}

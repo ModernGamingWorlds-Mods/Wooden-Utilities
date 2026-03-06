@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "woodenutilities:block/african_blackwood_planks",
+    "east": "woodenutilities:block/african_blackwood_planks",
+    "north": "woodenutilities:block/african_blackwood_planks",
+    "particle": "minecraft:block/crafting_table_front",
+    "south": "woodenutilities:block/african_blackwood_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "west": "woodenutilities:block/african_blackwood_planks"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:stripped_zebrawood_wood"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:zebrawood_planks",
+    "count": 4
+  }
+}

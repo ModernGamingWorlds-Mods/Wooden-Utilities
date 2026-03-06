@@ -1,0 +1,242 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "woodenutilities:acacia_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:african_blackwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:aspen_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bamboo_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:banyan_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:baobab_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:birch_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:black_walnut_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bloodwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:blue_enchanted_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bristlecone_pine_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_fir_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_jacaranda_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_mahogany_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_maple_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_palm_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_pine_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_redwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:bwg_willow_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:canopy_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:cherry_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:cika_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:conberry_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:cork_oak_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:crimson_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:cruderoot_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:cypress_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:dark_oak_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:dark_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:dead_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:dragon_blood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:ebony_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:empyreal_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:fir_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:florus_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:green_enchanted_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:hellbark_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:holly_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:ironwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:jacaranda_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:jungle_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:kapok_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:larch_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:magic_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:mahogany_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:mangrove_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:maple_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:mining_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:oak_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:palm_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:pine_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:rainbow_eucalyptus_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:redwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:roseroot_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:sakura_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:sandalwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:skyris_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:skyroot_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:sorting_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:spirit_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:spruce_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:sunroot_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:sycamore_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:teak_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:time_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:towerwood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:transformation_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:twilight_mangrove_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:twilight_oak_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:umbran_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:warped_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:wenge_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:white_mangrove_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:willow_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:witch_hazel_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:yagroot_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:zebrawood_wooden_barrel"
+    },
+    {
+      "id": "woodenutilities:zelkova_wooden_barrel"
+    }
+  ]
+}

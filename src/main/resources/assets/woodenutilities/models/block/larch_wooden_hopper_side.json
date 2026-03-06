@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "woodenutilities:block/larch_planks",
+    "top": "woodenutilities:block/larch_planks",
+    "side": "woodenutilities:block/larch_planks",
+    "inside": "woodenutilities:block/larch_planks"
+  }
+}

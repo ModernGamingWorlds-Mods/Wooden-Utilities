@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "woodenutilities:block/wenge_stripped_log_top",
+    "side": "woodenutilities:block/wenge_stripped_log_side"
+  }
+}

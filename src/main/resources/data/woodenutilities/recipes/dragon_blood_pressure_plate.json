@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:dragon_blood_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:dragon_blood_pressure_plate"
+  }
+}

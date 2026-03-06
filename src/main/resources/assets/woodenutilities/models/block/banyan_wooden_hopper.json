@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "woodenutilities:block/banyan_planks",
+    "top": "woodenutilities:block/banyan_planks",
+    "side": "woodenutilities:block/banyan_planks",
+    "inside": "woodenutilities:block/banyan_planks"
+  }
+}

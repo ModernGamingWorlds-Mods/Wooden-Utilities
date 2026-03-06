@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_badlands",
+  "features": "woodenutilities:dragon_blood_tree",
+  "step": "vegetal_decoration"
+}

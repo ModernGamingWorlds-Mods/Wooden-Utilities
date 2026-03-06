@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:kapok_wood"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:kapok_planks",
+    "count": 4
+  }
+}

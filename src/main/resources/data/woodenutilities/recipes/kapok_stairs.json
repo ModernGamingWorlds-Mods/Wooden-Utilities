@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:kapok_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:kapok_stairs",
+    "count": 4
+  }
+}

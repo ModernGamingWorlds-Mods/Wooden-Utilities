@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:stripped_cork_oak_log"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:cork_oak_planks",
+    "count": 4
+  }
+}

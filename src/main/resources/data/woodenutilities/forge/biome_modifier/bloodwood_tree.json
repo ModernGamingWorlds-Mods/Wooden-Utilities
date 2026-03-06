@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "woodenutilities:bloodwood_tree",
+  "step": "vegetal_decoration"
+}

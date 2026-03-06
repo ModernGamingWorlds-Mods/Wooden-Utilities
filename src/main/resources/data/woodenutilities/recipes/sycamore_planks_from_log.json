@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:sycamore_log"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:sycamore_planks",
+    "count": 4
+  }
+}

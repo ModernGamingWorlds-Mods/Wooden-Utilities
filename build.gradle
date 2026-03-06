@@ -52,6 +52,9 @@ stonecutter.const 'has_item_props', !(isNeoForge && mcMinor == 21 && mcPatch >= 
 //              True for all except forge_1201
 stonecutter.const 'block_codec', !(isForge && mcMinor == 20 && mcPatch == 1)
 
+// has_geckolib: GeckoLib dependency is present (geckolib_version property defined in gradle.properties)
+stonecutter.const 'has_geckolib', project.hasProperty('geckolib_version')
+
 // ── Project coordinates ───────────────────────────────────────────────────────
 version = mod_version
 group   = maven_group
@@ -87,10 +90,14 @@ if (isNeoForge) {
 
     repositories {
         maven { url = 'https://maven.blamejared.com' }
+        maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     }
 
     dependencies {
         implementation "net.neoforged:neoforge:${neo_version}"
+        if (project.hasProperty('geckolib_version')) {
+            implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+        }
         if (jei_version != 'none') {
             compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
             runtimeOnly  "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
@@ -118,10 +125,14 @@ if (isNeoForge) {
 
     repositories {
         maven { url = 'https://maven.blamejared.com' }
+        maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     }
 
     dependencies {
         minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+        if (project.hasProperty('geckolib_version')) {
+            implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraft_version}:${geckolib_version}")
+        }
         if (jei_version != 'none') {
             compileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
             runtimeOnly  "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"

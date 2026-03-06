@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:african_blackwood_sapling",
+    "woodenutilities:banyan_sapling",
+    "woodenutilities:black_walnut_sapling",
+    "woodenutilities:bloodwood_sapling",
+    "woodenutilities:bristlecone_pine_sapling",
+    "woodenutilities:cork_oak_sapling",
+    "woodenutilities:dragon_blood_sapling",
+    "woodenutilities:kapok_sapling",
+    "woodenutilities:larch_sapling",
+    "woodenutilities:sandalwood_sapling",
+    "woodenutilities:sycamore_sapling",
+    "woodenutilities:teak_sapling",
+    "woodenutilities:wenge_sapling",
+    "woodenutilities:zebrawood_sapling"
+  ]
+}

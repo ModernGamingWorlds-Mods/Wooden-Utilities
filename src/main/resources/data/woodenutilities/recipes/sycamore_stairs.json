@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:sycamore_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:sycamore_stairs",
+    "count": 4
+  }
+}

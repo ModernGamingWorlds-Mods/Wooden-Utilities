@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:banyan_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:banyan_stairs",
+    "count": 4
+  }
+}

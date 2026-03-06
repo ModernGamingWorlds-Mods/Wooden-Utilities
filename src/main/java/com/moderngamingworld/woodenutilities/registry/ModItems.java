@@ -1,10 +1,13 @@
 package com.moderngamingworld.woodenutilities.registry;
 
+import com.moderngamingworld.woodenutilities.WoodenBarrelBlockItem;
 import com.moderngamingworld.woodenutilities.WoodenBucketItem;
 import com.moderngamingworld.woodenutilities.WoodenUtilities;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.HangingSignItem;
+import net.minecraft.world.item.SignItem;
 //? if neoforge {
 /*import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -284,135 +287,135 @@ public final class ModItems {
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_CAULDRON.get(), new Item.Properties()));
 
     public static final DeferredItem<Item> WOODEN_BARREL = ITEMS.register("wooden_barrel",
-        () -> new BlockItem(ModBlocks.WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> OAK_WOODEN_BARREL = ITEMS.register("oak_wooden_barrel",
-        () -> new BlockItem(ModBlocks.OAK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.OAK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SPRUCE_WOODEN_BARREL = ITEMS.register("spruce_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SPRUCE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SPRUCE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BIRCH_WOODEN_BARREL = ITEMS.register("birch_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BIRCH_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BIRCH_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> JUNGLE_WOODEN_BARREL = ITEMS.register("jungle_wooden_barrel",
-        () -> new BlockItem(ModBlocks.JUNGLE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.JUNGLE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> ACACIA_WOODEN_BARREL = ITEMS.register("acacia_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ACACIA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ACACIA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> DARK_OAK_WOODEN_BARREL = ITEMS.register("dark_oak_wooden_barrel",
-        () -> new BlockItem(ModBlocks.DARK_OAK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.DARK_OAK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> MANGROVE_WOODEN_BARREL = ITEMS.register("mangrove_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CHERRY_WOODEN_BARREL = ITEMS.register("cherry_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CHERRY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CHERRY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BAMBOO_WOODEN_BARREL = ITEMS.register("bamboo_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BAMBOO_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BAMBOO_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CRIMSON_WOODEN_BARREL = ITEMS.register("crimson_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CRIMSON_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CRIMSON_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> WARPED_WOODEN_BARREL = ITEMS.register("warped_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WARPED_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WARPED_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> TWILIGHT_OAK_WOODEN_BARREL = ITEMS.register("twilight_oak_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TWILIGHT_OAK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TWILIGHT_OAK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CANOPY_WOODEN_BARREL = ITEMS.register("canopy_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CANOPY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CANOPY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> TWILIGHT_MANGROVE_WOODEN_BARREL = ITEMS.register("twilight_mangrove_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TWILIGHT_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TWILIGHT_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> DARK_WOODEN_BARREL = ITEMS.register("dark_wooden_barrel",
-        () -> new BlockItem(ModBlocks.DARK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.DARK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> TIME_WOODEN_BARREL = ITEMS.register("time_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TIME_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TIME_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> TRANSFORMATION_WOODEN_BARREL = ITEMS.register("transformation_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TRANSFORMATION_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TRANSFORMATION_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> MINING_WOODEN_BARREL = ITEMS.register("mining_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MINING_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MINING_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SORTING_WOODEN_BARREL = ITEMS.register("sorting_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SORTING_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SORTING_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> TOWERWOOD_WOODEN_BARREL = ITEMS.register("towerwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TOWERWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TOWERWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> FIR_WOODEN_BARREL = ITEMS.register("fir_wooden_barrel",
-        () -> new BlockItem(ModBlocks.FIR_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.FIR_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> PINE_WOODEN_BARREL = ITEMS.register("pine_wooden_barrel",
-        () -> new BlockItem(ModBlocks.PINE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.PINE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> MAPLE_WOODEN_BARREL = ITEMS.register("maple_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> REDWOOD_WOODEN_BARREL = ITEMS.register("redwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> MAHOGANY_WOODEN_BARREL = ITEMS.register("mahogany_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> JACARANDA_WOODEN_BARREL = ITEMS.register("jacaranda_wooden_barrel",
-        () -> new BlockItem(ModBlocks.JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> PALM_WOODEN_BARREL = ITEMS.register("palm_wooden_barrel",
-        () -> new BlockItem(ModBlocks.PALM_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.PALM_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> WILLOW_WOODEN_BARREL = ITEMS.register("willow_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> DEAD_WOODEN_BARREL = ITEMS.register("dead_wooden_barrel",
-        () -> new BlockItem(ModBlocks.DEAD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.DEAD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> MAGIC_WOODEN_BARREL = ITEMS.register("magic_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MAGIC_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MAGIC_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> UMBRAN_WOODEN_BARREL = ITEMS.register("umbran_wooden_barrel",
-        () -> new BlockItem(ModBlocks.UMBRAN_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.UMBRAN_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> HELLBARK_WOODEN_BARREL = ITEMS.register("hellbark_wooden_barrel",
-        () -> new BlockItem(ModBlocks.HELLBARK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.HELLBARK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> EMPYREAL_WOODEN_BARREL = ITEMS.register("empyreal_wooden_barrel",
-        () -> new BlockItem(ModBlocks.EMPYREAL_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.EMPYREAL_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> ROSEROOT_WOODEN_BARREL = ITEMS.register("roseroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ROSEROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ROSEROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> YAGROOT_WOODEN_BARREL = ITEMS.register("yagroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.YAGROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.YAGROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CRUDEROOT_WOODEN_BARREL = ITEMS.register("cruderoot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CRUDEROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CRUDEROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CONBERRY_WOODEN_BARREL = ITEMS.register("conberry_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CONBERRY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CONBERRY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SUNROOT_WOODEN_BARREL = ITEMS.register("sunroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SUNROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SUNROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SKYROOT_WOODEN_BARREL = ITEMS.register("skyroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SKYROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SKYROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> ASPEN_WOODEN_BARREL = ITEMS.register("aspen_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ASPEN_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ASPEN_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BAOBAB_WOODEN_BARREL = ITEMS.register("baobab_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BAOBAB_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BAOBAB_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BLUE_ENCHANTED_WOODEN_BARREL = ITEMS.register("blue_enchanted_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BLUE_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BLUE_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CIKA_WOODEN_BARREL = ITEMS.register("cika_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CIKA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CIKA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> CYPRESS_WOODEN_BARREL = ITEMS.register("cypress_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CYPRESS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CYPRESS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> EBONY_WOODEN_BARREL = ITEMS.register("ebony_wooden_barrel",
-        () -> new BlockItem(ModBlocks.EBONY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.EBONY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_FIR_WOODEN_BARREL = ITEMS.register("bwg_fir_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_FIR_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_FIR_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> FLORUS_WOODEN_BARREL = ITEMS.register("florus_wooden_barrel",
-        () -> new BlockItem(ModBlocks.FLORUS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.FLORUS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> GREEN_ENCHANTED_WOODEN_BARREL = ITEMS.register("green_enchanted_wooden_barrel",
-        () -> new BlockItem(ModBlocks.GREEN_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.GREEN_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> HOLLY_WOODEN_BARREL = ITEMS.register("holly_wooden_barrel",
-        () -> new BlockItem(ModBlocks.HOLLY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.HOLLY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> IRONWOOD_WOODEN_BARREL = ITEMS.register("ironwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.IRONWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.IRONWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_JACARANDA_WOODEN_BARREL = ITEMS.register("bwg_jacaranda_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_MAHOGANY_WOODEN_BARREL = ITEMS.register("bwg_mahogany_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_MAPLE_WOODEN_BARREL = ITEMS.register("bwg_maple_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_PALM_WOODEN_BARREL = ITEMS.register("bwg_palm_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_PALM_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_PALM_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_PINE_WOODEN_BARREL = ITEMS.register("bwg_pine_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_PINE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_PINE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> RAINBOW_EUCALYPTUS_WOODEN_BARREL = ITEMS.register("rainbow_eucalyptus_wooden_barrel",
-        () -> new BlockItem(ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_REDWOOD_WOODEN_BARREL = ITEMS.register("bwg_redwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SAKURA_WOODEN_BARREL = ITEMS.register("sakura_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SAKURA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SAKURA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SKYRIS_WOODEN_BARREL = ITEMS.register("skyris_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SKYRIS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SKYRIS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> SPIRIT_WOODEN_BARREL = ITEMS.register("spirit_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SPIRIT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SPIRIT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> WHITE_MANGROVE_WOODEN_BARREL = ITEMS.register("white_mangrove_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WHITE_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WHITE_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> BWG_WILLOW_WOODEN_BARREL = ITEMS.register("bwg_willow_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> WITCH_HAZEL_WOODEN_BARREL = ITEMS.register("witch_hazel_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WITCH_HAZEL_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WITCH_HAZEL_WOODEN_BARREL.get(), new Item.Properties()));
     public static final DeferredItem<Item> ZELKOVA_WOODEN_BARREL = ITEMS.register("zelkova_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ZELKOVA_WOODEN_BARREL.get(), new Item.Properties()));
 
     public static final DeferredItem<Item> WOODEN_SHEARS = ITEMS.register("wooden_shears",
         () -> new ShearsItem(new Item.Properties().durability(64)));
@@ -781,6 +784,734 @@ public final class ModItems {
         () -> new BlockItem(ModBlocks.WITCH_HAZEL_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
     public static final DeferredItem<Item> ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("zelkova_wooden_crafting_table_slab",
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+
+    // ── African Blackwood ──────────────────────────────────
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_LOG = ITEMS.register("african_blackwood_log",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_AFRICAN_BLACKWOOD_LOG = ITEMS.register("stripped_african_blackwood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_AFRICAN_BLACKWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOOD = ITEMS.register("african_blackwood_wood",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_AFRICAN_BLACKWOOD_WOOD = ITEMS.register("stripped_african_blackwood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_AFRICAN_BLACKWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_PLANKS = ITEMS.register("african_blackwood_planks",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_LEAVES = ITEMS.register("african_blackwood_leaves",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_SAPLING = ITEMS.register("african_blackwood_sapling",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_SLAB = ITEMS.register("african_blackwood_slab",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_STAIRS = ITEMS.register("african_blackwood_stairs",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_FENCE = ITEMS.register("african_blackwood_fence",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_FENCE_GATE = ITEMS.register("african_blackwood_fence_gate",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_PRESSURE_PLATE = ITEMS.register("african_blackwood_pressure_plate",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_BUTTON = ITEMS.register("african_blackwood_button",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_DOOR = ITEMS.register("african_blackwood_door",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_TRAPDOOR = ITEMS.register("african_blackwood_trapdoor",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_SIGN = ITEMS.register("african_blackwood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.AFRICAN_BLACKWOOD_SIGN.get(), ModBlocks.AFRICAN_BLACKWOOD_WALL_SIGN.get()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_HANGING_SIGN = ITEMS.register("african_blackwood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.AFRICAN_BLACKWOOD_HANGING_SIGN.get(), ModBlocks.AFRICAN_BLACKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("african_blackwood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("african_blackwood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_CAULDRON = ITEMS.register("african_blackwood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_HOPPER = ITEMS.register("african_blackwood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_BARREL = ITEMS.register("african_blackwood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_BOAT = ITEMS.register("african_blackwood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_CHEST_BOAT = ITEMS.register("african_blackwood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_PLATE = ITEMS.register("african_blackwood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Banyan ──────────────────────────────────
+    public static final DeferredItem<Item> BANYAN_LOG = ITEMS.register("banyan_log",
+        () -> new BlockItem(ModBlocks.BANYAN_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BANYAN_LOG = ITEMS.register("stripped_banyan_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BANYAN_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_WOOD = ITEMS.register("banyan_wood",
+        () -> new BlockItem(ModBlocks.BANYAN_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BANYAN_WOOD = ITEMS.register("stripped_banyan_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BANYAN_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_PLANKS = ITEMS.register("banyan_planks",
+        () -> new BlockItem(ModBlocks.BANYAN_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_LEAVES = ITEMS.register("banyan_leaves",
+        () -> new BlockItem(ModBlocks.BANYAN_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_SAPLING = ITEMS.register("banyan_sapling",
+        () -> new BlockItem(ModBlocks.BANYAN_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_SLAB = ITEMS.register("banyan_slab",
+        () -> new BlockItem(ModBlocks.BANYAN_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_STAIRS = ITEMS.register("banyan_stairs",
+        () -> new BlockItem(ModBlocks.BANYAN_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_FENCE = ITEMS.register("banyan_fence",
+        () -> new BlockItem(ModBlocks.BANYAN_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_FENCE_GATE = ITEMS.register("banyan_fence_gate",
+        () -> new BlockItem(ModBlocks.BANYAN_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_PRESSURE_PLATE = ITEMS.register("banyan_pressure_plate",
+        () -> new BlockItem(ModBlocks.BANYAN_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_BUTTON = ITEMS.register("banyan_button",
+        () -> new BlockItem(ModBlocks.BANYAN_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_DOOR = ITEMS.register("banyan_door",
+        () -> new BlockItem(ModBlocks.BANYAN_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_TRAPDOOR = ITEMS.register("banyan_trapdoor",
+        () -> new BlockItem(ModBlocks.BANYAN_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_SIGN = ITEMS.register("banyan_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BANYAN_SIGN.get(), ModBlocks.BANYAN_WALL_SIGN.get()));
+    public static final DeferredItem<Item> BANYAN_HANGING_SIGN = ITEMS.register("banyan_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BANYAN_HANGING_SIGN.get(), ModBlocks.BANYAN_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> BANYAN_WOODEN_CRAFTING_TABLE = ITEMS.register("banyan_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("banyan_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_WOODEN_CAULDRON = ITEMS.register("banyan_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_WOODEN_HOPPER = ITEMS.register("banyan_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_WOODEN_BARREL = ITEMS.register("banyan_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BANYAN_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BANYAN_BOAT = ITEMS.register("banyan_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BANYAN_CHEST_BOAT = ITEMS.register("banyan_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BANYAN_WOODEN_PLATE = ITEMS.register("banyan_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Black Walnut ──────────────────────────────────
+    public static final DeferredItem<Item> BLACK_WALNUT_LOG = ITEMS.register("black_walnut_log",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BLACK_WALNUT_LOG = ITEMS.register("stripped_black_walnut_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLACK_WALNUT_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOOD = ITEMS.register("black_walnut_wood",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BLACK_WALNUT_WOOD = ITEMS.register("stripped_black_walnut_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLACK_WALNUT_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_PLANKS = ITEMS.register("black_walnut_planks",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_LEAVES = ITEMS.register("black_walnut_leaves",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_SAPLING = ITEMS.register("black_walnut_sapling",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_SLAB = ITEMS.register("black_walnut_slab",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_STAIRS = ITEMS.register("black_walnut_stairs",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_FENCE = ITEMS.register("black_walnut_fence",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_FENCE_GATE = ITEMS.register("black_walnut_fence_gate",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_PRESSURE_PLATE = ITEMS.register("black_walnut_pressure_plate",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_BUTTON = ITEMS.register("black_walnut_button",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_DOOR = ITEMS.register("black_walnut_door",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_TRAPDOOR = ITEMS.register("black_walnut_trapdoor",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_SIGN = ITEMS.register("black_walnut_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BLACK_WALNUT_SIGN.get(), ModBlocks.BLACK_WALNUT_WALL_SIGN.get()));
+    public static final DeferredItem<Item> BLACK_WALNUT_HANGING_SIGN = ITEMS.register("black_walnut_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BLACK_WALNUT_HANGING_SIGN.get(), ModBlocks.BLACK_WALNUT_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_CRAFTING_TABLE = ITEMS.register("black_walnut_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("black_walnut_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_CAULDRON = ITEMS.register("black_walnut_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_HOPPER = ITEMS.register("black_walnut_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_BARREL = ITEMS.register("black_walnut_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BLACK_WALNUT_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLACK_WALNUT_BOAT = ITEMS.register("black_walnut_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BLACK_WALNUT_CHEST_BOAT = ITEMS.register("black_walnut_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_PLATE = ITEMS.register("black_walnut_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Bloodwood ──────────────────────────────────
+    public static final DeferredItem<Item> BLOODWOOD_LOG = ITEMS.register("bloodwood_log",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BLOODWOOD_LOG = ITEMS.register("stripped_bloodwood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLOODWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_WOOD = ITEMS.register("bloodwood_wood",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BLOODWOOD_WOOD = ITEMS.register("stripped_bloodwood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_PLANKS = ITEMS.register("bloodwood_planks",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_LEAVES = ITEMS.register("bloodwood_leaves",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_SAPLING = ITEMS.register("bloodwood_sapling",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_SLAB = ITEMS.register("bloodwood_slab",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_STAIRS = ITEMS.register("bloodwood_stairs",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_FENCE = ITEMS.register("bloodwood_fence",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_FENCE_GATE = ITEMS.register("bloodwood_fence_gate",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_PRESSURE_PLATE = ITEMS.register("bloodwood_pressure_plate",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_BUTTON = ITEMS.register("bloodwood_button",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_DOOR = ITEMS.register("bloodwood_door",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_TRAPDOOR = ITEMS.register("bloodwood_trapdoor",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_SIGN = ITEMS.register("bloodwood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BLOODWOOD_SIGN.get(), ModBlocks.BLOODWOOD_WALL_SIGN.get()));
+    public static final DeferredItem<Item> BLOODWOOD_HANGING_SIGN = ITEMS.register("bloodwood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BLOODWOOD_HANGING_SIGN.get(), ModBlocks.BLOODWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("bloodwood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("bloodwood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_CAULDRON = ITEMS.register("bloodwood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_HOPPER = ITEMS.register("bloodwood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_BARREL = ITEMS.register("bloodwood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BLOODWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BLOODWOOD_BOAT = ITEMS.register("bloodwood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BLOODWOOD_CHEST_BOAT = ITEMS.register("bloodwood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BLOODWOOD_WOODEN_PLATE = ITEMS.register("bloodwood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Bristlecone Pine ──────────────────────────────────
+    public static final DeferredItem<Item> BRISTLECONE_PINE_LOG = ITEMS.register("bristlecone_pine_log",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BRISTLECONE_PINE_LOG = ITEMS.register("stripped_bristlecone_pine_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BRISTLECONE_PINE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOOD = ITEMS.register("bristlecone_pine_wood",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_BRISTLECONE_PINE_WOOD = ITEMS.register("stripped_bristlecone_pine_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BRISTLECONE_PINE_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_PLANKS = ITEMS.register("bristlecone_pine_planks",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_LEAVES = ITEMS.register("bristlecone_pine_leaves",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_SAPLING = ITEMS.register("bristlecone_pine_sapling",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_SLAB = ITEMS.register("bristlecone_pine_slab",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_STAIRS = ITEMS.register("bristlecone_pine_stairs",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_FENCE = ITEMS.register("bristlecone_pine_fence",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_FENCE_GATE = ITEMS.register("bristlecone_pine_fence_gate",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_PRESSURE_PLATE = ITEMS.register("bristlecone_pine_pressure_plate",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_BUTTON = ITEMS.register("bristlecone_pine_button",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_DOOR = ITEMS.register("bristlecone_pine_door",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_TRAPDOOR = ITEMS.register("bristlecone_pine_trapdoor",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_SIGN = ITEMS.register("bristlecone_pine_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BRISTLECONE_PINE_SIGN.get(), ModBlocks.BRISTLECONE_PINE_WALL_SIGN.get()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_HANGING_SIGN = ITEMS.register("bristlecone_pine_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BRISTLECONE_PINE_HANGING_SIGN.get(), ModBlocks.BRISTLECONE_PINE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE = ITEMS.register("bristlecone_pine_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("bristlecone_pine_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_CAULDRON = ITEMS.register("bristlecone_pine_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_HOPPER = ITEMS.register("bristlecone_pine_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_BARREL = ITEMS.register("bristlecone_pine_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_BOAT = ITEMS.register("bristlecone_pine_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_CHEST_BOAT = ITEMS.register("bristlecone_pine_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_PLATE = ITEMS.register("bristlecone_pine_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Cork Oak ──────────────────────────────────
+    public static final DeferredItem<Item> CORK_OAK_LOG = ITEMS.register("cork_oak_log",
+        () -> new BlockItem(ModBlocks.CORK_OAK_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_CORK_OAK_LOG = ITEMS.register("stripped_cork_oak_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_CORK_OAK_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_WOOD = ITEMS.register("cork_oak_wood",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_CORK_OAK_WOOD = ITEMS.register("stripped_cork_oak_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_CORK_OAK_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_PLANKS = ITEMS.register("cork_oak_planks",
+        () -> new BlockItem(ModBlocks.CORK_OAK_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_LEAVES = ITEMS.register("cork_oak_leaves",
+        () -> new BlockItem(ModBlocks.CORK_OAK_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_SAPLING = ITEMS.register("cork_oak_sapling",
+        () -> new BlockItem(ModBlocks.CORK_OAK_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_SLAB = ITEMS.register("cork_oak_slab",
+        () -> new BlockItem(ModBlocks.CORK_OAK_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_STAIRS = ITEMS.register("cork_oak_stairs",
+        () -> new BlockItem(ModBlocks.CORK_OAK_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_FENCE = ITEMS.register("cork_oak_fence",
+        () -> new BlockItem(ModBlocks.CORK_OAK_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_FENCE_GATE = ITEMS.register("cork_oak_fence_gate",
+        () -> new BlockItem(ModBlocks.CORK_OAK_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_PRESSURE_PLATE = ITEMS.register("cork_oak_pressure_plate",
+        () -> new BlockItem(ModBlocks.CORK_OAK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_BUTTON = ITEMS.register("cork_oak_button",
+        () -> new BlockItem(ModBlocks.CORK_OAK_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_DOOR = ITEMS.register("cork_oak_door",
+        () -> new BlockItem(ModBlocks.CORK_OAK_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_TRAPDOOR = ITEMS.register("cork_oak_trapdoor",
+        () -> new BlockItem(ModBlocks.CORK_OAK_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_SIGN = ITEMS.register("cork_oak_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.CORK_OAK_SIGN.get(), ModBlocks.CORK_OAK_WALL_SIGN.get()));
+    public static final DeferredItem<Item> CORK_OAK_HANGING_SIGN = ITEMS.register("cork_oak_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.CORK_OAK_HANGING_SIGN.get(), ModBlocks.CORK_OAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_CRAFTING_TABLE = ITEMS.register("cork_oak_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("cork_oak_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_CAULDRON = ITEMS.register("cork_oak_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_HOPPER = ITEMS.register("cork_oak_wooden_hopper",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_BARREL = ITEMS.register("cork_oak_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.CORK_OAK_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> CORK_OAK_BOAT = ITEMS.register("cork_oak_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> CORK_OAK_CHEST_BOAT = ITEMS.register("cork_oak_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> CORK_OAK_WOODEN_PLATE = ITEMS.register("cork_oak_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Dragon Blood ──────────────────────────────────
+    public static final DeferredItem<Item> DRAGON_BLOOD_LOG = ITEMS.register("dragon_blood_log",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_DRAGON_BLOOD_LOG = ITEMS.register("stripped_dragon_blood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_DRAGON_BLOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOOD = ITEMS.register("dragon_blood_wood",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_DRAGON_BLOOD_WOOD = ITEMS.register("stripped_dragon_blood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_DRAGON_BLOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_PLANKS = ITEMS.register("dragon_blood_planks",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_LEAVES = ITEMS.register("dragon_blood_leaves",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_SAPLING = ITEMS.register("dragon_blood_sapling",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_SLAB = ITEMS.register("dragon_blood_slab",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_STAIRS = ITEMS.register("dragon_blood_stairs",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_FENCE = ITEMS.register("dragon_blood_fence",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_FENCE_GATE = ITEMS.register("dragon_blood_fence_gate",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_PRESSURE_PLATE = ITEMS.register("dragon_blood_pressure_plate",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_BUTTON = ITEMS.register("dragon_blood_button",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_DOOR = ITEMS.register("dragon_blood_door",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_TRAPDOOR = ITEMS.register("dragon_blood_trapdoor",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_SIGN = ITEMS.register("dragon_blood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DRAGON_BLOOD_SIGN.get(), ModBlocks.DRAGON_BLOOD_WALL_SIGN.get()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_HANGING_SIGN = ITEMS.register("dragon_blood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.DRAGON_BLOOD_HANGING_SIGN.get(), ModBlocks.DRAGON_BLOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("dragon_blood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("dragon_blood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_CAULDRON = ITEMS.register("dragon_blood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_HOPPER = ITEMS.register("dragon_blood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_BARREL = ITEMS.register("dragon_blood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_BOAT = ITEMS.register("dragon_blood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DRAGON_BLOOD_CHEST_BOAT = ITEMS.register("dragon_blood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_PLATE = ITEMS.register("dragon_blood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Kapok ──────────────────────────────────
+    public static final DeferredItem<Item> KAPOK_LOG = ITEMS.register("kapok_log",
+        () -> new BlockItem(ModBlocks.KAPOK_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_KAPOK_LOG = ITEMS.register("stripped_kapok_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_KAPOK_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_WOOD = ITEMS.register("kapok_wood",
+        () -> new BlockItem(ModBlocks.KAPOK_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_KAPOK_WOOD = ITEMS.register("stripped_kapok_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_KAPOK_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_PLANKS = ITEMS.register("kapok_planks",
+        () -> new BlockItem(ModBlocks.KAPOK_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_LEAVES = ITEMS.register("kapok_leaves",
+        () -> new BlockItem(ModBlocks.KAPOK_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_SAPLING = ITEMS.register("kapok_sapling",
+        () -> new BlockItem(ModBlocks.KAPOK_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_SLAB = ITEMS.register("kapok_slab",
+        () -> new BlockItem(ModBlocks.KAPOK_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_STAIRS = ITEMS.register("kapok_stairs",
+        () -> new BlockItem(ModBlocks.KAPOK_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_FENCE = ITEMS.register("kapok_fence",
+        () -> new BlockItem(ModBlocks.KAPOK_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_FENCE_GATE = ITEMS.register("kapok_fence_gate",
+        () -> new BlockItem(ModBlocks.KAPOK_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_PRESSURE_PLATE = ITEMS.register("kapok_pressure_plate",
+        () -> new BlockItem(ModBlocks.KAPOK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_BUTTON = ITEMS.register("kapok_button",
+        () -> new BlockItem(ModBlocks.KAPOK_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_DOOR = ITEMS.register("kapok_door",
+        () -> new BlockItem(ModBlocks.KAPOK_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_TRAPDOOR = ITEMS.register("kapok_trapdoor",
+        () -> new BlockItem(ModBlocks.KAPOK_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_SIGN = ITEMS.register("kapok_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.KAPOK_SIGN.get(), ModBlocks.KAPOK_WALL_SIGN.get()));
+    public static final DeferredItem<Item> KAPOK_HANGING_SIGN = ITEMS.register("kapok_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.KAPOK_HANGING_SIGN.get(), ModBlocks.KAPOK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> KAPOK_WOODEN_CRAFTING_TABLE = ITEMS.register("kapok_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("kapok_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_WOODEN_CAULDRON = ITEMS.register("kapok_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_WOODEN_HOPPER = ITEMS.register("kapok_wooden_hopper",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_WOODEN_BARREL = ITEMS.register("kapok_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.KAPOK_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KAPOK_BOAT = ITEMS.register("kapok_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> KAPOK_CHEST_BOAT = ITEMS.register("kapok_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> KAPOK_WOODEN_PLATE = ITEMS.register("kapok_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Larch ──────────────────────────────────
+    public static final DeferredItem<Item> LARCH_LOG = ITEMS.register("larch_log",
+        () -> new BlockItem(ModBlocks.LARCH_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_LARCH_LOG = ITEMS.register("stripped_larch_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_LARCH_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_WOOD = ITEMS.register("larch_wood",
+        () -> new BlockItem(ModBlocks.LARCH_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_LARCH_WOOD = ITEMS.register("stripped_larch_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_LARCH_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_PLANKS = ITEMS.register("larch_planks",
+        () -> new BlockItem(ModBlocks.LARCH_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_LEAVES = ITEMS.register("larch_leaves",
+        () -> new BlockItem(ModBlocks.LARCH_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_SAPLING = ITEMS.register("larch_sapling",
+        () -> new BlockItem(ModBlocks.LARCH_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_SLAB = ITEMS.register("larch_slab",
+        () -> new BlockItem(ModBlocks.LARCH_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_STAIRS = ITEMS.register("larch_stairs",
+        () -> new BlockItem(ModBlocks.LARCH_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_FENCE = ITEMS.register("larch_fence",
+        () -> new BlockItem(ModBlocks.LARCH_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_FENCE_GATE = ITEMS.register("larch_fence_gate",
+        () -> new BlockItem(ModBlocks.LARCH_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_PRESSURE_PLATE = ITEMS.register("larch_pressure_plate",
+        () -> new BlockItem(ModBlocks.LARCH_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_BUTTON = ITEMS.register("larch_button",
+        () -> new BlockItem(ModBlocks.LARCH_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_DOOR = ITEMS.register("larch_door",
+        () -> new BlockItem(ModBlocks.LARCH_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_TRAPDOOR = ITEMS.register("larch_trapdoor",
+        () -> new BlockItem(ModBlocks.LARCH_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_SIGN = ITEMS.register("larch_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.LARCH_SIGN.get(), ModBlocks.LARCH_WALL_SIGN.get()));
+    public static final DeferredItem<Item> LARCH_HANGING_SIGN = ITEMS.register("larch_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.LARCH_HANGING_SIGN.get(), ModBlocks.LARCH_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> LARCH_WOODEN_CRAFTING_TABLE = ITEMS.register("larch_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("larch_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_WOODEN_CAULDRON = ITEMS.register("larch_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_WOODEN_HOPPER = ITEMS.register("larch_wooden_hopper",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_WOODEN_BARREL = ITEMS.register("larch_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.LARCH_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> LARCH_BOAT = ITEMS.register("larch_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> LARCH_CHEST_BOAT = ITEMS.register("larch_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> LARCH_WOODEN_PLATE = ITEMS.register("larch_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Sandalwood ──────────────────────────────────
+    public static final DeferredItem<Item> SANDALWOOD_LOG = ITEMS.register("sandalwood_log",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_SANDALWOOD_LOG = ITEMS.register("stripped_sandalwood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_SANDALWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_WOOD = ITEMS.register("sandalwood_wood",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_SANDALWOOD_WOOD = ITEMS.register("stripped_sandalwood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_SANDALWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_PLANKS = ITEMS.register("sandalwood_planks",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_LEAVES = ITEMS.register("sandalwood_leaves",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_SAPLING = ITEMS.register("sandalwood_sapling",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_SLAB = ITEMS.register("sandalwood_slab",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_STAIRS = ITEMS.register("sandalwood_stairs",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_FENCE = ITEMS.register("sandalwood_fence",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_FENCE_GATE = ITEMS.register("sandalwood_fence_gate",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_PRESSURE_PLATE = ITEMS.register("sandalwood_pressure_plate",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_BUTTON = ITEMS.register("sandalwood_button",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_DOOR = ITEMS.register("sandalwood_door",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_TRAPDOOR = ITEMS.register("sandalwood_trapdoor",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_SIGN = ITEMS.register("sandalwood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SANDALWOOD_SIGN.get(), ModBlocks.SANDALWOOD_WALL_SIGN.get()));
+    public static final DeferredItem<Item> SANDALWOOD_HANGING_SIGN = ITEMS.register("sandalwood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.SANDALWOOD_HANGING_SIGN.get(), ModBlocks.SANDALWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("sandalwood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("sandalwood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_CAULDRON = ITEMS.register("sandalwood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_HOPPER = ITEMS.register("sandalwood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_BARREL = ITEMS.register("sandalwood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.SANDALWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SANDALWOOD_BOAT = ITEMS.register("sandalwood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SANDALWOOD_CHEST_BOAT = ITEMS.register("sandalwood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SANDALWOOD_WOODEN_PLATE = ITEMS.register("sandalwood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Sycamore ──────────────────────────────────
+    public static final DeferredItem<Item> SYCAMORE_LOG = ITEMS.register("sycamore_log",
+        () -> new BlockItem(ModBlocks.SYCAMORE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_SYCAMORE_LOG = ITEMS.register("stripped_sycamore_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_SYCAMORE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_WOOD = ITEMS.register("sycamore_wood",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_SYCAMORE_WOOD = ITEMS.register("stripped_sycamore_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_SYCAMORE_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_PLANKS = ITEMS.register("sycamore_planks",
+        () -> new BlockItem(ModBlocks.SYCAMORE_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_LEAVES = ITEMS.register("sycamore_leaves",
+        () -> new BlockItem(ModBlocks.SYCAMORE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_SAPLING = ITEMS.register("sycamore_sapling",
+        () -> new BlockItem(ModBlocks.SYCAMORE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_SLAB = ITEMS.register("sycamore_slab",
+        () -> new BlockItem(ModBlocks.SYCAMORE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_STAIRS = ITEMS.register("sycamore_stairs",
+        () -> new BlockItem(ModBlocks.SYCAMORE_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_FENCE = ITEMS.register("sycamore_fence",
+        () -> new BlockItem(ModBlocks.SYCAMORE_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_FENCE_GATE = ITEMS.register("sycamore_fence_gate",
+        () -> new BlockItem(ModBlocks.SYCAMORE_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_PRESSURE_PLATE = ITEMS.register("sycamore_pressure_plate",
+        () -> new BlockItem(ModBlocks.SYCAMORE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_BUTTON = ITEMS.register("sycamore_button",
+        () -> new BlockItem(ModBlocks.SYCAMORE_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_DOOR = ITEMS.register("sycamore_door",
+        () -> new BlockItem(ModBlocks.SYCAMORE_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_TRAPDOOR = ITEMS.register("sycamore_trapdoor",
+        () -> new BlockItem(ModBlocks.SYCAMORE_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_SIGN = ITEMS.register("sycamore_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SYCAMORE_SIGN.get(), ModBlocks.SYCAMORE_WALL_SIGN.get()));
+    public static final DeferredItem<Item> SYCAMORE_HANGING_SIGN = ITEMS.register("sycamore_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.SYCAMORE_HANGING_SIGN.get(), ModBlocks.SYCAMORE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_CRAFTING_TABLE = ITEMS.register("sycamore_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("sycamore_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_CAULDRON = ITEMS.register("sycamore_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_HOPPER = ITEMS.register("sycamore_wooden_hopper",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_BARREL = ITEMS.register("sycamore_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.SYCAMORE_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> SYCAMORE_BOAT = ITEMS.register("sycamore_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SYCAMORE_CHEST_BOAT = ITEMS.register("sycamore_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SYCAMORE_WOODEN_PLATE = ITEMS.register("sycamore_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Teak ──────────────────────────────────
+    public static final DeferredItem<Item> TEAK_LOG = ITEMS.register("teak_log",
+        () -> new BlockItem(ModBlocks.TEAK_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_TEAK_LOG = ITEMS.register("stripped_teak_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_TEAK_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_WOOD = ITEMS.register("teak_wood",
+        () -> new BlockItem(ModBlocks.TEAK_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_TEAK_WOOD = ITEMS.register("stripped_teak_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_TEAK_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_PLANKS = ITEMS.register("teak_planks",
+        () -> new BlockItem(ModBlocks.TEAK_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_LEAVES = ITEMS.register("teak_leaves",
+        () -> new BlockItem(ModBlocks.TEAK_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_SAPLING = ITEMS.register("teak_sapling",
+        () -> new BlockItem(ModBlocks.TEAK_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_SLAB = ITEMS.register("teak_slab",
+        () -> new BlockItem(ModBlocks.TEAK_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_STAIRS = ITEMS.register("teak_stairs",
+        () -> new BlockItem(ModBlocks.TEAK_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_FENCE = ITEMS.register("teak_fence",
+        () -> new BlockItem(ModBlocks.TEAK_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_FENCE_GATE = ITEMS.register("teak_fence_gate",
+        () -> new BlockItem(ModBlocks.TEAK_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_PRESSURE_PLATE = ITEMS.register("teak_pressure_plate",
+        () -> new BlockItem(ModBlocks.TEAK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_BUTTON = ITEMS.register("teak_button",
+        () -> new BlockItem(ModBlocks.TEAK_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_DOOR = ITEMS.register("teak_door",
+        () -> new BlockItem(ModBlocks.TEAK_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_TRAPDOOR = ITEMS.register("teak_trapdoor",
+        () -> new BlockItem(ModBlocks.TEAK_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_SIGN = ITEMS.register("teak_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.TEAK_SIGN.get(), ModBlocks.TEAK_WALL_SIGN.get()));
+    public static final DeferredItem<Item> TEAK_HANGING_SIGN = ITEMS.register("teak_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.TEAK_HANGING_SIGN.get(), ModBlocks.TEAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> TEAK_WOODEN_CRAFTING_TABLE = ITEMS.register("teak_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("teak_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_WOODEN_CAULDRON = ITEMS.register("teak_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_WOODEN_HOPPER = ITEMS.register("teak_wooden_hopper",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_WOODEN_BARREL = ITEMS.register("teak_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.TEAK_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> TEAK_BOAT = ITEMS.register("teak_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> TEAK_CHEST_BOAT = ITEMS.register("teak_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> TEAK_WOODEN_PLATE = ITEMS.register("teak_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Wenge ──────────────────────────────────
+    public static final DeferredItem<Item> WENGE_LOG = ITEMS.register("wenge_log",
+        () -> new BlockItem(ModBlocks.WENGE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_WENGE_LOG = ITEMS.register("stripped_wenge_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_WENGE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_WOOD = ITEMS.register("wenge_wood",
+        () -> new BlockItem(ModBlocks.WENGE_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_WENGE_WOOD = ITEMS.register("stripped_wenge_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_WENGE_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_PLANKS = ITEMS.register("wenge_planks",
+        () -> new BlockItem(ModBlocks.WENGE_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_LEAVES = ITEMS.register("wenge_leaves",
+        () -> new BlockItem(ModBlocks.WENGE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_SAPLING = ITEMS.register("wenge_sapling",
+        () -> new BlockItem(ModBlocks.WENGE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_SLAB = ITEMS.register("wenge_slab",
+        () -> new BlockItem(ModBlocks.WENGE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_STAIRS = ITEMS.register("wenge_stairs",
+        () -> new BlockItem(ModBlocks.WENGE_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_FENCE = ITEMS.register("wenge_fence",
+        () -> new BlockItem(ModBlocks.WENGE_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_FENCE_GATE = ITEMS.register("wenge_fence_gate",
+        () -> new BlockItem(ModBlocks.WENGE_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_PRESSURE_PLATE = ITEMS.register("wenge_pressure_plate",
+        () -> new BlockItem(ModBlocks.WENGE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_BUTTON = ITEMS.register("wenge_button",
+        () -> new BlockItem(ModBlocks.WENGE_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_DOOR = ITEMS.register("wenge_door",
+        () -> new BlockItem(ModBlocks.WENGE_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_TRAPDOOR = ITEMS.register("wenge_trapdoor",
+        () -> new BlockItem(ModBlocks.WENGE_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_SIGN = ITEMS.register("wenge_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.WENGE_SIGN.get(), ModBlocks.WENGE_WALL_SIGN.get()));
+    public static final DeferredItem<Item> WENGE_HANGING_SIGN = ITEMS.register("wenge_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.WENGE_HANGING_SIGN.get(), ModBlocks.WENGE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> WENGE_WOODEN_CRAFTING_TABLE = ITEMS.register("wenge_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("wenge_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_WOODEN_CAULDRON = ITEMS.register("wenge_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_WOODEN_HOPPER = ITEMS.register("wenge_wooden_hopper",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_WOODEN_BARREL = ITEMS.register("wenge_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.WENGE_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> WENGE_BOAT = ITEMS.register("wenge_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WENGE_CHEST_BOAT = ITEMS.register("wenge_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WENGE_WOODEN_PLATE = ITEMS.register("wenge_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Zebrawood ──────────────────────────────────
+    public static final DeferredItem<Item> ZEBRAWOOD_LOG = ITEMS.register("zebrawood_log",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_ZEBRAWOOD_LOG = ITEMS.register("stripped_zebrawood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_ZEBRAWOOD_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOOD = ITEMS.register("zebrawood_wood",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> STRIPPED_ZEBRAWOOD_WOOD = ITEMS.register("stripped_zebrawood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_ZEBRAWOOD_WOOD.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_PLANKS = ITEMS.register("zebrawood_planks",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_LEAVES = ITEMS.register("zebrawood_leaves",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_SAPLING = ITEMS.register("zebrawood_sapling",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_SLAB = ITEMS.register("zebrawood_slab",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_STAIRS = ITEMS.register("zebrawood_stairs",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_FENCE = ITEMS.register("zebrawood_fence",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_FENCE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_FENCE_GATE = ITEMS.register("zebrawood_fence_gate",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_PRESSURE_PLATE = ITEMS.register("zebrawood_pressure_plate",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_BUTTON = ITEMS.register("zebrawood_button",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_BUTTON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_DOOR = ITEMS.register("zebrawood_door",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_DOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_TRAPDOOR = ITEMS.register("zebrawood_trapdoor",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_SIGN = ITEMS.register("zebrawood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ZEBRAWOOD_SIGN.get(), ModBlocks.ZEBRAWOOD_WALL_SIGN.get()));
+    public static final DeferredItem<Item> ZEBRAWOOD_HANGING_SIGN = ITEMS.register("zebrawood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.ZEBRAWOOD_HANGING_SIGN.get(), ModBlocks.ZEBRAWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("zebrawood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("zebrawood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_CAULDRON = ITEMS.register("zebrawood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_HOPPER = ITEMS.register("zebrawood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_BARREL = ITEMS.register("zebrawood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.ZEBRAWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> ZEBRAWOOD_BOAT = ITEMS.register("zebrawood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> ZEBRAWOOD_CHEST_BOAT = ITEMS.register("zebrawood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_PLATE = ITEMS.register("zebrawood_wooden_plate",
+        () -> new Item(new Item.Properties()));
     *///?} else {
     public static final RegistryObject<Item> OAK_WOODEN_PLATE = ITEMS.register("oak_wooden_plate",
         () -> new Item(new Item.Properties()));
@@ -1037,133 +1768,133 @@ public final class ModItems {
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_CAULDRON.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> WOODEN_BARREL = ITEMS.register("wooden_barrel",
-        () -> new BlockItem(ModBlocks.WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> OAK_WOODEN_BARREL = ITEMS.register("oak_wooden_barrel",
-        () -> new BlockItem(ModBlocks.OAK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.OAK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> SPRUCE_WOODEN_BARREL = ITEMS.register("spruce_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SPRUCE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SPRUCE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BIRCH_WOODEN_BARREL = ITEMS.register("birch_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BIRCH_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BIRCH_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> JUNGLE_WOODEN_BARREL = ITEMS.register("jungle_wooden_barrel",
-        () -> new BlockItem(ModBlocks.JUNGLE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.JUNGLE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> ACACIA_WOODEN_BARREL = ITEMS.register("acacia_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ACACIA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ACACIA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> DARK_OAK_WOODEN_BARREL = ITEMS.register("dark_oak_wooden_barrel",
-        () -> new BlockItem(ModBlocks.DARK_OAK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.DARK_OAK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> MANGROVE_WOODEN_BARREL = ITEMS.register("mangrove_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CHERRY_WOODEN_BARREL = ITEMS.register("cherry_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CHERRY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CHERRY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BAMBOO_WOODEN_BARREL = ITEMS.register("bamboo_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BAMBOO_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BAMBOO_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CRIMSON_WOODEN_BARREL = ITEMS.register("crimson_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CRIMSON_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CRIMSON_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> WARPED_WOODEN_BARREL = ITEMS.register("warped_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WARPED_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WARPED_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> TWILIGHT_OAK_WOODEN_BARREL = ITEMS.register("twilight_oak_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TWILIGHT_OAK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TWILIGHT_OAK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CANOPY_WOODEN_BARREL = ITEMS.register("canopy_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CANOPY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CANOPY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> TWILIGHT_MANGROVE_WOODEN_BARREL = ITEMS.register("twilight_mangrove_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TWILIGHT_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TWILIGHT_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> DARK_WOODEN_BARREL = ITEMS.register("dark_wooden_barrel",
-        () -> new BlockItem(ModBlocks.DARK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.DARK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> TIME_WOODEN_BARREL = ITEMS.register("time_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TIME_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TIME_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> TRANSFORMATION_WOODEN_BARREL = ITEMS.register("transformation_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TRANSFORMATION_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TRANSFORMATION_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> MINING_WOODEN_BARREL = ITEMS.register("mining_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MINING_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MINING_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> SORTING_WOODEN_BARREL = ITEMS.register("sorting_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SORTING_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SORTING_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> TOWERWOOD_WOODEN_BARREL = ITEMS.register("towerwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.TOWERWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.TOWERWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> FIR_WOODEN_BARREL = ITEMS.register("fir_wooden_barrel",
-        () -> new BlockItem(ModBlocks.FIR_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.FIR_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> PINE_WOODEN_BARREL = ITEMS.register("pine_wooden_barrel",
-        () -> new BlockItem(ModBlocks.PINE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.PINE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> MAPLE_WOODEN_BARREL = ITEMS.register("maple_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> REDWOOD_WOODEN_BARREL = ITEMS.register("redwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> MAHOGANY_WOODEN_BARREL = ITEMS.register("mahogany_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> JACARANDA_WOODEN_BARREL = ITEMS.register("jacaranda_wooden_barrel",
-        () -> new BlockItem(ModBlocks.JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> PALM_WOODEN_BARREL = ITEMS.register("palm_wooden_barrel",
-        () -> new BlockItem(ModBlocks.PALM_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.PALM_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> WILLOW_WOODEN_BARREL = ITEMS.register("willow_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> DEAD_WOODEN_BARREL = ITEMS.register("dead_wooden_barrel",
-        () -> new BlockItem(ModBlocks.DEAD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.DEAD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> MAGIC_WOODEN_BARREL = ITEMS.register("magic_wooden_barrel",
-        () -> new BlockItem(ModBlocks.MAGIC_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.MAGIC_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> UMBRAN_WOODEN_BARREL = ITEMS.register("umbran_wooden_barrel",
-        () -> new BlockItem(ModBlocks.UMBRAN_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.UMBRAN_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> HELLBARK_WOODEN_BARREL = ITEMS.register("hellbark_wooden_barrel",
-        () -> new BlockItem(ModBlocks.HELLBARK_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.HELLBARK_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> EMPYREAL_WOODEN_BARREL = ITEMS.register("empyreal_wooden_barrel",
-        () -> new BlockItem(ModBlocks.EMPYREAL_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.EMPYREAL_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> ROSEROOT_WOODEN_BARREL = ITEMS.register("roseroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ROSEROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ROSEROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> YAGROOT_WOODEN_BARREL = ITEMS.register("yagroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.YAGROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.YAGROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CRUDEROOT_WOODEN_BARREL = ITEMS.register("cruderoot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CRUDEROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CRUDEROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CONBERRY_WOODEN_BARREL = ITEMS.register("conberry_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CONBERRY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CONBERRY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> SUNROOT_WOODEN_BARREL = ITEMS.register("sunroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SUNROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SUNROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> SKYROOT_WOODEN_BARREL = ITEMS.register("skyroot_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SKYROOT_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SKYROOT_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> ASPEN_WOODEN_BARREL = ITEMS.register("aspen_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ASPEN_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ASPEN_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BAOBAB_WOODEN_BARREL = ITEMS.register("baobab_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BAOBAB_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BAOBAB_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BLUE_ENCHANTED_WOODEN_BARREL = ITEMS.register("blue_enchanted_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BLUE_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BLUE_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CIKA_WOODEN_BARREL = ITEMS.register("cika_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CIKA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CIKA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> CYPRESS_WOODEN_BARREL = ITEMS.register("cypress_wooden_barrel",
-        () -> new BlockItem(ModBlocks.CYPRESS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.CYPRESS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> EBONY_WOODEN_BARREL = ITEMS.register("ebony_wooden_barrel",
-        () -> new BlockItem(ModBlocks.EBONY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.EBONY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_FIR_WOODEN_BARREL = ITEMS.register("bwg_fir_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_FIR_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_FIR_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> FLORUS_WOODEN_BARREL = ITEMS.register("florus_wooden_barrel",
-        () -> new BlockItem(ModBlocks.FLORUS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.FLORUS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> GREEN_ENCHANTED_WOODEN_BARREL = ITEMS.register("green_enchanted_wooden_barrel",
-        () -> new BlockItem(ModBlocks.GREEN_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.GREEN_ENCHANTED_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> HOLLY_WOODEN_BARREL = ITEMS.register("holly_wooden_barrel",
-        () -> new BlockItem(ModBlocks.HOLLY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.HOLLY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> IRONWOOD_WOODEN_BARREL = ITEMS.register("ironwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.IRONWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.IRONWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_JACARANDA_WOODEN_BARREL = ITEMS.register("bwg_jacaranda_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_JACARANDA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_MAHOGANY_WOODEN_BARREL = ITEMS.register("bwg_mahogany_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_MAHOGANY_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_MAPLE_WOODEN_BARREL = ITEMS.register("bwg_maple_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_MAPLE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_PALM_WOODEN_BARREL = ITEMS.register("bwg_palm_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_PALM_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_PALM_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_PINE_WOODEN_BARREL = ITEMS.register("bwg_pine_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_PINE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_PINE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> RAINBOW_EUCALYPTUS_WOODEN_BARREL = ITEMS.register("rainbow_eucalyptus_wooden_barrel",
-        () -> new BlockItem(ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.RAINBOW_EUCALYPTUS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_REDWOOD_WOODEN_BARREL = ITEMS.register("bwg_redwood_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_REDWOOD_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> SAKURA_WOODEN_BARREL = ITEMS.register("sakura_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SAKURA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SAKURA_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> SKYRIS_WOODEN_BARREL = ITEMS.register("skyris_wooden_barrel",
-        () -> new BlockItem(ModBlocks.SKYRIS_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.SKYRIS_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> WHITE_MANGROVE_WOODEN_BARREL = ITEMS.register("white_mangrove_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WHITE_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WHITE_MANGROVE_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> BWG_WILLOW_WOODEN_BARREL = ITEMS.register("bwg_willow_wooden_barrel",
-        () -> new BlockItem(ModBlocks.BWG_WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.BWG_WILLOW_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> WITCH_HAZEL_WOODEN_BARREL = ITEMS.register("witch_hazel_wooden_barrel",
-        () -> new BlockItem(ModBlocks.WITCH_HAZEL_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.WITCH_HAZEL_WOODEN_BARREL.get(), new Item.Properties()));
     public static final RegistryObject<Item> ZELKOVA_WOODEN_BARREL = ITEMS.register("zelkova_wooden_barrel",
-        () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_BARREL.get(), new Item.Properties()));
+        () -> new WoodenBarrelBlockItem(ModBlocks.ZELKOVA_WOODEN_BARREL.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> WOODEN_SHEARS = ITEMS.register("wooden_shears",
         () -> new ShearsItem(new Item.Properties().durability(64)));
@@ -1528,6 +2259,734 @@ public final class ModItems {
         () -> new BlockItem(ModBlocks.WITCH_HAZEL_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
     public static final RegistryObject<Item> ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("zelkova_wooden_crafting_table_slab",
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+
+    // ── African Blackwood ──────────────────────────────────
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_LOG = ITEMS.register("african_blackwood_log",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_AFRICAN_BLACKWOOD_LOG = ITEMS.register("stripped_african_blackwood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_AFRICAN_BLACKWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOOD = ITEMS.register("african_blackwood_wood",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_AFRICAN_BLACKWOOD_WOOD = ITEMS.register("stripped_african_blackwood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_AFRICAN_BLACKWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_PLANKS = ITEMS.register("african_blackwood_planks",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_LEAVES = ITEMS.register("african_blackwood_leaves",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_SAPLING = ITEMS.register("african_blackwood_sapling",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_SLAB = ITEMS.register("african_blackwood_slab",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_STAIRS = ITEMS.register("african_blackwood_stairs",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_FENCE = ITEMS.register("african_blackwood_fence",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_FENCE_GATE = ITEMS.register("african_blackwood_fence_gate",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_PRESSURE_PLATE = ITEMS.register("african_blackwood_pressure_plate",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_BUTTON = ITEMS.register("african_blackwood_button",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_DOOR = ITEMS.register("african_blackwood_door",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_TRAPDOOR = ITEMS.register("african_blackwood_trapdoor",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_SIGN = ITEMS.register("african_blackwood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.AFRICAN_BLACKWOOD_SIGN.get(), ModBlocks.AFRICAN_BLACKWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_HANGING_SIGN = ITEMS.register("african_blackwood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.AFRICAN_BLACKWOOD_HANGING_SIGN.get(), ModBlocks.AFRICAN_BLACKWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("african_blackwood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("african_blackwood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_CAULDRON = ITEMS.register("african_blackwood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_HOPPER = ITEMS.register("african_blackwood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_BARREL = ITEMS.register("african_blackwood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.AFRICAN_BLACKWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_BOAT = ITEMS.register("african_blackwood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_CHEST_BOAT = ITEMS.register("african_blackwood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_PLATE = ITEMS.register("african_blackwood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Banyan ──────────────────────────────────
+    public static final RegistryObject<Item> BANYAN_LOG = ITEMS.register("banyan_log",
+        () -> new BlockItem(ModBlocks.BANYAN_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BANYAN_LOG = ITEMS.register("stripped_banyan_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BANYAN_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_WOOD = ITEMS.register("banyan_wood",
+        () -> new BlockItem(ModBlocks.BANYAN_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BANYAN_WOOD = ITEMS.register("stripped_banyan_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BANYAN_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_PLANKS = ITEMS.register("banyan_planks",
+        () -> new BlockItem(ModBlocks.BANYAN_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_LEAVES = ITEMS.register("banyan_leaves",
+        () -> new BlockItem(ModBlocks.BANYAN_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_SAPLING = ITEMS.register("banyan_sapling",
+        () -> new BlockItem(ModBlocks.BANYAN_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_SLAB = ITEMS.register("banyan_slab",
+        () -> new BlockItem(ModBlocks.BANYAN_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_STAIRS = ITEMS.register("banyan_stairs",
+        () -> new BlockItem(ModBlocks.BANYAN_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_FENCE = ITEMS.register("banyan_fence",
+        () -> new BlockItem(ModBlocks.BANYAN_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_FENCE_GATE = ITEMS.register("banyan_fence_gate",
+        () -> new BlockItem(ModBlocks.BANYAN_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_PRESSURE_PLATE = ITEMS.register("banyan_pressure_plate",
+        () -> new BlockItem(ModBlocks.BANYAN_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_BUTTON = ITEMS.register("banyan_button",
+        () -> new BlockItem(ModBlocks.BANYAN_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_DOOR = ITEMS.register("banyan_door",
+        () -> new BlockItem(ModBlocks.BANYAN_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_TRAPDOOR = ITEMS.register("banyan_trapdoor",
+        () -> new BlockItem(ModBlocks.BANYAN_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_SIGN = ITEMS.register("banyan_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BANYAN_SIGN.get(), ModBlocks.BANYAN_WALL_SIGN.get()));
+    public static final RegistryObject<Item> BANYAN_HANGING_SIGN = ITEMS.register("banyan_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BANYAN_HANGING_SIGN.get(), ModBlocks.BANYAN_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BANYAN_WOODEN_CRAFTING_TABLE = ITEMS.register("banyan_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("banyan_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_WOODEN_CAULDRON = ITEMS.register("banyan_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_WOODEN_HOPPER = ITEMS.register("banyan_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BANYAN_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_WOODEN_BARREL = ITEMS.register("banyan_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BANYAN_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BANYAN_BOAT = ITEMS.register("banyan_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BANYAN_CHEST_BOAT = ITEMS.register("banyan_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BANYAN_WOODEN_PLATE = ITEMS.register("banyan_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Black Walnut ──────────────────────────────────
+    public static final RegistryObject<Item> BLACK_WALNUT_LOG = ITEMS.register("black_walnut_log",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BLACK_WALNUT_LOG = ITEMS.register("stripped_black_walnut_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLACK_WALNUT_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOOD = ITEMS.register("black_walnut_wood",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BLACK_WALNUT_WOOD = ITEMS.register("stripped_black_walnut_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLACK_WALNUT_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_PLANKS = ITEMS.register("black_walnut_planks",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_LEAVES = ITEMS.register("black_walnut_leaves",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_SAPLING = ITEMS.register("black_walnut_sapling",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_SLAB = ITEMS.register("black_walnut_slab",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_STAIRS = ITEMS.register("black_walnut_stairs",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_FENCE = ITEMS.register("black_walnut_fence",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_FENCE_GATE = ITEMS.register("black_walnut_fence_gate",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_PRESSURE_PLATE = ITEMS.register("black_walnut_pressure_plate",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_BUTTON = ITEMS.register("black_walnut_button",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_DOOR = ITEMS.register("black_walnut_door",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_TRAPDOOR = ITEMS.register("black_walnut_trapdoor",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_SIGN = ITEMS.register("black_walnut_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BLACK_WALNUT_SIGN.get(), ModBlocks.BLACK_WALNUT_WALL_SIGN.get()));
+    public static final RegistryObject<Item> BLACK_WALNUT_HANGING_SIGN = ITEMS.register("black_walnut_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BLACK_WALNUT_HANGING_SIGN.get(), ModBlocks.BLACK_WALNUT_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_CRAFTING_TABLE = ITEMS.register("black_walnut_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("black_walnut_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_CAULDRON = ITEMS.register("black_walnut_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_HOPPER = ITEMS.register("black_walnut_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BLACK_WALNUT_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_BARREL = ITEMS.register("black_walnut_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BLACK_WALNUT_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_WALNUT_BOAT = ITEMS.register("black_walnut_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLACK_WALNUT_CHEST_BOAT = ITEMS.register("black_walnut_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_PLATE = ITEMS.register("black_walnut_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Bloodwood ──────────────────────────────────
+    public static final RegistryObject<Item> BLOODWOOD_LOG = ITEMS.register("bloodwood_log",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BLOODWOOD_LOG = ITEMS.register("stripped_bloodwood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLOODWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_WOOD = ITEMS.register("bloodwood_wood",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BLOODWOOD_WOOD = ITEMS.register("stripped_bloodwood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BLOODWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_PLANKS = ITEMS.register("bloodwood_planks",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_LEAVES = ITEMS.register("bloodwood_leaves",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_SAPLING = ITEMS.register("bloodwood_sapling",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_SLAB = ITEMS.register("bloodwood_slab",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_STAIRS = ITEMS.register("bloodwood_stairs",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_FENCE = ITEMS.register("bloodwood_fence",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_FENCE_GATE = ITEMS.register("bloodwood_fence_gate",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_PRESSURE_PLATE = ITEMS.register("bloodwood_pressure_plate",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_BUTTON = ITEMS.register("bloodwood_button",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_DOOR = ITEMS.register("bloodwood_door",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_TRAPDOOR = ITEMS.register("bloodwood_trapdoor",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_SIGN = ITEMS.register("bloodwood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BLOODWOOD_SIGN.get(), ModBlocks.BLOODWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> BLOODWOOD_HANGING_SIGN = ITEMS.register("bloodwood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BLOODWOOD_HANGING_SIGN.get(), ModBlocks.BLOODWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("bloodwood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("bloodwood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_CAULDRON = ITEMS.register("bloodwood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_HOPPER = ITEMS.register("bloodwood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BLOODWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_BARREL = ITEMS.register("bloodwood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BLOODWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLOODWOOD_BOAT = ITEMS.register("bloodwood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLOODWOOD_CHEST_BOAT = ITEMS.register("bloodwood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BLOODWOOD_WOODEN_PLATE = ITEMS.register("bloodwood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Bristlecone Pine ──────────────────────────────────
+    public static final RegistryObject<Item> BRISTLECONE_PINE_LOG = ITEMS.register("bristlecone_pine_log",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BRISTLECONE_PINE_LOG = ITEMS.register("stripped_bristlecone_pine_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_BRISTLECONE_PINE_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOOD = ITEMS.register("bristlecone_pine_wood",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_BRISTLECONE_PINE_WOOD = ITEMS.register("stripped_bristlecone_pine_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_BRISTLECONE_PINE_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_PLANKS = ITEMS.register("bristlecone_pine_planks",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_LEAVES = ITEMS.register("bristlecone_pine_leaves",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_SAPLING = ITEMS.register("bristlecone_pine_sapling",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_SLAB = ITEMS.register("bristlecone_pine_slab",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_STAIRS = ITEMS.register("bristlecone_pine_stairs",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_FENCE = ITEMS.register("bristlecone_pine_fence",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_FENCE_GATE = ITEMS.register("bristlecone_pine_fence_gate",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_PRESSURE_PLATE = ITEMS.register("bristlecone_pine_pressure_plate",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_BUTTON = ITEMS.register("bristlecone_pine_button",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_DOOR = ITEMS.register("bristlecone_pine_door",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_TRAPDOOR = ITEMS.register("bristlecone_pine_trapdoor",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_SIGN = ITEMS.register("bristlecone_pine_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BRISTLECONE_PINE_SIGN.get(), ModBlocks.BRISTLECONE_PINE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_HANGING_SIGN = ITEMS.register("bristlecone_pine_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.BRISTLECONE_PINE_HANGING_SIGN.get(), ModBlocks.BRISTLECONE_PINE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE = ITEMS.register("bristlecone_pine_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("bristlecone_pine_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_CAULDRON = ITEMS.register("bristlecone_pine_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_HOPPER = ITEMS.register("bristlecone_pine_wooden_hopper",
+        () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_BARREL = ITEMS.register("bristlecone_pine_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.BRISTLECONE_PINE_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_BOAT = ITEMS.register("bristlecone_pine_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_CHEST_BOAT = ITEMS.register("bristlecone_pine_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_PLATE = ITEMS.register("bristlecone_pine_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Cork Oak ──────────────────────────────────
+    public static final RegistryObject<Item> CORK_OAK_LOG = ITEMS.register("cork_oak_log",
+        () -> new BlockItem(ModBlocks.CORK_OAK_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_CORK_OAK_LOG = ITEMS.register("stripped_cork_oak_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_CORK_OAK_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_WOOD = ITEMS.register("cork_oak_wood",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_CORK_OAK_WOOD = ITEMS.register("stripped_cork_oak_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_CORK_OAK_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_PLANKS = ITEMS.register("cork_oak_planks",
+        () -> new BlockItem(ModBlocks.CORK_OAK_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_LEAVES = ITEMS.register("cork_oak_leaves",
+        () -> new BlockItem(ModBlocks.CORK_OAK_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_SAPLING = ITEMS.register("cork_oak_sapling",
+        () -> new BlockItem(ModBlocks.CORK_OAK_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_SLAB = ITEMS.register("cork_oak_slab",
+        () -> new BlockItem(ModBlocks.CORK_OAK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_STAIRS = ITEMS.register("cork_oak_stairs",
+        () -> new BlockItem(ModBlocks.CORK_OAK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_FENCE = ITEMS.register("cork_oak_fence",
+        () -> new BlockItem(ModBlocks.CORK_OAK_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_FENCE_GATE = ITEMS.register("cork_oak_fence_gate",
+        () -> new BlockItem(ModBlocks.CORK_OAK_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_PRESSURE_PLATE = ITEMS.register("cork_oak_pressure_plate",
+        () -> new BlockItem(ModBlocks.CORK_OAK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_BUTTON = ITEMS.register("cork_oak_button",
+        () -> new BlockItem(ModBlocks.CORK_OAK_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_DOOR = ITEMS.register("cork_oak_door",
+        () -> new BlockItem(ModBlocks.CORK_OAK_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_TRAPDOOR = ITEMS.register("cork_oak_trapdoor",
+        () -> new BlockItem(ModBlocks.CORK_OAK_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_SIGN = ITEMS.register("cork_oak_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.CORK_OAK_SIGN.get(), ModBlocks.CORK_OAK_WALL_SIGN.get()));
+    public static final RegistryObject<Item> CORK_OAK_HANGING_SIGN = ITEMS.register("cork_oak_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.CORK_OAK_HANGING_SIGN.get(), ModBlocks.CORK_OAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_CRAFTING_TABLE = ITEMS.register("cork_oak_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("cork_oak_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_CAULDRON = ITEMS.register("cork_oak_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_HOPPER = ITEMS.register("cork_oak_wooden_hopper",
+        () -> new BlockItem(ModBlocks.CORK_OAK_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_BARREL = ITEMS.register("cork_oak_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.CORK_OAK_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CORK_OAK_BOAT = ITEMS.register("cork_oak_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CORK_OAK_CHEST_BOAT = ITEMS.register("cork_oak_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CORK_OAK_WOODEN_PLATE = ITEMS.register("cork_oak_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Dragon Blood ──────────────────────────────────
+    public static final RegistryObject<Item> DRAGON_BLOOD_LOG = ITEMS.register("dragon_blood_log",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_DRAGON_BLOOD_LOG = ITEMS.register("stripped_dragon_blood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_DRAGON_BLOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOOD = ITEMS.register("dragon_blood_wood",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_DRAGON_BLOOD_WOOD = ITEMS.register("stripped_dragon_blood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_DRAGON_BLOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_PLANKS = ITEMS.register("dragon_blood_planks",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_LEAVES = ITEMS.register("dragon_blood_leaves",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_SAPLING = ITEMS.register("dragon_blood_sapling",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_SLAB = ITEMS.register("dragon_blood_slab",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_STAIRS = ITEMS.register("dragon_blood_stairs",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_FENCE = ITEMS.register("dragon_blood_fence",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_FENCE_GATE = ITEMS.register("dragon_blood_fence_gate",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_PRESSURE_PLATE = ITEMS.register("dragon_blood_pressure_plate",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_BUTTON = ITEMS.register("dragon_blood_button",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_DOOR = ITEMS.register("dragon_blood_door",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_TRAPDOOR = ITEMS.register("dragon_blood_trapdoor",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_SIGN = ITEMS.register("dragon_blood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DRAGON_BLOOD_SIGN.get(), ModBlocks.DRAGON_BLOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_HANGING_SIGN = ITEMS.register("dragon_blood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.DRAGON_BLOOD_HANGING_SIGN.get(), ModBlocks.DRAGON_BLOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("dragon_blood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("dragon_blood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_CAULDRON = ITEMS.register("dragon_blood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_HOPPER = ITEMS.register("dragon_blood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_BARREL = ITEMS.register("dragon_blood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.DRAGON_BLOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_BLOOD_BOAT = ITEMS.register("dragon_blood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DRAGON_BLOOD_CHEST_BOAT = ITEMS.register("dragon_blood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_PLATE = ITEMS.register("dragon_blood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Kapok ──────────────────────────────────
+    public static final RegistryObject<Item> KAPOK_LOG = ITEMS.register("kapok_log",
+        () -> new BlockItem(ModBlocks.KAPOK_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_KAPOK_LOG = ITEMS.register("stripped_kapok_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_KAPOK_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_WOOD = ITEMS.register("kapok_wood",
+        () -> new BlockItem(ModBlocks.KAPOK_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_KAPOK_WOOD = ITEMS.register("stripped_kapok_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_KAPOK_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_PLANKS = ITEMS.register("kapok_planks",
+        () -> new BlockItem(ModBlocks.KAPOK_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_LEAVES = ITEMS.register("kapok_leaves",
+        () -> new BlockItem(ModBlocks.KAPOK_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_SAPLING = ITEMS.register("kapok_sapling",
+        () -> new BlockItem(ModBlocks.KAPOK_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_SLAB = ITEMS.register("kapok_slab",
+        () -> new BlockItem(ModBlocks.KAPOK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_STAIRS = ITEMS.register("kapok_stairs",
+        () -> new BlockItem(ModBlocks.KAPOK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_FENCE = ITEMS.register("kapok_fence",
+        () -> new BlockItem(ModBlocks.KAPOK_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_FENCE_GATE = ITEMS.register("kapok_fence_gate",
+        () -> new BlockItem(ModBlocks.KAPOK_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_PRESSURE_PLATE = ITEMS.register("kapok_pressure_plate",
+        () -> new BlockItem(ModBlocks.KAPOK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_BUTTON = ITEMS.register("kapok_button",
+        () -> new BlockItem(ModBlocks.KAPOK_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_DOOR = ITEMS.register("kapok_door",
+        () -> new BlockItem(ModBlocks.KAPOK_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_TRAPDOOR = ITEMS.register("kapok_trapdoor",
+        () -> new BlockItem(ModBlocks.KAPOK_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_SIGN = ITEMS.register("kapok_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.KAPOK_SIGN.get(), ModBlocks.KAPOK_WALL_SIGN.get()));
+    public static final RegistryObject<Item> KAPOK_HANGING_SIGN = ITEMS.register("kapok_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.KAPOK_HANGING_SIGN.get(), ModBlocks.KAPOK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> KAPOK_WOODEN_CRAFTING_TABLE = ITEMS.register("kapok_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("kapok_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_WOODEN_CAULDRON = ITEMS.register("kapok_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_WOODEN_HOPPER = ITEMS.register("kapok_wooden_hopper",
+        () -> new BlockItem(ModBlocks.KAPOK_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_WOODEN_BARREL = ITEMS.register("kapok_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.KAPOK_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> KAPOK_BOAT = ITEMS.register("kapok_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> KAPOK_CHEST_BOAT = ITEMS.register("kapok_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> KAPOK_WOODEN_PLATE = ITEMS.register("kapok_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Larch ──────────────────────────────────
+    public static final RegistryObject<Item> LARCH_LOG = ITEMS.register("larch_log",
+        () -> new BlockItem(ModBlocks.LARCH_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_LARCH_LOG = ITEMS.register("stripped_larch_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_LARCH_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_WOOD = ITEMS.register("larch_wood",
+        () -> new BlockItem(ModBlocks.LARCH_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_LARCH_WOOD = ITEMS.register("stripped_larch_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_LARCH_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_PLANKS = ITEMS.register("larch_planks",
+        () -> new BlockItem(ModBlocks.LARCH_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_LEAVES = ITEMS.register("larch_leaves",
+        () -> new BlockItem(ModBlocks.LARCH_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_SAPLING = ITEMS.register("larch_sapling",
+        () -> new BlockItem(ModBlocks.LARCH_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_SLAB = ITEMS.register("larch_slab",
+        () -> new BlockItem(ModBlocks.LARCH_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_STAIRS = ITEMS.register("larch_stairs",
+        () -> new BlockItem(ModBlocks.LARCH_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_FENCE = ITEMS.register("larch_fence",
+        () -> new BlockItem(ModBlocks.LARCH_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_FENCE_GATE = ITEMS.register("larch_fence_gate",
+        () -> new BlockItem(ModBlocks.LARCH_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_PRESSURE_PLATE = ITEMS.register("larch_pressure_plate",
+        () -> new BlockItem(ModBlocks.LARCH_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_BUTTON = ITEMS.register("larch_button",
+        () -> new BlockItem(ModBlocks.LARCH_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_DOOR = ITEMS.register("larch_door",
+        () -> new BlockItem(ModBlocks.LARCH_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_TRAPDOOR = ITEMS.register("larch_trapdoor",
+        () -> new BlockItem(ModBlocks.LARCH_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_SIGN = ITEMS.register("larch_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.LARCH_SIGN.get(), ModBlocks.LARCH_WALL_SIGN.get()));
+    public static final RegistryObject<Item> LARCH_HANGING_SIGN = ITEMS.register("larch_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.LARCH_HANGING_SIGN.get(), ModBlocks.LARCH_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> LARCH_WOODEN_CRAFTING_TABLE = ITEMS.register("larch_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("larch_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_WOODEN_CAULDRON = ITEMS.register("larch_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_WOODEN_HOPPER = ITEMS.register("larch_wooden_hopper",
+        () -> new BlockItem(ModBlocks.LARCH_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_WOODEN_BARREL = ITEMS.register("larch_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.LARCH_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> LARCH_BOAT = ITEMS.register("larch_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> LARCH_CHEST_BOAT = ITEMS.register("larch_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> LARCH_WOODEN_PLATE = ITEMS.register("larch_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Sandalwood ──────────────────────────────────
+    public static final RegistryObject<Item> SANDALWOOD_LOG = ITEMS.register("sandalwood_log",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_SANDALWOOD_LOG = ITEMS.register("stripped_sandalwood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_SANDALWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_WOOD = ITEMS.register("sandalwood_wood",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_SANDALWOOD_WOOD = ITEMS.register("stripped_sandalwood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_SANDALWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_PLANKS = ITEMS.register("sandalwood_planks",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_LEAVES = ITEMS.register("sandalwood_leaves",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_SAPLING = ITEMS.register("sandalwood_sapling",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_SLAB = ITEMS.register("sandalwood_slab",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_STAIRS = ITEMS.register("sandalwood_stairs",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_FENCE = ITEMS.register("sandalwood_fence",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_FENCE_GATE = ITEMS.register("sandalwood_fence_gate",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_PRESSURE_PLATE = ITEMS.register("sandalwood_pressure_plate",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_BUTTON = ITEMS.register("sandalwood_button",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_DOOR = ITEMS.register("sandalwood_door",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_TRAPDOOR = ITEMS.register("sandalwood_trapdoor",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_SIGN = ITEMS.register("sandalwood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SANDALWOOD_SIGN.get(), ModBlocks.SANDALWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> SANDALWOOD_HANGING_SIGN = ITEMS.register("sandalwood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.SANDALWOOD_HANGING_SIGN.get(), ModBlocks.SANDALWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("sandalwood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("sandalwood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_CAULDRON = ITEMS.register("sandalwood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_HOPPER = ITEMS.register("sandalwood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.SANDALWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_BARREL = ITEMS.register("sandalwood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.SANDALWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SANDALWOOD_BOAT = ITEMS.register("sandalwood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SANDALWOOD_CHEST_BOAT = ITEMS.register("sandalwood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SANDALWOOD_WOODEN_PLATE = ITEMS.register("sandalwood_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Sycamore ──────────────────────────────────
+    public static final RegistryObject<Item> SYCAMORE_LOG = ITEMS.register("sycamore_log",
+        () -> new BlockItem(ModBlocks.SYCAMORE_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_SYCAMORE_LOG = ITEMS.register("stripped_sycamore_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_SYCAMORE_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_WOOD = ITEMS.register("sycamore_wood",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_SYCAMORE_WOOD = ITEMS.register("stripped_sycamore_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_SYCAMORE_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_PLANKS = ITEMS.register("sycamore_planks",
+        () -> new BlockItem(ModBlocks.SYCAMORE_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_LEAVES = ITEMS.register("sycamore_leaves",
+        () -> new BlockItem(ModBlocks.SYCAMORE_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_SAPLING = ITEMS.register("sycamore_sapling",
+        () -> new BlockItem(ModBlocks.SYCAMORE_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_SLAB = ITEMS.register("sycamore_slab",
+        () -> new BlockItem(ModBlocks.SYCAMORE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_STAIRS = ITEMS.register("sycamore_stairs",
+        () -> new BlockItem(ModBlocks.SYCAMORE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_FENCE = ITEMS.register("sycamore_fence",
+        () -> new BlockItem(ModBlocks.SYCAMORE_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_FENCE_GATE = ITEMS.register("sycamore_fence_gate",
+        () -> new BlockItem(ModBlocks.SYCAMORE_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_PRESSURE_PLATE = ITEMS.register("sycamore_pressure_plate",
+        () -> new BlockItem(ModBlocks.SYCAMORE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_BUTTON = ITEMS.register("sycamore_button",
+        () -> new BlockItem(ModBlocks.SYCAMORE_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_DOOR = ITEMS.register("sycamore_door",
+        () -> new BlockItem(ModBlocks.SYCAMORE_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_TRAPDOOR = ITEMS.register("sycamore_trapdoor",
+        () -> new BlockItem(ModBlocks.SYCAMORE_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_SIGN = ITEMS.register("sycamore_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SYCAMORE_SIGN.get(), ModBlocks.SYCAMORE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> SYCAMORE_HANGING_SIGN = ITEMS.register("sycamore_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.SYCAMORE_HANGING_SIGN.get(), ModBlocks.SYCAMORE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_CRAFTING_TABLE = ITEMS.register("sycamore_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("sycamore_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_CAULDRON = ITEMS.register("sycamore_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_HOPPER = ITEMS.register("sycamore_wooden_hopper",
+        () -> new BlockItem(ModBlocks.SYCAMORE_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_BARREL = ITEMS.register("sycamore_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.SYCAMORE_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SYCAMORE_BOAT = ITEMS.register("sycamore_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SYCAMORE_CHEST_BOAT = ITEMS.register("sycamore_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SYCAMORE_WOODEN_PLATE = ITEMS.register("sycamore_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Teak ──────────────────────────────────
+    public static final RegistryObject<Item> TEAK_LOG = ITEMS.register("teak_log",
+        () -> new BlockItem(ModBlocks.TEAK_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_TEAK_LOG = ITEMS.register("stripped_teak_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_TEAK_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_WOOD = ITEMS.register("teak_wood",
+        () -> new BlockItem(ModBlocks.TEAK_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_TEAK_WOOD = ITEMS.register("stripped_teak_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_TEAK_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_PLANKS = ITEMS.register("teak_planks",
+        () -> new BlockItem(ModBlocks.TEAK_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_LEAVES = ITEMS.register("teak_leaves",
+        () -> new BlockItem(ModBlocks.TEAK_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_SAPLING = ITEMS.register("teak_sapling",
+        () -> new BlockItem(ModBlocks.TEAK_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_SLAB = ITEMS.register("teak_slab",
+        () -> new BlockItem(ModBlocks.TEAK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_STAIRS = ITEMS.register("teak_stairs",
+        () -> new BlockItem(ModBlocks.TEAK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_FENCE = ITEMS.register("teak_fence",
+        () -> new BlockItem(ModBlocks.TEAK_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_FENCE_GATE = ITEMS.register("teak_fence_gate",
+        () -> new BlockItem(ModBlocks.TEAK_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_PRESSURE_PLATE = ITEMS.register("teak_pressure_plate",
+        () -> new BlockItem(ModBlocks.TEAK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_BUTTON = ITEMS.register("teak_button",
+        () -> new BlockItem(ModBlocks.TEAK_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_DOOR = ITEMS.register("teak_door",
+        () -> new BlockItem(ModBlocks.TEAK_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_TRAPDOOR = ITEMS.register("teak_trapdoor",
+        () -> new BlockItem(ModBlocks.TEAK_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_SIGN = ITEMS.register("teak_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.TEAK_SIGN.get(), ModBlocks.TEAK_WALL_SIGN.get()));
+    public static final RegistryObject<Item> TEAK_HANGING_SIGN = ITEMS.register("teak_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.TEAK_HANGING_SIGN.get(), ModBlocks.TEAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> TEAK_WOODEN_CRAFTING_TABLE = ITEMS.register("teak_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("teak_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_WOODEN_CAULDRON = ITEMS.register("teak_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_WOODEN_HOPPER = ITEMS.register("teak_wooden_hopper",
+        () -> new BlockItem(ModBlocks.TEAK_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_WOODEN_BARREL = ITEMS.register("teak_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.TEAK_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TEAK_BOAT = ITEMS.register("teak_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TEAK_CHEST_BOAT = ITEMS.register("teak_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TEAK_WOODEN_PLATE = ITEMS.register("teak_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Wenge ──────────────────────────────────
+    public static final RegistryObject<Item> WENGE_LOG = ITEMS.register("wenge_log",
+        () -> new BlockItem(ModBlocks.WENGE_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_WENGE_LOG = ITEMS.register("stripped_wenge_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_WENGE_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_WOOD = ITEMS.register("wenge_wood",
+        () -> new BlockItem(ModBlocks.WENGE_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_WENGE_WOOD = ITEMS.register("stripped_wenge_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_WENGE_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_PLANKS = ITEMS.register("wenge_planks",
+        () -> new BlockItem(ModBlocks.WENGE_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_LEAVES = ITEMS.register("wenge_leaves",
+        () -> new BlockItem(ModBlocks.WENGE_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_SAPLING = ITEMS.register("wenge_sapling",
+        () -> new BlockItem(ModBlocks.WENGE_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_SLAB = ITEMS.register("wenge_slab",
+        () -> new BlockItem(ModBlocks.WENGE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_STAIRS = ITEMS.register("wenge_stairs",
+        () -> new BlockItem(ModBlocks.WENGE_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_FENCE = ITEMS.register("wenge_fence",
+        () -> new BlockItem(ModBlocks.WENGE_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_FENCE_GATE = ITEMS.register("wenge_fence_gate",
+        () -> new BlockItem(ModBlocks.WENGE_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_PRESSURE_PLATE = ITEMS.register("wenge_pressure_plate",
+        () -> new BlockItem(ModBlocks.WENGE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_BUTTON = ITEMS.register("wenge_button",
+        () -> new BlockItem(ModBlocks.WENGE_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_DOOR = ITEMS.register("wenge_door",
+        () -> new BlockItem(ModBlocks.WENGE_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_TRAPDOOR = ITEMS.register("wenge_trapdoor",
+        () -> new BlockItem(ModBlocks.WENGE_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_SIGN = ITEMS.register("wenge_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.WENGE_SIGN.get(), ModBlocks.WENGE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> WENGE_HANGING_SIGN = ITEMS.register("wenge_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.WENGE_HANGING_SIGN.get(), ModBlocks.WENGE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> WENGE_WOODEN_CRAFTING_TABLE = ITEMS.register("wenge_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("wenge_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_WOODEN_CAULDRON = ITEMS.register("wenge_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_WOODEN_HOPPER = ITEMS.register("wenge_wooden_hopper",
+        () -> new BlockItem(ModBlocks.WENGE_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_WOODEN_BARREL = ITEMS.register("wenge_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.WENGE_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WENGE_BOAT = ITEMS.register("wenge_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WENGE_CHEST_BOAT = ITEMS.register("wenge_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> WENGE_WOODEN_PLATE = ITEMS.register("wenge_wooden_plate",
+        () -> new Item(new Item.Properties()));
+
+    // ── Zebrawood ──────────────────────────────────
+    public static final RegistryObject<Item> ZEBRAWOOD_LOG = ITEMS.register("zebrawood_log",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_ZEBRAWOOD_LOG = ITEMS.register("stripped_zebrawood_log",
+        () -> new BlockItem(ModBlocks.STRIPPED_ZEBRAWOOD_LOG.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOOD = ITEMS.register("zebrawood_wood",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_ZEBRAWOOD_WOOD = ITEMS.register("stripped_zebrawood_wood",
+        () -> new BlockItem(ModBlocks.STRIPPED_ZEBRAWOOD_WOOD.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_PLANKS = ITEMS.register("zebrawood_planks",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_PLANKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_LEAVES = ITEMS.register("zebrawood_leaves",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_LEAVES.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_SAPLING = ITEMS.register("zebrawood_sapling",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_SAPLING.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_SLAB = ITEMS.register("zebrawood_slab",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_STAIRS = ITEMS.register("zebrawood_stairs",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_FENCE = ITEMS.register("zebrawood_fence",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_FENCE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_FENCE_GATE = ITEMS.register("zebrawood_fence_gate",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_FENCE_GATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_PRESSURE_PLATE = ITEMS.register("zebrawood_pressure_plate",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_BUTTON = ITEMS.register("zebrawood_button",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_BUTTON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_DOOR = ITEMS.register("zebrawood_door",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_DOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_TRAPDOOR = ITEMS.register("zebrawood_trapdoor",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_TRAPDOOR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_SIGN = ITEMS.register("zebrawood_sign",
+        () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.ZEBRAWOOD_SIGN.get(), ModBlocks.ZEBRAWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> ZEBRAWOOD_HANGING_SIGN = ITEMS.register("zebrawood_hanging_sign",
+        () -> new HangingSignItem(ModBlocks.ZEBRAWOOD_HANGING_SIGN.get(), ModBlocks.ZEBRAWOOD_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_CRAFTING_TABLE = ITEMS.register("zebrawood_wooden_crafting_table",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CRAFTING_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("zebrawood_wooden_crafting_table_slab",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_CAULDRON = ITEMS.register("zebrawood_wooden_cauldron",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CAULDRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_HOPPER = ITEMS.register("zebrawood_wooden_hopper",
+        () -> new BlockItem(ModBlocks.ZEBRAWOOD_WOODEN_HOPPER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_BARREL = ITEMS.register("zebrawood_wooden_barrel",
+        () -> new WoodenBarrelBlockItem(ModBlocks.ZEBRAWOOD_WOODEN_BARREL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ZEBRAWOOD_BOAT = ITEMS.register("zebrawood_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ZEBRAWOOD_CHEST_BOAT = ITEMS.register("zebrawood_chest_boat",
+        () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_PLATE = ITEMS.register("zebrawood_wooden_plate",
+        () -> new Item(new Item.Properties()));
 
     //?}
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "woodenutilities:block/sandalwood_planks",
+    "side": "woodenutilities:block/sandalwood_planks",
+    "top": "woodenutilities:block/sandalwood_planks"
+  }
+}

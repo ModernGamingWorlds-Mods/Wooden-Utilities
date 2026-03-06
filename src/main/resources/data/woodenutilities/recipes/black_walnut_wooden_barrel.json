@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:black_walnut_planks"
+    },
+    "S": {
+      "item": "woodenutilities:black_walnut_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:black_walnut_wooden_barrel"
+  }
+}

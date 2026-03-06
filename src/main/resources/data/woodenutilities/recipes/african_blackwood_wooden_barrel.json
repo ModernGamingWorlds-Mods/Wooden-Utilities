@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:african_blackwood_planks"
+    },
+    "S": {
+      "item": "woodenutilities:african_blackwood_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:african_blackwood_wooden_barrel"
+  }
+}

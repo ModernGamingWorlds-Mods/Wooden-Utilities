@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodenutilities:block/dragon_blood_slab"
+    },
+    "type=double": {
+      "model": "woodenutilities:block/dragon_blood_planks"
+    },
+    "type=top": {
+      "model": "woodenutilities:block/dragon_blood_slab_top"
+    }
+  }
+}

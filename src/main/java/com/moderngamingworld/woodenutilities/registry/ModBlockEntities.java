@@ -92,7 +92,21 @@ public final class ModBlockEntities {
                             ModBlocks.WHITE_MANGROVE_WOODEN_CAULDRON.get(),
                             ModBlocks.BWG_WILLOW_WOODEN_CAULDRON.get(),
                             ModBlocks.WITCH_HAZEL_WOODEN_CAULDRON.get(),
-                            ModBlocks.ZELKOVA_WOODEN_CAULDRON.get()
+                            ModBlocks.ZELKOVA_WOODEN_CAULDRON.get(),
+                            ModBlocks.AFRICAN_BLACKWOOD_WOODEN_CAULDRON.get(),
+                            ModBlocks.BANYAN_WOODEN_CAULDRON.get(),
+                            ModBlocks.BLACK_WALNUT_WOODEN_CAULDRON.get(),
+                            ModBlocks.BLOODWOOD_WOODEN_CAULDRON.get(),
+                            ModBlocks.BRISTLECONE_PINE_WOODEN_CAULDRON.get(),
+                            ModBlocks.CORK_OAK_WOODEN_CAULDRON.get(),
+                            ModBlocks.DRAGON_BLOOD_WOODEN_CAULDRON.get(),
+                            ModBlocks.KAPOK_WOODEN_CAULDRON.get(),
+                            ModBlocks.LARCH_WOODEN_CAULDRON.get(),
+                            ModBlocks.SANDALWOOD_WOODEN_CAULDRON.get(),
+                            ModBlocks.SYCAMORE_WOODEN_CAULDRON.get(),
+                            ModBlocks.TEAK_WOODEN_CAULDRON.get(),
+                            ModBlocks.WENGE_WOODEN_CAULDRON.get(),
+                            ModBlocks.ZEBRAWOOD_WOODEN_CAULDRON.get()
                     ).build(null));
 
     //? if neoforge {
@@ -168,7 +182,21 @@ public final class ModBlockEntities {
                             ModBlocks.WHITE_MANGROVE_WOODEN_BARREL.get(),
                             ModBlocks.BWG_WILLOW_WOODEN_BARREL.get(),
                             ModBlocks.WITCH_HAZEL_WOODEN_BARREL.get(),
-                            ModBlocks.ZELKOVA_WOODEN_BARREL.get()
+                            ModBlocks.ZELKOVA_WOODEN_BARREL.get(),
+                            ModBlocks.AFRICAN_BLACKWOOD_WOODEN_BARREL.get(),
+                            ModBlocks.BANYAN_WOODEN_BARREL.get(),
+                            ModBlocks.BLACK_WALNUT_WOODEN_BARREL.get(),
+                            ModBlocks.BLOODWOOD_WOODEN_BARREL.get(),
+                            ModBlocks.BRISTLECONE_PINE_WOODEN_BARREL.get(),
+                            ModBlocks.CORK_OAK_WOODEN_BARREL.get(),
+                            ModBlocks.DRAGON_BLOOD_WOODEN_BARREL.get(),
+                            ModBlocks.KAPOK_WOODEN_BARREL.get(),
+                            ModBlocks.LARCH_WOODEN_BARREL.get(),
+                            ModBlocks.SANDALWOOD_WOODEN_BARREL.get(),
+                            ModBlocks.SYCAMORE_WOODEN_BARREL.get(),
+                            ModBlocks.TEAK_WOODEN_BARREL.get(),
+                            ModBlocks.WENGE_WOODEN_BARREL.get(),
+                            ModBlocks.ZEBRAWOOD_WOODEN_BARREL.get()
                     ).build(null));
 
     //? if neoforge {
@@ -242,7 +270,21 @@ public final class ModBlockEntities {
                             ModBlocks.WHITE_MANGROVE_WOODEN_HOPPER.get(),
                             ModBlocks.BWG_WILLOW_WOODEN_HOPPER.get(),
                             ModBlocks.WITCH_HAZEL_WOODEN_HOPPER.get(),
-                            ModBlocks.ZELKOVA_WOODEN_HOPPER.get()
+                            ModBlocks.ZELKOVA_WOODEN_HOPPER.get(),
+                            ModBlocks.AFRICAN_BLACKWOOD_WOODEN_HOPPER.get(),
+                            ModBlocks.BANYAN_WOODEN_HOPPER.get(),
+                            ModBlocks.BLACK_WALNUT_WOODEN_HOPPER.get(),
+                            ModBlocks.BLOODWOOD_WOODEN_HOPPER.get(),
+                            ModBlocks.BRISTLECONE_PINE_WOODEN_HOPPER.get(),
+                            ModBlocks.CORK_OAK_WOODEN_HOPPER.get(),
+                            ModBlocks.DRAGON_BLOOD_WOODEN_HOPPER.get(),
+                            ModBlocks.KAPOK_WOODEN_HOPPER.get(),
+                            ModBlocks.LARCH_WOODEN_HOPPER.get(),
+                            ModBlocks.SANDALWOOD_WOODEN_HOPPER.get(),
+                            ModBlocks.SYCAMORE_WOODEN_HOPPER.get(),
+                            ModBlocks.TEAK_WOODEN_HOPPER.get(),
+                            ModBlocks.WENGE_WOODEN_HOPPER.get(),
+                            ModBlocks.ZEBRAWOOD_WOODEN_HOPPER.get()
                     ).build(null));
 
     private ModBlockEntities() {}

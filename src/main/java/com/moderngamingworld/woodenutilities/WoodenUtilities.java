@@ -7,6 +7,7 @@ import com.moderngamingworld.woodenutilities.registry.ModDataComponents;
 import com.moderngamingworld.woodenutilities.registry.ModItems;
 import com.moderngamingworld.woodenutilities.registry.ModMenuTypes;
 import com.moderngamingworld.woodenutilities.registry.ModRecipes;
+import com.moderngamingworld.woodenutilities.registry.ModWoodTypes;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.CreativeModeTabs;
 //? if neoforge {
@@ -22,6 +23,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+//? if has_geckolib {
+import software.bernie.geckolib.GeckoLib;
+//?}
 //?}
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,11 +40,15 @@ public class WoodenUtilities {
         modEventBus.addListener(WoodenUtilities::registerCapabilities);
     *///?} else {
     public WoodenUtilities() {
+        //? if has_geckolib {
+        GeckoLib.initialize();
+        //?}
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
     //?}
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
+        ModWoodTypes.init();
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModDataComponents.register(modEventBus);
@@ -191,6 +199,20 @@ public class WoodenUtilities {
             event.accept(ModItems.BWG_WILLOW_WOODEN_PLATE);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_PLATE);
             event.accept(ModItems.ZELKOVA_WOODEN_PLATE);
+            event.accept(ModItems.AFRICAN_BLACKWOOD_WOODEN_PLATE);
+            event.accept(ModItems.BANYAN_WOODEN_PLATE);
+            event.accept(ModItems.BLACK_WALNUT_WOODEN_PLATE);
+            event.accept(ModItems.BLOODWOOD_WOODEN_PLATE);
+            event.accept(ModItems.BRISTLECONE_PINE_WOODEN_PLATE);
+            event.accept(ModItems.CORK_OAK_WOODEN_PLATE);
+            event.accept(ModItems.DRAGON_BLOOD_WOODEN_PLATE);
+            event.accept(ModItems.KAPOK_WOODEN_PLATE);
+            event.accept(ModItems.LARCH_WOODEN_PLATE);
+            event.accept(ModItems.SANDALWOOD_WOODEN_PLATE);
+            event.accept(ModItems.SYCAMORE_WOODEN_PLATE);
+            event.accept(ModItems.TEAK_WOODEN_PLATE);
+            event.accept(ModItems.WENGE_WOODEN_PLATE);
+            event.accept(ModItems.ZEBRAWOOD_WOODEN_PLATE);
             event.accept(ModItems.ASPEN_WOODEN_CAULDRON);
             event.accept(ModItems.BAOBAB_WOODEN_CAULDRON);
             event.accept(ModItems.BLUE_ENCHANTED_WOODEN_CAULDRON);
@@ -218,6 +240,20 @@ public class WoodenUtilities {
             event.accept(ModItems.BWG_WILLOW_WOODEN_CAULDRON);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_CAULDRON);
             event.accept(ModItems.ZELKOVA_WOODEN_CAULDRON);
+            event.accept(ModItems.AFRICAN_BLACKWOOD_WOODEN_CAULDRON);
+            event.accept(ModItems.BANYAN_WOODEN_CAULDRON);
+            event.accept(ModItems.BLACK_WALNUT_WOODEN_CAULDRON);
+            event.accept(ModItems.BLOODWOOD_WOODEN_CAULDRON);
+            event.accept(ModItems.BRISTLECONE_PINE_WOODEN_CAULDRON);
+            event.accept(ModItems.CORK_OAK_WOODEN_CAULDRON);
+            event.accept(ModItems.DRAGON_BLOOD_WOODEN_CAULDRON);
+            event.accept(ModItems.KAPOK_WOODEN_CAULDRON);
+            event.accept(ModItems.LARCH_WOODEN_CAULDRON);
+            event.accept(ModItems.SANDALWOOD_WOODEN_CAULDRON);
+            event.accept(ModItems.SYCAMORE_WOODEN_CAULDRON);
+            event.accept(ModItems.TEAK_WOODEN_CAULDRON);
+            event.accept(ModItems.WENGE_WOODEN_CAULDRON);
+            event.accept(ModItems.ZEBRAWOOD_WOODEN_CAULDRON);
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
@@ -300,6 +336,20 @@ public class WoodenUtilities {
             event.accept(ModItems.BWG_WILLOW_WOODEN_BARREL);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_BARREL);
             event.accept(ModItems.ZELKOVA_WOODEN_BARREL);
+            event.accept(ModItems.AFRICAN_BLACKWOOD_WOODEN_BARREL);
+            event.accept(ModItems.BANYAN_WOODEN_BARREL);
+            event.accept(ModItems.BLACK_WALNUT_WOODEN_BARREL);
+            event.accept(ModItems.BLOODWOOD_WOODEN_BARREL);
+            event.accept(ModItems.BRISTLECONE_PINE_WOODEN_BARREL);
+            event.accept(ModItems.CORK_OAK_WOODEN_BARREL);
+            event.accept(ModItems.DRAGON_BLOOD_WOODEN_BARREL);
+            event.accept(ModItems.KAPOK_WOODEN_BARREL);
+            event.accept(ModItems.LARCH_WOODEN_BARREL);
+            event.accept(ModItems.SANDALWOOD_WOODEN_BARREL);
+            event.accept(ModItems.SYCAMORE_WOODEN_BARREL);
+            event.accept(ModItems.TEAK_WOODEN_BARREL);
+            event.accept(ModItems.WENGE_WOODEN_BARREL);
+            event.accept(ModItems.ZEBRAWOOD_WOODEN_BARREL);
             event.accept(ModItems.OAK_WOODEN_HOPPER);
             event.accept(ModItems.SPRUCE_WOODEN_HOPPER);
             event.accept(ModItems.BIRCH_WOODEN_HOPPER);
@@ -365,6 +415,20 @@ public class WoodenUtilities {
             event.accept(ModItems.BWG_WILLOW_WOODEN_HOPPER);
             event.accept(ModItems.WITCH_HAZEL_WOODEN_HOPPER);
             event.accept(ModItems.ZELKOVA_WOODEN_HOPPER);
+            event.accept(ModItems.AFRICAN_BLACKWOOD_WOODEN_HOPPER);
+            event.accept(ModItems.BANYAN_WOODEN_HOPPER);
+            event.accept(ModItems.BLACK_WALNUT_WOODEN_HOPPER);
+            event.accept(ModItems.BLOODWOOD_WOODEN_HOPPER);
+            event.accept(ModItems.BRISTLECONE_PINE_WOODEN_HOPPER);
+            event.accept(ModItems.CORK_OAK_WOODEN_HOPPER);
+            event.accept(ModItems.DRAGON_BLOOD_WOODEN_HOPPER);
+            event.accept(ModItems.KAPOK_WOODEN_HOPPER);
+            event.accept(ModItems.LARCH_WOODEN_HOPPER);
+            event.accept(ModItems.SANDALWOOD_WOODEN_HOPPER);
+            event.accept(ModItems.SYCAMORE_WOODEN_HOPPER);
+            event.accept(ModItems.TEAK_WOODEN_HOPPER);
+            event.accept(ModItems.WENGE_WOODEN_HOPPER);
+            event.accept(ModItems.ZEBRAWOOD_WOODEN_HOPPER);
         }
     }
 }

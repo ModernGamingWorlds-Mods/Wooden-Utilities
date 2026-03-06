@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:bloodwood_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:bloodwood_door",
+    "count": 3
+  }
+}

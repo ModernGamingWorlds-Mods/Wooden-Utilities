@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:zebrawood_planks"
+    },
+    "S": {
+      "item": "woodenutilities:zebrawood_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:zebrawood_wooden_barrel"
+  }
+}

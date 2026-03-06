@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:banyan_wood"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:banyan_planks",
+    "count": 4
+  }
+}

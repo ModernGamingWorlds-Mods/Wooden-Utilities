@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "woodenutilities:block/african_blackwood_planks"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:bristlecone_pine_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:bristlecone_pine_button"
+  }
+}

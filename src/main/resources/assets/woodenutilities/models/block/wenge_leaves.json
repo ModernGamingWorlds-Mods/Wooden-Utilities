@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "woodenutilities:block/wenge_leaves"
+  }
+}

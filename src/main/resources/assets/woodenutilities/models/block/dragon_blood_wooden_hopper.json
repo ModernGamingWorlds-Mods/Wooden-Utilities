@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "woodenutilities:block/dragon_blood_planks",
+    "top": "woodenutilities:block/dragon_blood_planks",
+    "side": "woodenutilities:block/dragon_blood_planks",
+    "inside": "woodenutilities:block/dragon_blood_planks"
+  }
+}

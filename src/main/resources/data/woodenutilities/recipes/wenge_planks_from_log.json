@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:wenge_log"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:wenge_planks",
+    "count": 4
+  }
+}

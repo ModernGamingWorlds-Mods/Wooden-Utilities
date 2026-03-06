@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:sandalwood_planks"
+    },
+    "S": {
+      "item": "woodenutilities:sandalwood_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:sandalwood_wooden_barrel"
+  }
+}

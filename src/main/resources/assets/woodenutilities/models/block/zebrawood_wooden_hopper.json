@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "woodenutilities:block/zebrawood_planks",
+    "top": "woodenutilities:block/zebrawood_planks",
+    "side": "woodenutilities:block/zebrawood_planks",
+    "inside": "woodenutilities:block/zebrawood_planks"
+  }
+}

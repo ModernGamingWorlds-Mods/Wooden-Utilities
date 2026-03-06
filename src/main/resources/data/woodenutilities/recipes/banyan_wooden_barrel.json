@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:banyan_planks"
+    },
+    "S": {
+      "item": "woodenutilities:banyan_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:banyan_wooden_barrel"
+  }
+}

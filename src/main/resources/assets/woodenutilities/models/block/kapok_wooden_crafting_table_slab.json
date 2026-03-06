@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "woodenutilities:block/kapok_planks",
+    "side": "woodenutilities:block/kapok_planks",
+    "top": "minecraft:block/crafting_table_top"
+  }
+}

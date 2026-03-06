@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:bristlecone_pine_planks"
+    },
+    "S": {
+      "item": "woodenutilities:bristlecone_pine_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:bristlecone_pine_wooden_barrel"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "woodenutilities:block/dragon_blood_planks",
+    "east": "woodenutilities:block/dragon_blood_planks",
+    "north": "woodenutilities:block/dragon_blood_planks",
+    "particle": "minecraft:block/crafting_table_front",
+    "south": "woodenutilities:block/dragon_blood_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "west": "woodenutilities:block/dragon_blood_planks"
+  }
+}

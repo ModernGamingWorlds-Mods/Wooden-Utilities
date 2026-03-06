@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "woodenutilities:block/wenge_planks",
+    "top": "woodenutilities:block/wenge_planks",
+    "side": "woodenutilities:block/wenge_planks",
+    "inside": "woodenutilities:block/wenge_planks"
+  }
+}

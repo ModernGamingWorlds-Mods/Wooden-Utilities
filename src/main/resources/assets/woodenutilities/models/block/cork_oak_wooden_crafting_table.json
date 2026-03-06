@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "woodenutilities:block/cork_oak_planks",
+    "east": "woodenutilities:block/cork_oak_planks",
+    "north": "woodenutilities:block/cork_oak_planks",
+    "particle": "minecraft:block/crafting_table_front",
+    "south": "woodenutilities:block/cork_oak_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "west": "woodenutilities:block/cork_oak_planks"
+  }
+}

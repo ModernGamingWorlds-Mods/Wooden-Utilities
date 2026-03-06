@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "woodenutilities:block/banyan_planks",
+    "side": "woodenutilities:block/banyan_planks",
+    "top": "woodenutilities:block/banyan_planks"
+  }
+}

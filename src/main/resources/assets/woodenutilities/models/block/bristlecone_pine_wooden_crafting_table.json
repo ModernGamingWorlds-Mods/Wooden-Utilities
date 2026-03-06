@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "woodenutilities:block/bristlecone_pine_planks",
+    "east": "woodenutilities:block/bristlecone_pine_planks",
+    "north": "woodenutilities:block/bristlecone_pine_planks",
+    "particle": "minecraft:block/crafting_table_front",
+    "south": "woodenutilities:block/bristlecone_pine_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "west": "woodenutilities:block/bristlecone_pine_planks"
+  }
+}

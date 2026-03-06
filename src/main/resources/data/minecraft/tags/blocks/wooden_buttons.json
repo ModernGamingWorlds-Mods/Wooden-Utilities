@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:african_blackwood_button",
+    "woodenutilities:banyan_button",
+    "woodenutilities:black_walnut_button",
+    "woodenutilities:bloodwood_button",
+    "woodenutilities:bristlecone_pine_button",
+    "woodenutilities:cork_oak_button",
+    "woodenutilities:dragon_blood_button",
+    "woodenutilities:kapok_button",
+    "woodenutilities:larch_button",
+    "woodenutilities:sandalwood_button",
+    "woodenutilities:sycamore_button",
+    "woodenutilities:teak_button",
+    "woodenutilities:wenge_button",
+    "woodenutilities:zebrawood_button"
+  ]
+}

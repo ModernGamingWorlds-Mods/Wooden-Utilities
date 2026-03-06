@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "woodenutilities:block/african_blackwood_planks"
+  }
+}

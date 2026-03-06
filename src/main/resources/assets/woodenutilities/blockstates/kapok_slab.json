@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodenutilities:block/kapok_slab"
+    },
+    "type=double": {
+      "model": "woodenutilities:block/kapok_planks"
+    },
+    "type=top": {
+      "model": "woodenutilities:block/kapok_slab_top"
+    }
+  }
+}

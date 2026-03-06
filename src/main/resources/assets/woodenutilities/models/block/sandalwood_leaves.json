@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "woodenutilities:block/sandalwood_leaves"
+  }
+}

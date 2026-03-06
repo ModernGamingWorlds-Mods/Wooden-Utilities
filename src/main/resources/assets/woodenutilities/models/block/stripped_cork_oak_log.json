@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "woodenutilities:block/cork_oak_stripped_log_top",
+    "side": "woodenutilities:block/cork_oak_stripped_log_side"
+  }
+}

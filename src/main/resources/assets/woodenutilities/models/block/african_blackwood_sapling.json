@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "woodenutilities:block/african_blackwood_sapling"
+  }
+}

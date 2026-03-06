@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:stripped_black_walnut_wood"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:black_walnut_planks",
+    "count": 4
+  }
+}

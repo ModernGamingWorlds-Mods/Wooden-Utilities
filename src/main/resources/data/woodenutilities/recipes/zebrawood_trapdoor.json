@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:zebrawood_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:zebrawood_trapdoor",
+    "count": 2
+  }
+}

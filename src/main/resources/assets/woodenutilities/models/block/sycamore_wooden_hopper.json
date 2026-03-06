@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "woodenutilities:block/sycamore_planks",
+    "top": "woodenutilities:block/sycamore_planks",
+    "side": "woodenutilities:block/sycamore_planks",
+    "inside": "woodenutilities:block/sycamore_planks"
+  }
+}

@@ -8,6 +8,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -19,25 +22,62 @@ import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+//? if has_geckolib {
+import software.bernie.geckolib.animatable.GeoBlockEntity;
+//?}
+//? if (has_geckolib && forge) {
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
+//?}
+//? if (has_geckolib && neoforge) {
+/*import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.util.GeckoLibUtil;
+*///?}
 //? if modern_nbt {
 /*import net.minecraft.core.HolderLookup;
 *///?}
 
-public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
+//? if has_geckolib {
+public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity implements GeoBlockEntity {
+//?} else {
+/*public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
+*///?}
+
+    //? if has_geckolib {
+    private static final RawAnimation OPEN_ANIM  = RawAnimation.begin().thenPlay("open");
+    private static final RawAnimation CLOSE_ANIM = RawAnimation.begin().thenPlay("close");
+
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    //?}
 
     private NonNullList<ItemStack> items = NonNullList.withSize(27, ItemStack.EMPTY);
+    private NonNullList<ItemStack> displayItems = NonNullList.withSize(5, ItemStack.EMPTY);
 
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(Level level, BlockPos pos, BlockState state) {
             WoodenBarrelBlockEntity.playSound(level, pos, state, SoundEvents.BARREL_OPEN);
             WoodenBarrelBlockEntity.updateBlockState(level, pos, state, true);
+            WoodenBarrelBlockEntity.this.refreshDisplayItems();
+            level.sendBlockUpdated(pos, level.getBlockState(pos), level.getBlockState(pos), 3);
         }
 
         @Override
         protected void onClose(Level level, BlockPos pos, BlockState state) {
             WoodenBarrelBlockEntity.playSound(level, pos, state, SoundEvents.BARREL_CLOSE);
             WoodenBarrelBlockEntity.updateBlockState(level, pos, state, false);
+            WoodenBarrelBlockEntity.this.displayItems = NonNullList.withSize(5, ItemStack.EMPTY);
+            level.sendBlockUpdated(pos, level.getBlockState(pos), level.getBlockState(pos), 3);
         }
 
         @Override
@@ -55,6 +95,36 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
     public WoodenBarrelBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.WOODEN_BARREL.get(), pos, state);
     }
+
+    // ── GeoBlockEntity ──────────────────────────────────────────────────────
+
+    //? if (has_geckolib && forge) {
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar registrar) {
+        registrar.add(new AnimationController<>(this, "barrel_controller", 0, this::animPredicate));
+    }
+    //?}
+    //? if (has_geckolib && neoforge) {
+    /*@Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar registrar) {
+        registrar.add(new AnimationController<>(this, "barrel_controller", this::animPredicate));
+    }
+    *///?}
+    //? if has_geckolib {
+    private PlayState animPredicate(AnimationState<WoodenBarrelBlockEntity> state) {
+        if (getLevel() == null) return PlayState.STOP;
+        boolean open = getBlockState().getValue(BarrelBlock.OPEN);
+        state.getController().setAnimation(open ? OPEN_ANIM : CLOSE_ANIM);
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
+    }
+    //?}
+
+    // ── Container ───────────────────────────────────────────────────────────
 
     @Override
     public int getContainerSize() {
@@ -131,9 +201,59 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity {
         }
     }
 
-    public static void lidAnimateTick(Level level, BlockPos pos, BlockState state, WoodenBarrelBlockEntity be) {
-        be.openersCounter.recheckOpeners(level, pos, state);
+    // ── Display items (synced on open/close only) ────────────────────────────
+
+    private void refreshDisplayItems() {
+        int idx = 0;
+        for (ItemStack stack : this.items) {
+            if (!stack.isEmpty()) {
+                this.displayItems.set(idx, stack.copy());
+                if (++idx >= 5) break;
+            }
+        }
+        while (idx < 5) this.displayItems.set(idx++, ItemStack.EMPTY);
     }
+
+    public NonNullList<ItemStack> getDisplayItems() {
+        return this.displayItems;
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    //? if modern_nbt {
+    /*@Override
+    public CompoundTag getUpdateTag(net.minecraft.core.HolderLookup.Provider registries) {
+        CompoundTag tag = new CompoundTag();
+        ContainerHelper.saveAllItems(tag, this.displayItems, true, registries);
+        return tag;
+    }
+
+    @Override
+    public void handleUpdateTag(CompoundTag tag, net.minecraft.core.HolderLookup.Provider registries) {
+        this.displayItems = NonNullList.withSize(5, ItemStack.EMPTY);
+        ContainerHelper.loadAllItems(tag, this.displayItems, registries);
+    }
+    *///?} else {
+    @Override
+    public CompoundTag getUpdateTag() {
+        CompoundTag tag = new CompoundTag();
+        ContainerHelper.saveAllItems(tag, this.displayItems, true);
+        return tag;
+    }
+
+    @Override
+    public void onDataPacket(net.minecraft.network.Connection connection,
+                             ClientboundBlockEntityDataPacket packet) {
+        CompoundTag tag = packet.getTag();
+        if (tag != null) {
+            this.displayItems = NonNullList.withSize(5, ItemStack.EMPTY);
+            ContainerHelper.loadAllItems(tag, this.displayItems);
+        }
+    }
+    //?}
 
     static void playSound(Level level, BlockPos pos, BlockState state, SoundEvent sound) {
         double dx = pos.getX() + 0.5, dy = pos.getY() + 0.5, dz = pos.getZ() + 0.5;

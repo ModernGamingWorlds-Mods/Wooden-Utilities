@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "woodenutilities:block/bloodwood_planks",
+    "side": "woodenutilities:block/bloodwood_planks",
+    "top": "minecraft:block/crafting_table_top"
+  }
+}

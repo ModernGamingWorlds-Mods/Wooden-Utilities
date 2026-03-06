@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:sandalwood_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:sandalwood_pressure_plate"
+  }
+}

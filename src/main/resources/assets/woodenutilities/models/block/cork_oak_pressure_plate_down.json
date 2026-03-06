@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "woodenutilities:block/cork_oak_planks"
+  }
+}

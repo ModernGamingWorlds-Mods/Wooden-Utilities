@@ -33,3 +33,17 @@ ${mod_description}
     versionRange="[${jei_version},)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="geckolib"
+    type="required"
+    versionRange="[4,)"
+    ordering="BEFORE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="sophisticatedstorage"
+    type="optional"
+    versionRange="[1.5,)"
+    ordering="NONE"
+    side="BOTH"

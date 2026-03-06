@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper_side",
+  "textures": {
+    "particle": "woodenutilities:block/bloodwood_planks",
+    "top": "woodenutilities:block/bloodwood_planks",
+    "side": "woodenutilities:block/bloodwood_planks",
+    "inside": "woodenutilities:block/bloodwood_planks"
+  }
+}

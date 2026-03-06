@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodenutilities:block/sandalwood_slab"
+    },
+    "type=double": {
+      "model": "woodenutilities:block/sandalwood_planks"
+    },
+    "type=top": {
+      "model": "woodenutilities:block/sandalwood_slab_top"
+    }
+  }
+}

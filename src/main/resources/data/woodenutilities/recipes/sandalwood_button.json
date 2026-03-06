@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:sandalwood_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:sandalwood_button"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "woodenutilities:block/sycamore_log_top",
+    "side": "woodenutilities:block/sycamore_log_side"
+  }
+}

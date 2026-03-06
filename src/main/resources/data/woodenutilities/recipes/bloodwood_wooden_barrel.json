@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:bloodwood_planks"
+    },
+    "S": {
+      "item": "woodenutilities:bloodwood_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:bloodwood_wooden_barrel"
+  }
+}

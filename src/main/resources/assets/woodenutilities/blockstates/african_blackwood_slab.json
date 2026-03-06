@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodenutilities:block/african_blackwood_slab"
+    },
+    "type=double": {
+      "model": "woodenutilities:block/african_blackwood_planks"
+    },
+    "type=top": {
+      "model": "woodenutilities:block/african_blackwood_slab_top"
+    }
+  }
+}

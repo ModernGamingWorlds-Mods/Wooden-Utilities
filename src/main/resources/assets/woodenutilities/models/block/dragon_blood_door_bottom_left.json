@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "woodenutilities:block/dragon_blood_planks",
+    "top": "woodenutilities:block/dragon_blood_planks"
+  }
+}

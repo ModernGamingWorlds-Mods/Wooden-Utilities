@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "rotation=0": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=1": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=2": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=3": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=4": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=5": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=6": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=7": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=8": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=9": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=10": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=11": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=12": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=13": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=14": {
+      "model": "woodenutilities:block/teak_sign"
+    },
+    "rotation=15": {
+      "model": "woodenutilities:block/teak_sign"
+    }
+  }
+}

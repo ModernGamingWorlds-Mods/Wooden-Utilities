@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:teak_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:teak_trapdoor",
+    "count": 2
+  }
+}

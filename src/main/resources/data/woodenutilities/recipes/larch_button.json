@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:larch_planks"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:larch_button"
+  }
+}

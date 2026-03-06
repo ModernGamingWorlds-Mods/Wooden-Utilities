@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:stripped_dragon_blood_log"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:dragon_blood_planks",
+    "count": 4
+  }
+}

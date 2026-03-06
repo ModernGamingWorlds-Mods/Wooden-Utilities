@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:african_blackwood_fence",
+    "woodenutilities:banyan_fence",
+    "woodenutilities:black_walnut_fence",
+    "woodenutilities:bloodwood_fence",
+    "woodenutilities:bristlecone_pine_fence",
+    "woodenutilities:cork_oak_fence",
+    "woodenutilities:dragon_blood_fence",
+    "woodenutilities:kapok_fence",
+    "woodenutilities:larch_fence",
+    "woodenutilities:sandalwood_fence",
+    "woodenutilities:sycamore_fence",
+    "woodenutilities:teak_fence",
+    "woodenutilities:wenge_fence",
+    "woodenutilities:zebrawood_fence"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "woodenutilities:block/zebrawood_planks",
+    "side": "woodenutilities:block/zebrawood_planks",
+    "top": "woodenutilities:block/zebrawood_planks"
+  }
+}

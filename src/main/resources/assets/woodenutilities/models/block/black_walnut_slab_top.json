@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "woodenutilities:block/black_walnut_planks",
+    "side": "woodenutilities:block/black_walnut_planks",
+    "top": "woodenutilities:block/black_walnut_planks"
+  }
+}

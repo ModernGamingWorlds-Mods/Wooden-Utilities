@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:teak_log"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:teak_planks",
+    "count": 4
+  }
+}

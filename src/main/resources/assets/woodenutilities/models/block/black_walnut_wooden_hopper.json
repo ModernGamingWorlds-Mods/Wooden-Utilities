@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/hopper",
+  "textures": {
+    "particle": "woodenutilities:block/black_walnut_planks",
+    "top": "woodenutilities:block/black_walnut_planks",
+    "side": "woodenutilities:block/black_walnut_planks",
+    "inside": "woodenutilities:block/black_walnut_planks"
+  }
+}

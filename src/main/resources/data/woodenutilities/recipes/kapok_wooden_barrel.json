@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:kapok_planks"
+    },
+    "S": {
+      "item": "woodenutilities:kapok_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:kapok_wooden_barrel"
+  }
+}

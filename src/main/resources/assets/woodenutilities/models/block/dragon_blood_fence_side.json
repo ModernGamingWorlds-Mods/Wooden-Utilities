@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "woodenutilities:block/dragon_blood_planks"
+  }
+}

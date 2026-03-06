@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:sycamore_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:sycamore_slab",
+    "count": 6
+  }
+}

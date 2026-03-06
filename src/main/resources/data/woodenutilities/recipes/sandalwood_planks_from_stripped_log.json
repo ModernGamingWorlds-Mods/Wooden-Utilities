@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:stripped_sandalwood_log"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:sandalwood_planks",
+    "count": 4
+  }
+}

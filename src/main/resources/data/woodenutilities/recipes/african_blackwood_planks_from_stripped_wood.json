@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "woodenutilities:stripped_african_blackwood_wood"
+    }
+  ],
+  "result": {
+    "item": "woodenutilities:african_blackwood_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "# #",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:wenge_planks"
+    },
+    "S": {
+      "item": "woodenutilities:wenge_slab"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:wenge_wooden_barrel"
+  }
+}

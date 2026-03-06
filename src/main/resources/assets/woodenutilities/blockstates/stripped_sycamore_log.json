@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "woodenutilities:block/stripped_sycamore_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "woodenutilities:block/stripped_sycamore_log"
+    },
+    "axis=z": {
+      "model": "woodenutilities:block/stripped_sycamore_log",
+      "x": 90
+    }
+  }
+}

@@ -1,15 +1,13 @@
 package com.moderngamingworld.woodenutilities;
 
-import com.moderngamingworld.woodenutilities.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BarrelBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -33,10 +31,12 @@ public class WoodenBarrelBlock extends BarrelBlock {
     }
 
     @Override
-    @Nullable
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide ? createTickerHelper(type, ModBlockEntities.WOODEN_BARREL.get(),
-                WoodenBarrelBlockEntity::lidAnimateTick) : null;
+    public RenderShape getRenderShape(BlockState state) {
+        //? if has_geckolib {
+        return RenderShape.ENTITYBLOCK_ANIMATED;
+        //?} else {
+        /*return RenderShape.MODEL;
+        *///?}
     }
 
     //? if neoforge {

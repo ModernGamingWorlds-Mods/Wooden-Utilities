@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "woodenutilities:block/zebrawood_log_side",
+    "side": "woodenutilities:block/zebrawood_log_side"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:wenge_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:wenge_pressure_plate"
+  }
+}

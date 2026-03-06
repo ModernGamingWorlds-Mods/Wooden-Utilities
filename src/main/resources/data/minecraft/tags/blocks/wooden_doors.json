@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:african_blackwood_door",
+    "woodenutilities:banyan_door",
+    "woodenutilities:black_walnut_door",
+    "woodenutilities:bloodwood_door",
+    "woodenutilities:bristlecone_pine_door",
+    "woodenutilities:cork_oak_door",
+    "woodenutilities:dragon_blood_door",
+    "woodenutilities:kapok_door",
+    "woodenutilities:larch_door",
+    "woodenutilities:sandalwood_door",
+    "woodenutilities:sycamore_door",
+    "woodenutilities:teak_door",
+    "woodenutilities:wenge_door",
+    "woodenutilities:zebrawood_door"
+  ]
+}

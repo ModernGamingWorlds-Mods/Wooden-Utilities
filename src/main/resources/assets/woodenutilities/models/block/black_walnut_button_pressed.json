@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "woodenutilities:block/black_walnut_planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "woodenutilities:block/wenge_slab"
+    },
+    "type=double": {
+      "model": "woodenutilities:block/wenge_planks"
+    },
+    "type=top": {
+      "model": "woodenutilities:block/wenge_slab_top"
+    }
+  }
+}

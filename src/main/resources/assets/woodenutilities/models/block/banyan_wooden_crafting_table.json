@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "woodenutilities:block/banyan_planks",
+    "east": "woodenutilities:block/banyan_planks",
+    "north": "woodenutilities:block/banyan_planks",
+    "particle": "minecraft:block/crafting_table_front",
+    "south": "woodenutilities:block/banyan_planks",
+    "up": "minecraft:block/crafting_table_top",
+    "west": "woodenutilities:block/banyan_planks"
+  }
+}

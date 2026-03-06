@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "woodenutilities:african_blackwood_trapdoor",
+    "woodenutilities:banyan_trapdoor",
+    "woodenutilities:black_walnut_trapdoor",
+    "woodenutilities:bloodwood_trapdoor",
+    "woodenutilities:bristlecone_pine_trapdoor",
+    "woodenutilities:cork_oak_trapdoor",
+    "woodenutilities:dragon_blood_trapdoor",
+    "woodenutilities:kapok_trapdoor",
+    "woodenutilities:larch_trapdoor",
+    "woodenutilities:sandalwood_trapdoor",
+    "woodenutilities:sycamore_trapdoor",
+    "woodenutilities:teak_trapdoor",
+    "woodenutilities:wenge_trapdoor",
+    "woodenutilities:zebrawood_trapdoor"
+  ]
+}
