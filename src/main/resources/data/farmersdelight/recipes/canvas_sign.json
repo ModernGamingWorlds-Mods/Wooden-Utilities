@@ -1,0 +1,35 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "woodenutilities"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "farmersdelight:canvas"
+    },
+    "/": {
+      "tag": "forge:rods/wooden"
+    },
+    "w": {
+      "tag": "woodenutilities:wooden_plates"
+    }
+  },
+  "pattern": [
+    "w#w",
+    "w#w",
+    " / "
+  ],
+  "result": {
+    "count": 3,
+    "item": "farmersdelight:canvas_sign"
+  },
+  "show_notification": true
+}
