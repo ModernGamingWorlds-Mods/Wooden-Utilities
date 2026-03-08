@@ -1,8 +1,8 @@
 [![Curseforge][curseImg]][curseLink] [![Twitch Status](https://img.shields.io/twitch/status/ModernGamingWorld?label=ModernGamingWorld&style=social)](https://www.twitch.tv/moderngamingworld) [![Discord][discordimg]][discordlink]
 
-[discordImg]: https://img.shields.io/discord/808837174387671090?color=7289DA&label=Modern%27s%20Place&style=flat-square
+[discordImg]: https://img.shields.io/discord/912551516592816170?logo=Discord&label=Everlasting%20Creativity
 
-[discordLink]: https://discord.gg/ATdtPejdJ8
+[discordLink]: https://discord.gg/EVA2pznvjb
 
 [curseImg]: http://cf.way2muchnoise.eu/409871.svg
 
