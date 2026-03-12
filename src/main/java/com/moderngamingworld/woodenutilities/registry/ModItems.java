@@ -786,7 +786,7 @@ public final class ModItems {
     public static final DeferredItem<Item> ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("zelkova_wooden_crafting_table_slab",
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
 
-    // ── African Blackwood ──────────────────────────────────
+    // -- African Blackwood ----------------------------------
     public static final DeferredItem<Item> AFRICAN_BLACKWOOD_LOG = ITEMS.register("african_blackwood_log",
         () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_AFRICAN_BLACKWOOD_LOG = ITEMS.register("stripped_african_blackwood_log",
@@ -838,7 +838,7 @@ public final class ModItems {
     public static final DeferredItem<Item> AFRICAN_BLACKWOOD_WOODEN_PLATE = ITEMS.register("african_blackwood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Banyan ──────────────────────────────────
+    // -- Banyan ----------------------------------
     public static final DeferredItem<Item> BANYAN_LOG = ITEMS.register("banyan_log",
         () -> new BlockItem(ModBlocks.BANYAN_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_BANYAN_LOG = ITEMS.register("stripped_banyan_log",
@@ -890,7 +890,7 @@ public final class ModItems {
     public static final DeferredItem<Item> BANYAN_WOODEN_PLATE = ITEMS.register("banyan_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Black Walnut ──────────────────────────────────
+    // -- Black Walnut ----------------------------------
     public static final DeferredItem<Item> BLACK_WALNUT_LOG = ITEMS.register("black_walnut_log",
         () -> new BlockItem(ModBlocks.BLACK_WALNUT_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_BLACK_WALNUT_LOG = ITEMS.register("stripped_black_walnut_log",
@@ -942,7 +942,7 @@ public final class ModItems {
     public static final DeferredItem<Item> BLACK_WALNUT_WOODEN_PLATE = ITEMS.register("black_walnut_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Bloodwood ──────────────────────────────────
+    // -- Bloodwood ----------------------------------
     public static final DeferredItem<Item> BLOODWOOD_LOG = ITEMS.register("bloodwood_log",
         () -> new BlockItem(ModBlocks.BLOODWOOD_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_BLOODWOOD_LOG = ITEMS.register("stripped_bloodwood_log",
@@ -994,7 +994,7 @@ public final class ModItems {
     public static final DeferredItem<Item> BLOODWOOD_WOODEN_PLATE = ITEMS.register("bloodwood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Bristlecone Pine ──────────────────────────────────
+    // -- Bristlecone Pine ----------------------------------
     public static final DeferredItem<Item> BRISTLECONE_PINE_LOG = ITEMS.register("bristlecone_pine_log",
         () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_BRISTLECONE_PINE_LOG = ITEMS.register("stripped_bristlecone_pine_log",
@@ -1046,7 +1046,7 @@ public final class ModItems {
     public static final DeferredItem<Item> BRISTLECONE_PINE_WOODEN_PLATE = ITEMS.register("bristlecone_pine_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Cork Oak ──────────────────────────────────
+    // -- Cork Oak ----------------------------------
     public static final DeferredItem<Item> CORK_OAK_LOG = ITEMS.register("cork_oak_log",
         () -> new BlockItem(ModBlocks.CORK_OAK_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_CORK_OAK_LOG = ITEMS.register("stripped_cork_oak_log",
@@ -1098,7 +1098,7 @@ public final class ModItems {
     public static final DeferredItem<Item> CORK_OAK_WOODEN_PLATE = ITEMS.register("cork_oak_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Dragon Blood ──────────────────────────────────
+    // -- Dragon Blood ----------------------------------
     public static final DeferredItem<Item> DRAGON_BLOOD_LOG = ITEMS.register("dragon_blood_log",
         () -> new BlockItem(ModBlocks.DRAGON_BLOOD_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_DRAGON_BLOOD_LOG = ITEMS.register("stripped_dragon_blood_log",
@@ -1150,7 +1150,7 @@ public final class ModItems {
     public static final DeferredItem<Item> DRAGON_BLOOD_WOODEN_PLATE = ITEMS.register("dragon_blood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Kapok ──────────────────────────────────
+    // -- Kapok ----------------------------------
     public static final DeferredItem<Item> KAPOK_LOG = ITEMS.register("kapok_log",
         () -> new BlockItem(ModBlocks.KAPOK_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_KAPOK_LOG = ITEMS.register("stripped_kapok_log",
@@ -1202,7 +1202,7 @@ public final class ModItems {
     public static final DeferredItem<Item> KAPOK_WOODEN_PLATE = ITEMS.register("kapok_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Larch ──────────────────────────────────
+    // -- Larch ----------------------------------
     public static final DeferredItem<Item> LARCH_LOG = ITEMS.register("larch_log",
         () -> new BlockItem(ModBlocks.LARCH_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_LARCH_LOG = ITEMS.register("stripped_larch_log",
@@ -1254,7 +1254,7 @@ public final class ModItems {
     public static final DeferredItem<Item> LARCH_WOODEN_PLATE = ITEMS.register("larch_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Sandalwood ──────────────────────────────────
+    // -- Sandalwood ----------------------------------
     public static final DeferredItem<Item> SANDALWOOD_LOG = ITEMS.register("sandalwood_log",
         () -> new BlockItem(ModBlocks.SANDALWOOD_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_SANDALWOOD_LOG = ITEMS.register("stripped_sandalwood_log",
@@ -1306,7 +1306,7 @@ public final class ModItems {
     public static final DeferredItem<Item> SANDALWOOD_WOODEN_PLATE = ITEMS.register("sandalwood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Sycamore ──────────────────────────────────
+    // -- Sycamore ----------------------------------
     public static final DeferredItem<Item> SYCAMORE_LOG = ITEMS.register("sycamore_log",
         () -> new BlockItem(ModBlocks.SYCAMORE_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_SYCAMORE_LOG = ITEMS.register("stripped_sycamore_log",
@@ -1358,7 +1358,7 @@ public final class ModItems {
     public static final DeferredItem<Item> SYCAMORE_WOODEN_PLATE = ITEMS.register("sycamore_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Teak ──────────────────────────────────
+    // -- Teak ----------------------------------
     public static final DeferredItem<Item> TEAK_LOG = ITEMS.register("teak_log",
         () -> new BlockItem(ModBlocks.TEAK_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_TEAK_LOG = ITEMS.register("stripped_teak_log",
@@ -1410,7 +1410,7 @@ public final class ModItems {
     public static final DeferredItem<Item> TEAK_WOODEN_PLATE = ITEMS.register("teak_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Wenge ──────────────────────────────────
+    // -- Wenge ----------------------------------
     public static final DeferredItem<Item> WENGE_LOG = ITEMS.register("wenge_log",
         () -> new BlockItem(ModBlocks.WENGE_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_WENGE_LOG = ITEMS.register("stripped_wenge_log",
@@ -1462,7 +1462,7 @@ public final class ModItems {
     public static final DeferredItem<Item> WENGE_WOODEN_PLATE = ITEMS.register("wenge_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Zebrawood ──────────────────────────────────
+    // -- Zebrawood ----------------------------------
     public static final DeferredItem<Item> ZEBRAWOOD_LOG = ITEMS.register("zebrawood_log",
         () -> new BlockItem(ModBlocks.ZEBRAWOOD_LOG.get(), new Item.Properties()));
     public static final DeferredItem<Item> STRIPPED_ZEBRAWOOD_LOG = ITEMS.register("stripped_zebrawood_log",
@@ -1514,7 +1514,7 @@ public final class ModItems {
     public static final DeferredItem<Item> ZEBRAWOOD_WOODEN_PLATE = ITEMS.register("zebrawood_wooden_plate",
         () -> new Item(new Item.Properties()));
     
-    // ── Wooden Chest Items (NeoForge) ───────────────────────────────────────
+    // -- Wooden Chest Items (NeoForge) ---------------------------------------
     public static final DeferredItem<Item> WOODEN_CHEST = ITEMS.register("wooden_chest",
         () -> new WoodenChestBlockItem(ModBlocks.WOODEN_CHEST.get(), new Item.Properties()));
     public static final DeferredItem<Item> OAK_WOODEN_CHEST = ITEMS.register("oak_wooden_chest",
@@ -2421,7 +2421,7 @@ public final class ModItems {
     public static final RegistryObject<Item> ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB = ITEMS.register("zelkova_wooden_crafting_table_slab",
         () -> new BlockItem(ModBlocks.ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB.get(), new Item.Properties()));
 
-    // ── African Blackwood ──────────────────────────────────
+    // -- African Blackwood ----------------------------------
     public static final RegistryObject<Item> AFRICAN_BLACKWOOD_LOG = ITEMS.register("african_blackwood_log",
         () -> new BlockItem(ModBlocks.AFRICAN_BLACKWOOD_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_AFRICAN_BLACKWOOD_LOG = ITEMS.register("stripped_african_blackwood_log",
@@ -2473,7 +2473,7 @@ public final class ModItems {
     public static final RegistryObject<Item> AFRICAN_BLACKWOOD_WOODEN_PLATE = ITEMS.register("african_blackwood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Banyan ──────────────────────────────────
+    // -- Banyan ----------------------------------
     public static final RegistryObject<Item> BANYAN_LOG = ITEMS.register("banyan_log",
         () -> new BlockItem(ModBlocks.BANYAN_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_BANYAN_LOG = ITEMS.register("stripped_banyan_log",
@@ -2525,7 +2525,7 @@ public final class ModItems {
     public static final RegistryObject<Item> BANYAN_WOODEN_PLATE = ITEMS.register("banyan_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Black Walnut ──────────────────────────────────
+    // -- Black Walnut ----------------------------------
     public static final RegistryObject<Item> BLACK_WALNUT_LOG = ITEMS.register("black_walnut_log",
         () -> new BlockItem(ModBlocks.BLACK_WALNUT_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_BLACK_WALNUT_LOG = ITEMS.register("stripped_black_walnut_log",
@@ -2577,7 +2577,7 @@ public final class ModItems {
     public static final RegistryObject<Item> BLACK_WALNUT_WOODEN_PLATE = ITEMS.register("black_walnut_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Bloodwood ──────────────────────────────────
+    // -- Bloodwood ----------------------------------
     public static final RegistryObject<Item> BLOODWOOD_LOG = ITEMS.register("bloodwood_log",
         () -> new BlockItem(ModBlocks.BLOODWOOD_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_BLOODWOOD_LOG = ITEMS.register("stripped_bloodwood_log",
@@ -2629,7 +2629,7 @@ public final class ModItems {
     public static final RegistryObject<Item> BLOODWOOD_WOODEN_PLATE = ITEMS.register("bloodwood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Bristlecone Pine ──────────────────────────────────
+    // -- Bristlecone Pine ----------------------------------
     public static final RegistryObject<Item> BRISTLECONE_PINE_LOG = ITEMS.register("bristlecone_pine_log",
         () -> new BlockItem(ModBlocks.BRISTLECONE_PINE_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_BRISTLECONE_PINE_LOG = ITEMS.register("stripped_bristlecone_pine_log",
@@ -2681,7 +2681,7 @@ public final class ModItems {
     public static final RegistryObject<Item> BRISTLECONE_PINE_WOODEN_PLATE = ITEMS.register("bristlecone_pine_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Cork Oak ──────────────────────────────────
+    // -- Cork Oak ----------------------------------
     public static final RegistryObject<Item> CORK_OAK_LOG = ITEMS.register("cork_oak_log",
         () -> new BlockItem(ModBlocks.CORK_OAK_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_CORK_OAK_LOG = ITEMS.register("stripped_cork_oak_log",
@@ -2733,7 +2733,7 @@ public final class ModItems {
     public static final RegistryObject<Item> CORK_OAK_WOODEN_PLATE = ITEMS.register("cork_oak_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Dragon Blood ──────────────────────────────────
+    // -- Dragon Blood ----------------------------------
     public static final RegistryObject<Item> DRAGON_BLOOD_LOG = ITEMS.register("dragon_blood_log",
         () -> new BlockItem(ModBlocks.DRAGON_BLOOD_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_DRAGON_BLOOD_LOG = ITEMS.register("stripped_dragon_blood_log",
@@ -2785,7 +2785,7 @@ public final class ModItems {
     public static final RegistryObject<Item> DRAGON_BLOOD_WOODEN_PLATE = ITEMS.register("dragon_blood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Kapok ──────────────────────────────────
+    // -- Kapok ----------------------------------
     public static final RegistryObject<Item> KAPOK_LOG = ITEMS.register("kapok_log",
         () -> new BlockItem(ModBlocks.KAPOK_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_KAPOK_LOG = ITEMS.register("stripped_kapok_log",
@@ -2837,7 +2837,7 @@ public final class ModItems {
     public static final RegistryObject<Item> KAPOK_WOODEN_PLATE = ITEMS.register("kapok_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Larch ──────────────────────────────────
+    // -- Larch ----------------------------------
     public static final RegistryObject<Item> LARCH_LOG = ITEMS.register("larch_log",
         () -> new BlockItem(ModBlocks.LARCH_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_LARCH_LOG = ITEMS.register("stripped_larch_log",
@@ -2889,7 +2889,7 @@ public final class ModItems {
     public static final RegistryObject<Item> LARCH_WOODEN_PLATE = ITEMS.register("larch_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Sandalwood ──────────────────────────────────
+    // -- Sandalwood ----------------------------------
     public static final RegistryObject<Item> SANDALWOOD_LOG = ITEMS.register("sandalwood_log",
         () -> new BlockItem(ModBlocks.SANDALWOOD_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_SANDALWOOD_LOG = ITEMS.register("stripped_sandalwood_log",
@@ -2941,7 +2941,7 @@ public final class ModItems {
     public static final RegistryObject<Item> SANDALWOOD_WOODEN_PLATE = ITEMS.register("sandalwood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Sycamore ──────────────────────────────────
+    // -- Sycamore ----------------------------------
     public static final RegistryObject<Item> SYCAMORE_LOG = ITEMS.register("sycamore_log",
         () -> new BlockItem(ModBlocks.SYCAMORE_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_SYCAMORE_LOG = ITEMS.register("stripped_sycamore_log",
@@ -2993,7 +2993,7 @@ public final class ModItems {
     public static final RegistryObject<Item> SYCAMORE_WOODEN_PLATE = ITEMS.register("sycamore_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Teak ──────────────────────────────────
+    // -- Teak ----------------------------------
     public static final RegistryObject<Item> TEAK_LOG = ITEMS.register("teak_log",
         () -> new BlockItem(ModBlocks.TEAK_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_TEAK_LOG = ITEMS.register("stripped_teak_log",
@@ -3045,7 +3045,7 @@ public final class ModItems {
     public static final RegistryObject<Item> TEAK_WOODEN_PLATE = ITEMS.register("teak_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Wenge ──────────────────────────────────
+    // -- Wenge ----------------------------------
     public static final RegistryObject<Item> WENGE_LOG = ITEMS.register("wenge_log",
         () -> new BlockItem(ModBlocks.WENGE_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_WENGE_LOG = ITEMS.register("stripped_wenge_log",
@@ -3097,7 +3097,7 @@ public final class ModItems {
     public static final RegistryObject<Item> WENGE_WOODEN_PLATE = ITEMS.register("wenge_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-    // ── Zebrawood ──────────────────────────────────
+    // -- Zebrawood ----------------------------------
     public static final RegistryObject<Item> ZEBRAWOOD_LOG = ITEMS.register("zebrawood_log",
         () -> new BlockItem(ModBlocks.ZEBRAWOOD_LOG.get(), new Item.Properties()));
     public static final RegistryObject<Item> STRIPPED_ZEBRAWOOD_LOG = ITEMS.register("stripped_zebrawood_log",
@@ -3149,7 +3149,7 @@ public final class ModItems {
     public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_PLATE = ITEMS.register("zebrawood_wooden_plate",
         () -> new Item(new Item.Properties()));
 
-        // ── Wooden Chest Items (Forge) ──────────────────────────────────────────
+        // -- Wooden Chest Items (Forge) ------------------------------------------
     public static final RegistryObject<Item> WOODEN_CHEST = ITEMS.register("wooden_chest",
         () -> new WoodenChestBlockItem(ModBlocks.WOODEN_CHEST.get(), new Item.Properties()));
     public static final RegistryObject<Item> OAK_WOODEN_CHEST = ITEMS.register("oak_wooden_chest",
@@ -3311,7 +3311,7 @@ public final class ModItems {
     public static final RegistryObject<Item> ZEBRAWOOD_WOODEN_CHEST = ITEMS.register("zebrawood_wooden_chest",
         () -> new WoodenChestBlockItem(ModBlocks.ZEBRAWOOD_WOODEN_CHEST.get(), new Item.Properties()));
 
-    // ── Grouped item lists (for addCreative() and ModCreativeTabs) ──────────────────
+    // -- Grouped item lists (for addCreative() and ModCreativeTabs) ------------------
     public static final List<RegistryObject<Item>> ALL_PLATES = List.of(
         OAK_WOODEN_PLATE, SPRUCE_WOODEN_PLATE, BIRCH_WOODEN_PLATE, JUNGLE_WOODEN_PLATE,
         ACACIA_WOODEN_PLATE, DARK_OAK_WOODEN_PLATE, MANGROVE_WOODEN_PLATE, CHERRY_WOODEN_PLATE,

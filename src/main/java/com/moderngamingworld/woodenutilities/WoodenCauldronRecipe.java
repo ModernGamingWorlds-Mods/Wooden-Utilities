@@ -88,7 +88,7 @@ public class WoodenCauldronRecipe implements Recipe<Container> {
 
     public ItemStack getResultCopy() { return result.copy(); }
 
-    // ── Recipe interface stubs ────────────────────────────────────────────────
+    // -- Recipe interface stubs ------------------------------------------------
 
     //? if modern_nbt {
     /*@Override

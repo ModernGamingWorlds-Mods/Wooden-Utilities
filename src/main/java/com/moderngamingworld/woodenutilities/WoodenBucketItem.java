@@ -36,7 +36,7 @@ public class WoodenBucketItem extends Item {
         super(props);
     }
 
-    // ── Fluid storage helpers ─────────────────────────────────────────────────
+    // -- Fluid storage helpers -------------------------------------------------
 
     //? if neoforge {
     /*public static FluidStack getFluid(ItemStack stack) {
@@ -115,7 +115,7 @@ public class WoodenBucketItem extends Item {
     }
     //?}
 
-    // ── Display name changes based on fluid content ───────────────────────────
+    // -- Display name changes based on fluid content ---------------------------
 
     @Override
     public Component getName(ItemStack stack) {
@@ -130,7 +130,7 @@ public class WoodenBucketItem extends Item {
         return super.getName(stack);
     }
 
-    // ── World interaction: pick up / place fluids ─────────────────────────────
+    // -- World interaction: pick up / place fluids -----------------------------
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {

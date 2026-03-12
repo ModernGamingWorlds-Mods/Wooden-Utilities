@@ -96,7 +96,7 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity im
         super(ModBlockEntities.WOODEN_BARREL.get(), pos, state);
     }
 
-    // ── GeoBlockEntity ──────────────────────────────────────────────────────
+    // -- GeoBlockEntity ------------------------------------------------------
 
     //? if (has_geckolib && forge) {
     @Override
@@ -124,7 +124,7 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity im
     }
     //?}
 
-    // ── Container ───────────────────────────────────────────────────────────
+    // -- Container -----------------------------------------------------------
 
     @Override
     public int getContainerSize() {
@@ -201,7 +201,7 @@ public class WoodenBarrelBlockEntity extends RandomizableContainerBlockEntity im
         }
     }
 
-    // ── Display items (synced on open/close only) ────────────────────────────
+    // -- Display items (synced on open/close only) ----------------------------
 
     private void refreshDisplayItems() {
         int idx = 0;

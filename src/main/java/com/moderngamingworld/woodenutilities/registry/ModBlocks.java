@@ -47,9 +47,27 @@ public final class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, WoodenUtilities.MOD_ID);
 
     //? if neoforge {
-        // ── Wooden Cauldrons ──────────────────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
-    /*public static final DeferredHolder<Block, Block> OAK_WOODEN_CAULDRON = BLOCKS.register("oak_wooden_cauldron",
+    /*private static net.minecraft.world.level.block.state.BlockBehaviour.Properties cauldronProps() {
+        return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.CAULDRON);
+    }
+    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties barrelProps() {
+        return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.BARREL);
+    }
+    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties craftingTableProps() {
+        return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.CRAFTING_TABLE);
+    }
+    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties anvilProps() {
+        return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.ANVIL).noOcclusion();
+    }
+    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties hopperProps() {
+        return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.HOPPER);
+    }
+    private static net.minecraft.world.level.block.state.BlockBehaviour.Properties chestProps() {
+        return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.CHEST);
+    }
+         // -- Wooden Cauldrons ------------------------------------------
+         // -- Vanilla ---------------------------------------------------
+    public static final DeferredHolder<Block, Block> OAK_WOODEN_CAULDRON = BLOCKS.register("oak_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final DeferredHolder<Block, Block> SPRUCE_WOODEN_CAULDRON = BLOCKS.register("spruce_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
@@ -72,7 +90,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WARPED_WOODEN_CAULDRON = BLOCKS.register("warped_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final DeferredHolder<Block, Block> TWILIGHT_OAK_WOODEN_CAULDRON = BLOCKS.register("twilight_oak_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final DeferredHolder<Block, Block> CANOPY_WOODEN_CAULDRON = BLOCKS.register("canopy_wooden_cauldron",
@@ -90,7 +108,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> TOWERWOOD_WOODEN_CAULDRON = BLOCKS.register("towerwood_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final DeferredHolder<Block, Block> FIR_WOODEN_CAULDRON = BLOCKS.register("fir_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final DeferredHolder<Block, Block> PINE_WOODEN_CAULDRON = BLOCKS.register("pine_wooden_cauldron",
@@ -118,7 +136,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> EMPYREAL_WOODEN_CAULDRON = BLOCKS.register("empyreal_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final DeferredHolder<Block, Block> ROSEROOT_WOODEN_CAULDRON = BLOCKS.register("roseroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final DeferredHolder<Block, Block> YAGROOT_WOODEN_CAULDRON = BLOCKS.register("yagroot_wooden_cauldron",
@@ -130,11 +148,11 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SUNROOT_WOODEN_CAULDRON = BLOCKS.register("sunroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final DeferredHolder<Block, Block> SKYROOT_WOODEN_CAULDRON = BLOCKS.register("skyroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final DeferredHolder<Block, Block> ASPEN_WOODEN_CAULDRON = BLOCKS.register("aspen_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final DeferredHolder<Block, Block> BAOBAB_WOODEN_CAULDRON = BLOCKS.register("baobab_wooden_cauldron",
@@ -227,8 +245,8 @@ public final class ModBlocks {
         ZELKOVA_WOODEN_CAULDRON
     );
 
-        // ── Wooden Barrels ────────────────────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Barrels --------------------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final DeferredHolder<Block, Block> WOODEN_BARREL = BLOCKS.register("wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final DeferredHolder<Block, Block> OAK_WOODEN_BARREL = BLOCKS.register("oak_wooden_barrel",
@@ -254,7 +272,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WARPED_WOODEN_BARREL = BLOCKS.register("warped_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final DeferredHolder<Block, Block> TWILIGHT_OAK_WOODEN_BARREL = BLOCKS.register("twilight_oak_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final DeferredHolder<Block, Block> CANOPY_WOODEN_BARREL = BLOCKS.register("canopy_wooden_barrel",
@@ -274,7 +292,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> TOWERWOOD_WOODEN_BARREL = BLOCKS.register("towerwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final DeferredHolder<Block, Block> FIR_WOODEN_BARREL = BLOCKS.register("fir_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final DeferredHolder<Block, Block> PINE_WOODEN_BARREL = BLOCKS.register("pine_wooden_barrel",
@@ -302,7 +320,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> EMPYREAL_WOODEN_BARREL = BLOCKS.register("empyreal_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final DeferredHolder<Block, Block> ROSEROOT_WOODEN_BARREL = BLOCKS.register("roseroot_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final DeferredHolder<Block, Block> YAGROOT_WOODEN_BARREL = BLOCKS.register("yagroot_wooden_barrel",
@@ -314,12 +332,12 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SUNROOT_WOODEN_BARREL = BLOCKS.register("sunroot_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final DeferredHolder<Block, Block> SKYROOT_WOODEN_BARREL = BLOCKS.register("skyroot_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final DeferredHolder<Block, Block> ASPEN_WOODEN_BARREL = BLOCKS.register("aspen_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final DeferredHolder<Block, Block> BAOBAB_WOODEN_BARREL = BLOCKS.register("baobab_wooden_barrel",
@@ -373,8 +391,8 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WOODEN_ANVIL = BLOCKS.register("wooden_anvil",
         () -> new WoodenAnvilBlock(anvilProps()));
 
-        // ── Wooden Hoppers ────────────────────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Hoppers --------------------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final DeferredHolder<Block, Block> OAK_WOODEN_HOPPER = BLOCKS.register("oak_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final DeferredHolder<Block, Block> SPRUCE_WOODEN_HOPPER = BLOCKS.register("spruce_wooden_hopper",
@@ -398,7 +416,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WARPED_WOODEN_HOPPER = BLOCKS.register("warped_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final DeferredHolder<Block, Block> TWILIGHT_OAK_WOODEN_HOPPER = BLOCKS.register("twilight_oak_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final DeferredHolder<Block, Block> CANOPY_WOODEN_HOPPER = BLOCKS.register("canopy_wooden_hopper",
@@ -416,7 +434,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> TOWERWOOD_WOODEN_HOPPER = BLOCKS.register("towerwood_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final DeferredHolder<Block, Block> FIR_WOODEN_HOPPER = BLOCKS.register("fir_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final DeferredHolder<Block, Block> PINE_WOODEN_HOPPER = BLOCKS.register("pine_wooden_hopper",
@@ -444,7 +462,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> EMPYREAL_WOODEN_HOPPER = BLOCKS.register("empyreal_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final DeferredHolder<Block, Block> ROSEROOT_WOODEN_HOPPER = BLOCKS.register("roseroot_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final DeferredHolder<Block, Block> YAGROOT_WOODEN_HOPPER = BLOCKS.register("yagroot_wooden_hopper",
@@ -456,11 +474,11 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SUNROOT_WOODEN_HOPPER = BLOCKS.register("sunroot_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final DeferredHolder<Block, Block> SKYROOT_WOODEN_HOPPER = BLOCKS.register("skyroot_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final DeferredHolder<Block, Block> ASPEN_WOODEN_HOPPER = BLOCKS.register("aspen_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final DeferredHolder<Block, Block> BAOBAB_WOODEN_HOPPER = BLOCKS.register("baobab_wooden_hopper",
@@ -514,8 +532,8 @@ public final class ModBlocks {
 
     public static final DeferredHolder<Block, Block> WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
-        // ── Wooden Crafting Table Slabs ───────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Crafting Table Slabs -------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final DeferredHolder<Block, Block> OAK_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("oak_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final DeferredHolder<Block, Block> SPRUCE_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("spruce_wooden_crafting_table_slab",
@@ -539,7 +557,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WARPED_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("warped_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final DeferredHolder<Block, Block> TWILIGHT_OAK_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("twilight_oak_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final DeferredHolder<Block, Block> CANOPY_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("canopy_wooden_crafting_table_slab",
@@ -559,7 +577,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> TOWERWOOD_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("towerwood_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final DeferredHolder<Block, Block> FIR_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("fir_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final DeferredHolder<Block, Block> PINE_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("pine_wooden_crafting_table_slab",
@@ -587,7 +605,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> EMPYREAL_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("empyreal_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final DeferredHolder<Block, Block> ROSEROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("roseroot_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final DeferredHolder<Block, Block> YAGROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("yagroot_wooden_crafting_table_slab",
@@ -599,11 +617,11 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SUNROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("sunroot_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final DeferredHolder<Block, Block> SKYROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("skyroot_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final DeferredHolder<Block, Block> ASPEN_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("aspen_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final DeferredHolder<Block, Block> BAOBAB_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("baobab_wooden_crafting_table_slab",
@@ -655,7 +673,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("zelkova_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── African Blackwood ──────────────────────────────────
+    // -- African Blackwood ----------------------------------
     public static final DeferredHolder<Block, Block> AFRICAN_BLACKWOOD_LOG = BLOCKS.register("african_blackwood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_AFRICAN_BLACKWOOD_LOG = BLOCKS.register("stripped_african_blackwood_log",
@@ -705,7 +723,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> AFRICAN_BLACKWOOD_WOODEN_BARREL = BLOCKS.register("african_blackwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Banyan ──────────────────────────────────
+    // -- Banyan ----------------------------------
     public static final DeferredHolder<Block, Block> BANYAN_LOG = BLOCKS.register("banyan_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_BANYAN_LOG = BLOCKS.register("stripped_banyan_log",
@@ -755,7 +773,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> BANYAN_WOODEN_BARREL = BLOCKS.register("banyan_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Black Walnut ──────────────────────────────────
+    // -- Black Walnut ----------------------------------
     public static final DeferredHolder<Block, Block> BLACK_WALNUT_LOG = BLOCKS.register("black_walnut_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_BLACK_WALNUT_LOG = BLOCKS.register("stripped_black_walnut_log",
@@ -805,7 +823,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> BLACK_WALNUT_WOODEN_BARREL = BLOCKS.register("black_walnut_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Bloodwood ──────────────────────────────────
+    // -- Bloodwood ----------------------------------
     public static final DeferredHolder<Block, Block> BLOODWOOD_LOG = BLOCKS.register("bloodwood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_BLOODWOOD_LOG = BLOCKS.register("stripped_bloodwood_log",
@@ -855,7 +873,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> BLOODWOOD_WOODEN_BARREL = BLOCKS.register("bloodwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Bristlecone Pine ──────────────────────────────────
+    // -- Bristlecone Pine ----------------------------------
     public static final DeferredHolder<Block, Block> BRISTLECONE_PINE_LOG = BLOCKS.register("bristlecone_pine_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_BRISTLECONE_PINE_LOG = BLOCKS.register("stripped_bristlecone_pine_log",
@@ -905,7 +923,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> BRISTLECONE_PINE_WOODEN_BARREL = BLOCKS.register("bristlecone_pine_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Cork Oak ──────────────────────────────────
+    // -- Cork Oak ----------------------------------
     public static final DeferredHolder<Block, Block> CORK_OAK_LOG = BLOCKS.register("cork_oak_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_CORK_OAK_LOG = BLOCKS.register("stripped_cork_oak_log",
@@ -955,7 +973,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> CORK_OAK_WOODEN_BARREL = BLOCKS.register("cork_oak_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Dragon Blood ──────────────────────────────────
+    // -- Dragon Blood ----------------------------------
     public static final DeferredHolder<Block, Block> DRAGON_BLOOD_LOG = BLOCKS.register("dragon_blood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_DRAGON_BLOOD_LOG = BLOCKS.register("stripped_dragon_blood_log",
@@ -1005,7 +1023,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> DRAGON_BLOOD_WOODEN_BARREL = BLOCKS.register("dragon_blood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Kapok ──────────────────────────────────
+    // -- Kapok ----------------------------------
     public static final DeferredHolder<Block, Block> KAPOK_LOG = BLOCKS.register("kapok_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_KAPOK_LOG = BLOCKS.register("stripped_kapok_log",
@@ -1055,7 +1073,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> KAPOK_WOODEN_BARREL = BLOCKS.register("kapok_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Larch ──────────────────────────────────
+    // -- Larch ----------------------------------
     public static final DeferredHolder<Block, Block> LARCH_LOG = BLOCKS.register("larch_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_LARCH_LOG = BLOCKS.register("stripped_larch_log",
@@ -1105,7 +1123,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> LARCH_WOODEN_BARREL = BLOCKS.register("larch_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Sandalwood ──────────────────────────────────
+    // -- Sandalwood ----------------------------------
     public static final DeferredHolder<Block, Block> SANDALWOOD_LOG = BLOCKS.register("sandalwood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_SANDALWOOD_LOG = BLOCKS.register("stripped_sandalwood_log",
@@ -1155,7 +1173,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SANDALWOOD_WOODEN_BARREL = BLOCKS.register("sandalwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Sycamore ──────────────────────────────────
+    // -- Sycamore ----------------------------------
     public static final DeferredHolder<Block, Block> SYCAMORE_LOG = BLOCKS.register("sycamore_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_SYCAMORE_LOG = BLOCKS.register("stripped_sycamore_log",
@@ -1205,7 +1223,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SYCAMORE_WOODEN_BARREL = BLOCKS.register("sycamore_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Teak ──────────────────────────────────
+    // -- Teak ----------------------------------
     public static final DeferredHolder<Block, Block> TEAK_LOG = BLOCKS.register("teak_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_TEAK_LOG = BLOCKS.register("stripped_teak_log",
@@ -1255,7 +1273,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> TEAK_WOODEN_BARREL = BLOCKS.register("teak_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Wenge ──────────────────────────────────
+    // -- Wenge ----------------------------------
     public static final DeferredHolder<Block, Block> WENGE_LOG = BLOCKS.register("wenge_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_WENGE_LOG = BLOCKS.register("stripped_wenge_log",
@@ -1305,7 +1323,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WENGE_WOODEN_BARREL = BLOCKS.register("wenge_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Zebrawood ──────────────────────────────────
+    // -- Zebrawood ----------------------------------
     public static final DeferredHolder<Block, Block> ZEBRAWOOD_LOG = BLOCKS.register("zebrawood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredHolder<Block, Block> STRIPPED_ZEBRAWOOD_LOG = BLOCKS.register("stripped_zebrawood_log",
@@ -1355,8 +1373,8 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> ZEBRAWOOD_WOODEN_BARREL = BLOCKS.register("zebrawood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Wooden Chests ──────────────────────────────────────────────────────────
-    // ── Vanilla ─────────────────────────────────────────────────────────────────
+    // -- Wooden Chests ----------------------------------------------------------
+    // -- Vanilla -----------------------------------------------------------------
     public static final DeferredHolder<Block, Block> WOODEN_CHEST = BLOCKS.register("wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final DeferredHolder<Block, Block> OAK_WOODEN_CHEST = BLOCKS.register("oak_wooden_chest",
@@ -1382,7 +1400,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> WARPED_WOODEN_CHEST = BLOCKS.register("warped_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final DeferredHolder<Block, Block> TWILIGHT_OAK_WOODEN_CHEST = BLOCKS.register("twilight_oak_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final DeferredHolder<Block, Block> CANOPY_WOODEN_CHEST = BLOCKS.register("canopy_wooden_chest",
@@ -1402,7 +1420,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> TOWERWOOD_WOODEN_CHEST = BLOCKS.register("towerwood_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final DeferredHolder<Block, Block> FIR_WOODEN_CHEST = BLOCKS.register("fir_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final DeferredHolder<Block, Block> PINE_WOODEN_CHEST = BLOCKS.register("pine_wooden_chest",
@@ -1430,7 +1448,7 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> EMPYREAL_WOODEN_CHEST = BLOCKS.register("empyreal_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final DeferredHolder<Block, Block> ROSEROOT_WOODEN_CHEST = BLOCKS.register("roseroot_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final DeferredHolder<Block, Block> YAGROOT_WOODEN_CHEST = BLOCKS.register("yagroot_wooden_chest",
@@ -1442,11 +1460,11 @@ public final class ModBlocks {
     public static final DeferredHolder<Block, Block> SUNROOT_WOODEN_CHEST = BLOCKS.register("sunroot_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final DeferredHolder<Block, Block> SKYROOT_WOODEN_CHEST = BLOCKS.register("skyroot_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final DeferredHolder<Block, Block> ASPEN_WOODEN_CHEST = BLOCKS.register("aspen_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final DeferredHolder<Block, Block> BAOBAB_WOODEN_CHEST = BLOCKS.register("baobab_wooden_chest",
@@ -1565,8 +1583,8 @@ public final class ModBlocks {
         return net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.CHEST);
     }
     *///?}
-        // ── Wooden Cauldrons ──────────────────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Cauldrons ------------------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final RegistryObject<Block> OAK_WOODEN_CAULDRON = BLOCKS.register("oak_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final RegistryObject<Block> SPRUCE_WOODEN_CAULDRON = BLOCKS.register("spruce_wooden_cauldron",
@@ -1590,7 +1608,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WARPED_WOODEN_CAULDRON = BLOCKS.register("warped_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final RegistryObject<Block> TWILIGHT_OAK_WOODEN_CAULDRON = BLOCKS.register("twilight_oak_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final RegistryObject<Block> CANOPY_WOODEN_CAULDRON = BLOCKS.register("canopy_wooden_cauldron",
@@ -1608,7 +1626,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> TOWERWOOD_WOODEN_CAULDRON = BLOCKS.register("towerwood_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final RegistryObject<Block> FIR_WOODEN_CAULDRON = BLOCKS.register("fir_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final RegistryObject<Block> PINE_WOODEN_CAULDRON = BLOCKS.register("pine_wooden_cauldron",
@@ -1636,7 +1654,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> EMPYREAL_WOODEN_CAULDRON = BLOCKS.register("empyreal_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final RegistryObject<Block> ROSEROOT_WOODEN_CAULDRON = BLOCKS.register("roseroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final RegistryObject<Block> YAGROOT_WOODEN_CAULDRON = BLOCKS.register("yagroot_wooden_cauldron",
@@ -1648,11 +1666,11 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SUNROOT_WOODEN_CAULDRON = BLOCKS.register("sunroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final RegistryObject<Block> SKYROOT_WOODEN_CAULDRON = BLOCKS.register("skyroot_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final RegistryObject<Block> ASPEN_WOODEN_CAULDRON = BLOCKS.register("aspen_wooden_cauldron",
         () -> new WoodenCauldronBlock(cauldronProps()));
     public static final RegistryObject<Block> BAOBAB_WOODEN_CAULDRON = BLOCKS.register("baobab_wooden_cauldron",
@@ -1742,8 +1760,8 @@ public final class ModBlocks {
         ZELKOVA_WOODEN_CAULDRON
     );
 
-        // ── Wooden Barrels ────────────────────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Barrels --------------------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final RegistryObject<Block> WOODEN_BARREL = BLOCKS.register("wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final RegistryObject<Block> OAK_WOODEN_BARREL = BLOCKS.register("oak_wooden_barrel",
@@ -1769,7 +1787,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WARPED_WOODEN_BARREL = BLOCKS.register("warped_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final RegistryObject<Block> TWILIGHT_OAK_WOODEN_BARREL = BLOCKS.register("twilight_oak_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final RegistryObject<Block> CANOPY_WOODEN_BARREL = BLOCKS.register("canopy_wooden_barrel",
@@ -1789,7 +1807,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> TOWERWOOD_WOODEN_BARREL = BLOCKS.register("towerwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final RegistryObject<Block> FIR_WOODEN_BARREL = BLOCKS.register("fir_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final RegistryObject<Block> PINE_WOODEN_BARREL = BLOCKS.register("pine_wooden_barrel",
@@ -1817,7 +1835,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> EMPYREAL_WOODEN_BARREL = BLOCKS.register("empyreal_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final RegistryObject<Block> ROSEROOT_WOODEN_BARREL = BLOCKS.register("roseroot_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final RegistryObject<Block> YAGROOT_WOODEN_BARREL = BLOCKS.register("yagroot_wooden_barrel",
@@ -1829,12 +1847,12 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SUNROOT_WOODEN_BARREL = BLOCKS.register("sunroot_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final RegistryObject<Block> SKYROOT_WOODEN_BARREL = BLOCKS.register("skyroot_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final RegistryObject<Block> ASPEN_WOODEN_BARREL = BLOCKS.register("aspen_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
     public static final RegistryObject<Block> BAOBAB_WOODEN_BARREL = BLOCKS.register("baobab_wooden_barrel",
@@ -1886,8 +1904,8 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WOODEN_ANVIL = BLOCKS.register("wooden_anvil",
         () -> new WoodenAnvilBlock(anvilProps()));
 
-        // ── Wooden Hoppers ────────────────────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Hoppers --------------------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final RegistryObject<Block> OAK_WOODEN_HOPPER = BLOCKS.register("oak_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final RegistryObject<Block> SPRUCE_WOODEN_HOPPER = BLOCKS.register("spruce_wooden_hopper",
@@ -1911,7 +1929,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WARPED_WOODEN_HOPPER = BLOCKS.register("warped_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final RegistryObject<Block> TWILIGHT_OAK_WOODEN_HOPPER = BLOCKS.register("twilight_oak_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final RegistryObject<Block> CANOPY_WOODEN_HOPPER = BLOCKS.register("canopy_wooden_hopper",
@@ -1929,7 +1947,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> TOWERWOOD_WOODEN_HOPPER = BLOCKS.register("towerwood_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final RegistryObject<Block> FIR_WOODEN_HOPPER = BLOCKS.register("fir_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final RegistryObject<Block> PINE_WOODEN_HOPPER = BLOCKS.register("pine_wooden_hopper",
@@ -1957,7 +1975,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> EMPYREAL_WOODEN_HOPPER = BLOCKS.register("empyreal_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final RegistryObject<Block> ROSEROOT_WOODEN_HOPPER = BLOCKS.register("roseroot_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final RegistryObject<Block> YAGROOT_WOODEN_HOPPER = BLOCKS.register("yagroot_wooden_hopper",
@@ -1969,11 +1987,11 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SUNROOT_WOODEN_HOPPER = BLOCKS.register("sunroot_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final RegistryObject<Block> SKYROOT_WOODEN_HOPPER = BLOCKS.register("skyroot_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final RegistryObject<Block> ASPEN_WOODEN_HOPPER = BLOCKS.register("aspen_wooden_hopper",
         () -> new WoodenHopperBlock(hopperProps()));
     public static final RegistryObject<Block> BAOBAB_WOODEN_HOPPER = BLOCKS.register("baobab_wooden_hopper",
@@ -2025,8 +2043,8 @@ public final class ModBlocks {
 
     public static final RegistryObject<Block> WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
-        // ── Wooden Crafting Table Slabs ───────────────────────────────
-        // ── Vanilla ───────────────────────────────────────────────────
+        // -- Wooden Crafting Table Slabs -------------------------------
+        // -- Vanilla ---------------------------------------------------
     public static final RegistryObject<Block> OAK_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("oak_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final RegistryObject<Block> SPRUCE_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("spruce_wooden_crafting_table_slab",
@@ -2050,7 +2068,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WARPED_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("warped_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final RegistryObject<Block> TWILIGHT_OAK_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("twilight_oak_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final RegistryObject<Block> CANOPY_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("canopy_wooden_crafting_table_slab",
@@ -2070,7 +2088,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> TOWERWOOD_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("towerwood_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final RegistryObject<Block> FIR_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("fir_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final RegistryObject<Block> PINE_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("pine_wooden_crafting_table_slab",
@@ -2098,7 +2116,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> EMPYREAL_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("empyreal_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final RegistryObject<Block> ROSEROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("roseroot_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final RegistryObject<Block> YAGROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("yagroot_wooden_crafting_table_slab",
@@ -2110,11 +2128,11 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SUNROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("sunroot_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final RegistryObject<Block> SKYROOT_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("skyroot_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final RegistryObject<Block> ASPEN_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("aspen_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
     public static final RegistryObject<Block> BAOBAB_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("baobab_wooden_crafting_table_slab",
@@ -2164,7 +2182,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> ZELKOVA_WOODEN_CRAFTING_TABLE_SLAB = BLOCKS.register("zelkova_wooden_crafting_table_slab",
         () -> new WoodenCraftingTableSlabBlock(craftingTableProps()));
 
-    // ── African Blackwood ──────────────────────────────────
+    // -- African Blackwood ----------------------------------
     public static final RegistryObject<Block> AFRICAN_BLACKWOOD_LOG = BLOCKS.register("african_blackwood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_AFRICAN_BLACKWOOD_LOG = BLOCKS.register("stripped_african_blackwood_log",
@@ -2214,7 +2232,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> AFRICAN_BLACKWOOD_WOODEN_BARREL = BLOCKS.register("african_blackwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Banyan ──────────────────────────────────
+    // -- Banyan ----------------------------------
     public static final RegistryObject<Block> BANYAN_LOG = BLOCKS.register("banyan_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_BANYAN_LOG = BLOCKS.register("stripped_banyan_log",
@@ -2264,7 +2282,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> BANYAN_WOODEN_BARREL = BLOCKS.register("banyan_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Black Walnut ──────────────────────────────────
+    // -- Black Walnut ----------------------------------
     public static final RegistryObject<Block> BLACK_WALNUT_LOG = BLOCKS.register("black_walnut_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_BLACK_WALNUT_LOG = BLOCKS.register("stripped_black_walnut_log",
@@ -2314,7 +2332,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> BLACK_WALNUT_WOODEN_BARREL = BLOCKS.register("black_walnut_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Bloodwood ──────────────────────────────────
+    // -- Bloodwood ----------------------------------
     public static final RegistryObject<Block> BLOODWOOD_LOG = BLOCKS.register("bloodwood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_BLOODWOOD_LOG = BLOCKS.register("stripped_bloodwood_log",
@@ -2364,7 +2382,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> BLOODWOOD_WOODEN_BARREL = BLOCKS.register("bloodwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Bristlecone Pine ──────────────────────────────────
+    // -- Bristlecone Pine ----------------------------------
     public static final RegistryObject<Block> BRISTLECONE_PINE_LOG = BLOCKS.register("bristlecone_pine_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_BRISTLECONE_PINE_LOG = BLOCKS.register("stripped_bristlecone_pine_log",
@@ -2414,7 +2432,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> BRISTLECONE_PINE_WOODEN_BARREL = BLOCKS.register("bristlecone_pine_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Cork Oak ──────────────────────────────────
+    // -- Cork Oak ----------------------------------
     public static final RegistryObject<Block> CORK_OAK_LOG = BLOCKS.register("cork_oak_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_CORK_OAK_LOG = BLOCKS.register("stripped_cork_oak_log",
@@ -2464,7 +2482,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> CORK_OAK_WOODEN_BARREL = BLOCKS.register("cork_oak_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Dragon Blood ──────────────────────────────────
+    // -- Dragon Blood ----------------------------------
     public static final RegistryObject<Block> DRAGON_BLOOD_LOG = BLOCKS.register("dragon_blood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_DRAGON_BLOOD_LOG = BLOCKS.register("stripped_dragon_blood_log",
@@ -2514,7 +2532,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> DRAGON_BLOOD_WOODEN_BARREL = BLOCKS.register("dragon_blood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Kapok ──────────────────────────────────
+    // -- Kapok ----------------------------------
     public static final RegistryObject<Block> KAPOK_LOG = BLOCKS.register("kapok_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_KAPOK_LOG = BLOCKS.register("stripped_kapok_log",
@@ -2564,7 +2582,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> KAPOK_WOODEN_BARREL = BLOCKS.register("kapok_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Larch ──────────────────────────────────
+    // -- Larch ----------------------------------
     public static final RegistryObject<Block> LARCH_LOG = BLOCKS.register("larch_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_LARCH_LOG = BLOCKS.register("stripped_larch_log",
@@ -2614,7 +2632,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> LARCH_WOODEN_BARREL = BLOCKS.register("larch_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Sandalwood ──────────────────────────────────
+    // -- Sandalwood ----------------------------------
     public static final RegistryObject<Block> SANDALWOOD_LOG = BLOCKS.register("sandalwood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_SANDALWOOD_LOG = BLOCKS.register("stripped_sandalwood_log",
@@ -2664,7 +2682,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SANDALWOOD_WOODEN_BARREL = BLOCKS.register("sandalwood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Sycamore ──────────────────────────────────
+    // -- Sycamore ----------------------------------
     public static final RegistryObject<Block> SYCAMORE_LOG = BLOCKS.register("sycamore_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_SYCAMORE_LOG = BLOCKS.register("stripped_sycamore_log",
@@ -2714,7 +2732,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SYCAMORE_WOODEN_BARREL = BLOCKS.register("sycamore_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Teak ──────────────────────────────────
+    // -- Teak ----------------------------------
     public static final RegistryObject<Block> TEAK_LOG = BLOCKS.register("teak_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_TEAK_LOG = BLOCKS.register("stripped_teak_log",
@@ -2764,7 +2782,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> TEAK_WOODEN_BARREL = BLOCKS.register("teak_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Wenge ──────────────────────────────────
+    // -- Wenge ----------------------------------
     public static final RegistryObject<Block> WENGE_LOG = BLOCKS.register("wenge_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_WENGE_LOG = BLOCKS.register("stripped_wenge_log",
@@ -2814,7 +2832,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WENGE_WOODEN_BARREL = BLOCKS.register("wenge_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Zebrawood ──────────────────────────────────
+    // -- Zebrawood ----------------------------------
     public static final RegistryObject<Block> ZEBRAWOOD_LOG = BLOCKS.register("zebrawood_log",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_ZEBRAWOOD_LOG = BLOCKS.register("stripped_zebrawood_log",
@@ -2864,8 +2882,8 @@ public final class ModBlocks {
     public static final RegistryObject<Block> ZEBRAWOOD_WOODEN_BARREL = BLOCKS.register("zebrawood_wooden_barrel",
         () -> new WoodenBarrelBlock(barrelProps()));
 
-    // ── Wooden Chests ──────────────────────────────────────────────────────────
-    // ── Vanilla ─────────────────────────────────────────────────────────────────
+    // -- Wooden Chests ----------------------------------------------------------
+    // -- Vanilla -----------------------------------------------------------------
     public static final RegistryObject<Block> WOODEN_CHEST = BLOCKS.register("wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final RegistryObject<Block> OAK_WOODEN_CHEST = BLOCKS.register("oak_wooden_chest",
@@ -2891,7 +2909,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> WARPED_WOODEN_CHEST = BLOCKS.register("warped_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Twilight Forest ────────────────────────────────────────────
+    // -- Twilight Forest --------------------------------------------
     public static final RegistryObject<Block> TWILIGHT_OAK_WOODEN_CHEST = BLOCKS.register("twilight_oak_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final RegistryObject<Block> CANOPY_WOODEN_CHEST = BLOCKS.register("canopy_wooden_chest",
@@ -2911,7 +2929,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> TOWERWOOD_WOODEN_CHEST = BLOCKS.register("towerwood_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Biomes O'Plenty ──────────────────────────────────────────
+    // -- Biomes O'Plenty ------------------------------------------
     public static final RegistryObject<Block> FIR_WOODEN_CHEST = BLOCKS.register("fir_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final RegistryObject<Block> PINE_WOODEN_CHEST = BLOCKS.register("pine_wooden_chest",
@@ -2939,7 +2957,7 @@ public final class ModBlocks {
     public static final RegistryObject<Block> EMPYREAL_WOODEN_CHEST = BLOCKS.register("empyreal_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Deep Aether ──────────────────────────────────────────────
+    // -- Deep Aether ----------------------------------------------
     public static final RegistryObject<Block> ROSEROOT_WOODEN_CHEST = BLOCKS.register("roseroot_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final RegistryObject<Block> YAGROOT_WOODEN_CHEST = BLOCKS.register("yagroot_wooden_chest",
@@ -2951,11 +2969,11 @@ public final class ModBlocks {
     public static final RegistryObject<Block> SUNROOT_WOODEN_CHEST = BLOCKS.register("sunroot_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Aether ───────────────────────────────────────────────────
+    // -- Aether ---------------------------------------------------
     public static final RegistryObject<Block> SKYROOT_WOODEN_CHEST = BLOCKS.register("skyroot_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
 
-    // ── Biomes We've Gone ────────────────────────────────────────
+    // -- Biomes We've Gone ----------------------------------------
     public static final RegistryObject<Block> ASPEN_WOODEN_CHEST = BLOCKS.register("aspen_wooden_chest",
         () -> new WoodenChestBlock(chestProps()));
     public static final RegistryObject<Block> BAOBAB_WOODEN_CHEST = BLOCKS.register("baobab_wooden_chest",

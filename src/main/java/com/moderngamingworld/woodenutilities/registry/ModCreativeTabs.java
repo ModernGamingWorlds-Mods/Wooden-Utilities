@@ -41,13 +41,13 @@ public final class ModCreativeTabs {
                                 boolean hasDeepAether = ModList.get().isLoaded("deep_aether");
                                 boolean hasAether     = ModList.get().isLoaded("aether");
 
-                                // ── Plates ──────────────────────────────────────────────
+                                // -- Plates ----------------------------------------------
                                 ModItems.ALL_PLATES.forEach(h -> output.accept(h.get()));
 
-                                // ── Cauldrons ────────────────────────────────────────────
+                                // -- Cauldrons --------------------------------------------
                                 ModItems.ALL_CAULDRONS.forEach(h -> output.accept(h.get()));
 
-                                // ── New Wood Blocks ──────────────────────────────────────
+                                // -- New Wood Blocks --------------------------------------
                                 // African Blackwood
                                 output.accept(ModItems.AFRICAN_BLACKWOOD_LOG.get());
                                 output.accept(ModItems.STRIPPED_AFRICAN_BLACKWOOD_LOG.get());
@@ -343,12 +343,12 @@ public final class ModCreativeTabs {
                                 output.accept(ModItems.ZEBRAWOOD_BOAT.get());
                                 output.accept(ModItems.ZEBRAWOOD_CHEST_BOAT.get());
 
-                                // ── Tools ────────────────────────────────────────────────
+                                // -- Tools ------------------------------------------------
                                 output.accept(ModItems.WOODEN_SHEARS.get());
                                 output.accept(ModItems.WOODEN_WRENCH.get());
                                 output.accept(ModItems.WOODEN_HAMMER.get());
 
-                                // ── Buckets (empty, water, lava for each wood type) ──────
+                                // -- Buckets (empty, water, lava for each wood type) ------
                                 java.util.function.Consumer<net.minecraft.world.item.Item> addBucket = (item) -> {
                                     output.accept(item);
                                     ItemStack w = new ItemStack(item);
@@ -406,7 +406,7 @@ public final class ModCreativeTabs {
                                     addBucket.accept(ModItems.SKYROOT_WOODEN_BUCKET.get());
                                 }
 
-                                // ── Rods ─────────────────────────────────────────────────
+                                // -- Rods -------------------------------------------------
                                 output.accept(ModItems.OAK_ROD.get());
                                 output.accept(ModItems.SPRUCE_ROD.get());
                                 output.accept(ModItems.ACACIA_ROD.get());
@@ -414,7 +414,7 @@ public final class ModCreativeTabs {
                                 output.accept(ModItems.DARK_OAK_ROD.get());
                                 output.accept(ModItems.JUNGLE_ROD.get());
 
-                                // ── Misc Items ───────────────────────────────────────────
+                                // -- Misc Items -------------------------------------------
                                 output.accept(ModItems.SAWDUST.get());
                             })
                             .build()
@@ -431,20 +431,20 @@ public final class ModCreativeTabs {
                             .displayItems((params, output) -> {
                                 boolean hasSS = ModList.get().isLoaded("sophisticatedstorage");
 
-                                // ── Barrels ──────────────────────────────────────────────
+                                // -- Barrels ----------------------------------------------
                                 ModItems.ALL_BARRELS.forEach(h -> output.accept(h.get()));
 
-                                // ── Wooden Chests ────────────────────────────────────────────────────
+                                // -- Wooden Chests ----------------------------------------------------
                                 ModItems.ALL_CHESTS.forEach(h -> output.accept(h.get()));
 
-                                // ── Hoppers ──────────────────────────────────────────────
+                                // -- Hoppers ----------------------------------------------
                                 ModItems.ALL_HOPPERS.forEach(h -> output.accept(h.get()));
 
-                                // ── Crafting Table Slabs ──────────────────────────────────
+                                // -- Crafting Table Slabs ----------------------------------
                                 ModItems.ALL_CRAFTING_SLABS.forEach(h -> output.accept(h.get()));
 
 
-                                // ── Sophisticated Storage Barrels ─────────────────────────────────────
+                                // -- Sophisticated Storage Barrels -------------------------------------
                                 if (hasSS) {
                                     addIfLoaded(output, "sophisticatedstorage", "barrel");
                                     addIfLoaded(output, "sophisticatedstorage", "copper_barrel");

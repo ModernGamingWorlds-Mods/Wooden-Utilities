@@ -100,7 +100,7 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
         return RenderShape.MODEL;
     }
 
-    // ── Light emission ────────────────────────────────────────────────────────
+    // -- Light emission --------------------------------------------------------
 
     @Override
     public int getLightEmission(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos) {
@@ -109,7 +109,7 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
         return super.getLightEmission(state, level, pos);
     }
 
-    // ── Block entity wiring ───────────────────────────────────────────────────
+    // -- Block entity wiring ---------------------------------------------------
 
     @Nullable
     @Override
@@ -126,7 +126,7 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
                         WoodenCauldronBlockEntity::serverTick);
     }
 
-    // ── Bucket / fluid item interaction ───────────────────────────────────────
+    // -- Bucket / fluid item interaction ---------------------------------------
 
     //? if neoforge {
     /*@Override
@@ -232,7 +232,7 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
     }
     //?}
 
-    // ── Absorb dropped items ──────────────────────────────────────────────────
+    // -- Absorb dropped items --------------------------------------------------
 
     @Override
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
@@ -256,7 +256,7 @@ public class WoodenCauldronBlock extends BaseEntityBlock {
         }
     }
 
-    // ── Drop item slot contents on block removal ───────────────────────────────
+    // -- Drop item slot contents on block removal -------------------------------
 
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {

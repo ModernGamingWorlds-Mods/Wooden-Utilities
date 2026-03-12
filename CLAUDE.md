@@ -55,6 +55,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 *///?}
 ```
 
+**Important Stonecutter rules:**
+- Never use non-ASCII characters (e.g. `─`, emoji) in comments inside conditional blocks — they become bare code when activated
+- Comments inside conditional blocks must have their own `//` prefix, not rely on the `/* */` wrapper
+- Helper methods used by both branches (e.g. `cauldronProps()`) must be defined in both `//? if neoforge {` and `//?} else {` blocks
+
 **Key API differences across versions:**
 - Registry holders: `RegistryObject<T>` (Forge) vs `DeferredHolder<R, T>` / `DeferredItem<T>` (NeoForge)
 - Block interaction: `use()` (Forge) vs `useWithoutItem()` (NeoForge)

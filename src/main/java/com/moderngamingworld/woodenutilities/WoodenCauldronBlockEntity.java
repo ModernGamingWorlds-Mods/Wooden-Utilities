@@ -47,7 +47,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     final ItemStackHandler itemHandler = new ItemStackHandler(1);
     private ItemStack filterItem = ItemStack.EMPTY;
 
-    // ── Fluid handler: fill + drain (sides: N/S/E/W) ────────────────────────
+    // -- Fluid handler: fill + drain (sides: N/S/E/W) ------------------------
     final IFluidHandler sideFluidHandler = new IFluidHandler() {
         @Override public int getTanks() { return 2; }
 
@@ -88,7 +88,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         }
     };
 
-    // ── Fluid handler: drain only (DOWN face) ────────────────────────────────
+    // -- Fluid handler: drain only (DOWN face) --------------------------------
     final IFluidHandler extractFluidHandler = new IFluidHandler() {
         @Override public int getTanks() { return 2; }
 
@@ -117,7 +117,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         }
     };
 
-    // ── Item handler: insert-only (UP face) ──────────────────────────────────
+    // -- Item handler: insert-only (UP face) ----------------------------------
     final IItemHandler insertOnlyItemHandler = new IItemHandler() {
         @Override public int getSlots() { return 1; }
 
@@ -142,7 +142,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         }
     };
 
-    // ─────────────────────────────────────────────────────────────────────────
+    // -------------------------------------------------------------------------
 
     public WoodenCauldronBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.WOODEN_CAULDRON.get(), pos, state);
@@ -151,7 +151,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     public ItemStack getFilterItem() { return filterItem; }
     public void setFilterItem(ItemStack stack) { this.filterItem = stack; }
 
-    // ── Server tick ───────────────────────────────────────────────────────────
+    // -- Server tick -----------------------------------------------------------
 
     public static void serverTick(Level level, BlockPos pos, BlockState state,
                                   WoodenCauldronBlockEntity be) {
@@ -224,7 +224,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         level.addFreshEntity(entity);
     }
 
-    // ── Fluid routing helper ──────────────────────────────────────────────────
+    // -- Fluid routing helper --------------------------------------------------
 
     private boolean recipeAllowsSecondFluid(FluidStack incoming) {
         if (level == null) return false;
@@ -299,7 +299,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
         //?}
     }
 
-    // ── NBT persistence ───────────────────────────────────────────────────────
+    // -- NBT persistence -------------------------------------------------------
 
     //? if modern_nbt {
     /*@Override
@@ -339,7 +339,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     }
     //?}
 
-    // ── Client sync ───────────────────────────────────────────────────────────
+    // -- Client sync -----------------------------------------------------------
 
     //? if modern_nbt {
     /*@Override
@@ -371,7 +371,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     }
     //?}
 
-    // ── Forge capabilities ────────────────────────────────────────────────────
+    // -- Forge capabilities ----------------------------------------------------
 
     //? if neoforge {
     
@@ -403,7 +403,7 @@ public class WoodenCauldronBlockEntity extends BlockEntity {
     }
     //?}
 
-    // ── Accessors (used by recipe and block) ──────────────────────────────────
+    // -- Accessors (used by recipe and block) ----------------------------------
 
     public boolean hasLava() {
         return (!tankA.isEmpty() && tankA.getFluid().getFluid().is(FluidTags.LAVA))
