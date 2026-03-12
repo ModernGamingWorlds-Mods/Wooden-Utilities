@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:dragon_blood_planks"
+  },
+  "result": {
+    "item": "woodenutilities:dragon_blood_wooden_plate",
+    "count": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    "P P",
+    "LLL"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:kapok_wooden_plate"
+    },
+    "L": {
+      "item": "woodenutilities:kapok_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:kapok_wooden_cauldron"
+  }
+}

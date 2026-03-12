@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:sycamore_planks"
+  },
+  "result": {
+    "item": "woodenutilities:sycamore_wooden_plate",
+    "count": 2
+  }
+}

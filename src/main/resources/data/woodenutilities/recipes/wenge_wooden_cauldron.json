@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    "P P",
+    "LLL"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:wenge_wooden_plate"
+    },
+    "L": {
+      "item": "woodenutilities:wenge_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:wenge_wooden_cauldron"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    "P P",
+    "LLL"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:dragon_blood_wooden_plate"
+    },
+    "L": {
+      "item": "woodenutilities:dragon_blood_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:dragon_blood_wooden_cauldron"
+  }
+}

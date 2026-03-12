@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:banyan_planks"
+  },
+  "result": {
+    "item": "woodenutilities:banyan_wooden_plate",
+    "count": 2
+  }
+}

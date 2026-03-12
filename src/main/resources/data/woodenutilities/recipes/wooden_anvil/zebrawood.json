@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:zebrawood_planks"
+  },
+  "result": {
+    "item": "woodenutilities:zebrawood_wooden_plate",
+    "count": 2
+  }
+}

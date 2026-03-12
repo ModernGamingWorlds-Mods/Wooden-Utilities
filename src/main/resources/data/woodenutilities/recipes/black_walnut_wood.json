@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:black_walnut_log"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:black_walnut_wood",
+    "count": 3
+  }
+}

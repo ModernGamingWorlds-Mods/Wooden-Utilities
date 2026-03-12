@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:bristlecone_pine_planks"
+  },
+  "result": {
+    "item": "woodenutilities:bristlecone_pine_wooden_plate",
+    "count": 2
+  }
+}

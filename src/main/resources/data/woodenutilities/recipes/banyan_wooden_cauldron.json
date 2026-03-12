@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    "P P",
+    "LLL"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:banyan_wooden_plate"
+    },
+    "L": {
+      "item": "woodenutilities:banyan_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:banyan_wooden_cauldron"
+  }
+}

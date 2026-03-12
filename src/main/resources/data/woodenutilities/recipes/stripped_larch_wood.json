@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:stripped_larch_log"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:stripped_larch_wood",
+    "count": 3
+  }
+}

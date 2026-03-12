@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:teak_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:teak_wooden_crafting_table"
+  }
+}

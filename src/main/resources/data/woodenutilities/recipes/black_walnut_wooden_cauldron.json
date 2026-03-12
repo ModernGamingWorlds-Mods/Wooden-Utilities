@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P P",
+    "P P",
+    "LLL"
+  ],
+  "key": {
+    "P": {
+      "item": "woodenutilities:black_walnut_wooden_plate"
+    },
+    "L": {
+      "item": "woodenutilities:black_walnut_planks"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:black_walnut_wooden_cauldron"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "woodenutilities:zebrawood_log"
+    }
+  },
+  "result": {
+    "item": "woodenutilities:zebrawood_wood",
+    "count": 3
+  }
+}

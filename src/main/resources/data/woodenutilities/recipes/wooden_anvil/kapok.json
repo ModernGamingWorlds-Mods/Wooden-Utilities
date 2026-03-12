@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:kapok_planks"
+  },
+  "result": {
+    "item": "woodenutilities:kapok_wooden_plate",
+    "count": 2
+  }
+}

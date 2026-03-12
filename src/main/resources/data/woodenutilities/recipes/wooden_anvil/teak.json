@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:teak_planks"
+  },
+  "result": {
+    "item": "woodenutilities:teak_wooden_plate",
+    "count": 2
+  }
+}

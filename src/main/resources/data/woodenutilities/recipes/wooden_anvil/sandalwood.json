@@ -1,0 +1,10 @@
+{
+  "type": "woodenutilities:wooden_anvil",
+  "input": {
+    "item": "woodenutilities:sandalwood_planks"
+  },
+  "result": {
+    "item": "woodenutilities:sandalwood_wooden_plate",
+    "count": 2
+  }
+}
