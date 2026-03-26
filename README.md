@@ -11,7 +11,9 @@
 </p>
 
 <p align="center">
-# Wooden Utilities
+  <a href="https://www.curseforge.com/minecraft/mc-mods/wooden-utilities">
+    <img src="https://bisecthosting.com/images/CF/Wooden_Utilities/BH_WU_Header.png" alt="Wooden Utilities" width="800">
+  </a>
 </p>
 
 <p align="center">
