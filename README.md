@@ -23,15 +23,15 @@ Wooden Utilities adds wood-themed utility blocks to Minecraft — cauldrons, bar
 </p>
 
 <p align="center">
-- **Wooden Plates** — 57+ variants across all supported mod ecosystems<br>
-- **Wooden Cauldrons** — fluid processing (two 1000 mB tanks + item slot); KubeJS recipe support<br>
-- **Wooden Barrels** — GeckoLib-animated; Sophisticated Storage compat (per-tier animated textures)<br>
-- **Wooden Chests** — GeckoLib-animated single and double chests; Sophisticated Storage compat<br>
-- **Wooden Hoppers** — item transport for all wood types<br>
-- **Wooden Crafting Table Slabs** — opens a full crafting grid in slab form<br>
-- **Wooden Anvil** — custom recipe type, KubeJS-compatible<br>
-- **Wooden Tools & Bucket** — shears, wrench, hammer, and a fluid-carrying bucket<br>
-- **Sawdust** — crafting ingredient
+- <strong>Wooden Plates</strong> — 57+ variants across all supported mod ecosystems<br>
+- <strong>Wooden Cauldrons</strong> — fluid processing (two 1000 mB tanks + item slot); KubeJS recipe support<br>
+- <strong>Wooden Barrels</strong> — GeckoLib-animated; Sophisticated Storage compat (per-tier animated textures)<br>
+- <strong>Wooden Chests</strong> — GeckoLib-animated single and double chests; Sophisticated Storage compat<br>
+- <strong>Wooden Hoppers</strong> — item transport for all wood types<br>
+- <strong>Wooden Crafting Table Slabs</strong> — opens a full crafting grid in slab form<br>
+- <strong>Wooden Anvil</strong> — custom recipe type, KubeJS-compatible<br>
+- <strong>Wooden Tools & Bucket</strong> — shears, wrench, hammer, and a fluid-carrying bucket<br>
+- <strong>Sawdust</strong> — crafting ingredient
 </p>
 
 <p align="center">
@@ -55,9 +55,9 @@ Wooden Utilities adds wood-themed utility blocks to Minecraft — cauldrons, bar
 </p>
 
 <p align="center">
-See `wooden_anvil_kubejs_example.txt` at the repo root for anvil recipe examples.<br>
-Cauldron recipe type: `woodenutilities:wooden_cauldron`<br>
-Anvil recipe type: `woodenutilities:wooden_anvil`
+See <strong>`wooden_anvil_kubejs_example.txt`</strong> at the repo root for anvil recipe examples.<br>
+Cauldron recipe type: <strong>`woodenutilities:wooden_cauldron`</strong><br>
+Anvil recipe type: <strong>`woodenutilities:wooden_anvil`</strong>
 </p>
 
 <p align="center">
@@ -85,8 +85,8 @@ gradle clean build
 </p>
 
 <p align="center">
-No Gradle wrapper is committed. Requires global Gradle installation (see `CLAUDE.md`).<br>
-<strong>Asset generation:</strong> See `scripts/README.md` for the generation pipeline used when adding new wood types.
+No Gradle wrapper is committed. Requires global Gradle installation (see <strong>`CLAUDE.md`</strong>).<br>
+<strong>Asset generation:</strong> See <strong>`scripts/README.md`</strong> for the generation pipeline used when adding new wood types.
 </p>
 
 <p align="center">
