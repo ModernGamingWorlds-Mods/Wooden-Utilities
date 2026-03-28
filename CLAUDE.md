@@ -4,19 +4,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build Commands
 
-No `gradlew` exists in this repo. Use the global Gradle installation at `/c/Gradle/gradle-8.14.1/bin/gradle`.
+Use `./gradlew` (the wrapper pins Gradle 8.11.1, which avoids the Groovy 3.0.22+ abstract method incompatibility with ForgeGradle). Do **not** use a global Gradle 8.12+ installation — it causes `AbstractExtensionMethodCache.getDisablePropertyName()` errors.
 
 ```bash
 # Build ALL versions (use this for production builds)
-gradle chiseledBuild
+./gradlew chiseledBuild
 
 # Build single version — MUST switch active first, then clean build
-gradle "Set active project to 1.20.1-forge"
-gradle clean build
+./gradlew "Set active project to 1.20.1-forge"
+./gradlew clean build
 
-gradle "Set active project to 1.21.1-neoforge"
-gradle clean build
+./gradlew "Set active project to 1.21.1-neoforge"
+./gradlew clean build
 ```
+
+On Windows use `gradlew.bat` or `.\gradlew` in PowerShell.
 
 **Critical build rules:**
 - `gradle build` on the root builds only the currently active version's JAR into `build/libs/` (may be stale)
