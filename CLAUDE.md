@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build Commands
 
-Use `./gradlew` (the wrapper pins Gradle 8.13, which satisfies NeoGradle 7.0.192+ and pairs with ForgeGradle 6.0.34+ that implements the `getDisablePropertyName()` method required by Groovy 3.0.22+). Do **not** use a global Gradle 8.12 or earlier — NeoGradle 7.0.192 requires Gradle API 8.13+.
+Use `./gradlew` (the wrapper pins Gradle 8.13). **Never use a global `gradle` command** — Gradle 9+ (current default as of 2026) uses Groovy 4.x which causes `AbstractExtensionMethodCache.getDisablePropertyName()` errors because ForgeGradle 6.x was compiled against Groovy 3.x. NeoGradle 7.0.x also requires exactly Gradle 8.13 (not older, not 9.x).
 
 ```bash
 # Build ALL versions (use this for production builds)

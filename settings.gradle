@@ -1,3 +1,17 @@
+// ForgeGradle 6.x does not support Gradle 9+ (Groovy 4.x adds getDisablePropertyName()
+// as abstract in AbstractExtensionMethodCache; FG6 doesn't implement it).
+// Always use ./gradlew (wrapper pins Gradle 8.13). Running with a global Gradle 9.x
+// installation will fail with "Missing implementation of ... getDisablePropertyName()".
+if (gradle.gradleVersion.split('\\.')[0].toInteger() >= 9) {
+    throw new GradleException(
+        "\n\n  *** WRONG GRADLE VERSION ***\n" +
+        "  ForgeGradle 6.x does not support Gradle 9+.\n" +
+        "  You are running: Gradle ${gradle.gradleVersion}\n" +
+        "  Required:        Gradle 8.13 (use ./gradlew, not gradle)\n" +
+        "  On Windows:      .\\gradlew\n\n"
+    )
+}
+
 pluginManagement {
     repositories {
         maven { url = 'https://maven.kikugie.dev/releases' }
