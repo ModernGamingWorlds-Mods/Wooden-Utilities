@@ -7,6 +7,8 @@ plugins {
     // Declared with apply=false so both land in the classpath; we apply one below.
     id 'net.minecraftforge.gradle' version '[6.0,6.2)' apply false
     id 'net.neoforged.gradle.userdev' version '7.0.184' apply false
+    // ModDevGradle: used for NeoForge 26.x+ (new versioning scheme)
+    id 'net.neoforged.moddev' version '2.0.141' apply false
 }
 
 // ── Stonecutter: determine current build target ───────────────────────────────
@@ -15,18 +17,20 @@ plugins {
 boolean isForge    = project.name.endsWith('-forge')
 boolean isNeoForge = project.name.endsWith('-neoforge')
 
-if (isNeoForge) apply plugin: 'net.neoforged.gradle.userdev'
-if (isForge)    apply plugin: 'net.minecraftforge.gradle'
-
-// ── Stonecutter preprocessor constants ───────────────────────────────────────
-stonecutter.const 'forge',    isForge
-stonecutter.const 'neoforge', isNeoForge
-
-// MC version parsing for version-specific constants
+// MC version parsing must happen before plugin application so we can pick NFG vs MDG
 def mcVer = minecraft_version.tokenize('.')
 int mcMajor = mcVer[0].toInteger()
 int mcMinor = mcVer[1].toInteger()
 int mcPatch = mcVer.size() > 2 ? mcVer[2].toInteger() : 0
+
+// NeoForge 26.x+ uses ModDevGradle; older NeoForge uses NeoForged Gradle (NFG)
+if (isNeoForge && mcMajor >= 26) apply plugin: 'net.neoforged.moddev'
+else if (isNeoForge)             apply plugin: 'net.neoforged.gradle.userdev'
+if (isForge)                     apply plugin: 'net.minecraftforge.gradle'
+
+// ── Stonecutter preprocessor constants ───────────────────────────────────────
+stonecutter.const 'forge',    isForge
+stonecutter.const 'neoforge', isNeoForge
 
 // forge_1201: only 1.20.1-forge (has getId(), NetworkHooks, old serializer signatures)
 stonecutter.const 'forge_1201', (isForge && mcMinor == 20 && mcPatch == 1)
@@ -73,21 +77,6 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(needsJava25 ? 25 : (isNe
 
 // ── Loader-specific configuration ────────────────────────────────────────────
 if (isNeoForge) {
-    runs {
-        configureEach {
-            systemProperty 'neoforge.logging.markers', 'REGISTRIES'
-            systemProperty 'neoforge.logging.console.level', 'debug'
-            modSource project.sourceSets.main
-        }
-        client {
-            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
-        }
-        server {
-            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
-            programArgument '--nogui'
-        }
-    }
-
     sourceSets.main.resources { srcDir 'src/generated/resources' }
 
     repositories {
@@ -95,15 +84,69 @@ if (isNeoForge) {
         maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     }
 
-    dependencies {
-        implementation "net.neoforged:neoforge:${neo_version}"
-        if (project.hasProperty('geckolib_version')) {
-            def geckolibGroup = mcMajor >= 26 ? 'com.geckolib' : 'software.bernie.geckolib'
-            implementation "${geckolibGroup}:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    if (mcMajor >= 26) {
+        // ── NeoForge 26.x+ — ModDevGradle (net.neoforged.moddev) ─────────────
+        neoForge {
+            version = neo_version
+
+            runs {
+                configureEach {
+                    systemProperty 'neoforge.logging.markers', 'REGISTRIES'
+                    systemProperty 'neoforge.logging.console.level', 'debug'
+                }
+                client {
+                    client()
+                    systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+                }
+                server {
+                    server()
+                    programArgument '--nogui'
+                }
+            }
+
+            mods {
+                "${mod_id}" {
+                    sourceSet sourceSets.main
+                }
+            }
         }
-        if (jei_version != 'none') {
-            compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-            runtimeOnly  "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+
+        dependencies {
+            if (project.hasProperty('geckolib_version')) {
+                implementation "com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+            }
+            if (jei_version != 'none') {
+                compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+                runtimeOnly  "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+            }
+        }
+
+    } else {
+        // ── NeoForge <26 — NeoForged Gradle (net.neoforged.gradle.userdev) ───
+        runs {
+            configureEach {
+                systemProperty 'neoforge.logging.markers', 'REGISTRIES'
+                systemProperty 'neoforge.logging.console.level', 'debug'
+                modSource project.sourceSets.main
+            }
+            client {
+                systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+            }
+            server {
+                systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+                programArgument '--nogui'
+            }
+        }
+
+        dependencies {
+            implementation "net.neoforged:neoforge:${neo_version}"
+            if (project.hasProperty('geckolib_version')) {
+                implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+            }
+            if (jei_version != 'none') {
+                compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+                runtimeOnly  "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+            }
         }
     }
 
