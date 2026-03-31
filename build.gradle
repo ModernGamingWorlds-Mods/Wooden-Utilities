@@ -24,6 +24,7 @@ stonecutter.const 'neoforge', isNeoForge
 
 // MC version parsing for version-specific constants
 def mcVer = minecraft_version.tokenize('.')
+int mcMajor = mcVer[0].toInteger()
 int mcMinor = mcVer[1].toInteger()
 int mcPatch = mcVer.size() > 2 ? mcVer[2].toInteger() : 0
 
@@ -45,8 +46,8 @@ stonecutter.const 'recipe_holder', (isNeoForge || (isForge && !(mcMinor == 20 &&
 stonecutter.const 'modern_nbt', (isNeoForge || (isForge && (mcMinor > 20 || mcPatch >= 6)))
 
 // has_item_props: ItemProperties and ClampedItemPropertyFunction exist
-//                Removed in NeoForge 1.21.4+
-stonecutter.const 'has_item_props', !(isNeoForge && mcMinor == 21 && mcPatch >= 4)
+//                Removed in NeoForge 1.21.4+ and all 26.x+ versions
+stonecutter.const 'has_item_props', !(isNeoForge && (mcMajor >= 26 || (mcMinor == 21 && mcPatch >= 4)))
 
 // block_codec: BaseEntityBlock requires codec() override
 //              True for all except forge_1201
@@ -63,11 +64,12 @@ base {
     archivesName = mod_id
 }
 
-// Forge 1.20.6+ requires Java 21; older Forge uses Java 17
+// Minecraft 26.x (NeoForge) requires Java 25; Forge 1.20.6+ and all NeoForge <26 require Java 21; older Forge uses Java 17
 def mcParts = minecraft_version.split('\\.')
+boolean needsJava25 = isNeoForge && mcMajor >= 26
 boolean forgeNeedsJava21 = isForge && (mcParts[1].toInteger() > 20 ||
         (mcParts[1].toInteger() == 20 && mcParts.length > 2 && mcParts[2].toInteger() >= 6))
-java.toolchain.languageVersion = JavaLanguageVersion.of((isNeoForge || forgeNeedsJava21) ? 21 : 17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(needsJava25 ? 25 : (isNeoForge || forgeNeedsJava21) ? 21 : 17)
 
 // ── Loader-specific configuration ────────────────────────────────────────────
 if (isNeoForge) {
@@ -96,7 +98,8 @@ if (isNeoForge) {
     dependencies {
         implementation "net.neoforged:neoforge:${neo_version}"
         if (project.hasProperty('geckolib_version')) {
-            implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+            def geckolibGroup = mcMajor >= 26 ? 'com.geckolib' : 'software.bernie.geckolib'
+            implementation "${geckolibGroup}:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
         }
         if (jei_version != 'none') {
             compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
